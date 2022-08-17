@@ -148,17 +148,19 @@
                     </label>
                   </div>
                   <div class="a2a">
-                    <button class="hover:a38 aa ab ac a1t a1u a1A al a4K a1F a1R aT a3d a1c a4L hover:a4">
+                    <button type="submit" class="hover:a38 aa ab ac a1t a1u a1A al a4K a1F a1R aT a3d a1c a4L hover:a4">
                       Sign up
                     </button>
                   </div>
                 </form>
                 <p class="a2G a1F a1R aQ dark:aS">
                   Already using Startup?
-                  <a href="signin.html" class="aR hover:a2z">
+                  @if (Route::has('login'))
+                  <a href="{{ route('login') }}" class="aR hover:a2z">
                     Sign in
                   </a>
                 </p>
+                  @endif
               </div>
             </form>
           </div>
