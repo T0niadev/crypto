@@ -1,53 +1,6 @@
 @extends('admin.layouts.auth')
 
 @section('content')
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card">
-          <div class="card-header">{{ __('Confirm Password') }}</div>
-
-          <div class="card-body">
-            {{ __('Please confirm your password before continuing.') }}
-
-            <form method="POST" action="{{ route('admin.password.confirm') }}">
-              @csrf
-
-              <div class="form-group row">
-                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                <div class="col-md-6">
-                  <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
-                    name="password" required autocomplete="current-password">
-
-                  @error('password')
-                    <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                    </span>
-                  @enderror
-                </div>
-              </div>
-
-              <div class="form-group row mb-0">
-                <div class="col-md-8 offset-md-4">
-                  <button type="submit" class="btn btn-primary">
-                    {{ __('Confirm Password') }}
-                  </button>
-
-                  @if (Route::has('password.request'))
-                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                      {{ __('Forgot Your Password?') }}
-                    </a>
-                  @endif
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Reset Password basic -->
   <div class="card mb-0">
     <div class="card-body">
@@ -86,41 +39,37 @@
         <h2 class="brand-text text-primary ms-1">Vuexy</h2>
       </a>
 
-      <h4 class="card-title mb-1">Reset Password 🔒</h4>
-      <p class="card-text mb-2">Your new password must be different from previously used passwords</p>
+      <h4 class="card-title mb-1">Confirm Password 🔒</h4>
+      <p class="card-text mb-2">Please confirm your password before continuing.</p>
 
-      <form class="auth-reset-password-form mt-2"
-        action="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/html/ltr/vertical-menu-template-bordered/auth-login-basic.html"
-        method="POST">
+      <form class="auth-reset-password-form mt-2" action="{{ route('admin.password.confirm') }}" method="POST">
+        @csrf
         <div class="mb-1">
           <div class="d-flex justify-content-between">
-            <label class="form-label" for="reset-password-new">New Password</label>
+            <label class="form-label" for="password">Password</label>
+            <a href="{{ route('admin.password.request') }}">
+              <small>Forgot Password?</small>
+            </a>
           </div>
           <div class="input-group input-group-merge form-password-toggle">
-            <input type="password" class="form-control form-control-merge" id="reset-password-new"
-              name="reset-password-new"
+            <input class="form-control form-control-merge @error('password') is-invalid @enderror" tabindex="2"
               placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-              aria-describedby="reset-password-new" tabindex="1" autofocus />
+              aria-describedby="password" id="password" type="password"
+              class="form-control @error('password') is-invalid @enderror" name="password" required
+              autocomplete="current-password" />
             <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
           </div>
+          @error('password')
+            <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+            </span>
+          @enderror
         </div>
-        <div class="mb-1">
-          <div class="d-flex justify-content-between">
-            <label class="form-label" for="reset-password-confirm">Confirm Password</label>
-          </div>
-          <div class="input-group input-group-merge form-password-toggle">
-            <input type="password" class="form-control form-control-merge" id="reset-password-confirm"
-              name="reset-password-confirm"
-              placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-              aria-describedby="reset-password-confirm" tabindex="2" />
-            <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
-          </div>
-        </div>
-        <button class="btn btn-primary w-100" tabindex="3">Set New Password</button>
+        <button type="submit" class="btn btn-primary w-100" tabindex="3">Confirm Password</button>
       </form>
 
       <p class="text-center mt-2">
-        <a href="auth-login-basic.html"> <i data-feather="chevron-left"></i> Back to login </a>
+        <a href="{{ route('admin.login') }}"> <i data-feather="chevron-left"></i> Back to login </a>
       </p>
     </div>
   </div>
@@ -128,6 +77,5 @@
 @endsection
 
 @section('script')
-<script src="{{ asset('assets/admin/js/scripts/pages/auth-forgot-password.min.js') }}"></script>
+  <script src="{{ asset('assets/admin/js/scripts/pages/auth-forgot-password.min.js') }}"></script>
 @endsection
-
