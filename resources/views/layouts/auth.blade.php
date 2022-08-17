@@ -66,16 +66,22 @@
                 <li>
                   <a href="#features"
                     class="scroll-menu aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY">
-                    Features
+                    Services
                   </a>
                 </li>
                 <li>
-                  <a href="#roadmap"
+                  <a href="/get-started"
                     class="scroll-menu aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY">
-                    Roadmap
+                    Get Started
                   </a>
                 </li>
-                <li class="aZ submenu-item af">
+                <li>
+                    <a href="#faq"
+                      class="scroll-menu aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY">
+                      FAQ
+                    </a>
+                </li>
+                {{-- <li class="aZ submenu-item af">
                   <a href="javascript:void(0)" @click="dropdownOpen = !dropdownOpen"
                     class="af aa am aO aP aQ after:aq after:a_ after:as/2 after:a10[-2px] after:a11 after:a12 after:a13[-50%] after:az after:a14 after:a15 after:a16 group-hover:aR dark:aS dark:group-hover:aT lg:aU lg:aV lg:aW lg:a17 lg:a18 lg:after:a19 xl:aX 2xl:aY">
                     Pages
@@ -107,7 +113,7 @@
                       </a>
                     @endif
                   </div>
-                </li>
+                </li> --}}
                 <li>
                   <a href="#contact"
                     class="scroll-menu aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY">
@@ -163,8 +169,7 @@
               <img src="{{ asset('assets/images/logo/logo.svg') }}" alt="logo" class="dark:ao" />
             </a>
             <p class="a1W a1F a1R aQ dark:aS">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae quam nec ante
-              fringilla vel at erat convallis elit.
+                Converts well, receive more 
             </p>
             <div class="aa ac a31">
               <a href="javascript:void(0)"
@@ -214,19 +219,16 @@
           <div class="wow fadeInUp a2_ xl:a30" data-wow-delay="0s">
             <h2 class="a2K a2B a1P a1k dark:aT">Quick Links</h2>
             <div class="a34">
-              <a href="javascript:void(0)" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
-                What is ico
+              <a href="#home" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
+                About Us
               </a>
-              <a href="javascript:void(0)" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
-                Roadmap
+              <a href="#features" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
+                Services
               </a>
-              <a href="javascript:void(0)" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
-                Whitepaper
+              <a href="#faq" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
+                FAQ
               </a>
-              <a href="javascript:void(0)" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
-                Social Network
-              </a>
-              <a href="javascript:void(0)" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
+              <a href="/register" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
                 Join Us Now
               </a>
             </div>
@@ -236,25 +238,19 @@
           <div class="wow fadeInUp a2_ xl:a30" data-wow-delay="0s">
             <h2 class="a2K a2B a1P a1k dark:aT">Supports</h2>
             <div class="a34">
-              <a href="javascript:void(0)" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
-                Setting & Privacy
-              </a>
-              <a href="javascript:void(0)" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
+
+              <a href="#contact" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
                 Help & Support
               </a>
-              <a href="javascript:void(0)" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
-                Terms & Conditions
-              </a>
-              <a href="javascript:void(0)" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
+
+              <a href="#contact" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
                 24/7 Supports
               </a>
-              <a href="javascript:void(0)" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
-                On Point FAQ
-              </a>
+
             </div>
           </div>
         </div>
-        <div class="ab ak md:a1M/2 lg:a1M/2 xl:a1U/12">
+        {{-- <div class="ab ak md:a1M/2 lg:a1M/2 xl:a1U/12">
           <div class="wow fadeInUp a2_ xl:a30" data-wow-delay="0s">
             <h2 class="a2K a2B a1P a1k dark:aT">News & Post</h2>
             <div class="a34">
@@ -299,14 +295,12 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
       </div>
       <div class="wow fadeInUp a36 a2l[#F3F4F4] a37 a2G dark:a2l[#2D2C4A]" data-wow-delay="0s">
         <p class="a1F a1R a4u aQ dark:aS">
-          © Crypto - all Rights Reserved, Crafted by
-          <a href="https://uideck.com/" rel="noopenner nofollow" target="_blank" class="hover:aR">
-            UIdeck
-          </a>
+          © CRYPTO-LUONO - all Rights Reserved
+
         </p>
       </div>
     </div>

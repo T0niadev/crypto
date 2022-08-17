@@ -7,13 +7,22 @@
         <div class="ab ak">
           <div class="a3r aH[720px] a2G">
             <h1 class="a1N a2o a1P a2p a1k dark:aT md:a2Q[45px]">
-              Tailwind CSS Template for Crypto, ICO and Web3
+               CRYPTO-LUONU
             </h1>
-            <p class="a3r a1N aH[620px] aO a1R aQ dark:aT">
-              Crypto Currency, Blockchain, ICO, Web3 related website template crafted with
-              Tailwind CSS. Comes with all essential UI components and pages to launch complete
-              website or landing page for anything that related to Crypto, Blockchain and Web3.
+
+            <p class ="a3r a1N aH[620px] aO a1R aQ dark:aT">
+                We  offer a comprehensive, user-friendly, risk-free investing platform that boosts your income potential.
+                We also have  a range investment packages specially curated for you by our highly competent  analysts and predictive tools.
             </p>
+
+
+
+          <p class="a3r a1N aH[620px] aO a1R aQ dark:aT">
+
+            More financial opportunities than you can think are available to you through cryptocurrency and helium mining, and we've built a platform to help you put those prospects into action.
+            Join the platform to learn how to profit from the expanding helium and cryptocurrency ecosystems.
+
+          </p>
             <div class="a3s a1W aa a1L ac a1t sm:a3t">
               <div class="aZ af a3u a3v sm:a3w">
                 <span class="a3x aa a32 a33 ac a1t a1u a1">
@@ -143,9 +152,7 @@
                 </div>
               </div>
             </div>
-            <a href="javascript:void(0)" class="a1u a1A a22 a1E a1F aP aT hover:a2X dark:hover:bg-opacity-90">
-              Buy Tokens 47% Off
-            </a>
+
           </div>
         </div>
       </div>
@@ -154,16 +161,39 @@
       style="background-image: linear-gradient(180deg, #3e7dff 0%, rgba(62, 125, 255, 0) 100%)"></div>
     <img src="{{ asset('assets/images/shapes/hero-shape-1.svg') }}" alt="" class="aq a1a a8 a2Z" />
     <img src="{{ asset('assets/images/shapes/hero-shape-2.svg') }}" alt="" class="aq a19 a8 a2Z" />
-  </section>
+
+    <div class="ag aa a1L ac a1t">
+        <a href="/register" class="a1u a1A a22 a1E a1F aP aT hover:a2X dark:hover:bg-opacity-90 md-4">
+            Register Now
+        </a>
+    </div>
+
+</section>
+
+
+
+
 
   <section>
     <div class="ae">
       <div class="wow fadeInUp a3E a2l[#F3F4F4] a3F dark:a2l[#2D2C4A]" data-wow-delay="0s">
+
         <h2 class="a1W a2G aO a1P a1k dark:aT sm:a2B">
-          Join the 20,000+ companies using the our platform
+            Join the 1,000+ users using the our platform
         </h2>
-        <div class="ag aa a1L ac a1t">
-          <div class="ak">
+        <p class="a1W aO a1R aQ dark:aS">
+            Founded on honesty and integrity.
+            We have assurance in our capacity to execute our pledges.
+            We maintain a secure, safe, and reliable trading environment that is designed to minimize losses and give our customers a relaxed atmosphere.
+        </p>
+
+
+
+        {{-- <div class="ag aa a1L ac a1t">
+            <a href="/register" class="a1u a1A a22 a1E a1F aP aT hover:a2X dark:hover:bg-opacity-90 md-4">
+                Register Now
+            </a> --}}
+          {{-- <div class="ak">
             <a href="https://uideck.com/" target="_blank" rel="nofollow noopenner"
               class="a1W aa aH[170px] a1t a3G a3H hover:a1d hover:a3I dark:hover:a1d">
               <img src="{{ asset('assets/images/brands/uideck-white.svg') }}" alt="uideck"
@@ -179,8 +209,8 @@
               <img src="{{ asset('assets/images/brands/tailgrids.svg') }}" alt="tailgrids"
                 class="a3r a32 a2G dark:ao" />
             </a>
-          </div>
-          <div class="ak">
+          </div> --}}
+          {{-- <div class="ak">
             <a href="https://lineicons.com/" target="_blank" rel="nofollow noopenner"
               class="a1W aa aH[170px] a1t a3G a3H hover:a1d hover:a3I dark:hover:a1d">
               <img src="{{ asset('assets/images/brands/LineIcons-white.svg') }}" alt="lineicons"
@@ -188,16 +218,16 @@
               <img src="{{ asset('assets/images/brands/lineicons.svg') }}" alt="lineicons"
                 class="a3r a32 a2G dark:ao" />
             </a>
-          </div>
-          <div class="ak">
+          </div> --}}
+          {{-- <div class="ak">
             <a href="https://ayroui.com/" target="_blank" rel="nofollow noopenner"
               class="a1W aa aH[170px] a1t a3G a3H hover:a1d hover:a3I dark:hover:a1d">
               <img src="{{ asset('assets/images/brands/AyroUI-white.svg') }}" alt="ayroui"
                 class="a3r ao a32 a2G dark:an" />
               <img src="images/brands/ayroui.svg" alt="ayroui" class="a3r a32 a2G dark:ao" />
             </a>
-          </div>
-          <div class="ak">
+          </div> --}}
+          {{-- <div class="ak">
             <a href="https://plainadmin.com/" target="_blank" rel="nofollow noopenner"
               class="a1W aa aH[170px] a1t a3G a3H hover:a1d hover:a3I dark:hover:a1d">
               <img src="{{ asset('assets/images/brands/PlainAdmin-white.svg') }}" alt="plainadmin"
@@ -205,20 +235,19 @@
               <img src="{{ asset('assets/images/brands/plainadmin.svg') }}" alt="plainadmin"
                 class="a3r a32 a2G dark:ao" />
             </a>
-          </div>
-        </div>
-      </div>
+          </div> --}}
+        {{-- </div>
+      </div> --}}
     </div>
   </section>
 
   <section id="features" class="a1J[120px] a3J">
     <div class="ae">
       <div class="wow fadeInUp a3r a3K aH[590px] a2G md:a30" data-wow-delay="0s">
-        <span class="a2d aO a1P a3L aR sm:a1O"> CRYPTO FEATURE </span>
-        <h2 class="a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]">Best Features</h2>
+        <span class="a2d aO a1P a3L aR sm:a1O">CRYPTO-LUONO</span>
+        <h2 class="a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]">WHY CHOOSE US ?</h2>
         <p class="aO a1R aQ dark:aS">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed congue arcu, In et
-          dignissim quam condimentum vel.
+            We make trading easy, fast & reliable.
         </p>
       </div>
       <div class="ag aa a1L">
@@ -235,8 +264,7 @@
             <div>
               <h3 class="a2d a1O a1P a1k dark:aT sm:a2o lg:a1O xl:a2o">Safe & Secure</h3>
               <p class="a1F a1R aQ dark:aS sm:aO lg:a1F xl:aO">
-                Lorem ipsum dolor sit amet consectetur elit, sed do eiusmod tempor labore labore
-                labore et dolor .
+                Trading bitcoin since 2011 with industry-leading uptime and dedicated 24/7 support
               </p>
             </div>
           </div>
@@ -252,10 +280,9 @@
               </svg>
             </div>
             <div>
-              <h3 class="a2d a1O a1P a1k dark:aT sm:a2o lg:a1O xl:a2o">Early Bonus</h3>
+              <h3 class="a2d a1O a1P a1k dark:aT sm:a2o lg:a1O xl:a2o">Trading Ease</h3>
               <p class="a1F a1R aQ dark:aS sm:aO lg:a1F xl:aO">
-                Lorem ipsum dolor sit amet consectetur elit, sed do eiusmod tempor labore labore
-                labore et dolor .
+                A user-friendly interface with options for instant deposits and cash out to bank account directly.
               </p>
             </div>
           </div>
@@ -273,10 +300,9 @@
               </svg>
             </div>
             <div>
-              <h3 class="a2d a1O a1P a1k dark:aT sm:a2o lg:a1O xl:a2o">Universal Access</h3>
+              <h3 class="a2d a1O a1P a1k dark:aT sm:a2o lg:a1O xl:a2o">Fast Payments</h3>
               <p class="a1F a1R aQ dark:aS sm:aO lg:a1F xl:aO">
-                Lorem ipsum dolor sit amet consectetur elit, sed do eiusmod tempor labore labore
-                labore et dolor .
+                All transactions are secure and efficient in real time, and payments are usually completed in less than 24 hours.
               </p>
             </div>
           </div>
@@ -294,8 +320,7 @@
             <div>
               <h3 class="a2d a1O a1P a1k dark:aT sm:a2o lg:a1O xl:a2o">Secure Storage</h3>
               <p class="a1F a1R aQ dark:aS sm:aO lg:a1F xl:aO">
-                Lorem ipsum dolor sit amet consectetur elit, sed do eiusmod tempor labore labore
-                labore et dolor .
+                Highly encrypted personal data with whitelisting and transaction confirmations
               </p>
             </div>
           </div>
@@ -311,10 +336,9 @@
               </svg>
             </div>
             <div>
-              <h3 class="a2d a1O a1P a1k dark:aT sm:a2o lg:a1O xl:a2o">Low Cost</h3>
+              <h3 class="a2d a1O a1P a1k dark:aT sm:a2o lg:a1O xl:a2o">Advanced Trading Tools</h3>
               <p class="a1F a1R aQ dark:aS sm:aO lg:a1F xl:aO">
-                Lorem ipsum dolor sit amet consectetur elit, sed do eiusmod tempor labore labore
-                labore et dolor .
+                Set up your own trading interface or deploy your algorithmic strategy with our high-performance FIX and HTTP APIs. Connect to our WebSocket for real-time data streaming.
               </p>
             </div>
           </div>
@@ -330,10 +354,9 @@
               </svg>
             </div>
             <div>
-              <h3 class="a2d a1O a1P a1k dark:aT sm:a2o lg:a1O xl:a2o">Several Profit</h3>
+              <h3 class="a2d a1O a1P a1k dark:aT sm:a2o lg:a1O xl:a2o">Stable Profit</h3>
               <p class="a1F a1R aQ dark:aS sm:aO lg:a1F xl:aO">
-                Lorem ipsum dolor sit amet consectetur elit, sed do eiusmod tempor labore labore
-                labore et dolor .
+                We ensure that the investment package you choose will provide you with the most reliable and safe risk-free income.
               </p>
             </div>
           </div>
@@ -388,7 +411,7 @@
     </div>
   </section>
 
-  <section id="roadmap" class="af a2E aw[120px]">
+  {{-- <section id="roadmap" class="af a2E aw[120px]">
     <div class="ae">
       <div class="wow fadeInUp a3r a3K aH[590px] a2G md:a30" data-wow-delay="0s">
         <span class="a2d aO a1P a3L aR sm:a1O"> ROADMAP </span>
@@ -562,9 +585,9 @@
     <div class="aq a1a a2J a2Z">
       <img src="{{ asset('assets/images/shapes/timeline.svg') }}" alt="shape" />
     </div>
-  </section>
+  </section> --}}
 
-  <section id="team" class="a36 a2l[#F3F4F4] a1J[120px] a1T dark:a2l[#2D2C4A]">
+  {{-- <section id="team" class="a36 a2l[#F3F4F4] a1J[120px] a1T dark:a2l[#2D2C4A]">
     <div class="ae">
       <div class="wow fadeInUp a3r a3K aH[590px] a2G md:a30" data-wow-delay="0s">
         <span class="a2d aO a1P a3L aR sm:a1O"> OUT TEAM </span>
@@ -741,154 +764,40 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <section id="testimonial" class="a1v a1J[120px] a1T dark:a1w[#14102C]">
-    <div class="ae">
-      <div class="wow fadeInUp a3r a3K aH[590px] a2G md:a30" data-wow-delay="0s">
-        <span class="a2d aO a1P a3L aR sm:a1O"> TESTIMONIALS </span>
-        <h2 class="a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]">What Our Client Say's</h2>
-        <p class="aO a1R aQ dark:aS">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed congue arcu, In et
-          dignissim quam condimentum vel.
-        </p>
-      </div>
-      <div class="ag aa a1L">
-        <div class="ab ak md:a1M/2">
-          <div class="wow fadeInUp af a2E a1W a2c a4d[10px] a1 aI a3_ dark:a1w[#131B4D] sm:a4f md:a29 xl:a4f"
-            data-wow-delay="0s">
-            <div class="aq a19 a8 a2I[-1]">
-              <img src="{{ asset('assets/images/shapes/testimonial-shape.svg') }}" alt="shape" />
-            </div>
-            <div class="a2n aa ac">
-              <div class="a20 a3N ab aH[80px] a2c a1i">
-                <img src="{{ asset('assets/images/testimonials/image-01.jpg') }}}}" alt="author" />
-              </div>
-              <div class="ab">
-                <h3 class="a4g aO aP a2u dark:aT">Jason Keys</h3>
-                <p class="a1j a1R aQ dark:aT">CEO & Founder @ Dreampeet.</p>
-              </div>
-            </div>
-            <div>
-              <p class="a1F a1R a2f aQ dark:aS">
-                “I believe in lifelong learning and Learn. is a great place to learn from experts.
-                I've learned a lot and recommend it to all my friends and familys.”
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="ab ak md:a1M/2">
-          <div class="wow fadeInUp af a2E a1W a2c a4d[10px] a1 aI a3_ dark:a1w[#131B4D] sm:a4f md:a29 xl:a4f"
-            data-wow-delay="0s">
-            <div class="aq a19 a8 a2I[-1]">
-              <img src="{{ asset('assets/images/shapes/testimonial-shape.svg') }}" alt="shape" />
-            </div>
-            <div class="a2n aa ac">
-              <div class="a20 a3N ab aH[80px] a2c a1i">
-                <img src="{{ asset('assets/images/testimonials/image-02.jpg') }}" alt="author" />
-              </div>
-              <div class="ab">
-                <h3 class="a4g aO aP a2u dark:aT">Mariya Merry</h3>
-                <p class="a1j a1R aQ dark:aT">CEO & Founder @ Betex.</p>
-              </div>
-            </div>
-            <div>
-              <p class="a1F a1R a2f aQ dark:aS">
-                “I believe in lifelong learning and Learn. is a great place to learn from experts.
-                I've learned a lot and recommend it to all my friends and familys.”
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="ab ak md:a1M/2">
-          <div class="wow fadeInUp af a2E a1W a2c a4d[10px] a1 aI a3_ dark:a1w[#131B4D] sm:a4f md:a29 xl:a4f"
-            data-wow-delay="0s">
-            <div class="aq a19 a8 a2I[-1]">
-              <img src="{{ asset('assets/images/shapes/testimonial-shape.svg') }}" alt="shape" />
-            </div>
-            <div class="a2n aa ac">
-              <div class="a20 a3N ab aH[80px] a2c a1i">
-                <img src="{{ asset('assets/images/testimonials/image-03.jpg') }}" alt="author" />
-              </div>
-              <div class="ab">
-                <h3 class="a4g aO aP a2u dark:aT">Andria Jolly</h3>
-                <p class="a1j a1R aQ dark:aT">CEO & Founder @ CryptoX.</p>
-              </div>
-            </div>
-            <div>
-              <p class="a1F a1R a2f aQ dark:aS">
-                “I believe in lifelong learning and Learn. is a great place to learn from experts.
-                I've learned a lot and recommend it to all my friends and familys.”
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="ab ak md:a1M/2">
-          <div class="wow fadeInUp af a2E a1W a2c a4d[10px] a1 aI a3_ dark:a1w[#131B4D] sm:a4f md:a29 xl:a4f"
-            data-wow-delay="0s">
-            <div class="aq a19 a8 a2I[-1]">
-              <img src="{{ asset('assets/images/shapes/testimonial-shape.svg') }}" alt="shape" />
-            </div>
-            <div class="a2n aa ac">
-              <div class="a20 a3N ab aH[80px] a2c a1i">
-                <img src="{{ asset('assets/images/testimonials/image-04.jpg') }}" alt="author" />
-              </div>
-              <div class="ab">
-                <h3 class="a4g aO aP a2u dark:aT">Devid Willium</h3>
-                <p class="a1j a1R aQ dark:aT">CEO & Founder @ Coinbase.</p>
-              </div>
-            </div>
-            <div>
-              <p class="a1F a1R a2f aQ dark:aS">
-                “I believe in lifelong learning and Learn. is a great place to learn from experts.
-                I've learned a lot and recommend it to all my friends and familys.”
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  </section> --}}
 
   <section id="download" class="a4h">
     <div class="ae">
       <div class="ag aa a1L ac">
         <div class="ab ak lg:a1M/2">
           <div class="wow fadeInUp a3R aH[500px] lg:a1Q" data-wow-delay="0s">
-            <span class="a2d aO a1P a3L aR sm:a1O"> Download Our App </span>
+            <span class="a2d aO a1P a3L aR sm:a1O"> CRYPTO-LUONO</span>
             <h2 class="a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]">
-              The choice is yours, we've got you covered
+              Buy & trade on the
+               original crypto exchange.
             </h2>
             <p class="a1W aO a1R aQ dark:aS">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique, nisl ut
-              viverra porttitor, dolor sem lacinia orci, et pretium quam mi a eros sed molestie
-              est.
-            </p>
+              CRYPTO-LUONO makes trading easy, fast & reliable. With 24/7 support, staking and bank-grade security & insurance. Since 2011.
             <div class="a4i aa ac">
-              <div class="av">
+              {{-- <div class="av">
                 <a href="javascript:void(0)"
                   class="aa ac a1t a1u a1C a2l[#2D2947] a1w[#2D2947] a4j[10px] a4k a1F aP aT hover:a2X dark:hover:a2X">
                   <span class="a2k aa a32 a33 ac a1t a1u a1A aT">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M18.7101 19.5C17.8801 20.74 17.0001 21.95 15.6601 21.97C14.3201 22 13.8901 21.18 12.3701 21.18C10.8401 21.18 10.3701 21.95 9.10009 22C7.79009 22.05 6.80009 20.68 5.96009 19.47C4.25009 17 2.94009 12.45 4.70009 9.39C5.57009 7.87 7.13009 6.91 8.82009 6.88C10.1001 6.86 11.3201 7.75 12.1101 7.75C12.8901 7.75 14.3701 6.68 15.9201 6.84C16.5701 6.87 18.3901 7.1 19.5601 8.82C19.4701 8.88 17.3901 10.1 17.4101 12.63C17.4401 15.65 20.0601 16.66 20.0901 16.67C20.0601 16.74 19.6701 18.11 18.7101 19.5ZM13.0001 3.5C13.7301 2.67 14.9401 2.04 15.9401 2C16.0701 3.17 15.6001 4.35 14.9001 5.19C14.2101 6.04 13.0701 6.7 11.9501 6.61C11.8001 5.46 12.3601 4.26 13.0001 3.5Z"
-                        fill="white" />
-                    </svg>
+
                   </span>
-                  App Store
+                  Get Started
                 </a>
-              </div>
+              </div> --}}
               <div class="av">
-                <a href="javascript:void(0)"
+                <a href="/register"
                   class="aa ac a1t a1u a1C a2l[#2D2947] a7 a4j[10px] a4k a1F aP aQ hover:a1w[#2D294710] dark:aT dark:hover:a1w[#2D2947]">
                   <span class="a2k aa a32 a33 ac a1t a1u a3 aT dark:a1 dark:a2u">
-                    <svg width="24" height="24" viewBox="0 0 24 24" class="a1B">
+                    {{-- <svg width="24" height="24" viewBox="0 0 24 24" class="a1B">
                       <path
                         d="M3 20.5V3.50002C3 2.91002 3.34 2.39002 3.84 2.15002L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5ZM16.81 15.12L6.05 21.34L14.54 12.85L16.81 15.12ZM20.16 10.81C20.5 11.08 20.75 11.5 20.75 12C20.75 12.5 20.53 12.9 20.18 13.18L17.89 14.5L15.39 12L17.89 9.50002L20.16 10.81ZM6.05 2.66002L16.81 8.88002L14.54 11.15L6.05 2.66002Z" />
-                    </svg>
+                    </svg> --}}
                   </span>
-                  Play Store
+                  Get Started
                 </a>
               </div>
             </div>
@@ -915,6 +824,71 @@
     </div>
   </section>
 
+  <section id="testimonial" class="a1v a1J[120px] a1T dark:a1w[#14102C]">
+    <div class="ae">
+      <div class="wow fadeInUp a3r a3K aH[590px] a2G md:a30" data-wow-delay="0s">
+        <span class="a2d aO a1P a3L aR sm:a1O"> TESTIMONIALS </span>
+        <h2 class="a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]">What Our Clients Say</h2>
+        <p class="aO a1R aQ dark:aS">
+          Still hesitant about trusting CRYPTO-LUONO for the best investment package? Read user testimonials
+        </p>
+      </div>
+      <div class="ag aa a1L">
+
+        <div class="ab ak md:a1M/2">
+          <div class="wow fadeInUp af a2E a1W a2c a4d[10px] a1 aI a3_ dark:a1w[#131B4D] sm:a4f md:a29 xl:a4f"
+            data-wow-delay="0s">
+            <div class="aq a19 a8 a2I[-1]">
+              <img src="{{ asset('assets/images/shapes/testimonial-shape.svg') }}" alt="shape" />
+            </div>
+            <div class="a2n aa ac">
+              <div class="a20 a3N ab aH[80px] a2c a1i">
+                <img src="{{ asset('assets/images/avatar/avatar.png') }}" alt="author" />
+              </div>
+              <div class="ab">
+                <h3 class="a4g aO aP a2u dark:aT">Jolien Mcthearty</h3>
+                <p class="a1j a1R aQ dark:aT">Customer</p>
+              </div>
+            </div>
+            <div>
+              <p class="a1F a1R a2f aQ dark:aS">
+               "My first cryptocurrency investment encounter was using Crypto-Luono.
+               I started off as a typical beginner purchase of Bitcoin for the first time, asking legacy traders what a wallet was and why I needed to go through the verification process.
+                Now i've made a fortune off this."
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="ab ak md:a1M/2">
+          <div class="wow fadeInUp af a2E a1W a2c a4d[10px] a1 aI a3_ dark:a1w[#131B4D] sm:a4f md:a29 xl:a4f"
+            data-wow-delay="0s">
+            <div class="aq a19 a8 a2I[-1]">
+              <img src="{{ asset('assets/images/shapes/testimonial-shape.svg') }}" alt="shape" />
+            </div>
+            <div class="a2n aa ac">
+              <div class="a20 a3N ab aH[80px] a2c a1i">
+                <img src="{{ asset('assets/images/avatar/avatar.png') }}" alt="author" />
+              </div>
+              <div class="ab">
+                <h3 class="a4g aO aP a2u dark:aT">Peterson Jones</h3>
+                <p class="a1j a1R aQ dark:aT">Customer</p>
+              </div>
+            </div>
+            <div>
+              <p class="a1F a1R a2f aQ dark:aS">
+                “Being a vendor with Crypto-Luono has been terrific.
+                The best part is that I've been able to assist many new investors in making actual money, and support is always responsive and helpful.
+                Being the first on-ramp to the currency of the future is always gratifying. ”
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
   <section id="faq" x-data="{
       openFaq1: false,
       openFaq2: false,
@@ -926,17 +900,17 @@
       <div class="wow fadeInUp a3r a3K aH[630px] a2G md:a30" data-wow-delay="0s">
         <span class="a2d aO a1P a3L aR sm:a1O"> FAQ </span>
         <h2 class="a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]">Frequently Asked Questions</h2>
-        <p class="a3r aH[590px] aO a1R aQ dark:aS">
+        {{-- <p class="a3r aH[590px] aO a1R aQ dark:aS">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed congue arcu, In et
           dignissim quam condimentum vel.
-        </p>
+        </p> --}}
       </div>
       <div class="ag aa a1L a1t">
         <div class="ab ak lg:a2N/12 xl:a1z/12">
           <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0s">
             <button @click="openFaq1 = !openFaq1" class="faq-btn aa ab ac ah a4l">
               <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">
-                How can I participate in the ICO Token sale?
+                Is CRYPTO-LUONO a registered company?
               </h3>
               <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq1 && 'a4p'">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
@@ -957,16 +931,13 @@
             </button>
             <div x-show="openFaq1" class="faq-content">
               <p class="a4q a4r a1F aQ dark:aS">
-                There are many variations of passages of Lorem Ipsum available, but the majority
-                have suffered alteration in some form, by injected humour, or randomised words
-                which don't look even slightly believable. If you are going to use a passage of
-                Lorem Ipsum, you need to be sure there isn't anything.
+                Yes, It is registered in the United Kingdom & United States
               </p>
             </div>
           </div>
           <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0s">
             <button @click="openFaq2 = !openFaq2" class="faq-btn aa ab ac ah a4l">
-              <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">What is ICO Crypto?</h3>
+              <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">What do we do at CRYPTO-LUONO?</h3>
               <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq2 && 'a4p'">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -986,17 +957,14 @@
             </button>
             <div x-show="openFaq2" class="faq-content">
               <p class="a4q a4r a1F aQ dark:aS">
-                There are many variations of passages of Lorem Ipsum available, but the majority
-                have suffered alteration in some form, by injected humour, or randomised words
-                which don't look even slightly believable. If you are going to use a passage of
-                Lorem Ipsum, you need to be sure there isn't anything.
+                Trading on the forex and cryptocurrency markets is what we do.
               </p>
             </div>
           </div>
           <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0s">
             <button @click="openFaq3 = !openFaq3" class="faq-btn aa ab ac ah a4l">
               <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">
-                How do I benefit from the ICO Token?
+                Why CRYPTO-LUONO over other competitors?
               </h3>
               <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq3 && 'a4p'">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
@@ -1017,16 +985,15 @@
             </button>
             <div x-show="openFaq3" class="faq-content">
               <p class="a4q a4r a1F aQ dark:aS">
-                There are many variations of passages of Lorem Ipsum available, but the majority
-                have suffered alteration in some form, by injected humour, or randomised words
-                which don't look even slightly believable. If you are going to use a passage of
-                Lorem Ipsum, you need to be sure there isn't anything.
+                Our objective is to use our unique technique to gain a steady profit on the cryptocurrency market rather than to outcompete the fierce competition.
+                For investors seeking passive income, we have created customized investment packages with the best service plans and affiliate programs.
               </p>
             </div>
           </div>
+
           <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0s">
             <button @click="openFaq4 = !openFaq4" class="faq-btn aa ab ac ah a4l">
-              <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">How can i purchase bitcoin?</h3>
+              <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">What are the possible risks on investment?</h3>
               <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq4 && 'a4p'">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -1046,15 +1013,96 @@
             </button>
             <div x-show="openFaq4" class="faq-content">
               <p class="a4q a4r a1F aQ dark:aS">
-                There are many variations of passages of Lorem Ipsum available, but the majority
-                have suffered alteration in some form, by injected humour, or randomised words
-                which don't look even slightly believable. If you are going to use a passage of
-                Lorem Ipsum, you need to be sure there isn't anything.
+                Due to the expertise of our staff and our wealth of experience, the risks to our investors are kept to a minimum.
+              </p>
+            </div>
+          </div>
+          <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0s">
+            <button @click="openFaq4 = !openFaq4" class="faq-btn aa ab ac ah a4l">
+              <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">How do i get started?</h3>
+              <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq4 && 'a4p'">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_50_132)">
+                    <path
+                      d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L-0.000488487 3.08978L4.99951 8.08978L9.99951 3.08979L8.82033 1.91065Z"
+                      fill="currentColor" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_50_132">
+                      <rect width="10" height="10" fill="white"
+                        transform="translate(-0.000488281 0.000488281)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+            </button>
+            <div x-show="openFaq4" class="faq-content">
+              <p class="a4q a4r a1F aQ dark:aS">
+                You should first sign up on our website.
+                It only takes a few minutes to complete the registration process.
+                Fill out the registration form completely, log in to your account, select the best investing strategy, and deposit funds into your account.
+                After that, you will be formally tagged an investor and start receiving payments in accordance with the service plan you have selected.
+              </p>
+            </div>
+          </div>
+          <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0s">
+            <button @click="openFaq4 = !openFaq4" class="faq-btn aa ab ac ah a4l">
+              <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">How does this really work?</h3>
+              <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq4 && 'a4p'">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_50_132)">
+                    <path
+                      d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L-0.000488487 3.08978L4.99951 8.08978L9.99951 3.08979L8.82033 1.91065Z"
+                      fill="currentColor" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_50_132">
+                      <rect width="10" height="10" fill="white"
+                        transform="translate(-0.000488281 0.000488281)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+            </button>
+            <div x-show="openFaq4" class="faq-content">
+              <p class="a4q a4r a1F aQ dark:aS">
+                After creating you account, choose an investment plan that perfectly suits you. The minimum deposit amount is $25 while the maximum - $100,000. Deposits can be made via different payment methods. However, withdrawal can only be made via the same deposit method. The minimum withdrawal amount is $1.
+                You can choose multiple investment plans, make deposits and withdrawal on the different investment packages a using a single account.
+              </p>
+            </div>
+          </div>
+          <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0s">
+            <button @click="openFaq4 = !openFaq4" class="faq-btn aa ab ac ah a4l">
+              <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">Do i make money from referrals?</h3>
+              <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq4 && 'a4p'">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_50_132)">
+                    <path
+                      d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L-0.000488487 3.08978L4.99951 8.08978L9.99951 3.08979L8.82033 1.91065Z"
+                      fill="currentColor" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_50_132">
+                      <rect width="10" height="10" fill="white"
+                        transform="translate(-0.000488281 0.000488281)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+            </button>
+            <div x-show="openFaq4" class="faq-content">
+              <p class="a4q a4r a1F aQ dark:aS">
+                Yes, you get 5% of commission for every deposit a referral makes. You  can receive referral commission via  only the payment systems used to make the deposit.
               </p>
             </div>
           </div>
         </div>
+
       </div>
+
     </div>
     <div class="aq a1a a4s a2Z">
       <img src="{{ asset('assets/images/shapes/faq-shape-1.svg') }}" alt="shape" />
@@ -1064,7 +1112,7 @@
     </div>
   </section>
 
-  <section id="blog" class="a1J[120px] a1T">
+  {{-- <section id="blog" class="a1J[120px] a1T">
     <div class="ae">
       <div class="wow fadeInUp a3r a3K aH[590px] a2G md:a30" data-wow-delay="0s">
         <span class="a2d aO a1P a3L aR sm:a1O"> LATEST NEWS </span>
@@ -1194,7 +1242,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> --}}
 
   <section id="contact" class="a1v aw[120px] dark:a1w[#14102C]">
     <div class="ae">
@@ -1203,29 +1251,17 @@
           <div class="wow fadeInUp a3K aH[350px]" data-wow-delay="0s">
             <span class="a2d aO a1P a3L aR sm:a1O"> Contact Us </span>
             <h2 class="a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]">
-              Let's talk about your problem.
+              How Can We Help You ?
             </h2>
           </div>
           <div class="ag aa a1L">
             <div class="ab ak sm:a1M/2">
-              <div class="wow fadeInUp a4w aH[250px]" data-wow-delay="0s">
-                <h3 class="a1N aO aP a2u dark:aT">Our Location</h3>
-                <p class="a1F a1R a4u aQ dark:aS">
-                  401 Broadway, 24th Floor, Orchard Cloud View, London
-                </p>
-              </div>
+
             </div>
             <div class="ab ak sm:a1M/2">
               <div class="wow fadeInUp a4w aH[250px]" data-wow-delay="0s">
-                <h3 class="a1N aO aP a2u dark:aT">Email Address</h3>
-                <p class="a1F a1R a4u aQ dark:aS">
-                  <a href="cdn-cgi/l/email-protection.html" class="__cf_email__"
-                    data-cfemail="1871767e775861776d6a7c7775797176367b7775">[email&#160;protected]</a>
-                </p>
-                <p class="a1F a1R a4u aQ dark:aS">
-                  <a href="cdn-cgi/l/email-protection.html" class="__cf_email__"
-                    data-cfemail="fe9d91908a9f9d8abe87918b8c9a91939f9790d09d9193">[email&#160;protected]</a>
-                </p>
+
+
               </div>
             </div>
             <div class="ab ak sm:a1M/2">
@@ -1237,10 +1273,11 @@
             </div>
             <div class="ab ak sm:a1M/2">
               <div class="wow fadeInUp a4w aH[250px]" data-wow-delay="0s">
-                <h3 class="a1N aO aP a2u dark:aT">How Can We Help?</h3>
-                <p class="a1F a1R a4u aQ dark:aS">
-                  Tell us your problem we will get back to you ASAP.
-                </p>
+                <h3 class="a1N aO aP a2u dark:aT">Email Address</h3>
+                    <p class="a1F a1R a4u aQ dark:aS">
+                    <a href="cdn-cgi/l/email-protection.html" class="__cf_email__"
+                        data-cfemail="1871767e775861776d6a7c7775797176367b7775">caprth@mail.com</a>
+                    </p>
               </div>
             </div>
           </div>
@@ -1286,10 +1323,9 @@
           <div class="ab ak lg:a1M/2">
             <div class="a1W lg:a1Q">
               <div class="aH[500px]">
-                <h2 class="a2s a2o a1P a2p aT md:a2Q[45px]">Newsletter</h2>
+                <h2 class="a2s a2o a1P a2p aT md:a2Q[45px]"> Service Review</h2>
                 <p class="aO a1R aT">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae quam nec ante
-                  aliquet fringilla vel at erat.
+                  Drop a review about our services
                 </p>
               </div>
             </div>
