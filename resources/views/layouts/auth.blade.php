@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="a0">
 
 <head>
   <meta charset="UTF-8" />
@@ -120,7 +120,8 @@
           <div class="aa ap a1l lg:a1m xl:a1n 2xl:a1o">
             <div class="a1p">
               <label for="darkToggler" class="aa a1q a1r a1s ac a1t a1u a1v dark:a1w[#1E2763]">
-                <input type="checkbox" name="darkToggler" id="darkToggler" class="a1x" checked aria-label="darkToggler" />
+                <input type="checkbox" name="darkToggler" id="darkToggler" checked class="a1x"
+                  aria-label="darkToggler" />
                 <span class="aa a1y a1z ac a1t a1u a1A aT dark:a7 dark:aS">
                   <svg width="16" height="16" viewBox="0 0 16 16" class="a1B">
                     <path
@@ -136,10 +137,10 @@
               </label>
             </div>
             <div class="ao sm:aa">
-              @if (Route::has('register'))
-                <a href="{{ route('register') }}"
+              @if (Route::has('login'))
+                <a href="{{ route('login') }}"
                   class="aa ac a1t a1u a1C a1D aw[9px] a1E a1F aP aQ a1G hover:a1H hover:a1A hover:aT dark:a1I dark:aT dark:hover:a1 dark:hover:aR lg:px-4 xl:px-8">
-                  Sign Up
+                  Sign In
                 </a>
               @endif
             </div>
@@ -149,9 +150,9 @@
     </div>
   </header>
 
- <main>
+  <main>
     @yield('content')
- </main>
+  </main>
 
   <footer class="af a2E a1J[120px]">
     <div class="ae">
@@ -280,7 +281,8 @@
               </div>
               <div class="aa">
                 <div class="a20 aC[75px] ab aH[75px] a1X">
-                  <img src="{{ asset('assets/images/footer/blog-02.jpg') }}" alt="post" class="a2w ab a1X a2x a2y" />
+                  <img src="{{ asset('assets/images/footer/blog-02.jpg') }}" alt="post"
+                    class="a2w ab a1X a2x a2y" />
                 </div>
                 <div>
                   <a href="javascript:void(0)" class="a1F a1R aQ hover:aR dark:aS dark:hover:aR">

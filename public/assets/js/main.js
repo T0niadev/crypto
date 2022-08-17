@@ -4,8 +4,8 @@ const html = document.querySelector("html");
 
 const darkModeToggler = () => {
   darkTogglerCheckbox.checked
-    ? html.classList.add("a0")
-    : html.classList.remove("a0");
+    ? html.classList.remove("a0")
+    : html.classList.add("a0");
 };
 darkModeToggler();
 
