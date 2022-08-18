@@ -1,84 +1,6 @@
 @extends('admin.layouts.auth')
 
 @section('content')
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card">
-          <div class="card-header">{{ __('Register') }}</div>
-
-          <div class="card-body">
-            <form method="POST" action="{{ route('admin.register') }}">
-              @csrf
-
-              <div class="form-group row">
-                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                <div class="col-md-6">
-                  <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
-                    name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                  @error('name')
-                    <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                    </span>
-                  @enderror
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                <div class="col-md-6">
-                  <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                    name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                  @error('email')
-                    <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                    </span>
-                  @enderror
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                <div class="col-md-6">
-                  <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
-                    name="password" required autocomplete="new-password">
-
-                  @error('password')
-                    <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                    </span>
-                  @enderror
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <label for="password-confirm"
-                  class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                <div class="col-md-6">
-                  <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required
-                    autocomplete="new-password">
-                </div>
-              </div>
-
-              <div class="form-group row mb-0">
-                <div class="col-md-6 offset-md-4">
-                  <button type="submit" class="btn btn-primary">
-                    {{ __('Register') }}
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Register basic -->
   <div class="card mb-0">
@@ -121,30 +43,73 @@
       <h4 class="card-title mb-1">Adventure starts here 🚀</h4>
       <p class="card-text mb-2">Make your app management easy and fun!</p>
 
-      <form class="auth-register-form mt-2"
-        action="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/html/ltr/vertical-menu-template-bordered/index.html"
-        method="POST">
+      <form class="auth-register-form mt-2" action="{{ route('admin.register') }}" method="POST">
+        @csrf
         <div class="mb-1">
-          <label for="register-username" class="form-label">Username</label>
-          <input type="text" class="form-control" id="register-username" name="register-username"
-            placeholder="johndoe" aria-describedby="register-username" tabindex="1" autofocus />
+          <label for="first_name" class="form-label">First name</label>
+          <input placeholder="John" aria-describedby="first_name" tabindex="1" autofocus id="first_name"
+            type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name"
+            value="{{ old('first_name') }}" required autocomplete="first_name" autofocus />
+          @error('first_name')
+            <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+            </span>
+          @enderror
         </div>
         <div class="mb-1">
-          <label for="register-email" class="form-label">Email</label>
-          <input type="text" class="form-control" id="register-email" name="register-email"
-            placeholder="john@example.com" aria-describedby="register-email" tabindex="2" />
+          <label for="last_name" class="form-label">Last name</label>
+          <input placeholder="Doe" aria-describedby="last_name" tabindex="1" autofocus id="last_name"
+            type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name"
+            value="{{ old('last_name') }}" required autocomplete="last_name" autofocus />
+          @error('last_name')
+            <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+            </span>
+          @enderror
+        </div>
+        <div class="mb-1">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="text" class="form-control" placeholder="john@example.com" aria-describedby="email"
+            tabindex="2" id="email" type="email" class="form-control @error('email') is-invalid @enderror"
+            name="email" value="{{ old('email') }}" required autocomplete="email" />
+          @error('email')
+            <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+            </span>
+          @enderror
         </div>
 
         <div class="mb-1">
-          <label for="register-password" class="form-label">Password</label>
+          <label for="password" class="form-label">Password</label>
 
           <div class="input-group input-group-merge form-password-toggle">
-            <input type="password" class="form-control form-control-merge" id="register-password"
-              name="register-password"
+            <input class="form-control form-control-merge @error('password') is-invalid @enderror"
               placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-              aria-describedby="register-password" tabindex="3" />
+              aria-describedby="password" tabindex="3" id="password" type="password" name="password" required
+              autocomplete="new-password" />
             <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
           </div>
+          @error('password')
+            <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+            </span>
+          @enderror
+        </div>
+        <div class="mb-1">
+          <label for="confirm_password" class="form-label">Confirm Password</label>
+
+          <div class="input-group input-group-merge form-password-toggle">
+            <input class="form-control form-control-merge @error('confirm_password') is-invalid @enderror"
+              placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+              aria-describedby="password" tabindex="3" id="confirm_password" type="password" name="confirm_password" required
+              autocomplete="new-password" />
+            <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
+          </div>
+          @error('confirm_password')
+            <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+            </span>
+          @enderror
         </div>
         <div class="mb-1">
           <div class="form-check">
@@ -154,12 +119,12 @@
             </label>
           </div>
         </div>
-        <button class="btn btn-primary w-100" tabindex="5">Sign up</button>
+        <button type="submit" class="btn btn-primary w-100" tabindex="5">Sign up</button>
       </form>
 
       <p class="text-center mt-2">
         <span>Already have an account?</span>
-        <a href="auth-login-basic.html">
+        <a href="{{ route('admin.login') }}">
           <span>Sign in instead</span>
         </a>
       </p>
@@ -189,5 +154,5 @@
 
 
 @section('script')
-<script src="{{ asset('assets/admin/js/scripts/pages/auth-register.min.js') }}"></script>
+  <script src="{{ asset('assets/admin/js/scripts/pages/auth-register.min.js') }}"></script>
 @endsection
