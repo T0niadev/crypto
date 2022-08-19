@@ -16,8 +16,8 @@
                 <p class="a4w a2G a1F a1R aS">
                   Login to your account for a faster checkout.
                 </p>
-                <button
-                  class="a4F dark:a38 a2a aa ab ac a1t a1u a1C a27 a4z a1 a4C a1F a1R aQ hover:aR dark:a4G dark:a1w[#1F2656] dark:aS dark:hover:aT">
+                <a href="{{ route('google.login') }}"
+                  class="aa ac a1t a1u a1C a1D aw[9px] a1E a1F aP aQ a1G hover:a1H hover:a1A hover:aT dark:a1I dark:aT dark:hover:a1 dark:hover:aR lg:px-4 xl:px-8">
                   <span class="a2k">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -43,7 +43,7 @@
                     </svg>
                   </span>
                   Sign in with Google
-                </button>
+                </a>
                 <div class="a2n aa ac a1t">
                   <span class="ao aC[1px] ab aH[70px] a2m a4H sm:an"></span>
                   <p class="ab a23 a2G a1F a1R aQ dark:aS">
@@ -134,8 +134,8 @@
                   );
                 ">
       </div>
-      <img src="images/shapes/hero-shape-1.svg" alt="" class="aq a1a a8 a2Z" />
-      <img src="images/shapes/hero-shape-2.svg" alt="" class="aq a19 a8 a2Z" />
+      <img src="{{ asset('assets/images/shapes/hero-shape-1.svg') }}" alt="" class="aq a1a a8 a2Z" />
+      <img src="{{ asset('assets/images/shapes/hero-shape-2.svg') }}" alt="" class="aq a19 a8 a2Z" />
     </section>
   </main>
 @endsection

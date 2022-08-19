@@ -107,14 +107,14 @@
                     @enderror
                   </div>
                   <div class="a2n">
-                    <label for="confirm_password" class="a2d an a1j a1R a2u dark:aT">
+                    <label for="password_confirmation" class="a2d an a1j a1R a2u dark:aT">
                       Confirm Password
                     </label>
                     <input type="password" placeholder="Re-Enter your Password"
-                      class="a4F dark:a38 ab a1u a1C a27 a4z a22 aI a1F aS a4I a24 focus:a1H focus-visible:aM dark:a4G dark:a1w[#1F2656] @error('confirm_password') border-red-500 @enderror"
-                      required autocomplete="new-password" id="confirm_password" type="password" class="form-input w-full"
-                      name="confirm_password" required autocomplete="new-password" />
-                    @error('confirm_password')
+                      class="a4F dark:a38 ab a1u a1C a27 a4z a22 aI a1F aS a4I a24 focus:a1H focus-visible:aM dark:a4G dark:a1w[#1F2656] @error('password_confirmation') border-red-500 @enderror"
+                      required autocomplete="new-password" id="password_confirmation" type="password" class="form-input w-full"
+                      name="password_confirmation" required autocomplete="new-password" />
+                    @error('password_confirmation')
                       <p class="text-red-500 text-xs italic mt-4">
                         {{ $message }}
                       </p>
@@ -175,8 +175,8 @@
                           );
                         ">
       </div>
-      <img src="images/shapes/hero-shape-1.svg" alt="" class="aq a1a a8 a2Z" />
-      <img src="images/shapes/hero-shape-2.svg" alt="" class="aq a19 a8 a2Z" />
+      <img src="{{ asset('assets/images/shapes/hero-shape-1.svg') }}" alt="" class="aq a1a a8 a2Z" />
+      <img src="{{ asset('assets/images/shapes/hero-shape-2.svg') }}" alt="" class="aq a19 a8 a2Z" />
     </section>
   </main>
 @endsection
