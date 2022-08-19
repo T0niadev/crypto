@@ -7,22 +7,24 @@
         <div class="ab ak">
           <div class="a3r aH[720px] a2G">
             <h1 class="a1N a2o a1P a2p a1k dark:aT md:a2Q[45px]">
-               CRYPTO-LUONU
+              CRYPTO-LUONU
             </h1>
 
-            <p class ="a3r a1N aH[620px] aO a1R aQ dark:aT">
-                We  offer a comprehensive, user-friendly, risk-free investing platform that boosts your income potential.
-                We also have  a range investment packages specially curated for you by our highly competent  analysts and predictive tools.
+            <p class="a3r a1N aH[820px] aO a1R aQ dark:aT">
+              We offer a comprehensive, user-friendly, risk-free investing platform that boosts your income potential.
+              We also have a range investment packages specially curated for you by our highly competent analysts and
+              predictive tools.
             </p>
 
 
 
-          <p class="a3r a1N aH[620px] aO a1R aQ dark:aT">
+            <p class="a3r a1N aH[820px] aO a1R aQ dark:aT">
 
-            More financial opportunities than you can think are available to you through cryptocurrency and helium mining, and we've built a platform to help you put those prospects into action.
-            Join the platform to learn how to profit from the expanding helium and cryptocurrency ecosystems.
+              More financial opportunities than you can think are available to you through cryptocurrency and helium
+              mining, and we've built a platform to help you put those prospects into action.
+              Join the platform to learn how to profit from the expanding helium and cryptocurrency ecosystems.
 
-          </p>
+            </p>
             <div class="a3s a1W aa a1L ac a1t sm:a3t">
               <div class="aZ af a3u a3v sm:a3w">
                 <span class="a3x aa a32 a33 ac a1t a1u a1">
@@ -163,12 +165,12 @@
     <img src="{{ asset('assets/images/shapes/hero-shape-2.svg') }}" alt="" class="aq a19 a8 a2Z" />
 
     <div class="ag aa a1L ac a1t">
-        <a href="/register" class="a1u a1A a22 a1E a1F aP aT hover:a2X dark:hover:bg-opacity-90 md-4">
-            Register Now
-        </a>
+      <a href="/register" class="a1u a1A a22 a1E a1F aP aT hover:a2X dark:hover:bg-opacity-90 md-4">
+        Register Now
+      </a>
     </div>
 
-</section>
+  </section>
 
 
 
@@ -179,12 +181,13 @@
       <div class="wow fadeInUp a3E a2l[#F3F4F4] a3F dark:a2l[#2D2C4A]" data-wow-delay="0s">
 
         <h2 class="a1W a2G aO a1P a1k dark:aT sm:a2B">
-            Join the 1,000+ users using the our platform
+          Join the 1,000+ users using the our platform
         </h2>
         <p class="a1W aO a1R aQ dark:aS">
-            Founded on honesty and integrity.
-            We have assurance in our capacity to execute our pledges.
-            We maintain a secure, safe, and reliable trading environment that is designed to minimize losses and give our customers a relaxed atmosphere.
+          Founded on honesty and integrity.
+          We have assurance in our capacity to execute our pledges.
+          We maintain a secure, safe, and reliable trading environment that is designed to minimize losses and give our
+          customers a relaxed atmosphere.
         </p>
 
 
@@ -193,7 +196,7 @@
             <a href="/register" class="a1u a1A a22 a1E a1F aP aT hover:a2X dark:hover:bg-opacity-90 md-4">
                 Register Now
             </a> --}}
-          {{-- <div class="ak">
+        {{-- <div class="ak">
             <a href="https://uideck.com/" target="_blank" rel="nofollow noopenner"
               class="a1W aa aH[170px] a1t a3G a3H hover:a1d hover:a3I dark:hover:a1d">
               <img src="{{ asset('assets/images/brands/uideck-white.svg') }}" alt="uideck"
@@ -210,7 +213,7 @@
                 class="a3r a32 a2G dark:ao" />
             </a>
           </div> --}}
-          {{-- <div class="ak">
+        {{-- <div class="ak">
             <a href="https://lineicons.com/" target="_blank" rel="nofollow noopenner"
               class="a1W aa aH[170px] a1t a3G a3H hover:a1d hover:a3I dark:hover:a1d">
               <img src="{{ asset('assets/images/brands/LineIcons-white.svg') }}" alt="lineicons"
@@ -219,7 +222,7 @@
                 class="a3r a32 a2G dark:ao" />
             </a>
           </div> --}}
-          {{-- <div class="ak">
+        {{-- <div class="ak">
             <a href="https://ayroui.com/" target="_blank" rel="nofollow noopenner"
               class="a1W aa aH[170px] a1t a3G a3H hover:a1d hover:a3I dark:hover:a1d">
               <img src="{{ asset('assets/images/brands/AyroUI-white.svg') }}" alt="ayroui"
@@ -227,7 +230,7 @@
               <img src="images/brands/ayroui.svg" alt="ayroui" class="a3r a32 a2G dark:ao" />
             </a>
           </div> --}}
-          {{-- <div class="ak">
+        {{-- <div class="ak">
             <a href="https://plainadmin.com/" target="_blank" rel="nofollow noopenner"
               class="a1W aa aH[170px] a1t a3G a3H hover:a1d hover:a3I dark:hover:a1d">
               <img src="{{ asset('assets/images/brands/PlainAdmin-white.svg') }}" alt="plainadmin"
@@ -238,7 +241,7 @@
           </div> --}}
         {{-- </div>
       </div> --}}
-    </div>
+      </div>
   </section>
 
   <section id="features" class="a1J[120px] a3J">
@@ -247,7 +250,7 @@
         <span class="a2d aO a1P a3L aR sm:a1O">CRYPTO-LUONO</span>
         <h2 class="a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]">WHY CHOOSE US ?</h2>
         <p class="aO a1R aQ dark:aS">
-            We make trading easy, fast & reliable.
+          We make trading easy, fast & reliable.
         </p>
       </div>
       <div class="ag aa a1L">
@@ -302,7 +305,8 @@
             <div>
               <h3 class="a2d a1O a1P a1k dark:aT sm:a2o lg:a1O xl:a2o">Fast Payments</h3>
               <p class="a1F a1R aQ dark:aS sm:aO lg:a1F xl:aO">
-                All transactions are secure and efficient in real time, and payments are usually completed in less than 24 hours.
+                All transactions are secure and efficient in real time, and payments are usually completed in less than 24
+                hours.
               </p>
             </div>
           </div>
@@ -338,7 +342,8 @@
             <div>
               <h3 class="a2d a1O a1P a1k dark:aT sm:a2o lg:a1O xl:a2o">Advanced Trading Tools</h3>
               <p class="a1F a1R aQ dark:aS sm:aO lg:a1F xl:aO">
-                Set up your own trading interface or deploy your algorithmic strategy with our high-performance FIX and HTTP APIs. Connect to our WebSocket for real-time data streaming.
+                Set up your own trading interface or deploy your algorithmic strategy with our high-performance FIX and
+                HTTP APIs. Connect to our WebSocket for real-time data streaming.
               </p>
             </div>
           </div>
@@ -356,7 +361,8 @@
             <div>
               <h3 class="a2d a1O a1P a1k dark:aT sm:a2o lg:a1O xl:a2o">Stable Profit</h3>
               <p class="a1F a1R aQ dark:aS sm:aO lg:a1F xl:aO">
-                We ensure that the investment package you choose will provide you with the most reliable and safe risk-free income.
+                We ensure that the investment package you choose will provide you with the most reliable and safe
+                risk-free income.
               </p>
             </div>
           </div>
@@ -774,32 +780,18 @@
             <span class="a2d aO a1P a3L aR sm:a1O"> CRYPTO-LUONO</span>
             <h2 class="a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]">
               Buy & trade on the
-               original crypto exchange.
+              original crypto exchange.
             </h2>
             <p class="a1W aO a1R aQ dark:aS">
-              CRYPTO-LUONO makes trading easy, fast & reliable. With 24/7 support, staking and bank-grade security & insurance. Since 2011.
-            <div class="a4i aa ac">
-              {{-- <div class="av">
-                <a href="javascript:void(0)"
-                  class="aa ac a1t a1u a1C a2l[#2D2947] a1w[#2D2947] a4j[10px] a4k a1F aP aT hover:a2X dark:hover:a2X">
-                  <span class="a2k aa a32 a33 ac a1t a1u a1A aT">
-
-                  </span>
+              CRYPTO-LUONO makes trading easy, fast & reliable. With 24/7 support, staking and bank-grade security &
+              insurance. Since 2011.
+            <div class="ao sm:aa">
+              @if (Route::has('register'))
+                <a href="{{ route('register') }}"
+                  class="aa ac a1t a1u a1C a1D aw[9px] a1E a1F aP aQ a1G hover:a1H hover:a1A hover:aT dark:a1I dark:aT dark:hover:a1 dark:hover:aR lg:px-4 xl:px-8">
                   Get Started
                 </a>
-              </div> --}}
-              <div class="av">
-                <a href="/register"
-                  class="aa ac a1t a1u a1C a2l[#2D2947] a7 a4j[10px] a4k a1F aP aQ hover:a1w[#2D294710] dark:aT dark:hover:a1w[#2D2947]">
-                  <span class="a2k aa a32 a33 ac a1t a1u a3 aT dark:a1 dark:a2u">
-                    {{-- <svg width="24" height="24" viewBox="0 0 24 24" class="a1B">
-                      <path
-                        d="M3 20.5V3.50002C3 2.91002 3.34 2.39002 3.84 2.15002L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5ZM16.81 15.12L6.05 21.34L14.54 12.85L16.81 15.12ZM20.16 10.81C20.5 11.08 20.75 11.5 20.75 12C20.75 12.5 20.53 12.9 20.18 13.18L17.89 14.5L15.39 12L17.89 9.50002L20.16 10.81ZM6.05 2.66002L16.81 8.88002L14.54 11.15L6.05 2.66002Z" />
-                    </svg> --}}
-                  </span>
-                  Get Started
-                </a>
-              </div>
+              @endif
             </div>
           </div>
         </div>
@@ -852,8 +844,9 @@
             </div>
             <div>
               <p class="a1F a1R a2f aQ dark:aS">
-               "My first cryptocurrency investment encounter was using Crypto-Luono.
-               I started off as a typical beginner purchase of Bitcoin for the first time, asking legacy traders what a wallet was and why I needed to go through the verification process.
+                "My first cryptocurrency investment encounter was using Crypto-Luono.
+                I started off as a typical beginner purchase of Bitcoin for the first time, asking legacy traders what a
+                wallet was and why I needed to go through the verification process.
                 Now i've made a fortune off this."
               </p>
             </div>
@@ -877,7 +870,8 @@
             <div>
               <p class="a1F a1R a2f aQ dark:aS">
                 “Being a vendor with Crypto-Luono has been terrific.
-                The best part is that I've been able to assist many new investors in making actual money, and support is always responsive and helpful.
+                The best part is that I've been able to assist many new investors in making actual money, and support is
+                always responsive and helpful.
                 Being the first on-ramp to the currency of the future is always gratifying. ”
               </p>
             </div>
@@ -895,15 +889,13 @@
       openFaq3: false,
       openFaq4: false,
       openFaq5: false,
+      openFaq6: false,
+      openFaq7: false,
   }" class="af a2E a1v a4h dark:a1w[#14102C]">
     <div class="ae">
       <div class="wow fadeInUp a3r a3K aH[630px] a2G md:a30" data-wow-delay="0s">
         <span class="a2d aO a1P a3L aR sm:a1O"> FAQ </span>
         <h2 class="a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]">Frequently Asked Questions</h2>
-        {{-- <p class="a3r aH[590px] aO a1R aQ dark:aS">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed congue arcu, In et
-          dignissim quam condimentum vel.
-        </p> --}}
       </div>
       <div class="ag aa a1L a1t">
         <div class="ab ak lg:a2N/12 xl:a1z/12">
@@ -985,8 +977,10 @@
             </button>
             <div x-show="openFaq3" class="faq-content">
               <p class="a4q a4r a1F aQ dark:aS">
-                Our objective is to use our unique technique to gain a steady profit on the cryptocurrency market rather than to outcompete the fierce competition.
-                For investors seeking passive income, we have created customized investment packages with the best service plans and affiliate programs.
+                Our objective is to use our unique technique to gain a steady profit on the cryptocurrency market rather
+                than to outcompete the fierce competition.
+                For investors seeking passive income, we have created customized investment packages with the best service
+                plans and affiliate programs.
               </p>
             </div>
           </div>
@@ -1013,12 +1007,13 @@
             </button>
             <div x-show="openFaq4" class="faq-content">
               <p class="a4q a4r a1F aQ dark:aS">
-                Due to the expertise of our staff and our wealth of experience, the risks to our investors are kept to a minimum.
+                Due to the expertise of our staff and our wealth of experience, the risks to our investors are kept to a
+                minimum.
               </p>
             </div>
           </div>
           <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0s">
-            <button @click="openFaq4 = !openFaq4" class="faq-btn aa ab ac ah a4l">
+            <button @click="openFaq5 = !openFaq5" class="faq-btn aa ab ac ah a4l">
               <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">How do i get started?</h3>
               <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq4 && 'a4p'">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
@@ -1037,17 +1032,19 @@
                 </svg>
               </span>
             </button>
-            <div x-show="openFaq4" class="faq-content">
+            <div x-show="openFaq5" class="faq-content">
               <p class="a4q a4r a1F aQ dark:aS">
                 You should first sign up on our website.
                 It only takes a few minutes to complete the registration process.
-                Fill out the registration form completely, log in to your account, select the best investing strategy, and deposit funds into your account.
-                After that, you will be formally tagged an investor and start receiving payments in accordance with the service plan you have selected.
+                Fill out the registration form completely, log in to your account, select the best investing strategy, and
+                deposit funds into your account.
+                After that, you will be formally tagged an investor and start receiving payments in accordance with the
+                service plan you have selected.
               </p>
             </div>
           </div>
           <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0s">
-            <button @click="openFaq4 = !openFaq4" class="faq-btn aa ab ac ah a4l">
+            <button @click="openFaq6 = !openFaq6" class="faq-btn aa ab ac ah a4l">
               <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">How does this really work?</h3>
               <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq4 && 'a4p'">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
@@ -1066,15 +1063,18 @@
                 </svg>
               </span>
             </button>
-            <div x-show="openFaq4" class="faq-content">
+            <div x-show="openFaq6" class="faq-content">
               <p class="a4q a4r a1F aQ dark:aS">
-                After creating you account, choose an investment plan that perfectly suits you. The minimum deposit amount is $25 while the maximum - $100,000. Deposits can be made via different payment methods. However, withdrawal can only be made via the same deposit method. The minimum withdrawal amount is $1.
-                You can choose multiple investment plans, make deposits and withdrawal on the different investment packages a using a single account.
+                After creating you account, choose an investment plan that perfectly suits you. The minimum deposit amount
+                is $25 while the maximum - $100,000. Deposits can be made via different payment methods. However,
+                withdrawal can only be made via the same deposit method. The minimum withdrawal amount is $1.
+                You can choose multiple investment plans, make deposits and withdrawal on the different investment
+                packages a using a single account.
               </p>
             </div>
           </div>
           <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0s">
-            <button @click="openFaq4 = !openFaq4" class="faq-btn aa ab ac ah a4l">
+            <button @click="openFaq7 = !openFaq7" class="faq-btn aa ab ac ah a4l">
               <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">Do i make money from referrals?</h3>
               <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq4 && 'a4p'">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
@@ -1093,9 +1093,10 @@
                 </svg>
               </span>
             </button>
-            <div x-show="openFaq4" class="faq-content">
+            <div x-show="openFaq7" class="faq-content">
               <p class="a4q a4r a1F aQ dark:aS">
-                Yes, you get 5% of commission for every deposit a referral makes. You  can receive referral commission via  only the payment systems used to make the deposit.
+                Yes, you get 5% of commission for every deposit a referral makes. You can receive referral commission via
+                only the payment systems used to make the deposit.
               </p>
             </div>
           </div>
@@ -1274,10 +1275,12 @@
             <div class="ab ak sm:a1M/2">
               <div class="wow fadeInUp a4w aH[250px]" data-wow-delay="0s">
                 <h3 class="a1N aO aP a2u dark:aT">Email Address</h3>
-                    <p class="a1F a1R a4u aQ dark:aS">
-                    <a href="cdn-cgi/l/email-protection.html" class="__cf_email__"
-                        data-cfemail="1871767e775861776d6a7c7775797176367b7775">caprth@mail.com</a>
-                    </p>
+                <p class="a1F a1R a4u aQ dark:aS">
+                  <a href="mailto:admin@crypto-luono.com" class="__cf_email__"
+                    data-cfemail="1871767e775861776d6a7c7775797176367b7775">caprth@mail.com</a>
+
+                    <a href="mailto:"></a>
+                </p>
               </div>
             </div>
           </div>

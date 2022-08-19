@@ -40,90 +40,12 @@
     <div class="ae">
       <div class="af ag aa ac ah">
         <div class="ai aj ak">
-          <a href="index.html" :class="scrolledFromTop && '!al lg:!am'" class="an ab a2h lg:aW">
+          <a href="{{ route('welcome') }}" :class="scrolledFromTop && '!al lg:!am'" class="an ab a2h lg:aW">
             <img src="{{ asset('assets/images/logo/logo.svg') }}" alt="logo" class="ab dark:ao" />
             <img src="{{ asset('assets/images/logo/logo-white.svg') }}" alt="logo" class="ao ab dark:an" />
           </a>
         </div>
-        <div class="aa ab ac ap ak">
-          <div>
-            <button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarTogglerActive'" id="navbarToggler"
-              class="aq ar as/2 an at/2 au av aw[6px] ax focus:ay lg:ao">
-              <span :class="navbarOpen && 'az aA[7px]'" class="af aB[6px] an aC[2px] aD[30px] a2 dark:a1"></span>
-              <span :class="navbarOpen && 'aE'" class="af aB[6px] an aC[2px] aD[30px] a2 dark:a1"></span>
-              <span :class="navbarOpen && 'aA[-8px] aF[135deg]'"
-                class="af aB[6px] an aC[2px] aD[30px] a2 dark:a1"></span>
-            </button>
-            <nav :class="!navbarOpen && 'ao'" id="navbarCollapse"
-              class="aq ar aG ab aH[250px] au a1 al aI aJ dark:a2 lg:aK lg:an lg:ab lg:aj lg:a7 lg:aL lg:aM dark:lg:a7">
-              <ul class="aN lg:aa">
-                <li class="aQ dark:aS">
-                  <a href="#home"
-                    class="scroll-menu aa am aO aP aR hover:aR dark:aT dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="#features"
-                    class="scroll-menu aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a href="/get-started"
-                    class="scroll-menu aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY">
-                    Get Started
-                  </a>
-                </li>
-                <li>
-                    <a href="#faq"
-                      class="scroll-menu aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY">
-                      FAQ
-                    </a>
-                </li>
-                {{-- <li class="aZ submenu-item af">
-                  <a href="javascript:void(0)" @click="dropdownOpen = !dropdownOpen"
-                    class="af aa am aO aP aQ after:aq after:a_ after:as/2 after:a10[-2px] after:a11 after:a12 after:a13[-50%] after:az after:a14 after:a15 after:a16 group-hover:aR dark:aS dark:group-hover:aT lg:aU lg:aV lg:aW lg:a17 lg:a18 lg:after:a19 xl:aX 2xl:aY">
-                    Pages
-                  </a>
-                  <div :class="dropdownOpen ? 'an' : 'ao lg:an '"
-                    class="submenu af aG a1a au a1 a1b[top] a1c group-hover:a1d dark:a2 lg:a1e lg:aq lg:aA[115%] lg:aD[250px] lg:a1f lg:aE lg:a1g lg:group-hover:a1h lg:group-hover:aG">
-                    <a href="blog-grid.html" class="an a1i aw[10px] a1j a1k hover:aR dark:aT dark:hover:aR lg:ak">
-                      Blog Grid Page
-                    </a>
-                    <a href="blog-details.html" class="an a1i aw[10px] a1j a1k hover:aR dark:aT dark:hover:aR lg:ak">
-                      Blog Details Page
-                    </a>
-                    <a href="token-sale.html" class="an a1i aw[10px] a1j a1k hover:aR dark:aT dark:hover:aR lg:ak">
-                      Token Sale Page
-                    </a>
-                    <a href="support.html" class="an a1i aw[10px] a1j a1k hover:aR dark:aT dark:hover:aR lg:ak">
-                      Support Page
-                    </a>
-                    @if (Route::has('login'))
-                      <a href="{{ route('login') }}"
-                        class="an a1i aw[10px] a1j a1k hover:aR dark:aT dark:hover:aR lg:ak">
-                        Signin Page
-                      </a>
-                    @endif
-                    @if (Route::has('register'))
-                      <a href="{{ route('register') }}"
-                        class="an a1i aw[10px] a1j a1k hover:aR dark:aT dark:hover:aR lg:ak">
-                        Signup Page
-                      </a>
-                    @endif
-                  </div>
-                </li> --}}
-                <li>
-                  <a href="#contact"
-                    class="scroll-menu aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY">
-                    Support
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="aa ap a1l lg:a1m xl:a1n 2xl:a1o">
+          <div class="aa ap lg:a1m xl:a1n 2xl:a1o">
             <div class="a1p">
               <label for="darkToggler" class="aa a1q a1r a1s ac a1t a1u a1v dark:a1w[#1E2763]">
                 <input type="checkbox" name="darkToggler" id="darkToggler" checked class="a1x"
@@ -170,7 +92,7 @@
               <img src="{{ asset('assets/images/logo/logo.svg') }}" alt="logo" class="dark:ao" />
             </a>
             <p class="a1W a1F a1R aQ dark:aS">
-                Converts well, receive more 
+                Converts well, receive more
             </p>
             <div class="aa ac a31">
               <a href="javascript:void(0)"
