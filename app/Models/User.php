@@ -17,7 +17,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    
+
 
     protected $guarded = [];
 
@@ -39,4 +39,33 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function investments()
+    {
+        return $this->hasMany(Investment::class);
+    }
+    // Users relationships with wallets
+    public function wallet()
+    {
+        return $this->hasOne(Wallet::class);
+    }
+    // Users relationships with transactions
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
+    }
+    // Users relationships with Bank Accounts.
+    public function bankAccounts()
+    {
+        return $this->hasMany(BankAccount::class);
+    }
+    // Users relationships with Documents.
+    public function documents()
+    {
+        return $this->hasMany(Document::class);
+    }
+    public function payments(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(PaypalPayment::class);
+    }
 }
