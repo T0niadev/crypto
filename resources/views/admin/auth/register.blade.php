@@ -96,16 +96,16 @@
           @enderror
         </div>
         <div class="mb-1">
-          <label for="confirm_password" class="form-label">Confirm Password</label>
+          <label for="password_confirmation" class="form-label">Confirm Password</label>
 
           <div class="input-group input-group-merge form-password-toggle">
-            <input class="form-control form-control-merge @error('confirm_password') is-invalid @enderror"
+            <input class="form-control form-control-merge @error('password_confirmation') is-invalid @enderror"
               placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-              aria-describedby="password" tabindex="3" id="confirm_password" type="password" name="confirm_password" required
+              aria-describedby="password" tabindex="3" id="password_confirmation" type="password" name="password_confirmation" required
               autocomplete="new-password" />
             <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
           </div>
-          @error('confirm_password')
+          @error('password_confirmation')
             <span class="invalid-feedback" role="alert">
               <strong>{{ $message }}</strong>
             </span>
