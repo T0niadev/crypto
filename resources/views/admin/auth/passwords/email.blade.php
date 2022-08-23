@@ -43,6 +43,7 @@
       <p class="card-text mb-2">Enter your email and we'll send you instructions to reset your password</p>
 
       <form class="auth-forgot-password-form mt-2" action="{{ route('admin.password.email') }}" method="POST">
+        @csrf
         <div class="mb-1">
           <label for="email" class="form-label">Email</label>
           <input placeholder="john@example.com" aria-describedby="email" tabindex="1" autofocus id="email"
