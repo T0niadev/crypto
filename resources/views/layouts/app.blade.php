@@ -54,7 +54,7 @@
           <!-- Main Sections Links -->
           <div class="is-scrollbar-hidden flex grow flex-col space-y-4 overflow-y-auto pt-6">
             <!-- Dashobards -->
-            <a href="dashboards-crm-analytics.html"
+            <a href="{{route('dashboard')}}"
               class="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:bg-navy-600 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90"
               x-tooltip.placement.right="'Dashboards'">
               <svg class="h-7 w-7" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,9 +73,9 @@
             </a>
 
             <!-- Apps -->
-            <a href="apps-list.html"
+            <a href="{{ route('wallet') }}"
               class="flex h-11 w-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
-              x-tooltip.placement.right="'Applications'">
+              x-tooltip.placement.right="'Wallet'">
               <svg class="h-7 w-7" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M5 8H19V16C19 17.8856 19 18.8284 18.4142 19.4142C17.8284 20 16.8856 20 15 20H9C7.11438 20 6.17157 20 5.58579 19.4142C5 18.8284 5 17.8856 5 16V8Z"
@@ -92,10 +92,10 @@
               </svg>
             </a>
 
-            <!-- Pages And Layouts -->
-            <a href="pages-card-user-1.html"
+            <!-- Investments -->
+            <a href={{route('investment') }}
               class="flex h-11 w-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
-              x-tooltip.placement.right="'Pages & Layouts'">
+              x-tooltip.placement.right="'Investments'">
               <svg class="h-7 w-7" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M9.85714 3H4.14286C3.51167 3 3 3.51167 3 4.14286V9.85714C3 10.4883 3.51167 11 4.14286 11H9.85714C10.4883 11 11 10.4883 11 9.85714V4.14286C11 3.51167 10.4883 3 9.85714 3Z"
@@ -112,10 +112,10 @@
               </svg>
             </a>
 
-            <!-- Forms -->
-            <a href="form-input-text.html"
+            <!-- Transactions -->
+            <a href="{{route('transaction')}}"
               class="flex h-11 w-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
-              x-tooltip.placement.right="'Forms'">
+              x-tooltip.placement.right="'Transactions'">
               <svg class="h-7 w-7" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-opacity="0.3"
                   d="M21.0001 16.05V18.75C21.0001 20.1 20.1001 21 18.7501 21H6.6001C6.9691 21 7.3471 20.946 7.6981 20.829C7.7971 20.793 7.89609 20.757 7.99509 20.712C8.31009 20.586 8.61611 20.406 8.88611 20.172C8.96711 20.109 9.05711 20.028 9.13811 19.947L9.17409 19.911L15.2941 13.8H18.7501C20.1001 13.8 21.0001 14.7 21.0001 16.05Z"
@@ -164,7 +164,7 @@
           <!-- Bottom Links -->
           <div class="flex flex-col items-center space-y-3 py-3">
             <!-- Settings -->
-            <a href="form-layout-5.html"
+            <a href="{{route('profile')}}"
               class="flex h-11 w-11 items-center justify-center rounded-lg text-slate-500 outline-none transition-colors duration-200 hover:bg-primary/20 hover:text-primary focus:bg-primary/25 focus:text-primary dark:text-navy-200 dark:hover:bg-accent dark:hover:text-white dark:focus:bg-accent dark:focus:text-white">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24"
                 stroke="currentColor">
