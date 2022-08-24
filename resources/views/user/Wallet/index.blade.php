@@ -9,13 +9,14 @@
         <div
             class="mt-4 grid grid-cols-12 gap-4 sm:mt-5 sm:gap-5 lg:mt-6 lg:gap-6"
         >
+
             <div
             class="col-span-12 grid grid-cols-12 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 py-5 sm:py-6"
             >
             <div class="col-span-12 sm:col-span-6 lg:col-span-4">
                 <div class="px-4 text-white sm:px-5">
                 <div class="-mt-1 flex items-center space-x-2">
-                    <h2 class="text-base font-medium tracking-wide">Balance</h2>
+                    <h2 class="text-base font-medium tracking-wide">Wallet Balance</h2>
                     <div
                     x-data="usePopper({placement:'bottom-end',offset:4})"
                     @click.outside="if(isShowPopper) isShowPopper = false"
@@ -97,7 +98,7 @@
 
                 <div class="mt-4 flex space-x-7">
                     <div>
-                    <p class="text-indigo-100">Income</p>
+                    <p class="text-indigo-100">Deposit</p>
                     <div class="mt-1 flex items-center space-x-2">
                         <div
                         class="flex h-7 w-7 items-center justify-center rounded-full bg-black/20"
@@ -117,11 +118,11 @@
                             />
                         </svg>
                         </div>
-                        <p class="text-base font-medium">$2,225.22</p>
+                        {{-- <p class="text-base font-medium">$2,225.22</p> --}}
                     </div>
                     </div>
                     <div>
-                    <p class="text-indigo-100">Expense</p>
+                    <p class="text-indigo-100">Withdrawal</p>
                     <div class="mt-1 flex items-center space-x-2">
                         <div
                         class="flex h-7 w-7 items-center justify-center rounded-full bg-black/20"
@@ -141,7 +142,7 @@
                             />
                         </svg>
                         </div>
-                        <p class="text-base font-medium">$225.22</p>
+                        {{-- <p class="text-base font-medium">$225.22</p> --}}
                     </div>
                     </div>
                 </div>
@@ -162,8 +163,8 @@
                     >
                         <div class="flex items-center justify-between">
                         <img
-                            class="h-3"
-                            src="{{ asset('assets/images/payments/cc-visa-white.svg' ) }}"
+                            class="h-30"
+                            src="{{ asset('assets/images/payments/coins.png' ) }}"
                             alt="image"
                         />
                         <svg
@@ -182,14 +183,91 @@
                         </svg>
                         </div>
                         <div class="text-white">
-                        <p class="text-lg font-semibold tracking-wide">
-                            $1,686.66
-                        </p>
-                        <p class="mt-1 text-xs font-medium">
-                            **** **** **** 7946
-                        </p>
+                            <p class="mt-1 text-xs font-medium">
+                            Make Deposit With
+                            </p>
+                            <a  href="" class="text-lg font-semibold tracking-wide">
+                                CoinRemmiter
+                            </a>
+                            <p class="mt-1 text-xs font-medium">
+
+                            </p>
+
                         </div>
                     </div>
+                    </div>
+                    {{-- <div class="swiper-slide relative h-40 w-64 shrink-0 rounded-lg bg-gradient-to-br from-[#ffffff55] to-[#ffffff20]">
+                        <div class="absolute inset-0 flex flex-col justify-between rounded-lg border border-white/10 p-5">
+                            <div class="flex items-center justify-between">
+                            <img
+                                class="h-30"
+                                src="{{ asset('assets/images/payments/paypal.jpg' ) }}"
+                                alt="image"
+                            />
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 text-indigo-100"
+                                fill="none"
+                                stroke="currentColor"
+                                viewbox="0 0 24 24"
+                            >
+                                <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M5.343 7.257a.5.5 0 01.354.147 6.5 6.5 0 010 9.192.64.64 0 00-.073.087 4.718 4.718 0 01-.56-.094 1.301 1.301 0 01-.109-.03.5.5 0 01.035-.67 5.5 5.5 0 000-7.778.5.5 0 01.353-.854zm-.422 9.288a.06.06 0 010 0zM15 1.6a.5.5 0 01.354.147 14.5 14.5 0 010 20.506.5.5 0 11-.708-.707 13.5 13.5 0 000-19.092A.5.5 0 0115 1.6zM10.172 4.43a.5.5 0 01.353.146 10.5 10.5 0 010 14.85.5.5 0 11-.707-.707 9.5 9.5 0 000-13.436.5.5 0 01.354-.853z"
+                                />
+                            </svg>
+                            </div>
+
+                            <div class="text-white">
+                                <p class="mt-1 text-xs font-medium">
+                                Make Deposit With
+                                </p>
+                                <a  href="" class="text-lg font-semibold tracking-wide">
+                                    Paypal
+                                </a>
+
+                            </div>
+                        </div>
+                    </div> --}}
+                    <div class="swiper-slide relative h-40 w-64 shrink-0 rounded-lg bg-gradient-to-br from-[#ffffff55] to-[#ffffff20]">
+                        <div class="absolute inset-0 flex flex-col justify-between rounded-lg border border-white/10 p-5">
+                            <div class="flex items-center justify-between">
+                            <img
+                                class="h-30"
+                                src="{{ asset('assets/images/payments/paypal.png' ) }}"
+                                alt="image"
+                            />
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 text-indigo-100"
+                                fill="none"
+                                stroke="currentColor"
+                                viewbox="0 0 24 24"
+                            >
+                                <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M5.343 7.257a.5.5 0 01.354.147 6.5 6.5 0 010 9.192.64.64 0 00-.073.087 4.718 4.718 0 01-.56-.094 1.301 1.301 0 01-.109-.03.5.5 0 01.035-.67 5.5 5.5 0 000-7.778.5.5 0 01.353-.854zm-.422 9.288a.06.06 0 010 0zM15 1.6a.5.5 0 01.354.147 14.5 14.5 0 010 20.506.5.5 0 11-.708-.707 13.5 13.5 0 000-19.092A.5.5 0 0115 1.6zM10.172 4.43a.5.5 0 01.353.146 10.5 10.5 0 010 14.85.5.5 0 11-.707-.707 9.5 9.5 0 000-13.436.5.5 0 01.354-.853z"
+                                />
+                            </svg>
+                            </div>
+                            <div class="text-white">
+                                <p class="mt-1 text-xs font-medium">
+                                Make Deposit With
+                                </p>
+                                <a  href="" class="text-lg font-semibold tracking-wide">
+                                    Paypal
+                                </a>
+
+
+                                <p class="mt-1 text-xs font-medium">
+                                    **** **** **** 8945
+                                </p>
+                            </div>
+                        </div>
                     </div>
                     <div
                     class="swiper-slide relative h-40 w-64 shrink-0 rounded-lg bg-gradient-to-br from-[#ffffff55] to-[#ffffff20]"
@@ -199,8 +277,8 @@
                     >
                         <div class="flex items-center justify-between">
                         <img
-                            class="h-3"
-                            src="{{ asset('assets/images/payments/cc-visa-white.svg' ) }}"
+                            class="h-20"
+                            src="{{ asset('assets/images/payments/stripe.png' ) }}"
                             alt="image"
                         />
                         <svg
@@ -218,87 +296,14 @@
                             />
                         </svg>
                         </div>
-                        <div class="text-white">
-                        <p class="text-lg font-semibold tracking-wide">
-                            $5,589.16
-                        </p>
                         <p class="mt-1 text-xs font-medium">
-                            **** **** **** 5699
+                            Make Deposit With
                         </p>
-                        </div>
-                    </div>
-                    </div>
-                    <div
-                    class="swiper-slide relative h-40 w-64 shrink-0 rounded-lg bg-gradient-to-br from-[#ffffff55] to-[#ffffff20]"
-                    >
-                    <div
-                        class="absolute inset-0 flex flex-col justify-between rounded-lg border border-white/10 p-5"
-                    >
-                        <div class="flex items-center justify-between">
-                        <img
-                            class="h-3"
-                            src="{{ asset('assets/images/payments/cc-visa-white.svg' ) }}"
-                            alt="image"
-                        />
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5 text-indigo-100"
-                            fill="none"
-                            stroke="currentColor"
-                            viewbox="0 0 24 24"
-                        >
-                            <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.5"
-                            d="M5.343 7.257a.5.5 0 01.354.147 6.5 6.5 0 010 9.192.64.64 0 00-.073.087 4.718 4.718 0 01-.56-.094 1.301 1.301 0 01-.109-.03.5.5 0 01.035-.67 5.5 5.5 0 000-7.778.5.5 0 01.353-.854zm-.422 9.288a.06.06 0 010 0zM15 1.6a.5.5 0 01.354.147 14.5 14.5 0 010 20.506.5.5 0 11-.708-.707 13.5 13.5 0 000-19.092A.5.5 0 0115 1.6zM10.172 4.43a.5.5 0 01.353.146 10.5 10.5 0 010 14.85.5.5 0 11-.707-.707 9.5 9.5 0 000-13.436.5.5 0 01.354-.853z"
-                            />
-                        </svg>
-                        </div>
                         <div class="text-white">
-                        <p class="text-lg font-semibold tracking-wide">
-                            $2,139.22
-                        </p>
-                        <p class="mt-1 text-xs font-medium">
-                            **** **** **** 8945
-                        </p>
-                        </div>
-                    </div>
-                    </div>
-                    <div
-                    class="swiper-slide relative h-40 w-64 shrink-0 rounded-lg bg-gradient-to-br from-[#ffffff55] to-[#ffffff20]"
-                    >
-                    <div
-                        class="absolute inset-0 flex flex-col justify-between rounded-lg border border-white/10 p-5"
-                    >
-                        <div class="flex items-center justify-between">
-                        <img
-                            class="h-3"
-                            src="{{ asset('assets/images/payments/cc-visa-white.svg' ) }}"
-                            alt="image"
-                        />
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5 text-indigo-100"
-                            fill="none"
-                            stroke="currentColor"
-                            viewbox="0 0 24 24"
-                        >
-                            <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.5"
-                            d="M5.343 7.257a.5.5 0 01.354.147 6.5 6.5 0 010 9.192.64.64 0 00-.073.087 4.718 4.718 0 01-.56-.094 1.301 1.301 0 01-.109-.03.5.5 0 01.035-.67 5.5 5.5 0 000-7.778.5.5 0 01.353-.854zm-.422 9.288a.06.06 0 010 0zM15 1.6a.5.5 0 01.354.147 14.5 14.5 0 010 20.506.5.5 0 11-.708-.707 13.5 13.5 0 000-19.092A.5.5 0 0115 1.6zM10.172 4.43a.5.5 0 01.353.146 10.5 10.5 0 010 14.85.5.5 0 11-.707-.707 9.5 9.5 0 000-13.436.5.5 0 01.354-.853z"
-                            />
-                        </svg>
-                        </div>
-                        <div class="text-white">
-                        <p class="text-lg font-semibold tracking-wide">
-                            $369.74
-                        </p>
-                        <p class="mt-1 text-xs font-medium">
-                            **** **** **** 2568
-                        </p>
+                        <a href="" class="text-lg font-semibold tracking-wide">
+                            Stripe
+                        </a>
+
                         </div>
                     </div>
                     </div>
@@ -396,11 +401,11 @@
                 <div class="flex items-center space-x-4">
                 <div class="flex cursor-pointer items-center space-x-2">
                     <div class="h-3 w-3 rounded-full bg-accent"></div>
-                    <p>Sales</p>
+                    <p>Investments</p>
                 </div>
                 <div class="flex cursor-pointer items-center space-x-2">
                     <div class="h-3 w-3 rounded-full bg-info"></div>
-                    <p>Profit</p>
+                    <p>Returns</p>
                 </div>
                 </div>
             </div>
@@ -426,7 +431,7 @@
                         <div class="avatar">
                         <img
                             class="rounded-full"
-                            src="{{ asset('assets/images/avatar/avatar-20.jpg' ) }}"
+                            src="{{ asset('assets/images/blogs/blog-detail.jpg' ) }}"
                             alt="avatar"
                         />
                         </div>
@@ -434,7 +439,7 @@
                         <p
                             class="text-slate-700 line-clamp-1 dark:text-navy-100"
                         >
-                            Konnor Guzman
+                          WIT24-08-22-01
                         </p>
                         <p
                             class="text-xs text-slate-400 line-clamp-1 dark:text-navy-200"
@@ -450,7 +455,7 @@
                         <div class="avatar">
                         <img
                             class="rounded-full"
-                            src="{{ asset('assets/images/avatar/avatar-19.jpg' ) }}"
+                            src="{{ asset('assets/images/blogs/blog-detail.jpg' ) }}"
                             alt="avatar"
                         />
                         </div>
@@ -458,7 +463,7 @@
                         <p
                             class="text-slate-700 line-clamp-1 dark:text-navy-100"
                         >
-                            Henry Curtis
+                         WIT24-08-22-02
                         </p>
                         <p
                             class="text-xs text-slate-400 line-clamp-1 dark:text-navy-200"
@@ -474,7 +479,7 @@
                         <div class="avatar">
                         <img
                             class="rounded-full"
-                            src="{{ asset('assets/images/avatar/avatar-18.jpg' ) }}"
+                            src="{{ asset('assets/images/blogs/blog-detail.jpg' ) }}"
                             alt="avatar"
                         />
                         </div>
@@ -482,7 +487,7 @@
                         <p
                             class="text-slate-700 line-clamp-1 dark:text-navy-100"
                         >
-                            Derrick Simmons
+                            Dep24-08-22-03
                         </p>
                         <p
                             class="text-xs text-slate-400 line-clamp-1 dark:text-navy-200"
@@ -498,7 +503,7 @@
                         <div class="avatar">
                         <img
                             class="rounded-full"
-                            src="{{ asset('assets/images/avatar/avatar-11.jpg' ) }}"
+                            src="{{ asset('assets/images/blogs/blog-detail.jpg' ) }}"
                             alt="avatar"
                         />
                         </div>
@@ -506,7 +511,7 @@
                         <p
                             class="text-slate-700 line-clamp-1 dark:text-navy-100"
                         >
-                            Kartina West
+                          DEP24-08-22-01
                         </p>
                         <p
                             class="text-xs text-slate-400 line-clamp-1 dark:text-navy-200"
@@ -522,7 +527,7 @@
                         <div class="avatar">
                         <img
                             class="rounded-full"
-                            src="{{ asset('assets/images/avatar/avatar-7.jpg' ) }}"
+                            src="{{ asset('assets/images/blogs/blog-detail.jpg' ) }}"
                             alt="avatar"
                         />
                         </div>
@@ -530,7 +535,7 @@
                         <p
                             class="text-slate-700 line-clamp-1 dark:text-navy-100"
                         >
-                            Samantha Shelton
+                         DEP24-08-22-02
                         </p>
                         <p
                             class="text-xs text-slate-400 line-clamp-1 dark:text-navy-200"
@@ -546,7 +551,7 @@
                         <div class="avatar">
                         <img
                             class="rounded-full"
-                            src="{{ asset('assets/images/avatar/avatar-5.jpg' ) }}"
+                            src="{{ asset('assets/images/blogs/blog-detail.jpg' ) }}"
                             alt="avatar"
                         />
                         </div>
@@ -554,7 +559,7 @@
                         <p
                             class="text-slate-700 line-clamp-1 dark:text-navy-100"
                         >
-                            Joe Perkins
+                          DEP24-08-22-01
                         </p>
                         <p
                             class="text-xs text-slate-400 line-clamp-1 dark:text-navy-200"
@@ -575,7 +580,7 @@
                 <h2
                 class="font-medium tracking-wide text-slate-700 dark:text-navy-100"
                 >
-                Send Money
+                Investment Packages
                 </h2>
                 <div
                 x-data="usePopper({placement:'bottom-end',offset:4})"
@@ -616,26 +621,28 @@
                         <a
                             href="#"
                             class="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100"
-                            >Action</a
+                            >Coin Remmitter</a
                         >
                         </li>
                         <li>
                         <a
                             href="#"
                             class="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100"
-                            >Another Action</a
+                            >Paypal</a
                         >
+
                         </li>
-                        <li>
+                        {{-- <li>
                         <a
                             href="#"
                             class="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100"
                             >Something else</a
                         >
-                        </li>
+                        </li> --}}
                     </ul>
+
                     <div class="my-1 h-px bg-slate-150 dark:bg-navy-500"></div>
-                    <ul>
+                    {{-- <ul>
                         <li>
                         <a
                             href="#"
@@ -643,45 +650,56 @@
                             >Separated Link</a
                         >
                         </li>
-                    </ul>
+                    </ul> --}}
                     </div>
                 </div>
                 </div>
             </div>
             <div class="flex space-x-2">
-                <div class="avatar h-8 w-8 hover:z-10">
+                {{-- <div class="avatar h-8 w-8 hover:z-10"> --}}
                 <img
                     class="rounded-full ring ring-white dark:ring-navy-700"
-                    src="{{ asset('assets/images/avatar/avatar-16.jpg' ) }}"
+                    src="{{ asset('assets/images/blogs/image-01.jpg' ) }}"
+
                     alt="avatar"
                 />
+
+                </div>
+
+                <div class="mt-2 space-y-4">
+                    <i>
+                        Take advantage of the specially curated investment packages we have for you
+                    </i>
+                    <p>
+                        click here
+                    </p>
                 </div>
 
                 <div class="avatar h-8 w-8 hover:z-10">
-                <div
+                {{-- <div
                     class="is-initial rounded-full bg-info text-xs+ uppercase text-white ring ring-white dark:ring-navy-700"
                 >
                     jd
-                </div>
+                </div> --}}
                 </div>
 
-                <div class="avatar h-8 w-8 hover:z-10">
+                {{-- <div class="avatar h-8 w-8 hover:z-10">
                 <img
                     class="rounded-full ring ring-white dark:ring-navy-700"
                     src="{{ asset('assets/images/avatar/avatar-20.jpg' ) }}"
                     alt="avatar"
                 />
-                </div>
+                </div> --}}
 
-                <div class="avatar h-8 w-8 hover:z-10">
+                {{-- <div class="avatar h-8 w-8 hover:z-10">
                 <img
                     class="rounded-full ring ring-white dark:ring-navy-700"
                     src="{{ asset('assets/images/avatar/avatar-19.jpg' ) }}"
                     alt="avatar"
                 />
-                </div>
+                </div> --}}
             </div>
-            <div class="mt-2 flex items-center justify-between">
+            {{-- <div class="mt-2 flex items-center justify-between">
                 <p class="text-xs+">View All Contacts</p>
 
                 <button
@@ -747,9 +765,10 @@
             <button
                 class="btn mt-5 h-10 w-full bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90"
             >
-                Send Money
-            </button>
+                deposit
+            </button> --}}
             </div>
+
         </div>
     </main>
 @endsection

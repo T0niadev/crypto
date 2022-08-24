@@ -7,7 +7,7 @@
         <h2
             class="text-xl font-medium text-slate-800 dark:text-navy-50 lg:text-2xl"
         >
-            Form Layout 5
+            Profile
         </h2>
         <div class="hidden h-full py-1 sm:flex">
             <div class="h-full w-px bg-slate-300 dark:bg-navy-600"></div>
@@ -17,7 +17,7 @@
             <a
                 class="text-primary transition-colors hover:text-primary-focus dark:text-accent-light dark:hover:text-accent"
                 href="#"
-                >Forms</a
+                >Settings</a
             >
             <svg
                 x-ignore
@@ -35,7 +35,7 @@
                 />
             </svg>
             </li>
-            <li>Form Layout 5</li>
+            <li>Edit Profile</li>
         </ul>
         </div>
 
@@ -46,7 +46,7 @@
                 <div class="avatar h-14 w-14">
                 <img
                     class="rounded-full"
-                    src="{{ asset('assets/images/avatar/avatar-20.jpg' ) }}"
+                    src="{{ asset('assets/images/avatar/avatar.png' ) }}"
                     alt="avatar"
                 />
                 </div>
@@ -54,9 +54,9 @@
                 <h3
                     class="text-base font-medium text-slate-700 dark:text-navy-100"
                 >
-                    Travis Fuller
+                    User
                 </h3>
-                <p class="text-xs+">Author</p>
+                <p class="text-xs+">User</p>
                 </div>
             </div>
             <ul class="mt-6 space-y-1.5 font-inter font-medium">
@@ -206,7 +206,7 @@
                 <div class="avatar mt-1.5 h-20 w-20">
                     <img
                     class="mask is-squircle"
-                    src="{{ asset('assets/images/avatar/avatar-20.jpg' ) }}"
+                    src="{{ asset('assets/images/avatar/avatar.png' ) }}"
                     alt="avatar"
                     />
                     <div
@@ -291,6 +291,35 @@
                     </span>
                     </span>
                 </label>
+
+                <div>
+                    <span>Change Password</span>
+                    <label class="block">
+                      <input
+                        class="form-input w-full rounded-lg border border-success bg-transparent px-3 py-2 placeholder:text-slate-400/70"
+                        placeholder="Enter Password"
+                        type="text"
+                        value=""
+                      />
+                    </label>
+                    <span class="text-tiny+ text-success"></span>
+
+                    </div>
+                    <span></span>
+                    <div>
+                      <label class="block">
+                        <input
+                          class="form-input w-full rounded-lg border border-success bg-transparent px-3 py-2 placeholder:text-slate-400/70"
+                          placeholder="Confirm Password"
+                          type="text"
+                          value=""
+                        />
+                      </label>
+                      <span class="text-tiny+ text-success"></span>
+                  </div>
+                  <div>
+
+                  </div>
                 </div>
                 <div class="my-7 h-px bg-slate-200 dark:bg-navy-500"></div>
                 <div>
@@ -299,9 +328,9 @@
                 >
                     Linked Accounts
                 </h3>
-                <p class="text-xs+ text-slate-400 dark:text-navy-300">
+                {{-- <p class="text-xs+ text-slate-400 dark:text-navy-300">
                     Lorem ipsum dolor sit amet consectetur.
-                </p>
+                </p> --}}
                 <div class="flex items-center justify-between pt-4">
                     <div class="flex items-center space-x-4">
                     <div class="h-12 w-12">

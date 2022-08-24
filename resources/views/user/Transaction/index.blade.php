@@ -8,7 +8,7 @@
       <h3
         class="text-lg font-medium text-slate-700 line-clamp-1 dark:text-navy-50"
       >
-        Workspaces Overview
+        Transactions Overview
       </h3>
       <div class="flex">
         <button
@@ -64,7 +64,7 @@
             <h2
               class="text-sm+ font-medium tracking-wide text-slate-700 dark:text-navy-100"
             >
-              Server traffic
+              Transaction History
             </h2>
             <div
               x-data="usePopper({placement:'bottom-start',offset:4})"
@@ -169,7 +169,7 @@
       <div
         class="order-first col-span-12 grid grid-cols-2 gap-4 sm:order-none sm:gap-5 lg:col-span-5 lg:gap-6"
       >
-        <div class="card row-span-2 justify-between py-5 px-2 text-center">
+        {{-- <div class="card row-span-2 justify-between py-5 px-2 text-center">
           <p
             class="font-medium tracking-wide text-slate-700 dark:text-navy-100"
           >
@@ -188,8 +188,8 @@
               >Good</span
             >
           </p>
-        </div>
-        <div class="card justify-center p-4">
+        </div> --}}
+        {{-- <div class="card justify-center p-4">
           <div class="flex items-center space-x-3">
             <div>
               <div
@@ -202,8 +202,8 @@
               Storage Usage
             </div>
           </div>
-        </div>
-        <div class="card justify-center p-4">
+        </div> --}}
+        {{-- <div class="card justify-center p-4">
           <div class="flex items-center space-x-3">
             <div>
               <div
@@ -216,8 +216,8 @@
               Memory Usage
             </div>
           </div>
-        </div>
-        <div class="card flex-row overflow-hidden">
+        </div> --}}
+        {{-- <div class="card flex-row overflow-hidden">
           <div class="h-full w-1 shrink-0 bg-primary dark:bg-accent"></div>
           <div class="p-4 font-inter">
             <div class="flex items-baseline space-x-2">
@@ -230,8 +230,8 @@
             </div>
             <p class="text-xs">Daily traffic</p>
           </div>
-        </div>
-        <div class="card flex-row overflow-hidden">
+        </div> --}}
+        {{-- <div class="card flex-row overflow-hidden">
           <div class="h-full w-1 shrink-0 bg-info"></div>
           <div class="p-4 font-inter">
             <div class="flex items-baseline space-x-2">
@@ -244,7 +244,7 @@
             </div>
             <p class="text-xs">Hourly traffic</p>
           </div>
-        </div>
+        </div> --}}
       </div>
     </div>
 
@@ -261,7 +261,7 @@
           <h2
             class="text-base font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100"
           >
-            Table With Filter
+
           </h2>
           <div class="flex">
             <div class="flex items-center" x-data="{isInputActive:false}">
@@ -321,11 +321,11 @@
               class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:gap-6"
             >
               <label class="block">
-                <span>Employer name:</span>
+                <span>Transaction type:</span>
                 <div class="relative mt-1.5 flex">
                   <input
                     class="form-input peer w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 pl-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                    placeholder="Enter Employer Name"
+                    placeholder="Enter Transaction Type"
                     type="text"
                   />
                   <span
@@ -347,11 +347,11 @@
                 </div>
               </label>
               <label class="block">
-                <span>Project name:</span>
+                <span>Transaction ID:</span>
                 <div class="relative mt-1.5 flex">
                   <input
                     class="form-input peer w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 pl-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                    placeholder="Enter Project Name"
+                    placeholder="Enter Transaction ID"
                     type="text"
                   />
                   <span
@@ -438,7 +438,7 @@
                 </div>
               </label>
               <div class="sm:col-span-2">
-                <span>Project Status:</span>
+                <span>Transaction Status:</span>
                 <div
                   class="mt-2 grid grid-cols-1 gap-4 sm:grid-cols-4 sm:gap-5 lg:gap-6"
                 >
@@ -505,12 +505,12 @@
                   <th
                     class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
                   >
-                    Project Name
+                    Transaction ID
                   </th>
                   <th
                     class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
                   >
-                    Employer Name
+                   Transaction Type
                   </th>
 
                   <th
@@ -526,7 +526,7 @@
                   <th
                     class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
                   >
-                    Deadline
+                    Transaction Date
                   </th>
                 </tr>
               </thead>
@@ -538,10 +538,10 @@
                   <td
                     class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
                   >
-                    Web Application
+                  WIT24-08-22-02
                   </td>
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    John Doe
+                    Withdrawal
                   </td>
 
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
@@ -573,10 +573,10 @@
                   <td
                     class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
                   >
-                    Android App
+                   DEP24-08-22-01
                   </td>
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    Sabina Mores
+                    Deposit
                   </td>
 
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
@@ -608,10 +608,10 @@
                   <td
                     class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
                   >
-                    Android App
+                   DEP24-08-22-02
                   </td>
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    Bailie Coulman
+                    Deposit
                   </td>
 
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
@@ -637,10 +637,10 @@
                   <td
                     class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
                   >
-                    Desktop App
+                    WIT24-08-22-01
                   </td>
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    Richardo Aldren
+                    Withdrawal
                   </td>
 
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
@@ -668,10 +668,10 @@
                   <td
                     class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
                   >
-                    CRM App
+                  DEP24-08-22-03
                   </td>
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    Nolan Doe
+                    Deposit
                   </td>
 
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">

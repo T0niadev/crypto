@@ -12,7 +12,7 @@
                 <h3
                     class="text-xl font-medium text-slate-800 dark:text-navy-50"
                 >
-                    Featured Artists
+                    Available Bundles
                 </h3>
                 <a
                     href="#"
@@ -24,94 +24,94 @@
                 <div class="card items-center pb-5 text-center">
                     <img
                     class="h-24 w-full rounded-t-lg object-cover object-center"
-                    src="{{ asset('assets/images/object/object-2.jpg' ) }}"
+                    src="{{ asset('assets/images/payments/invest3.png' ) }}"
                     alt="image"
                     />
-                    <div class="avatar -mt-12 h-20 w-20">
+                    {{-- <div class="avatar -mt-12 h-20 w-20">
                     <img
                         class="rounded-full border-2 border-white dark:border-navy-700"
                         src="{{ asset('assets/images/avatar/avatar-4.jpg') }}"
                         alt="avatar"
                     />
-                    </div>
+                    </div> --}}
                     <div class="mt-1.5 px-2">
                     <a
                         href="#"
                         class="text-base font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light"
                     >
-                        Travis Fuller
+                       Wage Growth Shield Bundle
                     </a>
                     <p class="text-xs text-slate-400 dark:text-navy-300">
-                        USA, Washington DC
+                       Gold Coverage with Bitcoin Performance
                     </p>
                     <button
                         class="btn mt-4 h-8 min-w-[7rem] rounded-full bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90"
                     >
-                        Follow
+                        Check Out
                     </button>
                     </div>
                 </div>
                 <div class="card items-center pb-5 text-center">
                     <img
                     class="h-24 w-full rounded-t-lg object-cover object-center"
-                    src="{{ asset('assets/images/object/object-7.jpg' ) }}"
+                    src="{{ asset('assets/images/payments/invest3.png' ) }}"
                     alt="image"
                     />
-                    <div class="avatar -mt-12 h-20 w-20">
+                    {{-- <div class="avatar -mt-12 h-20 w-20">
                     <img
                         class="rounded-full border-2 border-white dark:border-navy-700"
                         src="{{ asset('assets/images/avatar/avatar-5.jpg' ) }}"
                         alt="avatar"
                     />
-                    </div>
+                    </div> --}}
                     <div class="mt-1.5 px-2">
                     <a
                         href="#"
                         class="text-base font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light"
                     >
-                        Alfredo Elliott
+                       Payment Bundle
                     </a>
                     <p class="text-xs text-slate-400 dark:text-navy-300">
-                        Australia, Sydney
+                        Track and invest in the top cryptocurrencies that will revolutionize money and its value
                     </p>
                     <button
                         class="btn mt-4 h-8 min-w-[7rem] rounded-full bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90"
                     >
-                        Follow
+                        Check Out
                     </button>
                     </div>
                 </div>
                 <div class="card items-center pb-5 text-center">
                     <img
                     class="h-24 w-full rounded-t-lg object-cover object-center"
-                    src="{{ asset('assets/images/object/object-9.jpg' ) }}"
+                    src="{{ asset('assets/images/payments/invest3.png' ) }}"
                     alt="image"
                     />
-                    <div class="avatar -mt-12 h-20 w-20">
+                    {{-- <div class="avatar -mt-12 h-20 w-20">
                     <img
                         class="rounded-full border-2 border-white dark:border-navy-700"
                         src="{{ asset('assets/images/avatar/avatar-6.jpg' ) }}"
                         alt="avatar"
                     />
-                    </div>
+                    </div> --}}
                     <div class="mt-1.5 px-2">
                     <a
                         href="#"
                         class="text-base font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light"
                     >
-                        Raul Bradley
+                        DEC Bundle
                     </a>
                     <p class="text-xs text-slate-400 dark:text-navy-300">
-                        Germany, Berlin
+                       Invest in the future of decentralised, automated and digital financial systems
                     </p>
                     <button
                         class="btn mt-4 h-8 min-w-[7rem] rounded-full bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90"
                     >
-                        Follow
+                        check out
                     </button>
                     </div>
                 </div>
-                <div class="card items-center pb-5 text-center">
+                {{-- <div class="card items-center pb-5 text-center">
                     <img
                     class="h-24 w-full rounded-t-lg object-cover object-center"
                     src="{{ asset('assets/images/object/object-16.jpg' ) }}"
@@ -140,7 +140,7 @@
                         Follow
                     </button>
                     </div>
-                </div>
+                </div> --}}
                 </div>
             </div>
 
@@ -149,7 +149,7 @@
                 <h3
                     class="text-xl font-medium text-slate-800 dark:text-navy-50"
                 >
-                    Feed
+                    My Investment Packages
                 </h3>
 
                 <div
@@ -239,21 +239,21 @@
                 <div class="card group p-3">
                     <div class="flex items-center justify-between space-x-2 px-1">
                     <div class="flex items-center space-x-2">
-                        <div class="avatar h-9 w-9">
+                        {{-- <div class="avatar h-9 w-9">
                         <img
                             class="rounded-full"
                             src="{{ asset('assets/images/avatar/avatar-20.jpg' ) }}"
                             alt="avatar"
                         />
-                        </div>
+                        </div> --}}
                         <div>
                         <a
                             href="#"
                             class="font-medium text-slate-600 line-clamp-1 dark:text-navy-100"
-                            >Travis Fuller</a
+                            >WGS-02</a
                         >
                         <p class="text-xs text-primary dark:text-accent-light">
-                            952 items
+                            Get 40% of your investment after 24 hours
                         </p>
                         </div>
                     </div>
@@ -275,7 +275,7 @@
                     <div class="relative mt-4">
                     <img
                         class="h-56 w-full rounded-lg object-cover object-center"
-                        src="{{ asset('assets/images/object/object-12.jpg' ) }}"
+                        src="{{ asset('assets/images/blogs/blog-detail.jpg' ) }}"
                         alt="image"
                     />
                     <div
@@ -287,7 +287,7 @@
                         <button
                         class="btn min-w-[7rem] border border-white/10 bg-white/20 text-white backdrop-blur hover:bg-white/30 focus:bg-white/30"
                         >
-                        Place a Bid
+                        View Details
                         </button>
                     </div>
                     </div>
@@ -296,23 +296,24 @@
                         href="#"
                         class="text-base font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light"
                     >
-                        The Runner #265
+                        40% after 24 hours
                     </a>
                     <div class="my-3 h-px bg-slate-200 dark:bg-navy-500"></div>
                     <div class="flex justify-between">
                         <div>
                         <p class="text-xs text-slate-400 dark:text-navy-300">
-                            Ending in
+                            Minimum Deposit: $1500
+
                         </p>
                         <p
                             class="text-base font-medium text-slate-700 dark:text-navy-100"
                         >
-                            9h 12m 33s
+                            Maximum Deposit: $8000
                         </p>
                         </div>
                         <div class="text-right">
                         <p class="text-xs text-slate-400 dark:text-navy-300">
-                            Highest bid
+                            My Bid
                         </p>
                         <p
                             class="text-base font-medium text-primary dark:text-accent-light"
@@ -327,21 +328,21 @@
                 <div class="card group p-3">
                     <div class="flex items-center justify-between space-x-2 px-1">
                     <div class="flex items-center space-x-2">
-                        <div class="avatar h-9 w-9">
+                        {{-- <div class="avatar h-9 w-9">
                         <img
                             class="rounded-full"
-                            src="{{ asset('assets/images/avatar/avatar-11.jpg' ) }}"
+                            src="{{ asset('assets/images/avatar/avatar-20.jpg' ) }}"
                             alt="avatar"
                         />
-                        </div>
+                        </div> --}}
                         <div>
                         <a
                             href="#"
                             class="font-medium text-slate-600 line-clamp-1 dark:text-navy-100"
-                            >Katrina West</a
+                            >WGS-04</a
                         >
                         <p class="text-xs text-primary dark:text-accent-light">
-                            896 items
+                            Get 200% of your investment after 48 hours
                         </p>
                         </div>
                     </div>
@@ -363,7 +364,7 @@
                     <div class="relative mt-4">
                     <img
                         class="h-56 w-full rounded-lg object-cover object-center"
-                        src="{{ asset('assets/images/object/object-11.jpg' ) }}"
+                        src="{{ asset('assets/images/blogs/blog-detail.jpg' ) }}"
                         alt="image"
                     />
                     <div
@@ -375,7 +376,7 @@
                         <button
                         class="btn min-w-[7rem] border border-white/10 bg-white/20 text-white backdrop-blur hover:bg-white/30 focus:bg-white/30"
                         >
-                        Place a Bid
+                        View Details
                         </button>
                     </div>
                     </div>
@@ -384,28 +385,28 @@
                         href="#"
                         class="text-base font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light"
                     >
-                        Punkiber #015
+                        200% after 24 hours
                     </a>
                     <div class="my-3 h-px bg-slate-200 dark:bg-navy-500"></div>
                     <div class="flex justify-between">
                         <div>
                         <p class="text-xs text-slate-400 dark:text-navy-300">
-                            Ending in
+                            Minimum Deposit: $10000
                         </p>
                         <p
                             class="text-base font-medium text-slate-700 dark:text-navy-100"
                         >
-                            2h 48m 18s
+                           Maximum Deposit: $150000
                         </p>
                         </div>
                         <div class="text-right">
                         <p class="text-xs text-slate-400 dark:text-navy-300">
-                            Highest bid
+                            My Bid
                         </p>
                         <p
                             class="text-base font-medium text-primary dark:text-accent-light"
                         >
-                            11.06 ETH
+                            4.56 ETH
                         </p>
                         </div>
                     </div>
@@ -415,110 +416,21 @@
                 <div class="card group p-3">
                     <div class="flex items-center justify-between space-x-2 px-1">
                     <div class="flex items-center space-x-2">
-                        <div class="avatar h-9 w-9">
+                        {{-- <div class="avatar h-9 w-9">
                         <img
                             class="rounded-full"
-                            src="{{ asset('assets/images/avatar/avatar-19.jpg' ) }}"
+                            src="{{ asset('assets/images/avatar/avatar-20.jpg' ) }}"
                             alt="avatar"
                         />
-                        </div>
+                        </div> --}}
                         <div>
                         <a
                             href="#"
                             class="font-medium text-slate-600 line-clamp-1 dark:text-navy-100"
-                            >Raul Bradley</a
+                            >WGS-01</a
                         >
                         <p class="text-xs text-primary dark:text-accent-light">
-                            1,643 items
-                        </p>
-                        </div>
-                    </div>
-                    <button
-                        x-data="{isLiked:true}"
-                        @click="isLiked = !isLiked"
-                        class="btn h-9 w-9 bg-slate-150 p-0 text-slate-800 hover:bg-slate-200 focus:bg-slate-200 active:bg-slate-200/80 dark:bg-navy-500 dark:text-navy-50 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90"
-                    >
-                        <i
-                        x-show="!isLiked"
-                        class="fa-regular fa-heart text-lg"
-                        ></i>
-                        <i
-                        x-show="isLiked"
-                        class="fa-solid fa-heart text-lg text-error"
-                        ></i>
-                    </button>
-                    </div>
-                    <div class="relative mt-4">
-                    <img
-                        class="h-56 w-full rounded-lg object-cover object-center"
-                        src="{{ asset('assets/images/object/object-19.jpg' ) }}"
-                        alt="image"
-                    />
-                    <div
-                        class="absolute top-0 h-full w-full rounded-lg bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                    ></div>
-                    <div
-                        class="absolute top-0 flex h-full w-full items-center justify-center opacity-0 group-hover:opacity-100"
-                    >
-                        <button
-                        class="btn min-w-[7rem] border border-white/10 bg-white/20 text-white backdrop-blur hover:bg-white/30 focus:bg-white/30"
-                        >
-                        Place a Bid
-                        </button>
-                    </div>
-                    </div>
-
-                    <div class="mt-3 px-1">
-                    <a
-                        href="#"
-                        class="text-base font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light"
-                    >
-                        Cube Store #015
-                    </a>
-                    <div class="my-3 h-px bg-slate-200 dark:bg-navy-500"></div>
-                    <div class="flex justify-between">
-                        <div>
-                        <p class="text-xs text-slate-400 dark:text-navy-300">
-                            Ending in
-                        </p>
-                        <p
-                            class="text-base font-medium text-slate-700 dark:text-navy-100"
-                        >
-                            1d 6s 16m
-                        </p>
-                        </div>
-                        <div class="text-right">
-                        <p class="text-xs text-slate-400 dark:text-navy-300">
-                            Highest bid
-                        </p>
-                        <p
-                            class="text-base font-medium text-primary dark:text-accent-light"
-                        >
-                            7.23 ETH
-                        </p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="card group p-3">
-                    <div class="flex items-center justify-between space-x-2 px-1">
-                    <div class="flex items-center space-x-2">
-                        <div class="avatar h-9 w-9">
-                        <img
-                            class="rounded-full"
-                            src="{{ asset('assets/images/avatar/avatar-18.jpg' ) }}"
-                            alt="avatar"
-                        />
-                        </div>
-                        <div>
-                        <a
-                            href="#"
-                            class="font-medium text-slate-600 line-clamp-1 dark:text-navy-100"
-                            >Henry Curtis</a
-                        >
-                        <p class="text-xs text-primary dark:text-accent-light">
-                            163 items
+                            Get 20% of your investment after 24 hours
                         </p>
                         </div>
                     </div>
@@ -540,7 +452,7 @@
                     <div class="relative mt-4">
                     <img
                         class="h-56 w-full rounded-lg object-cover object-center"
-                        src="{{ asset('assets/images/object/object-17.jpg' ) }}"
+                        src="{{ asset('assets/images/blogs/blog-detail.jpg' ) }}"
                         alt="image"
                     />
                     <div
@@ -552,96 +464,7 @@
                         <button
                         class="btn min-w-[7rem] border border-white/10 bg-white/20 text-white backdrop-blur hover:bg-white/30 focus:bg-white/30"
                         >
-                        Place a Bid
-                        </button>
-                    </div>
-                    </div>
-
-                    <div class="mt-3 px-1">
-                    <a
-                        href="#"
-                        class="text-base font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light"
-                    >
-                        Abstraktio #699
-                    </a>
-                    <div class="my-3 h-px bg-slate-200 dark:bg-navy-500"></div>
-                    <div class="flex justify-between">
-                        <div>
-                        <p class="text-xs text-slate-400 dark:text-navy-300">
-                            Ending in
-                        </p>
-                        <p
-                            class="text-base font-medium text-slate-700 dark:text-navy-100"
-                        >
-                            2d 4s 52m
-                        </p>
-                        </div>
-                        <div class="text-right">
-                        <p class="text-xs text-slate-400 dark:text-navy-300">
-                            Highest bid
-                        </p>
-                        <p
-                            class="text-base font-medium text-primary dark:text-accent-light"
-                        >
-                            3.09 ETH
-                        </p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="card group p-3">
-                    <div class="flex items-center justify-between space-x-2 px-1">
-                    <div class="flex items-center space-x-2">
-                        <div class="avatar h-9 w-9">
-                        <img
-                            class="rounded-full"
-                            src="{{ asset('assets/images/avatar/avatar-5.jpg' ) }}"
-                            alt="avatar"
-                        />
-                        </div>
-                        <div>
-                        <a
-                            href="#"
-                            class="font-medium text-slate-600 line-clamp-1 dark:text-navy-100"
-                            >Lance Tucker
-                        </a>
-                        <p class="text-xs text-primary dark:text-accent-light">
-                            533 items
-                        </p>
-                        </div>
-                    </div>
-                    <button
-                        x-data="{isLiked:true}"
-                        @click="isLiked = !isLiked"
-                        class="btn h-9 w-9 bg-slate-150 p-0 text-slate-800 hover:bg-slate-200 focus:bg-slate-200 active:bg-slate-200/80 dark:bg-navy-500 dark:text-navy-50 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90"
-                    >
-                        <i
-                        x-show="!isLiked"
-                        class="fa-regular fa-heart text-lg"
-                        ></i>
-                        <i
-                        x-show="isLiked"
-                        class="fa-solid fa-heart text-lg text-error"
-                        ></i>
-                    </button>
-                    </div>
-                    <div class="relative mt-4">
-                    <img
-                        class="h-56 w-full rounded-lg object-cover object-center"
-                        src="{{ asset('assets/images/object/object-13.jpg' ) }}"
-                        alt="image"
-                    />
-                    <div
-                        class="absolute top-0 h-full w-full rounded-lg bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                    ></div>
-                    <div
-                        class="absolute top-0 flex h-full w-full items-center justify-center opacity-0 group-hover:opacity-100"
-                    >
-                        <button
-                        class="btn min-w-[7rem] border border-white/10 bg-white/20 text-white backdrop-blur hover:bg-white/30 focus:bg-white/30"
-                        >
-                        Place a Bid
+                        View Details
                         </button>
                     </div>
                     </div>
@@ -650,125 +473,42 @@
                         href="#"
                         class="text-base font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light"
                     >
-                        Galaxy #236
+                        20% after 24 hours
                     </a>
                     <div class="my-3 h-px bg-slate-200 dark:bg-navy-500"></div>
                     <div class="flex justify-between">
                         <div>
                         <p class="text-xs text-slate-400 dark:text-navy-300">
-                            Ending in
+                            Minimum Deposit: $150
                         </p>
                         <p
                             class="text-base font-medium text-slate-700 dark:text-navy-100"
                         >
-                            4d 5s 3m
+                           Maximum Deposit: $1500
                         </p>
                         </div>
                         <div class="text-right">
                         <p class="text-xs text-slate-400 dark:text-navy-300">
-                            Highest bid
+                            My Bid
                         </p>
                         <p
                             class="text-base font-medium text-primary dark:text-accent-light"
                         >
-                            1.49 ETH
+                            4.56 ETH
                         </p>
                         </div>
                     </div>
                     </div>
                 </div>
 
-                <div class="card group p-3">
-                    <div class="flex items-center justify-between space-x-2 px-1">
-                    <div class="flex items-center space-x-2">
-                        <div class="avatar h-9 w-9">
-                        <img
-                            class="rounded-full"
-                            src="{{ asset('assets/images/avatar/avatar-12.jpg' ) }}"
-                            alt="avatar"
-                        />
-                        </div>
-                        <div>
-                        <a
-                            href="#"
-                            class="font-medium text-slate-600 line-clamp-1 dark:text-navy-100"
-                            >Henry Curtis
-                        </a>
-                        <p class="text-xs text-primary dark:text-accent-light">
-                            669 items
-                        </p>
-                        </div>
-                    </div>
-                    <button
-                        x-data="{isLiked:false}"
-                        @click="isLiked = !isLiked"
-                        class="btn h-9 w-9 bg-slate-150 p-0 text-slate-800 hover:bg-slate-200 focus:bg-slate-200 active:bg-slate-200/80 dark:bg-navy-500 dark:text-navy-50 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90"
-                    >
-                        <i
-                        x-show="!isLiked"
-                        class="fa-regular fa-heart text-lg"
-                        ></i>
-                        <i
-                        x-show="isLiked"
-                        class="fa-solid fa-heart text-lg text-error"
-                        ></i>
-                    </button>
-                    </div>
-                    <div class="relative mt-4">
-                    <img
-                        class="h-56 w-full rounded-lg object-cover object-center"
-                        src="{{ asset('assets/images/object/object-2.jpg' ) }}"
-                        alt="image"
-                    />
-                    <div
-                        class="absolute top-0 h-full w-full rounded-lg bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                    ></div>
-                    <div
-                        class="absolute top-0 flex h-full w-full items-center justify-center opacity-0 group-hover:opacity-100"
-                    >
-                        <button
-                        class="btn min-w-[7rem] border border-white/10 bg-white/20 text-white backdrop-blur hover:bg-white/30 focus:bg-white/30"
-                        >
-                        Place a Bid
-                        </button>
-                    </div>
-                    </div>
-                    <div class="mt-3 px-1">
-                    <a
-                        href="#"
-                        class="text-base font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light"
-                    >
-                        Avrang #965
-                    </a>
-                    <div class="my-3 h-px bg-slate-200 dark:bg-navy-500"></div>
-                    <div class="flex justify-between">
-                        <div>
-                        <p class="text-xs text-slate-400 dark:text-navy-300">
-                            Ending in
-                        </p>
-                        <p
-                            class="text-base font-medium text-slate-700 dark:text-navy-100"
-                        >
-                            6d 2s 11m
-                        </p>
-                        </div>
-                        <div class="text-right">
-                        <p class="text-xs text-slate-400 dark:text-navy-300">
-                            Highest bid
-                        </p>
-                        <p
-                            class="text-base font-medium text-primary dark:text-accent-light"
-                        >
-                            3.63 ETH
-                        </p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
+
                 </div>
             </div>
             </div>
             <div
+
+
+
             class="col-span-12 space-y-4 sm:space-y-5 lg:col-span-4 lg:space-y-6 xl:col-span-3"
             >
             <div class="card bg-gradient-to-br from-info to-info-focus p-4">
@@ -792,7 +532,8 @@
             <div class="card p-3">
                 <img
                 class="h-56 w-full rounded-lg object-cover object-center"
-                src="{{ asset('assets/images/object/object-18.jpg' ) }}"
+                {{-- src="{{ asset('assets/images/object/object-18.jpg' ) }}" --}}
+                src="{{ asset('assets/images/blogs/image-01.jpg' ) }}"
                 alt="image"
                 />
                 <div class="mt-3 p-1">
@@ -801,7 +542,7 @@
                     href="#"
                     class="text-base font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light"
                     >
-                    The Runner #033
+                    Other Investment Packages
                     </a>
                     <button
                     x-data="{isLiked:true}"
@@ -816,15 +557,14 @@
                     </button>
                 </div>
                 <p class="mt-2 text-xs+">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Perferendis optio laudantium
+                    Check out the other investment packages available.
                 </p>
                 <div class="mt-5 flex items-center justify-between space-x-2">
                     <div class="flex items-center space-x-2">
                     <div class="avatar h-10 w-10">
                         <img
                         class="rounded-full"
-                        src="{{ asset('assets/images/avatar/avatar-20.jpg' ) }}"
+                        src="{{ asset('assets/images/blogs/image-01.jpg' ) }}"
                         alt="avatar"
                         />
                     </div>
@@ -832,20 +572,20 @@
                         <a
                         href="#"
                         class="font-medium text-slate-600 line-clamp-1 dark:text-navy-100"
-                        >Travis Fuller</a
+                        >DEC-01</a
                         >
                         <p class="text-xs text-slate-400 dark:text-navy-300">
-                        952 items
+                        40% after 48 hours
                         </p>
                     </div>
                     </div>
                     <button
                     class="btn h-7 rounded-full bg-primary/10 px-2.5 text-xs font-medium text-primary hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:bg-accent-light/10 dark:text-accent-light dark:hover:bg-accent-light/20 dark:focus:bg-accent-light/20 dark:active:bg-accent-light/25"
                     >
-                    Follow
+                    View other packages
                     </button>
                 </div>
-                <p class="mt-6 font-medium">Action End in</p>
+                <p class="mt-6 font-medium">Package expires in</p>
                 <div
                     class="mt-3 grid grid-cols-3 gap-3 text-center font-inter text-4xl font-semibold text-primary dark:text-accent-light"
                 >
@@ -853,12 +593,12 @@
                     <div
                         class="rounded-lg bg-primary/10 py-3 dark:bg-accent-light/10"
                     >
-                        1
+                        0
                     </div>
                     <div
                         class="rounded-lg bg-primary/10 py-3 dark:bg-accent-light/10"
                     >
-                        4
+                        9
                     </div>
                     </div>
                     <div class="grid grid-cols-2 gap-1">
@@ -887,16 +627,16 @@
                     </div>
                 </div>
                 <div class="mt-2 grid grid-cols-3 gap-3 text-center text-xs+">
+                    <p>months</p>
+                    <p>days</p>
                     <p>hours</p>
-                    <p>minutes</p>
-                    <p>seconds</p>
                 </div>
                 <div class="my-5 h-px bg-slate-200 dark:bg-navy-500"></div>
                 <div class="flex items-center justify-between">
                     <p
                     class="text-lg font-medium text-slate-700 dark:text-navy-100"
                     >
-                    156 ETH
+                    Minimum Deposit: $1500
                     </p>
                     <button
                     class="btn h-9 min-w-[7rem] rounded-full bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90"
@@ -907,7 +647,7 @@
                 </div>
             </div>
 
-            <div class="card px-4 pb-4">
+            {{-- <div class="card px-4 pb-4">
                 <div class="my-3 flex h-8 items-center justify-between">
                 <h2
                     class="text-sm+ font-medium tracking-wide text-slate-700 dark:text-navy-100"
@@ -1038,7 +778,7 @@
                     <p class="text-xs">a day ago</p>
                 </div>
                 </div>
-            </div>
+            </div> --}}
             </div>
         </div>
     </main>
