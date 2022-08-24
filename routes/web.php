@@ -26,6 +26,7 @@ Route::get('/investment', [\App\Http\Controllers\InvestmentController::class, 'i
 Route::get('/dashboard', [\App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
 Route::get('/profile', [\App\Http\Controllers\UserController::class, 'index'])->name('profile');
 Route::get('/transaction', [\App\Http\Controllers\TransactionController::class, 'index'])->name('transaction');
+Route::get('/document', [\App\Http\Controllers\DocumentController::class, 'index'])->name('document');  
 
 Route::prefix('google')->name('google.')->group(function () {
     Route::get('login', [GoogleController::class, 'loginWithGoogle'])->name('login');
