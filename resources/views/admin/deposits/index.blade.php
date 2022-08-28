@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 @section('content')
 <div class="main-panel">
-    
+
         <div class="page-inner mt--5">
 
             <div class="row">
@@ -9,7 +9,7 @@
                     <div class="card">
                         <div class="card-header card_header_bg_blue" >
                             <div class="card-head-row card-tools-still-right">
-                                <h4 class="card-title text-white" > <i class="fas fa-donate"></i> {{ __('Deposit History') }} </h4>
+                                <h4 class="card-title text-white" > <i class="fas fa-donate"></i> {{ __('Deposit Histories') }} </h4>
                                 <div class="card-tools">
                                     <form action="/admin/search/deposit" method="post">
                                         <div class="input-group">
