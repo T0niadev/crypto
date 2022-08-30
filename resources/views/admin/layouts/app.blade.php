@@ -20,13 +20,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
         rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/vendors/css/vendors.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/vendors/css/charts/apexcharts.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/vendors/css/extensions/toastr.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/vendors/css/vendors.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('assets/admin/vendors/css/tables/datatable/dataTables.bootstrap5.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('assets/admin/vendors/css/tables/datatable/responsive.bootstrap5.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('assets/admin/vendors/css/tables/datatable/buttons.bootstrap5.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('assets/admin/vendors/css/tables/datatable/rowGroup.bootstrap5.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('assets/admin/vendors/css/pickers/flatpickr/flatpickr.min.css') }}">
+    @yield('pageVendorCss')
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/css/bootstrap-extended.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/css/colors.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/css/components.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/css/themes/dark-layout.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/css/themes/bordered-layout.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/css/themes/semi-dark-layout.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/css/bootstrap-extended.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/css/colors.min.css') }}">
@@ -42,6 +63,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/css/plugins/charts/chart-apex.min.css') }}">
     <link rel="stylesheet" type="text/css"
         href="{{ asset('assets/admin/css/plugins/extensions/ext-component-toastr.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('assets/admin/css/core/menu/menu-types/vertical-menu.min.css') }}">
+    @yield('pageCss')
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
@@ -529,7 +553,7 @@
                         data-feather="more-horizontal"></i>
                 </li>
                 <li class=" nav-item"><a class="d-flex align-items-center" href="{{route('admin.user')}}"><i
-                            data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Manage
+                            data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">
                             Users</span></a>
                 </li>
                 <li class=" nav-item"><a class="d-flex align-items-center" href="{{ route('admin.package') }}"><i
@@ -724,16 +748,35 @@
     <!-- BEGIN: Page Vendor JS-->
     <script src="{{ asset('assets/admin/vendors/js/charts/apexcharts.min.js') }}"></script>
     <script src="{{ asset('assets/admin/vendors/js/extensions/toastr.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/dataTables.bootstrap5.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/dataTables.responsive.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/responsive.bootstrap5.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/datatables.checkboxes.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/datatables.buttons.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/jszip.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/pdfmake.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/vfs_fonts.js') }}"></script>
+    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/buttons.html5.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/buttons.print.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/dataTables.rowGroup.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/vendors/js/pickers/flatpickr/flatpickr.min.js') }}"></script>
+    @yield('pageVendorScript')
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
     <script src="{{ asset('assets/admin/js/scripts/customizer.min.js') }}"></script>
     <script src="{{ asset('assets/admin/js/core/app-menu.min.js') }}"></script>
     <script src="{{ asset('assets/admin/js/core/app.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/core/app-menu.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/core/app.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/scripts/customizer.min.js') }}"></script>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
     <script src="{{ asset('assets/admin/js/scripts/pages/dashboard-ecommerce.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/scripts/tables/table-datatables-basic.min.js') }}"></script>
+    @yield('pageScript')
     <!-- END: Page JS-->
 
     <script>
