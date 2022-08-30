@@ -30,7 +30,6 @@ class PackageController extends Controller
     {
         //
         return view('admin.packages.create');
-
     }
 
     /**

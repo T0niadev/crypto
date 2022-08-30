@@ -73,7 +73,6 @@ class InvestmentController extends Controller
     public function update(Request $request, $id)
     {
 
-
         $request->validate([
             "slots" => 'required',
             "amount" => 'required',

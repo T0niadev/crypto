@@ -61,8 +61,13 @@
                                                 <button class="fa fa-search btn"></button>
                                             </div>
                                         </div>
-                                    </form>
-                                </div>
+                                        <input type="text" name="search_val" class="form-control"
+                                            placeholder="Search by Username, Amount, Bank, Date, Capital or Status">
+                                        <div class="input-group-append">
+                                            <button class="btn"><i class="fa fa-search"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
 
                             <p class="card-category text-white"> {{ __('All registered users.') }} </p>
@@ -128,11 +133,11 @@
                                 @endforeach
                             </table>
 
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 @endsection

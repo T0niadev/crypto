@@ -125,11 +125,12 @@
                                 </tbody>
                                 @endforeach
                             </table>
-
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Small Table end -->
+
         </div>
     </div>
 </div>
