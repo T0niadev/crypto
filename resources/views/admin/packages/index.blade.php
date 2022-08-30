@@ -29,9 +29,9 @@
                         <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                 data-feather="grid"></i></button>
-                        <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="app-todo.html"><i
+                        <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="/admin/packages/create"><i
                                     class="me-1" data-feather="check-square"></i><span
-                                    class="align-middle">Todo</span></a><a class="dropdown-item" href="app-chat.html"><i
+                                    class="align-middle">Create Package</span></a><a class="dropdown-item" href="/admin/create/package"><i
                                     class="me-1" data-feather="message-square"></i><span
                                     class="align-middle">Chat</span></a><a class="dropdown-item"
                                 href="app-email.html"><i class="me-1" data-feather="mail"></i><span
@@ -73,7 +73,7 @@
                             <table class="table table-lg">
                                 <thead>
                                     <tr>
-                                        <th>Avatar</th>
+                                        <th>Image</th>
                                         <th>Package Name</th>
                                         <th>Min Amount</th>
                                         <th>Max Amount</th>

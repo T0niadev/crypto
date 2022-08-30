@@ -3,6 +3,9 @@
 @section('content')
 
 <!-- BEGIN: Content-->
+
+
+
 <div class="app-content content ">
     <div class="content-overlay"></div>
     <div class="header-navbar-shadow"></div>
@@ -11,12 +14,12 @@
             <div class="content-header-left col-md-9 col-12 mb-2">
                 <div class="row breadcrumbs-top">
                     <div class="col-12">
-                        <h2 class="content-header-title float-start mb-0">All Package</h2>
+                        <h2 class="content-header-title float-start mb-0">All Investments</h2>
                         <div class="breadcrumb-wrapper">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a>
                                 </li>
-                                <li class="breadcrumb-item active">All Package
+                                <li class="breadcrumb-item active">All Investments
                                 </li>
                             </ol>
                         </div>
@@ -45,7 +48,7 @@
         <div class="content-body">
             <!-- Small Table start -->
             <div class="row" id="table-small">
-                <div class="col-12">
+                <div class="col-md-12">
                     <div class="card">
                         <div class="card-header card_header_bg_blue">
                             <div class="card-head-row card-tools-still-right">
@@ -66,49 +69,36 @@
                                     </form>
                                 </div>
                             </div>
+
+                            <p class="card-category text-white"> {{ __('All investments') }} </p>
                         </div>
                         <div class="table-responsive">
-                            <table class="table table-lg">
+                            <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th>Avatar</th>
-                                        <th>Package Name</th>
-                                        <th>Min Amount</th>
-                                        <th>Max Amount</th>
-                                        <th>Start Date</th>
-                                        <th>End Date</th>
-                                        <th>Status</th>
-                                        <th>Actions</th>
+                                           <th> {{ __('Username') }} </th>
+                                            <th> {{ __('Package') }} </th>
+                                            <th> {{ __('Slot') }} </th>
+                                            <th> {{ __('Amount') }} </th>
+                                            <th> {{ __('Total Return') }} </th>
+                                            <th> {{ __('Start Date') }} </th>
+                                            <th> {{ __('Withdrawal Date') }} </th>
+                                            <th> {{ __('Status') }} </th>
+                                            <th> {{ __('Actions') }} </th>
                                     </tr>
                                 </thead>
 
-                                @foreach($packages as $package)
+                                @foreach($investment as $investment)
                                 <tbody>
                                     <tr>
-                                        <td>
-                                            <img src="{{ asset('assets/images/packages/'.$package['image']) }}"
-                                                class="avatar" alt="Avatar" height="40" width="40" />
-                                        </td>
-                                        <td>{{ $package['name'] }}</td>
-                                        <td>
-                                            {{ $package['min_amount'] }}
-                                        </td>
-                                        <td>
-                                            {{ $package['max_amount'] }}
-                                        </td>
-                                        <td>
-                                            {{ $package['start_date'] }}
-                                        </td>
-                                        <td>
-                                            {{ $package['end_date'] }}
-                                        </td>
-                                        <td>
-                                            @if($package['status'] == 'open')
-                                            <span class="badge rounded-pill badge-light-success me-1">Open</span>
-                                            @else
-                                            <span class="badge rounded-pill badge-light-danger me-1">Close</span>
-                                            @endif
-                                        </td>
+                                        <td>{{$investment->user_id}}</td>
+                                            <td><b>{{$investment->package_id}}</b></td>
+                                            <td>{{$investment->slot}}</td>
+                                            <td>{{$investment->amount}}</td>
+                                            <td>{{$investment->total_return}}</td>
+                                            <td>{{substr($investment->created_at, 0, 10)}}</td>
+                                            td>{{$investment->withdrawal_date}}</td>
+                                            <td>{{$investment->status}}</td>
                                         <td>
                                             <div class="dropdown">
                                                 <button type="button" class="btn btn-sm dropdown-toggle hide-arrow py-0"
@@ -135,12 +125,11 @@
                                 </tbody>
                                 @endforeach
                             </table>
+
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Small Table end -->
-
         </div>
     </div>
 </div>

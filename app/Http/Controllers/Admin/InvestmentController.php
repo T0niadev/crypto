@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Investment;
+use App\Models\Package;
 
 class InvestmentController extends Controller
 {
@@ -27,13 +28,13 @@ class InvestmentController extends Controller
     {
 
         $request->validate([
-            "name" => 'required',
-            "max_invest" => 'required',
-            "min_invest" => 'required',
-            "withdrawal_date" => 'required|max:255',
-            "start_date" => 'required',
-            "end_date" => 'required',
-            "duration" => 'required',
+            "slots" => 'required',
+             "amount" => 'required',
+             "total_return" => 'required',
+             "investment_date" => 'required',
+             "start_date" => 'required',
+            "withdrawal_date" => 'required',
+            "status" => 'required',
 
 
         ]);
@@ -41,20 +42,20 @@ class InvestmentController extends Controller
 
         $investments = new Investment([
 
-            'name' => request('name'),
-            'max_invest' => request('max_invest'),
-            'min_invest' => request('min_invest'),
-            'withdrawal_date' => request('withdrawal_date'),
-            'start_date' => request('start_date'),
-            'end_date' => request('end_date'),
-            'duration' => request('duration'),
+            "slots" => required('slots'),
+            "amount" => required('amount'),
+            "total_return" => required('total_return'),
+            "investment_date" => required('investment_date'),
+            "start_date" => required('start_date'),
+           "withdrawal_date" => required('withdrawal_date'),
+           "status" => required('status'),
 
 
         ]);
 
 
 
-
+        $investments->save();
 
         return redirect('/investments');
     }
@@ -74,13 +75,13 @@ class InvestmentController extends Controller
 
 
         $request->validate([
-            "name" => 'required',
-            "max_invest" => 'required',
-            "min_invest" => 'required',
-            "withdrawal_date" => 'required|max:255',
+            "slots" => 'required',
+            "amount" => 'required',
+            "total_return" => 'required',
+            "investment_date" => 'required',
             "start_date" => 'required',
-            "end_date" => 'required',
-            "duration" => 'required',
+           "withdrawal_date" => 'required',
+           "status" => 'required',
         ]);
 
         // $input = $request->except(['image']);
@@ -89,18 +90,21 @@ class InvestmentController extends Controller
 
         $investment = Investment::findorfail($id);
 
-        $investment->name = $request->get('name');
+        $investment->slots = $request->get('slots');
 
-        $investment->max_invest = $request->get('max_invest');
+        $investment->amount = $request->get('amount');
 
-        $investment->min_invest = $request->get('min_invest');
+        $investment->total_return = $request->get('total_return');
+
+        $investment->investment_date = $request->get('investment_date');
+
+        $investment->start_date = $request->get('start_date');
+
 
         $investment->withdrawal_date = $request->get('withdrawal_date');
 
-        $investment->end_date = $request->get('end_date');
 
-
-        $investment->duration = $request->get('duration');
+        $investment->status = $request->get('status');
 
 
 
@@ -111,6 +115,6 @@ class InvestmentController extends Controller
 
 
 
-        return redirect('/deposits');
+        return redirect('/admin/investments');
     }
 }

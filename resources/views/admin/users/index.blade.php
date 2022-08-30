@@ -91,16 +91,19 @@
                                         </td>
                                         <td>{{ $user->getFullNameAttribute }}</td>
                                         <td>
-                                            {{ $user['min_amount'] }}
+                                            "{{$users->first_name}} {{$users->last_name}}"
                                         </td>
                                         <td>
-                                            {{ $user['max_amount'] }}
+                                            {{ $user['username'] }}
                                         </td>
                                         <td>
-                                            {{ $user['start_date'] }}
+                                            {{ $user['email'] }}
                                         </td>
                                         <td>
-                                            {{ $user['end_date'] }}
+                                            {{ $user['phone'] }}
+                                        </td>
+                                        <td>
+                                            {{ $user['status'] }}
                                         </td>
                                         <td>
                                             @if($user['status'] == 'open')

@@ -8,12 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
     <meta name="description"
-        content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+        content="CryptFX- Best Investment Platform">
     <meta name="keywords"
-        content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
+        content="">
     <meta name="author" content="devProMaleek et Tonia">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laravel') }} :: Admin</title>
+    <title>{{ config('app.name', 'CryptFX') }} :: Admin</title>
     <link rel="apple-touch-icon" href="{{ asset('assets/admin/images/ico/apple-icon-120.html') }}">
     <link rel="shortcut icon" type="image/x-icon"
         href="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/app-assets/images/ico/favicon.ico">
@@ -110,7 +110,7 @@
                             data-feather="search"></i></a>
                     <div class="search-input">
                         <div class="search-input-icon"><i data-feather="search"></i></div>
-                        <input class="form-control input" type="text" placeholder="Explore Vuexy..." tabindex="-1"
+                        <input class="form-control input" type="text" placeholder="Explore CryptFX..." tabindex="-1"
                             data-search="search">
                         <div class="search-input-close"><i data-feather="x"></i></div>
                         <ul class="search-list search-list-main"></ul>
@@ -462,8 +462,9 @@
     <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
         <div class="navbar-header">
             <ul class="nav navbar-nav flex-row">
-                <li class="nav-item me-auto"><a class="navbar-brand" href="index.html"><span class="brand-logo">
-                            <svg viewbox="0 0 139 95" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                <li class="nav-item me-auto"><a class="navbar-brand" href="index.html"><img src="{{ asset('assets/images/logo/cryptfx.png') }}" alt="png" height="40"><span class="brand-logo">
+
+                            {{-- <svg viewbox="0 0 139 95" version="1.1" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" height="24">
                                 <defs>
                                     <lineargradient id="linearGradient-1" x1="100%" y1="10.5120544%" x2="50%"
@@ -498,8 +499,8 @@
                                         </g>
                                     </g>
                                 </g>
-                            </svg></span>
-                        <h2 class="brand-text">Vuexy</h2>
+                            </svg></span> --}}
+                        <h2 class="brand-text">CryptFX</h2>
                     </a></li>
                 <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pe-0" data-bs-toggle="collapse"><i
                             class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i><i
@@ -699,8 +700,7 @@
     <!-- End: Customizer-->
 
     <!-- Buynow Button-->
-    <div class="buy-now"><a href="https://1.envato.market/vuexy_admin" target="_blank" class="btn btn-danger">Buy
-            Now</a>
+    <div class="buy-now"><a target="_blank" class="btn btn-danger">CryptFX</a>
 
     </div>
     <div class="sidenav-overlay"></div>
@@ -711,7 +711,7 @@
         <p class="clearfix mb-0"><span class="float-md-start d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2021<a
                     class="ms-25" href="https://1.envato.market/pixinvent_portfolio" target="_blank">Pixinvent</a><span
                     class="d-none d-sm-inline-block">, All rights Reserved</span></span><span
-                class="float-md-end d-none d-md-block">Hand-crafted & Made with<i data-feather="heart"></i></span></p>
+                class="float-md-end d-none d-md-block"><i data-feather="heart"></i></span></p>
     </footer>
     <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
     <!-- END: Footer-->
