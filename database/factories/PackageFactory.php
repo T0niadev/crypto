@@ -15,6 +15,12 @@ class PackageFactory extends Factory
     {
         return [
             //
+
+            'name' => $this->faker->name();
+            'min_amount' => $this->faker->numberBetween(10, 1000);
+            'max_amount' => $this->faker->numberBetween(10000, 1000000);
+            'start_date' => $this->faker->date();
+            'end_date' =>
         ];
     }
 }
