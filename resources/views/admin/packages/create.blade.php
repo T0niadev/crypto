@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="row">
+    <div class="container">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header card_header_bg_blue" >
@@ -13,7 +13,7 @@
                     </div>
                 </div>
                 <div class="card-body pb-0 table-responsive">
-                <form id="add_new_pack" action="/admin/create/package" method="post" >
+                <form action="{{ url('/admin/packages/store') }}" name="post" enctype="multipart/form-data">
                     @csrf()
                         <div class="form-group row">
                             <div class="col-sm-12">
@@ -51,7 +51,8 @@
                 <div class="form-group row">
                         <div class="col-sm-12 text-center">
                             <br><br>
-                            <button class="btn btn-info btn_form" onclick="load_post_ajax('/admin/create/package', 'add_new_pack', 'add_pack')"><i class="fa fa-plus"></i> {{ __('Add Package') }} </button>
+                            <button class="btn btn-info btn_form" type="submit"  href="/admin/packages/store"><i class="fa fa-plus"></i> {{ __('Add Package') }} </button>
+                            {{-- <button class="btn btn-info btn_form" "onclick="load_post_ajax('/admin/create/package', 'add_new_pack', 'add_pack')"><i class="fa fa-plus"></i> {{ __('Add Package') }} </button> --}}
                         </div>
                     </div>
 
