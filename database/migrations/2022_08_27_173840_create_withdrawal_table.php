@@ -18,6 +18,7 @@ class CreateWithdrawalTable extends Migration
             $table->string('username');
             $table->string('amount');
             $table->string('amountpayable');
+            $table->string('accountname_ID');
             $table->string('bankdetails_wallet');
             $table->string('date');
             $table->string('status');

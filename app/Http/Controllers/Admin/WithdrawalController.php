@@ -10,10 +10,10 @@ class WithdrawalController extends Controller
 {
     public function index() {
 
-		$withdrawal = Withdrawal::latest()->get();
+		$withdrawals = Withdrawal::latest()->get();
 
 
-		return view('admin.withdrawals.index', compact('withdrawal'));
+		return view('admin.withdrawals.index', compact('withdrawals'));
 	}
 
 	public function create() {
@@ -39,7 +39,7 @@ class WithdrawalController extends Controller
 
 
 
-			$withdrawals = new Withdrawals([
+			$withdrawals = new Withdrawal([
 
 				'username'=> request('username'),
 				'amount' => request('amount'),
@@ -53,8 +53,7 @@ class WithdrawalController extends Controller
 				]);
 
 
-				// $this->addImage(request()->file('image'));
-				// $withdrawal->save();
+                $withdrawals->save();
 
 
 				return redirect('/withdrawals');
@@ -63,9 +62,9 @@ class WithdrawalController extends Controller
 
 			public function edit($id) {
 
-				$withdrawal= Withdrawal::findorfail($id);
+				$withdrawals= Withdrawal::findorfail($id);
 
-				return view('admin.withdrawals.edit', compact('withdrawal'));
+				return view('admin.withdrawals.edit', compact('withdrawals'));
 
 
 			}
@@ -86,40 +85,29 @@ class WithdrawalController extends Controller
 
 					$input = $request->except(['image']);
 
-					$withdrawal = Withdrawal::findorfail($id);
+					$withdrawals = Withdrawal::findorfail($id);
 
-					$withdrawal->username= $request->get('username');
+					$withdrawals->username= $request->get('username');
 
-					$withdrawal->amount = $request->get('amount');
+					$withdrawals->amount = $request->get('amount');
 
-					$withdrawal->amountpayable = $request->get('amountpayable');
+					$withdrawals->amountpayable = $request->get('amountpayable');
 
-					$withdrawal->bankdetails_wallet = $request->get('bankdetails_wallet');
+					$withdrawals->bankdetails_wallet = $request->get('bankdetails_wallet');
 
-					$withdrawal->date = $request->get('date');
+					$withdrawals->date = $request->get('date');
 
-					$withdrawal->status = $request->get('status');
-
-
-
-					// /** Upade Photo and Recent Photo Delete **/
-					// if ($file = request()->file('image')) {
-					// 	\File::delete(public_path(). '/multimages/package/' .$withdrawal->image);
-
-					// 	$this->addImage(request()->file('image'));
-
-					// 	$extension =request()->file('image')->getClientOriginalExtension();
-					// 	$name = time();
-
-
-					// 	$input['image'] = $name.".".$extension;
-					// }
+					$withdrawals->status = $request->get('status');
 
 
 
 
 
-					$withdrawal->update($input);
+
+
+
+
+					$withdrawals->update($input);
 
 
 

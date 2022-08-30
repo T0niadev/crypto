@@ -37,6 +37,8 @@ class UserController extends Controller
 
 		]);
 
+        $users->save();
+
 		return redirect('/users');
 
 
