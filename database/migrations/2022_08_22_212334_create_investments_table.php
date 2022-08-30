@@ -15,16 +15,18 @@ class CreateInvestmentsTable extends Migration
     {
         Schema::create('investments', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('max_invest');
-            $table->string('min_invest');
-            $table->string('interest');
-            $table->string('withdrawal_date');
-            $table->string('start_date');
-            $table->string('end_date');
-            $table->string('duration');
+            $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('package_id')->constrained();
+            $table->integer('slots');
+            $table->decimal('amount', 15, 2);
+            $table->decimal('total_return', 15, 2);
+            $table->text('package_data');
+            $table->dateTime('investment_date');
+            $table->dateTime('start_date');
+            $table->enum('payment', ['approved', 'declined', 'pending']);
+            $table->enum('status', ['active', 'pending', 'cancelled', 'settled'])->default('pending');
+            $table->boolean('rollover')->default(false);
             $table->timestamps();
-
         });
     }
 

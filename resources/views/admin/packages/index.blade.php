@@ -1,7 +1,8 @@
 @extends('admin.layouts.app')
 
-
 @section('content')
+
+<!-- BEGIN: Content-->
 <div class="app-content content ">
     <div class="content-overlay"></div>
     <div class="header-navbar-shadow"></div>
@@ -10,12 +11,12 @@
             <div class="content-header-left col-md-9 col-12 mb-2">
                 <div class="row breadcrumbs-top">
                     <div class="col-12">
-                        <h2 class="content-header-title float-start mb-0">All Users</h2>
+                        <h2 class="content-header-title float-start mb-0">All Package</h2>
                         <div class="breadcrumb-wrapper">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a>
                                 </li>
-                                <li class="breadcrumb-item active">All Users
+                                <li class="breadcrumb-item active">All Package
                                 </li>
                             </ol>
                         </div>
@@ -44,7 +45,7 @@
         <div class="content-body">
             <!-- Small Table start -->
             <div class="row" id="table-small">
-                <div class="col-md-12">
+                <div class="col-12">
                     <div class="card">
                         <div class="card-header card_header_bg_blue">
                             <div class="card-head-row card-tools-still-right">
@@ -69,41 +70,42 @@
                             <p class="card-category text-white"> {{ __('All registered users.') }} </p>
                         </div>
                         <div class="table-responsive">
-                            <table class="table table-hover">
+                            <table class="table table-lg">
                                 <thead>
                                     <tr>
                                         <th>Avatar</th>
-                                        <th>Full Name</th>
-                                        <th>Username</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
+                                        <th>Package Name</th>
+                                        <th>Min Amount</th>
+                                        <th>Max Amount</th>
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
                                         <th>Status</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
 
-                                @foreach($users as $user)
+                                @foreach($packages as $package)
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <img src="{{ asset('assets/images/users/'.$user['image']) }}" class="avatar"
-                                                alt="Avatar" height="40" width="40" />
+                                            <img src="{{ asset('assets/images/packages/'.$package['image']) }}"
+                                                class="avatar" alt="Avatar" height="40" width="40" />
                                         </td>
-                                        <td>{{ $user->getFullNameAttribute }}</td>
+                                        <td>{{ $package['name'] }}</td>
                                         <td>
-                                            {{ $user['min_amount'] }}
-                                        </td>
-                                        <td>
-                                            {{ $user['max_amount'] }}
+                                            {{ $package['min_amount'] }}
                                         </td>
                                         <td>
-                                            {{ $user['start_date'] }}
+                                            {{ $package['max_amount'] }}
                                         </td>
                                         <td>
-                                            {{ $user['end_date'] }}
+                                            {{ $package['start_date'] }}
                                         </td>
                                         <td>
-                                            @if($user['status'] == 'open')
+                                            {{ $package['end_date'] }}
+                                        </td>
+                                        <td>
+                                            @if($package['status'] == 'open')
                                             <span class="badge rounded-pill badge-light-success me-1">Open</span>
                                             @else
                                             <span class="badge rounded-pill badge-light-danger me-1">Close</span>
@@ -135,12 +137,15 @@
                                 </tbody>
                                 @endforeach
                             </table>
-
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Small Table end -->
+
         </div>
     </div>
 </div>
+<!-- END: Content-->
+
 @endsection
