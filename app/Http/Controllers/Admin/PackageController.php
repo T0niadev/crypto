@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Package;
 use Illuminate\Http\Request;
+use illuminate\Support\Facades\File;
+use DataTables;
 
 class PackageController extends Controller
 {
@@ -18,6 +20,13 @@ class PackageController extends Controller
         //
 
         $packages = Package::all();
+        if(request()->ajax()) {
+            return Datatables::of($packages)
+            ->addColumn('action', 'admin.packages.action')
+            ->rawColumns(['action'])
+            ->addIndexColumn()
+            ->make(true);
+        }
         return view('admin.packages.index', compact('packages'));
     }
 
@@ -67,21 +76,20 @@ class PackageController extends Controller
 
         $packages = new Package([
 
-            "name" => required('name'),
-            "roi" => required('roi'),
-            "start_date" => required('start_date'),
-            "slots" => required('slots'),
-            "min_amount" => required('min_amount'),
-            "max_amount" => required('max_amount'),
-           "duration" => required('duration'),
-           "duration_mode" => required('duration_mode'),
-           "milestones" => required('milestones'),
+            "name" => $request['name'],
+            "roi" => $request['roi'],
+            "start_date" => $request['start_date'],
+            "slots" => $request['slots'],
+            "min_amount" => $request['min_amount'],
+            "max_amount" => $request['max_amount'],
+           "duration" => $request['duration'],
+           "duration_mode" => $request['duration_mode'],
+           "milestones" => $request['milestones'],
            'image' => $name . "." . $extension,
-           "payout_mode" => required('payout_mode'),
-
-           "type" => required('type'),
-           "rollover" => required('rollover'),
-           "status" => required('status'),
+           "payout_mode" => $request['payout_mode'],
+           "type" => $request['type'],
+           "rollover" => $request['rollover'],
+           "status" => $request['status'],
 
 
         ]);
@@ -104,7 +112,7 @@ class PackageController extends Controller
     }
 
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Package $package)
     {
 
             $request->validate([
@@ -146,8 +154,8 @@ class PackageController extends Controller
 
 
 
-            if ($file = request()->file('image')) {
-                \File::delete(public_path(). '/assets/packages/' .$package->image);
+            if ($request->file('image')) {
+                File::delete(public_path(). '/assets/packages/' .$package->image);
 
                 $this->addImage(request()->file('image'));
 
@@ -167,5 +175,19 @@ class PackageController extends Controller
 
 
         return redirect('/admin/packages');
+    }
+
+    public function destroy(Package $package )
+    {
+        // check if package doesn't have investment
+        if ($package->investments()->count() > 0){
+            return back()->with('error', 'Can\'t delete package, investments already associated');
+        }
+        unlink($package['image']);
+        if ($package->delete()){
+            return redirect()->route('admin.packages')->with('success', 'Package deleted successfully');
+        }
+
+        return back()->with('error', 'Error deleting package');
     }
 }
