@@ -58,5 +58,6 @@ Route::post('/withdrawals/update', [\App\Http\Controllers\Admin\WithdrawalContro
 Route::get('/packages', [\App\Http\Controllers\Admin\PackageController::class, 'index'])->name('package');
 Route::get('/packages/create', [\App\Http\Controllers\Admin\PackageController::class, 'create'] )->name('package.create');
 Route::post('/packages/store', [\App\Http\Controllers\Admin\PackageController::class, 'store'] )->name('package.store');
-Route::get('/packages/edit/{package_id}', [\App\Http\Controllers\Admin\PackageController::class, 'edit'])->name('package.edit');
-Route::post('/packages/update', [\App\Http\Controllers\Admin\PackageController::class, 'update'] )->name('package.update');
+Route::get('/packages/{package}/edit', [\App\Http\Controllers\Admin\PackageController::class, 'edit'])->name('package.edit');
+Route::post('/packages/{package}/update', [\App\Http\Controllers\Admin\PackageController::class, 'update'] )->name('package.update');
+Route::delete('/packages/{package}/destroy', [App\Http\Controllers\Admin\PackageController::class, 'destroy'])->name('package.destroy');
