@@ -11,12 +11,12 @@
             <div class="content-header-left col-md-9 col-12 mb-2">
                 <div class="row breadcrumbs-top">
                     <div class="col-12">
-                        <h2 class="content-header-title float-start mb-0">Packages</h2>
+                        <h2 class="content-header-title float-start mb-0">Bootstrap Tables</h2>
                         <div class="breadcrumb-wrapper">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a>
                                 </li>
-                                <li class="breadcrumb-item"><a href="#">All Packages</a>
+                                <li class="breadcrumb-item active">Table Bootstrap
                                 </li>
                             </ol>
                         </div>
@@ -43,78 +43,157 @@
             </div>
         </div>
         <div class="content-body">
-            <!-- Basic table -->
-            <section id="basic-datatable">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <table class="datatables-basic table">
+            <!-- Basic Tables start -->
+            <div class="row" id="basic-table">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Table Basic</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Using the most basic table Leanne Grahamup, here’s how <code>.table</code>-based tables
+                                look in Bootstrap. You
+                                can use any example of below table for your table and it can be use with any type of
+                                bootstrap tables.
+                            </p>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table" id="datatable">
                                 <thead>
                                     <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <th>id</th>
+                                        <th>S/N</th>
                                         <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Date</th>
-                                        <th>Salary</th>
+                                        <th>ROI</th>
+                                        <th>State Date</th>
+                                        <th>End Date</th>
+                                        <th>Duration</th>
+                                        <th>Durstion Mode</th>
+                                        <th>Rollover</th>
                                         <th>Status</th>
-                                        <th>Action</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                             </table>
                         </div>
                     </div>
                 </div>
-                <!-- Modal to add new record -->
-                <div class="modal modal-slide-in fade" id="modals-slide-in">
-                    <div class="modal-dialog sidebar-sm">
-                        <form class="add-new-record modal-content pt-0">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                aria-label="Close">×</button>
-                            <div class="modal-header mb-1">
-                                <h5 class="modal-title" id="exampleModalLabel">New Record</h5>
-                            </div>
-                            <div class="modal-body flex-grow-1">
-                                <div class="mb-1">
-                                    <label class="form-label" for="basic-icon-default-fullname">Full Name</label>
-                                    <input type="text" class="form-control dt-full-name"
-                                        id="basic-icon-default-fullname" placeholder="John Doe" aria-label="John Doe" />
-                                </div>
-                                <div class="mb-1">
-                                    <label class="form-label" for="basic-icon-default-post">Post</label>
-                                    <input type="text" id="basic-icon-default-post" class="form-control dt-post"
-                                        placeholder="Web Developer" aria-label="Web Developer" />
-                                </div>
-                                <div class="mb-1">
-                                    <label class="form-label" for="basic-icon-default-email">Email</label>
-                                    <input type="text" id="basic-icon-default-email" class="form-control dt-email"
-                                        placeholder="john.doe@example.com" aria-label="john.doe@example.com" />
-                                    <small class="form-text"> You can use letters, numbers & periods </small>
-                                </div>
-                                <div class="mb-1">
-                                    <label class="form-label" for="basic-icon-default-date">Joining Date</label>
-                                    <input type="text" class="form-control dt-date" id="basic-icon-default-date"
-                                        placeholder="MM/DD/YYYY" aria-label="MM/DD/YYYY" />
-                                </div>
-                                <div class="mb-4">
-                                    <label class="form-label" for="basic-icon-default-salary">Salary</label>
-                                    <input type="text" id="basic-icon-default-salary" class="form-control dt-salary"
-                                        placeholder="$12000" aria-label="$12000" />
-                                </div>
-                                <button type="button" class="btn btn-primary data-submit me-1">Submit</button>
-                                <button type="reset" class="btn btn-outline-secondary"
-                                    data-bs-dismiss="modal">Cancel</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-            <!--/ Basic table -->
+            </div>
+            <!-- Basic Tables end -->
+
+
 
         </div>
     </div>
 </div>
 <!-- END: Content-->
 
+@endsection
+
+@section('pageScript')
+<script type="text/javascript">
+    $(document).ready( function () {
+     $.ajaxSetup({
+       headers: {
+       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+       }
+     });
+       $('#datatable').DataTable({
+              processing: true,
+              serverSide: true,
+              ajax: "{{ url('admin.package') }}",
+              columns: [
+                       { data: 'id', name: 'id' },
+                       { data: 'name', name: 'name' },
+                       { data: 'roi', name: 'roi' },
+                       { data: 'min_amount', name: 'min_amount' },
+                       { data: 'max_amount', name: 'max_amount' },
+                       { data: 'state_date', name: 'state_date' },
+                       { data: 'end_date', name: 'end_date' },
+                       { data: 'duration', name: 'duration' },
+                       { data: 'duration_mode', name: 'duration_mode' },
+                       { data: 'rollover', name: 'rollover' },
+                       { data: 'status', name: 'status' },
+                       {data: 'action', name: 'action', orderable: false},
+                    ],
+                    order: [[0, 'desc']]
+          });
+
+       $('body').on('click', '.delete', function () {
+           let id = $(this).data('id');
+           Swal.fire({
+                    title: "Are you sure?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: !0,
+                    confirmButtonText: "Yes, delete it!",
+                    customClass: {
+                        confirmButton: "btn btn-primary",
+                        cancelButton: "btn btn-outline-danger ms-1",
+                    },
+                    buttonsStyling: !1,
+                }).then(function (t, id) {
+                    t.value
+                        ? $.ajax({
+                                type:"POST",
+                                url: "{{ url('admin.package.destroy') }}",
+                                data: { id: id},
+                                dataType: 'json',
+                                success: function(res){
+                                    var oTable = $('#datatable').dataTable();
+                                    oTable.fnDraw(false);
+                                    Swal.fire({
+                                        icon: "success",
+                                        title: "Deleted!",
+                                        text: "Your file has been deleted.",
+                                        customClass: { confirmButton: "btn btn-success" },
+                                     });
+                                }
+                        : t.dismiss === Swal.DismissReason.cancel &&
+                          Swal.fire({
+                              title: "Cancelled",
+                              text: "Your imaginary file is safe :)",
+                              icon: "error",
+                              customClass: { confirmButton: "btn btn-success" },
+                          });
+           });
+
+        });
+     });
+
+</script>
+
+<script>
+    confirmFormSubmit = function (e, form) {
+                    Swal.fire({
+                        title: "Are you sure?",
+                        text: "You won't be able to revert this!",
+                        icon: "warning",
+                        showCancelButton: !0,
+                        confirmButtonText: "Yes, delete it!",
+                        customClass: {
+                            confirmButton: "btn btn-primary",
+                            cancelButton: "btn btn-outline-danger ms-1",
+                        },
+                        buttonsStyling: !1,
+                    }).then(function (result) {
+                        if (result.value) {
+                            $('#'+form).submit();
+                            Swal.fire({
+                                  icon: "success",
+                                  title: "Deleted!",
+                                  text: "Your file has been deleted.",
+                                  customClass: { confirmButton: "btn btn-success" },
+                              })
+                        } elseif ( result.dismiss === Swal.DismissReason.cancel ) {
+                            Swal.fire({
+                                  title: "Cancelled",
+                                  text: "Your imaginary file is safe :)",
+                                  icon: "error",
+                                  customClass: { confirmButton: "btn btn-success" },
+                              });
+                        };
+                    });
+                });
+</script>
 @endsection

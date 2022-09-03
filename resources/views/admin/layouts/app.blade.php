@@ -7,10 +7,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
-    <meta name="description"
-        content="CryptFX- Best Investment Platform">
-    <meta name="keywords"
-        content="">
+    <meta name="description" content="CryptFX- Best Investment Platform">
+    <meta name="keywords" content="">
     <meta name="author" content="devProMaleek et Tonia">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'CryptFX') }} :: Admin</title>
@@ -20,23 +18,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
         rel="stylesheet">
 
+
+
+    <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
+
+
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/vendors/css/vendors.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/vendors/css/charts/apexcharts.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/vendors/css/extensions/toastr.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/vendors/css/animate/animate.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('assets/admin/vendors/css/extensions/sweetalert2.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/vendors/css/vendors.min.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('assets/admin/vendors/css/tables/datatable/dataTables.bootstrap5.min.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('assets/admin/vendors/css/tables/datatable/responsive.bootstrap5.min.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('assets/admin/vendors/css/tables/datatable/buttons.bootstrap5.min.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('assets/admin/vendors/css/tables/datatable/rowGroup.bootstrap5.min.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('assets/admin/vendors/css/pickers/flatpickr/flatpickr.min.css') }}">
     @yield('pageVendorCss')
     <!-- END: Vendor CSS-->
 
@@ -65,6 +61,8 @@
         href="{{ asset('assets/admin/css/plugins/extensions/ext-component-toastr.min.css') }}">
     <link rel="stylesheet" type="text/css"
         href="{{ asset('assets/admin/css/core/menu/menu-types/vertical-menu.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('assets/admin/css/plugins/extensions/ext-component-sweet-alerts.min.css') }}">
     @yield('pageCss')
     <!-- END: Page CSS-->
 
@@ -486,7 +484,9 @@
     <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
         <div class="navbar-header">
             <ul class="nav navbar-nav flex-row">
-                <li class="nav-item me-auto"><a class="navbar-brand" href="index.html"><img src="{{ asset('assets/images/logo/cryptfx.png') }}" alt="png" height="40"><span class="brand-logo">
+                <li class="nav-item me-auto"><a class="navbar-brand" href="index.html"><img
+                            src="{{ asset('assets/images/logo/cryptfx.png') }}" alt="png" height="40"><span
+                            class="brand-logo">
 
                             {{-- <svg viewbox="0 0 139 95" version="1.1" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" height="24">
@@ -748,26 +748,49 @@
     <!-- BEGIN: Page Vendor JS-->
     <script src="{{ asset('assets/admin/vendors/js/charts/apexcharts.min.js') }}"></script>
     <script src="{{ asset('assets/admin/vendors/js/extensions/toastr.min.js') }}"></script>
-    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/dataTables.bootstrap5.min.js') }}"></script>
-    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/dataTables.responsive.min.js') }}"></script>
-    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/responsive.bootstrap5.min.js') }}"></script>
-    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/datatables.checkboxes.min.js') }}"></script>
-    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/datatables.buttons.min.js') }}"></script>
-    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/jszip.min.js') }}"></script>
-    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/pdfmake.min.js') }}"></script>
-    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/vfs_fonts.js') }}"></script>
-    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/buttons.html5.min.js') }}"></script>
-    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/buttons.print.min.js') }}"></script>
-    <script src="{{ asset('assets/admin/vendors/js/tables/datatable/dataTables.rowGroup.min.js') }}"></script>
-    <script src="{{ asset('assets/admin/vendors/js/pickers/flatpickr/flatpickr.min.js') }}"></script>
+    <script src="{{ asset('app-assets/vendors/js/extensions/sweetalert2.all.min.js') }}"></script>
+    <script src="{{ asset('app-assets/vendors/js/extensions/polyfill.min.js') }}"></script>
+    <script>
+        confirmFormSubmit = function (e, form) {
+                    Swal.fire({
+                        title: "Are you sure?",
+                        text: "You won't be able to revert this!",
+                        icon: "warning",
+                        showCancelButton: !0,
+                        confirmButtonText: "Yes, delete it!",
+                        customClass: {
+                            confirmButton: "btn btn-primary",
+                            cancelButton: "btn btn-outline-danger ms-1",
+                        },
+                        buttonsStyling: !1,
+                    }).then(function (result) {
+                        if (result.value) {
+                            $('#'+form).submit();
+                            Swal.fire({
+                                  icon: "success",
+                                  title: "Deleted!",
+                                  text: "Your file has been deleted.",
+                                  customClass: { confirmButton: "btn btn-success" },
+                              })
+                        } elseif ( result.dismiss === Swal.DismissReason.cancel ) {
+                            Swal.fire({
+                                  title: "Cancelled",
+                                  text: "Your imaginary file is safe :)",
+                                  icon: "error",
+                                  customClass: { confirmButton: "btn btn-success" },
+                              });
+                        };
+                    });
+                });
+    </script>
+
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
     @yield('pageVendorScript')
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
-    <script src="{{ asset('assets/admin/js/scripts/customizer.min.js') }}"></script>
-    <script src="{{ asset('assets/admin/js/core/app-menu.min.js') }}"></script>
-    <script src="{{ asset('assets/admin/js/core/app.min.js') }}"></script>
     <script src="{{ asset('assets/admin/js/core/app-menu.min.js') }}"></script>
     <script src="{{ asset('assets/admin/js/core/app.min.js') }}"></script>
     <script src="{{ asset('assets/admin/js/scripts/customizer.min.js') }}"></script>
@@ -775,7 +798,7 @@
 
     <!-- BEGIN: Page JS-->
     <script src="{{ asset('assets/admin/js/scripts/pages/dashboard-ecommerce.min.js') }}"></script>
-    <script src="{{ asset('assets/admin/js/scripts/tables/table-datatables-basic.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/scripts/extensions/ext-component-sweet-alerts.min.js') }}"></script>
     @yield('pageScript')
     <!-- END: Page JS-->
 
