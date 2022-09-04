@@ -57,10 +57,15 @@
                       Username or Email
                     </label>
                     <input type="text" name="login" placeholder="Enter your Email or Username"
-                      class="a4F dark:a38 ab a1u a1C a27 a4z a22 aI a1F dark:aS a4I a24 focus:a1H focus-visible:aM dark:a4G dark:a1w[#1F2656] @error('email' || 'username') border-red-500 @enderror"
+                      class="a4F dark:a38 ab a1u a1C a27 a4z a22 aI a1F dark:aS a4I a24 focus:a1H focus-visible:aM dark:a4G dark:a1w[#1F2656] @error('email') border-red-500 @enderror @error('username') border-red-500 @enderror"
                       id="login" value="{{ old('username') ?: old('email') }}" required autocomplete="email" autofocus />
 
-                    @error('email' || 'username')
+                    @error('email')
+                      <p class="text-red-500 text-xs italic mt-4">
+                        {{ $message }}
+                      </p>
+                    @enderror
+                    @error('username')
                       <p class="text-red-500 text-xs italic mt-4">
                         {{ $message }}
                       </p>

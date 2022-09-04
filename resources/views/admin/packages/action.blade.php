@@ -1,4 +1,4 @@
-<a href="{{ route('packages.edit',$id) }}" data-toggle="tooltip" data-original-title="Edit"
+<a href="{{ route('admin.packages.edit',$id) }}" data-toggle="tooltip" data-original-title="Edit"
     class="edit btn btn-success edit">
     Edit
 </a>
