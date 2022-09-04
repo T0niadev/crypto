@@ -47,20 +47,20 @@
                 <div class="a2n aa ac a1t">
                   <span class="ao aC[1px] ab aH[70px] a2m a4H sm:an"></span>
                   <p class="ab a23 a2G a1F a1R aQ dark:aS">
-                    Or, sign in with your email
+                    Or, sign in with your email or username
                   </p>
                   <span class="ao aC[1px] ab aH[70px] a2m a4H sm:an"></span>
                 </div>
                 <form>
                   <div class="a2n">
-                    <label for="email" class="a2d an a1j a1R a2u dark:aT">
-                      Your Email
+                    <label for="login" class="a2d an a1j a1R a2u dark:aT">
+                      Username or Email
                     </label>
-                    <input type="email" name="email" placeholder="Enter your Email"
-                      class="a4F dark:a38 ab a1u a1C a27 a4z a22 aI a1F aS a4I a24 focus:a1H focus-visible:aM dark:a4G dark:a1w[#1F2656] @error('email') border-red-500 @enderror"
-                      id="email" value="{{ old('email') }}" required autocomplete="email" autofocus />
+                    <input type="text" name="login" placeholder="Enter your Email or Username"
+                      class="a4F dark:a38 ab a1u a1C a27 a4z a22 aI a1F dark:aS a4I a24 focus:a1H focus-visible:aM dark:a4G dark:a1w[#1F2656] @error('email' || 'username') border-red-500 @enderror"
+                      id="login" value="{{ old('username') ?: old('email') }}" required autocomplete="email" autofocus />
 
-                    @error('email')
+                    @error('email' || 'username')
                       <p class="text-red-500 text-xs italic mt-4">
                         {{ $message }}
                       </p>
@@ -71,7 +71,7 @@
                       Your Password
                     </label>
                     <input type="password" name="password" placeholder="Enter your Password"
-                      class="a4F dark:a38 ab a1u a1C a27 a4z a22 aI a1F aS a4I a24 focus:a1H focus-visible:aM dark:a4G dark:a1w[#1F2656] @error('password') border-red-500 @enderror"
+                      class="a4F dark:a38 ab a1u a1C a27 a4z a22 aI a1F dark:aS a4I a24 focus:a1H focus-visible:aM dark:a4G dark:a1w[#1F2656] @error('password') border-red-500 @enderror"
                       id="password" required />
 
                     @error('password')
