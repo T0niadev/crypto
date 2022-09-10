@@ -7,7 +7,7 @@
         <div class="ab ak">
           <div class="a3r aH[720px] a2G">
             <h1 class="a1N a2o a1P a2p a1k dark:aT md:a2Q[45px]">
-              CRYPTO-LUONU
+              CryptFX
             </h1>
 
             <p class="a3r a1N aH[820px] aO a1R aQ dark:aT">
@@ -247,7 +247,7 @@
   <section id="features" class="a1J[120px] a3J">
     <div class="ae">
       <div class="wow fadeInUp a3r a3K aH[590px] a2G md:a30" data-wow-delay="0s">
-        <span class="a2d aO a1P a3L aR sm:a1O">CRYPTO-LUONO</span>
+        <span class="a2d aO a1P a3L aR sm:a1O">CryptFX</span>
         <h2 class="a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]">WHY CHOOSE US ?</h2>
         <p class="aO a1R aQ dark:aS">
           We make trading easy, fast & reliable.
@@ -371,7 +371,7 @@
     </div>
   </section>
 
-  <section class="af a2E">
+  <!-- <section class="af a2E">
     <div class="ae">
       <div class="au a1v a3O a1E dark:a1w[#14102C] sm:a3P sm:a3Q lg:a1E xl:a3Q">
         <div class="ag aa a1L ac">
@@ -415,7 +415,7 @@
     <div class="aq a19 a3W a2Z">
       <img src="{{ asset('assets/images/shapes/token-sale-shape.svg') }}" alt="shape" />
     </div>
-  </section>
+  </section> -->
 
   {{-- <section id="roadmap" class="af a2E aw[120px]">
     <div class="ae">
@@ -777,13 +777,13 @@
       <div class="ag aa a1L ac">
         <div class="ab ak lg:a1M/2">
           <div class="wow fadeInUp a3R aH[500px] lg:a1Q" data-wow-delay="0s">
-            <span class="a2d aO a1P a3L aR sm:a1O"> CRYPTO-LUONO</span>
+            <span class="a2d aO a1P a3L aR sm:a1O"> CryptFX</span>
             <h2 class="a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]">
               Buy & trade on the
               original crypto exchange.
             </h2>
             <p class="a1W aO a1R aQ dark:aS">
-              CRYPTO-LUONO makes trading easy, fast & reliable. With 24/7 support, staking and bank-grade security &
+              CryptFX makes trading easy, fast & reliable. With 24/7 support, staking and bank-grade security &
               insurance. Since 2011.
             <div class="ao sm:aa">
               @if (Route::has('register'))
@@ -822,7 +822,7 @@
         <span class="a2d aO a1P a3L aR sm:a1O"> TESTIMONIALS </span>
         <h2 class="a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]">What Our Clients Say</h2>
         <p class="aO a1R aQ dark:aS">
-          Still hesitant about trusting CRYPTO-LUONO for the best investment package? Read user testimonials
+          Still hesitant about trusting CryptFX for the best investment package? Read user testimonials
         </p>
       </div>
       <div class="ag aa a1L">
@@ -844,7 +844,7 @@
             </div>
             <div>
               <p class="a1F a1R a2f aQ dark:aS">
-                "My first cryptocurrency investment encounter was using Crypto-Luono.
+                "My first cryptocurrency investment encounter was using CryptFX.
                 I started off as a typical beginner purchase of Bitcoin for the first time, asking legacy traders what a
                 wallet was and why I needed to go through the verification process.
                 Now i've made a fortune off this."
@@ -869,7 +869,7 @@
             </div>
             <div>
               <p class="a1F a1R a2f aQ dark:aS">
-                “Being a vendor with Crypto-Luono has been terrific.
+                “Being a vendor with CryptFX has been terrific.
                 The best part is that I've been able to assist many new investors in making actual money, and support is
                 always responsive and helpful.
                 Being the first on-ramp to the currency of the future is always gratifying. ”
@@ -902,7 +902,7 @@
           <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0s">
             <button @click="openFaq1 = !openFaq1" class="faq-btn aa ab ac ah a4l">
               <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">
-                Is CRYPTO-LUONO a registered company?
+                Is CryptFX a registered company?
               </h3>
               <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq1 && 'a4p'">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
@@ -929,7 +929,7 @@
           </div>
           <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0s">
             <button @click="openFaq2 = !openFaq2" class="faq-btn aa ab ac ah a4l">
-              <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">What do we do at CRYPTO-LUONO?</h3>
+              <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">What do we do at CryptFX?</h3>
               <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq2 && 'a4p'">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -956,7 +956,7 @@
           <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0s">
             <button @click="openFaq3 = !openFaq3" class="faq-btn aa ab ac ah a4l">
               <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">
-                Why CRYPTO-LUONO over other competitors?
+                Why CryptFX over other competitors?
               </h3>
               <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq3 && 'a4p'">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
@@ -1277,7 +1277,7 @@
                 <h3 class="a1N aO aP a2u dark:aT">Email Address</h3>
                 <p class="a1F a1R a4u aQ dark:aS">
                   <a href="mailto:admin@crypto-luono.com" class="__cf_email__"
-                    data-cfemail="1871767e775861776d6a7c7775797176367b7775">caprth@mail.com</a>
+                    data-cfemail="1871767e775861776d6a7c7775797176367b7775">support@cryptfx.com</a>
 
                     <a href="mailto:"></a>
                 </p>

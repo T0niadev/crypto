@@ -58,7 +58,6 @@ class PackageController extends Controller
             "rollover" => 'required',
             "status" => 'required',
 
-
         ]);
 
 
@@ -78,7 +77,6 @@ class PackageController extends Controller
            "milestones" => required('milestones'),
            'image' => $name . "." . $extension,
            "payout_mode" => required('payout_mode'),
-
            "type" => required('type'),
            "rollover" => required('rollover'),
            "status" => required('status'),
@@ -90,6 +88,8 @@ class PackageController extends Controller
         $packages->save();
 
 
+
+        
         return redirect('/packages');
 
     }

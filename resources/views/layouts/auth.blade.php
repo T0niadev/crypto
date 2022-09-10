@@ -223,7 +223,7 @@
       </div>
       <div class="wow fadeInUp a36 a2l[#F3F4F4] a37 a2G dark:a2l[#2D2C4A]" data-wow-delay="0s">
         <p class="a1F a1R a4u aQ dark:aS">
-          © CRYPTO-LUONO - all Rights Reserved
+          © CryptFX - all Rights Reserved
 
         </p>
       </div>
