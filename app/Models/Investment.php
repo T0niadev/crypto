@@ -8,7 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Investment extends Model
 {
     use HasFactory;
+
+            protected $fillable = ['amount', 'total_return', 'start_date', 'withdrawal_date',  'inv_user','slots', 'package_id', 'status'];
     // Investments relationships with package.
+    
+  
+
+
+    
     public function package()
     {
         return $this->belongsTo(Package::class);

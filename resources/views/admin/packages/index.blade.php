@@ -29,15 +29,9 @@
                         <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                 data-feather="grid"></i></button>
-                        <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="app-todo.html"><i
+                        <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="/admin/packages/create"><i
                                     class="me-1" data-feather="check-square"></i><span
-                                    class="align-middle">Todo</span></a><a class="dropdown-item" href="app-chat.html"><i
-                                    class="me-1" data-feather="message-square"></i><span
-                                    class="align-middle">Chat</span></a><a class="dropdown-item"
-                                href="app-email.html"><i class="me-1" data-feather="mail"></i><span
-                                    class="align-middle">Email</span></a><a class="dropdown-item"
-                                href="app-calendar.html"><i class="me-1" data-feather="calendar"></i><span
-                                    class="align-middle">Calendar</span></a></div>
+                                    class="align-middle">Create new package</span></div>
                     </div>
                 </div>
             </div>
@@ -49,19 +43,70 @@
                     <div class="col-12">
                         <div class="card">
                             <table class="datatables-basic table">
-                                <thead>
+                            <thead>
                                     <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <th>id</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Date</th>
-                                        <th>Salary</th>
+                                        <th>Image</th>
+                                        <th>Package Name</th>
+                                        <th>Min Amount</th>
+                                        <th>Max Amount</th>
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
                                         <th>Status</th>
-                                        <th>Action</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
+                                @foreach($packages as $package)
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src="{{ asset('assets/images/packages/'.$package['image']) }}"
+                                                class="avatar" alt="Avatar" height="40" width="40" />
+                                        </td>
+                                        <td>{{ $package['name'] }}</td>
+                                        <td>
+                                            {{ $package['min_amount'] }}
+                                        </td>
+                                        <td>
+                                            {{ $package['max_amount'] }}
+                                        </td>
+                                        <td>
+                                            {{ $package['start_date'] }}
+                                        </td>
+                                        <td>
+                                            {{ $package['start_date'] }}
+                                        </td>
+                                        <td>
+                                            @if($package['status'] == 'open')
+                                            <span class="badge rounded-pill badge-light-success me-1">Open</span>
+                                            @else
+                                            <span class="badge rounded-pill badge-light-danger me-1">Close</span>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow py-0"
+                                                    data-bs-toggle="dropdown">
+                                                    <i data-feather="more-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a  class="dropdown-item"  href="{{ url('admin/packages/edit', $package->id) }}">
+                                                        <i data-feather="edit-2" class="me-50"></i>
+                                                        <span>Edit</span>
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i data-feather="edit-2" class="me-50"></i>
+                                                        <span>Show</span>
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i data-feather="trash" class="me-50"></i>
+                                                        <span>Delete</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                @endforeach
                             </table>
                         </div>
                     </div>

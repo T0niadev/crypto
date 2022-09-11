@@ -3,84 +3,130 @@
 namespace App\Http\Controllers;
 
 use App\Models\Investment;
+use App\Models\Package;
+use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreInvestmentRequest;
 use App\Http\Requests\UpdateInvestmentRequest;
 
 class InvestmentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        return view('user.Investment.index');
+      
+        return view('user.Investment.index')->with([
+            "packages" => Package::all(),
+            "investments" => Investment::all(),
+        ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('user.Investment.add')->with([
+
+            "packages" => Package::all()
+        ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreInvestmentRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreInvestmentRequest $request)
+
+    public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            "slots" => 'required',
+            "amount" => 'required',
+            "total_return" => 'required',
+            // "investment_date" => 'required',
+            "start_date" => 'required',
+            "withdrawal_date" => 'required',
+            "package_id" => 'required',
+
+        ]);
+
+      //   $inv = investment::find($id);
+       //  $inv_user = User::find($inv->user_id); 
+        
+
+
+       $user_id = Auth::id(); 
+
+        Investment::create([
+
+            "slots" => $request->slots,
+            "amount" => $request->amount,
+            "total_return" => $request->total_return,
+            // "investment_date" => $request->investment_date,
+            "start_date" => $request->start_date,
+            "withdrawal_date" => $request->withdrawal_date,
+            "package_id" => $request->package_id,
+
+
+        ]);
+
+
+
+        return redirect('/investment')->with([
+            "success" => "Package Added Succesfully"
+        ]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Investment  $investment
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Investment $investment)
+
+    public function edit($id)
     {
-        //
+
+        $investment = Investment::findorfail($id);
+
+        return view('investments.edit', compact('investment'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Investment  $investment
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Investment $investment)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateInvestmentRequest  $request
-     * @param  \App\Models\Investment  $investment
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateInvestmentRequest $request, Investment $investment)
+    public function update(Request $request, $id)
     {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Investment  $investment
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Investment $investment)
-    {
-        //
+        $request->validate([
+            "slots" => 'required',
+            "amount" => 'required',
+            "total_return" => 'required',
+            "investment_date" => 'required',
+            "start_date" => 'required',
+        "withdrawal_date" => 'required',
+        "status" => 'required',
+        ]);
+
+        // $input = $request->except(['image']);
+
+        $input = $request;
+
+        $investment = Investment::findorfail($id);
+
+        $investment->slots = $request->get('slots');
+
+        $investment->amount = $request->get('amount');
+
+        $investment->total_return = $request->get('total_return');
+
+        $investment->investment_date = $request->get('investment_date');
+
+        $investment->start_date = $request->get('start_date');
+
+
+        $investment->withdrawal_date = $request->get('withdrawal_date');
+
+
+        $investment->status = $request->get('status');
+
+
+
+        $investment->update($input);
+
+
+
+
+
+
+        return redirect('/admin/investments');
     }
 }
+

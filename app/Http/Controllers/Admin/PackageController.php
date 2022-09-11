@@ -50,47 +50,75 @@ class PackageController extends Controller
             "max_amount" => 'required',
             "duration" => 'required',
             "duration_mode" => 'required',
-            "milestones" => 'required',
-            "payout_mode" => 'required',
+            // "milestones" => 'required',
+            // "payout_mode" => 'required',
             "description" => 'required',
             "image" => 'mimes:jpeg,png|max:5000',
             "type" => 'required',
             "rollover" => 'required',
             "status" => 'required',
-
         ]);
 
 
-        $extension =request()->file('image')->getClientOriginalExtension();
-		$name = time();
+        // $extension =request()->file('image')->getClientOriginalExtension();
+		// $name = time();
 
-        $packages = new Package([
+        // $packages = new Package([
 
-            "name" => required('name'),
-            "roi" => required('roi'),
-            "start_date" => required('start_date'),
-            "slots" => required('slots'),
-            "min_amount" => required('min_amount'),
-            "max_amount" => required('max_amount'),
-           "duration" => required('duration'),
-           "duration_mode" => required('duration_mode'),
-           "milestones" => required('milestones'),
-           'image' => $name . "." . $extension,
-           "payout_mode" => required('payout_mode'),
-           "type" => required('type'),
-           "rollover" => required('rollover'),
-           "status" => required('status'),
+        //     "name" => required('name'),
+        //     "roi" => required('roi'),
+        //     "start_date" => required('start_date'),
+        //     "slots" => required('slots'),
+        //     "min_amount" => required('min_amount'),
+        //     "max_amount" => required('max_amount'),
+        //    "duration" => required('duration'),
+        //    "duration_mode" => required('duration_mode'),
+        //    "milestones" => required('milestones'),
+        //    'image' => $name . "." . $extension,
+        //    "payout_mode" => required('payout_mode'),
 
-
-        ]);
-
-        $this->addImage(request()->file('image'));
-        $packages->save();
+        //    "type" => required('type'),
+        //    "rollover" => required('rollover'),
+        //    "status" => required('status'),
 
 
+        // ]);
 
-        
-        return redirect('/packages');
+        // $this->addImage(request()->file('image'));
+        // $packages->save();
+
+
+        // return redirect('/packages');
+
+
+        // if ($request->hasFile("image")) {
+        //     $file = $request->image;
+        //     $imageName = time() . "_" . $file->getClientOriginalName();
+        //     $file->move(public_path('images/packages'), $imageName);
+
+            Package::create([
+                "name"  => $request->name,
+                "roi"  => $request->roi,
+                "start_date"  => $request->start_date,
+                "slots"  => $request->slots,
+                "min_amount"  => $request->min_amount,
+                "max_amount"  => $request->max_amount,
+                "duration"  => $request->duration,
+                "duration_mode"  => $request->duration_mode,
+                "milestones"  => $request->milestones,
+                "payout_mode"  => $request->payout_mode,
+                "description"  => $request->description,
+                "type"  => $request->type,
+                "rollover"  => $request->rollover,
+                "status"  => $request->status,
+            ]);
+
+
+
+            return redirect('admin/packages')->with([
+                "success" => "Package Added Succesfully"
+            ]);
+
 
     }
 
@@ -98,7 +126,7 @@ class PackageController extends Controller
     public function edit($id)
     {
 
-        $package = Packages::findorfail($id);
+        $package = Package::findorfail($id);
 
         return view('admin.packages.edit', compact('package'));
     }
@@ -125,47 +153,76 @@ class PackageController extends Controller
             "status" => 'required',
         ]);
 
+        if ($request->hasFile("image")) {
+            $file = $request->image;
+            $imageName = time() . "_" . $file->getClientOriginalName();
+            $file->move(public_path('images/packages'), $imageName);
+
+            Package::create([
+                "name"  => $request->name,
+                "roi"  => $request->roi,
+                "start_date"  => $request->start_date,
+                "slots"  => $request->slots,
+                "min_amount"  => $request->min_amount,
+                "max_amount"  => $request->max_amount,
+                "duration"  => $request->duration,
+                "duration_mode"  => $request->duration_mode,
+                "milestones"  => $request->milestones,
+                "payout_mode"  => $request->payout_mode,
+                "description"  => $request->description,
+                "type"  => $request->type,
+                "rollover"  => $request->rollover,
+                "status"  => $request->status,
+            ]);
+
+
+
+            return redirect('admin/packages')->with([
+                "success" => "Package Added Succesfully"
+            ]);
+        }
+
         // $input = $request->except(['image']);
 
-            $package->name = $request->get('name');
-            $package->roi = $request->get('roi');
-            $package->start_date = $request->get('start_date');
-            $package->slots = $request->get('slots');
-            $package->min_amount = $request->get('min_amount');
-            $package->max_amount = $request->get('max_amount');
-            $package->duration = $request->get('duration');
-            $package->duration_mode = $request->get('duration_mode');
-            $package->milestones = $request->get('milestones');
-            $package->payout_mode = $request->get('payout_mode');
-            $package->description = $request->get('description');
+        //     $package->name = $request->get('name');
+        //     $package->roi = $request->get('roi');
+        //     $package->start_date = $request->get('start_date');
+        //     $package->slots = $request->get('slots');
+        //     $package->min_amount = $request->get('min_amount');
+        //     $package->max_amount = $request->get('max_amount');
+        //     $package->duration = $request->get('duration');
+        //     $package->duration_mode = $request->get('duration_mode');
+        //     $package->milestones = $request->get('milestones');
+        //     $package->payout_mode = $request->get('payout_mode');
+        //     $package->description = $request->get('description');
 
-            $package->type = $request->get('type');
-            $package->rollover = $request->get('rollover');
-            $package->status = $request->get('status');
-
-
-
-
-            if ($file = request()->file('image')) {
-                \File::delete(public_path(). '/assets/packages/' .$package->image);
-
-                $this->addImage(request()->file('image'));
-
-                $extension =request()->file('image')->getClientOriginalExtension();
-                $name = time();
-
-
-                $input['image'] = $name.".".$extension;
-            }
-
-
-        $package->update($input);
+        //     $package->type = $request->get('type');
+        //     $package->rollover = $request->get('rollover');
+        //     $package->status = $request->get('status');
 
 
 
 
+        //     if ($file = request()->file('image')) {
+        //         \File::delete(public_path(). '/assets/packages/' .$package->image);
+
+        //         $this->addImage(request()->file('image'));
+
+        //         $extension =request()->file('image')->getClientOriginalExtension();
+        //         $name = time();
 
 
-        return redirect('/admin/packages');
+        //         $input['image'] = $name.".".$extension;
+        //     }
+
+
+        // $package->update($input);
+
+
+
+
+
+
+        // return redirect('/admin/packages');
     }
 }

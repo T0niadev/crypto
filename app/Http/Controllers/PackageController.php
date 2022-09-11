@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Package;
-use App\Http\Requests\StorePackageRequest;
-use App\Http\Requests\UpdatePackageRequest;
+use Illuminate\Http\Request;
 
 class PackageController extends Controller
 {
@@ -15,7 +15,10 @@ class PackageController extends Controller
      */
     public function index()
     {
-        return view('user.package.index');
+        //
+
+        $packages = Package::all();
+        return view('admin.packages.index', compact('packages'));
     }
 
     /**
@@ -26,61 +29,108 @@ class PackageController extends Controller
     public function create()
     {
         //
+        return view('admin.packages.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StorePackageRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePackageRequest $request)
+   public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            "name" => 'required',
+             "roi" => 'required',
+             "start_date" => 'required',
+             "slots" => 'required',
+             "min_amount" => 'required',
+            "max_amount" => 'required',
+            "duration" => 'required',
+            "duration_mode" => 'required',
+            "description" => 'required',
+            "image" => 'mimes:jpeg,png|max:5000',
+            "status" => 'required',
+        ]);
+
+
+            Package::create([
+                "name"  => $request->name,
+                "roi"  => $request->roi,
+                "start_date"  => $request->start_date,
+                "slots"  => $request->slots,
+                "type"  => $request->type,
+                "min_amount"  => $request->min_amount,
+                "max_amount"  => $request->max_amount,
+                "duration"  => $request->duration,
+                "duration_mode"  => $request->duration_mode,
+                "description"  => $request->description,
+                "status"  => $request->status,
+            ]);
+
+
+
+            return redirect('admin/packages')->with([
+                "success" => "Package Added Succesfully"
+            ]);
+
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Package  $package
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Package $package)
+
+    public function edit($id)
     {
-        //
+
+        $package = Package::findorfail($id);
+
+        return view('admin.packages.edit', compact('package'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Package  $package
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Package $package)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdatePackageRequest  $request
-     * @param  \App\Models\Package  $package
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdatePackageRequest $request, Package $package)
+    public function update(Request $request, $id)
     {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Package  $package
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Package $package)
-    {
-        //
+            $request->validate([
+            "name" => 'required',
+             "roi" => 'required',
+             "start_date" => 'required',
+             "slots" => 'required',
+             "min_amount" => 'required',
+            "max_amount" => 'required',
+            "duration" => 'required',
+            "duration_mode" => 'required',
+            "description" => 'required',
+            "image" => 'mimes:jpeg,png|max:5000',
+            "status" => 'required',
+        ]);
+
+        if ($request->hasFile("image")) {
+            $file = $request->image;
+            $imageName = time() . "_" . $file->getClientOriginalName();
+            $file->move(public_path('images/packages'), $imageName);
+
+            Package::create([
+                "name"  => $request->name,
+                "roi"  => $request->roi,
+                "start_date"  => $request->start_date,
+                "slots"  => $request->slots,
+                "min_amount"  => $request->min_amount,
+                "max_amount"  => $request->max_amount,
+                "duration"  => $request->duration,
+                "duration_mode"  => $request->duration_mode,
+                "description"  => $request->description,
+                "status"  => $request->status,
+            ]);
+
+
+
+            return redirect('admin/packages')->with([
+                "success" => "Package Added Succesfully"
+            ]);
+        }
+
+        
     }
 }
