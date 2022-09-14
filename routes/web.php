@@ -23,6 +23,7 @@ Auth::routes();
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/wallet', [\App\Http\Controllers\WalletController::class, 'index'])->name('wallet');
 Route::get('/investment', [\App\Http\Controllers\InvestmentController::class, 'index'])->name('investment');
+Route::get('/package', [\App\Http\Controllers\PackageController::class, 'index'])->name('package');
 Route::get('/investment/add/{package_id}', [\App\Http\Controllers\InvestmentController::class, 'create'])->name('addinvestment');
 Route::post('/investments/store', [\App\Http\Controllers\InvestmentController::class, 'store'])->name('storeinvestment');
 Route::get('/dashboard', [\App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');

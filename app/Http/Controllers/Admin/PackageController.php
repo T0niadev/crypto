@@ -206,23 +206,6 @@ class PackageController extends Controller
 
         // $input = $request->except(['image']);
 
-<<<<<<< HEAD
-        $package->name = $request->get('name');
-        $package->roi = $request->get('roi');
-        $package->start_date = $request->get('start_date');
-        $package->slots = $request->get('slots');
-        $package->min_amount = $request->get('min_amount');
-        $package->max_amount = $request->get('max_amount');
-        $package->duration = $request->get('duration');
-        $package->duration_mode = $request->get('duration_mode');
-        $package->milestones = $request->get('milestones');
-        $package->payout_mode = $request->get('payout_mode');
-        $package->description = $request->get('description');
-
-        $package->type = $request->get('type');
-        $package->rollover = $request->get('rollover');
-        $package->status = $request->get('status');
-=======
         //     $package->name = $request->get('name');
         //     $package->roi = $request->get('roi');
         //     $package->start_date = $request->get('start_date');
@@ -238,7 +221,6 @@ class PackageController extends Controller
         //     $package->type = $request->get('type');
         //     $package->rollover = $request->get('rollover');
         //     $package->status = $request->get('status');
->>>>>>> 5a288440605c740201e4ee3229508e90be3d8a65
 
 
         //     if ($file = request()->file('image')) {
