@@ -31,37 +31,64 @@
                                 data-feather="grid"></i></button>
                         <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="app-todo.html"><i
                                     class="me-1" data-feather="check-square"></i><span
-                                    class="align-middle">Todo</span></a><a class="dropdown-item" href="app-chat.html"><i
+                                    class="align-middle">Add User</span></a><a class="dropdown-item" href="app-chat.html"><i
                                     class="me-1" data-feather="message-square"></i><span
-                                    class="align-middle">Chat</span></a><a class="dropdown-item"
-                                href="app-email.html"><i class="me-1" data-feather="mail"></i><span
-                                    class="align-middle">Email</span></a><a class="dropdown-item"
-                                href="app-calendar.html"><i class="me-1" data-feather="calendar"></i><span
-                                    class="align-middle">Calendar</span></a></div>
+                                    class="align-middle">Chat</span></a>
+                       </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="content-body">
             <!-- Basic table -->
-            <section id="basic-datatable">
+            <section id="">
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
-                            <table class="datatables-basic table">
+                            <table class="">
                                 <thead>
                                     <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <th>id</th>
-                                        <th>Name</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
                                         <th>Email</th>
-                                        <th>Date</th>
-                                        <th>Salary</th>
-                                        <th>Status</th>
+                                        <th>Country</th>
+                                        <th>Registration Date</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
+                                @foreach($users as $user)
+                                <tbody>
+                                    <tr>
+                                        <td>{{ $user['first_name'] }}</td>
+                                        <td>
+                                            {{ $user['last_name'] }}
+                                        </td>
+                                        <td>
+                                            {{ $user['email'] }}
+                                        </td>
+                                        <td>
+                                            {{ $user['country'] }}
+                                        </td>
+                                        <td>
+                                            {{ $user['created_at'] }}
+                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow py-0"
+                                                    data-bs-toggle="dropdown">
+                                                    <i data-feather="more-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" href="#">
+                                                        <i data-feather="trash" class="me-50"></i>
+                                                        <span>Delete User</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                @endforeach
                             </table>
                         </div>
                     </div>

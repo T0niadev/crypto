@@ -6,16 +6,17 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Investment;
 use App\Models\Package;
+use App\Models\User;
 
 class InvestmentController extends Controller
 {
     public function index()
     {
 
-        $investment = Investment::latest()->get();
+        $investments = Investment::latest()->get();
 
 
-        return view('admin.investments.index', compact('investment'));
+        return view('admin.investments.index', compact('investments'));
     }
 
     public function create()

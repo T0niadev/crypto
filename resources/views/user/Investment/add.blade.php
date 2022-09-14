@@ -72,10 +72,21 @@
                                        
                                         <input value="{{ $package->name }}"
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                            placeholder="Enter Investment amount of your choice"
+                                            placeholder=""
                                             type="text"
                                         />
                                     </label>
+
+                                
+
+                                        <input value="{{ $package->id }}" name="package_id"
+                                            class=" bg-transparent px-3 py-2 text:text-transparent "
+                                            placeholder=""
+                                            type="text"
+                                        />
+                                    
+
+                                    
 
                                     <label for="number" class="block">
                                         <span
@@ -92,7 +103,7 @@
                                     <label for="number" class="block">
                                         <span
                                             class="font-medium text-slate-600 dark:text-navy-100"
-                                            >Amount</span
+                                            > Investment Amount</span
                                         >
                                         <input name="amount" id="secondNumber"
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
@@ -106,7 +117,7 @@
                                             class="font-medium text-slate-600 dark:text-navy-100"
                                             >Slots</span
                                         >
-                                        <input name="slots" id="thirdNumber" onchange="multiply()"
+                                        <input name="slots" id="thirdNumber" onchange="multiply()" 
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                             placeholder="Enter number of slots"
                                             type="number"
@@ -119,14 +130,27 @@
                                     <label for="number" class="block">
                                         <span
                                             class="font-medium text-slate-600 dark:text-navy-100"
+                                            >Total Interest</span
+                                        >
+                                        <input  id="result" 
+                                            class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                            placeholder="Total Interest"
+                                            type="number"
+                                        />
+                                    </label>
+
+                                    <label for="number" class="block">
+                                        <span
+                                            class="font-medium text-slate-600 dark:text-navy-100"
                                             >Total Returns</span
                                         >
-                                        <input  name="total_return" id="result"
+                                        <input  name="total_return" id="returns"
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                             placeholder="Total Returns"
                                             type="number"
                                         />
                                     </label>
+                                   
                                    
 
                                     <label>
@@ -134,7 +158,7 @@
                                         >Start Date</span
                                         >
                                         <span class="relative mt-1.5 flex">
-                                        <input
+                                        <input onchange="add()"
                                             x-flatpickr
                                             class="form-input peer w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 pl-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                             placeholder="Choose date..."
@@ -220,8 +244,22 @@
             let num3 = document.getElementById(
                 "thirdNumber").value
 
-             let result = document.getElementById('result').value= num1 * num2 * num3 / 100 ;
+             let result = document.getElementById('result').value= ((num1 * num2 * num3)  / 100);
              console.log(result);
         }
    </script>
+   <script>
+
+    function add()
+    {
+
+        let num4 = document.getElementById(
+            "secondNumber").value
+        let num5 = document.getElementById(
+            "result").value
+
+        let result = document.getElementById('returns').value= num4 + num5;
+        console.log(result);
+    }
+    </script>
 @endsection

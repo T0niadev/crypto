@@ -48,20 +48,71 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
-                            <table class="datatables-basic table">
+                            <table class="">
                                 <thead>
                                     <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <th>id</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Date</th>
-                                        <th>Salary</th>
+                                        <th>User Name</th>
+                                        <th>Package Name</th>
+                                        <th>Amount</th>
+                                        <th>Slots</th>
+                                        <th>Total Returns</th>
+                                        <th>Start Date</th>
+                                        <th>Withdrawal Date</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
+                                @foreach($investments as $investment)
+                                <tbody>
+                                    <tr>
+                                        <td>{{ $investment->user->first_name}} {{ $investment->user->last_name}}</td>
+                                        <td>
+                                            {{ $investment->package->name }}
+                                        </td>
+                                        <td>
+                                            {{ $investment['amount'] }}
+                                        </td>
+                                        <td>
+                                            {{ $investment['slots'] }}
+                                        </td>
+                                        <td>
+                                            {{ $investment['total_returns'] }}
+                                        </td>
+                                        <td>
+                                            {{ $investment['start_date'] }}
+                                        </td>
+                                        <td>
+                                            {{ $investment['withdrawal_date'] }}
+                                        </td>
+                                        <td>
+                                            @if($investment['status'] == 'open')
+                                            <span class="badge rounded-pill badge-light-success me-1">Approved</span>
+                                            @else
+                                            <span class="badge rounded-pill badge-light-danger me-1">Pending</span>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow py-0"
+                                                    data-bs-toggle="dropdown">
+                                                    <i data-feather="more-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a  class="dropdown-item"  href="">
+                                                        <i data-feather="edit-2" class="me-50"></i>
+                                                        <span>Approve</span>
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                    <a class="dropdown-item" href="#">
+                                                        <i data-feather="trash" class="me-50"></i>
+                                                        <span>Delete</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                @endforeach
                             </table>
                         </div>
                     </div>

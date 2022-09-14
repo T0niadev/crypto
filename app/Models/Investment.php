@@ -24,6 +24,8 @@ class Investment extends Model
 
 
     }
+
+ 
     
     public function package()
     {
