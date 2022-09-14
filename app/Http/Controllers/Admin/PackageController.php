@@ -18,91 +18,9 @@ class PackageController extends Controller
     public function index()
     {
         //
-        return view('admin.packages.index');
-    }
 
-    /**
-     * Get the data for listing in yajra.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function fetchPackages(Request $request)
-    {
-        ## Read value
-        $draw = $request->get('draw');
-        $start = $request->get("start");
-        $rowPerPage = $request->get("length"); // Rows display per page
-
-        $columnIndex_arr = $request->get('order');
-        $columnName_arr = $request->get('columns');
-        $order_arr = $request->get('order');
-        $search_arr = $request->get('search');
-
-        $columnIndex = $columnIndex_arr[0]['column']; // Column index
-        $columnName = $columnName_arr[$columnIndex]['data']; // Column name
-        $columnSortOrder = $order_arr[0]['dir']; // asc or desc
-        $searchValue = $search_arr['value']; // Search value
-
-        // Total records
-        $totalRecords = Package::select('count(*) as allcount')->count();
-        $totalRecordsWithFilter = Package::select('count(*) as allcount')->where('name', 'like', '%' . $searchValue . '%')->count();
-
-        // Fetch records
-        $records = Package::orderBy($columnName, $columnSortOrder)
-            ->where('packages.name', 'like', '%' . $searchValue . '%')
-            ->orWhere('packages.roi', 'like', '%' . $searchValue . '%')
-            ->orWhere('packages.min_amount', 'like', '%' . $searchValue . '%')
-            ->orWhere('packages.max_amount', 'like', '%' . $searchValue . '%')
-            ->orWhere('packages.start_date', 'like', '%' . $searchValue . '%')
-            ->orWhere('packages.end_date', 'like', '%' .$searchValue . '%')
-            ->orWhere('packages.duration', 'like', '%' .$searchValue . '%')
-            ->orWhere('packages.duration_mode', 'like', '%' .$searchValue . '%')
-            ->orWhere('packages.rollover', 'like', '%' .$searchValue . '%')
-            ->orWhere('packages.status', 'like', '%' .$searchValue . '%')
-            ->select('packages.*')
-            ->skip($start)
-            ->take($rowPerPage)
-            ->get();
-
-        $data_arr = array();
-
-        foreach ($records as $record) {
-            $id = $record->id;
-            $name = $record->name;
-            $roi = $record->roi;
-            $min_amount = $record->min_amount;
-            $max_amount = $record->max_amount;
-            $start_date = $record->start_date;
-            $end_date = $record->end_date;
-            $duration = $record->duration;
-            $duration_mode = $record->duration_mode;
-            $rollover = $record->rollover;
-            $status = $record->status;
-
-            $data_arr[] = array(
-                "id" => $id,
-                "name" => $name,
-                "roi" => $roi,
-                "min_amount" => $min_amount,
-                "max_amount" => $max_amount,
-                "start_date" => $start_date,
-                "end_date" => $end_date,
-                "duration" => $duration,
-                "duration_mode" => $duration_mode,
-                "rollover" => $rollover,
-                "status" => $status
-            );
-        }
-
-        $response = array(
-            "draw" => intval($draw),
-            "iTotalRecords" => $totalRecords,
-            "iTotalDisplayRecords" => $totalRecordsWithFilter,
-            "aaData" => $data_arr
-        );
-
-        return response()->json($response);
+        $packages = Package::all();
+        return view('admin.packages.index', compact('packages'));
     }
 
     /**
@@ -134,51 +52,86 @@ class PackageController extends Controller
             "max_amount" => 'required',
             "duration" => 'required',
             "duration_mode" => 'required',
-            "milestones" => 'required',
-            "payout_mode" => 'required',
+            // "milestones" => 'required',
+            // "payout_mode" => 'required',
             "description" => 'required',
             "image" => 'mimes:jpeg,png|max:5000',
             "type" => 'required',
             "rollover" => 'required',
             "status" => 'required',
-
-
         ]);
 
 
-        $extension = request()->file('image')->getClientOriginalExtension();
-        $name = time();
+        // $extension =request()->file('image')->getClientOriginalExtension();
+		// $name = time();
 
-        $packages = new Package([
+        // $packages = new Package([
 
-            "name" => $request['name'],
-            "roi" => $request['roi'],
-            "start_date" => $request['start_date'],
-            "slots" => $request['slots'],
-            "min_amount" => $request['min_amount'],
-            "max_amount" => $request['max_amount'],
-            "duration" => $request['duration'],
-            "duration_mode" => $request['duration_mode'],
-            "milestones" => $request['milestones'],
-            'image' => $name . "." . $extension,
-            "payout_mode" => $request['payout_mode'],
-            "type" => $request['type'],
-            "rollover" => $request['rollover'],
-            "status" => $request['status'],
+        //     "name" => required('name'),
+        //     "roi" => required('roi'),
+        //     "start_date" => required('start_date'),
+        //     "slots" => required('slots'),
+        //     "min_amount" => required('min_amount'),
+        //     "max_amount" => required('max_amount'),
+        //    "duration" => required('duration'),
+        //    "duration_mode" => required('duration_mode'),
+        //    "milestones" => required('milestones'),
+        //    'image' => $name . "." . $extension,
+        //    "payout_mode" => required('payout_mode'),
 
-
-        ]);
-
-        $this->addImage(request()->file('image'));
-        $packages->save();
+        //    "type" => required('type'),
+        //    "rollover" => required('rollover'),
+        //    "status" => required('status'),
 
 
-        return redirect('/packages');
+        // ]);
+
+        // $this->addImage(request()->file('image'));
+        // $packages->save();
+
+
+        // return redirect('/packages');
+
+
+        // if ($request->hasFile("image")) {
+        //     $file = $request->image;
+        //     $imageName = time() . "_" . $file->getClientOriginalName();
+        //     $file->move(public_path('images/packages'), $imageName);
+
+            Package::create([
+                "name"  => $request->name,
+                "roi"  => $request->roi,
+                "start_date"  => $request->start_date,
+                "slots"  => $request->slots,
+                "min_amount"  => $request->min_amount,
+                "max_amount"  => $request->max_amount,
+                "duration"  => $request->duration,
+                "duration_mode"  => $request->duration_mode,
+                "milestones"  => $request->milestones,
+                "payout_mode"  => $request->payout_mode,
+                "description"  => $request->description,
+                "type"  => $request->type,
+                "rollover"  => $request->rollover,
+                "status"  => $request->status,
+            ]);
+
+
+        // $this->addImage(request()->file('image'));
+        // $packages->save();
+
+            return redirect('admin/packages')->with([
+                "success" => "Package Added Succesfully"
+            ]);
+
+
     }
 
 
     public function edit(Package $package)
     {
+
+        $package = Package::findorfail($id);
+
         return view('admin.packages.edit', compact('package'));
     }
 
@@ -204,8 +157,56 @@ class PackageController extends Controller
             "status" => 'required',
         ]);
 
+        if ($request->hasFile("image")) {
+            $file = $request->image;
+            $imageName = time() . "_" . $file->getClientOriginalName();
+            $file->move(public_path('images/packages'), $imageName);
+
+            Package::create([
+                "name"  => $request->name,
+                "roi"  => $request->roi,
+                "start_date"  => $request->start_date,
+                "slots"  => $request->slots,
+                "min_amount"  => $request->min_amount,
+                "max_amount"  => $request->max_amount,
+                "duration"  => $request->duration,
+                "duration_mode"  => $request->duration_mode,
+                "milestones"  => $request->milestones,
+                "payout_mode"  => $request->payout_mode,
+                "description"  => $request->description,
+                "type"  => $request->type,
+                "rollover"  => $request->rollover,
+                "status"  => $request->status,
+            ]);
+
+
+
+            return redirect('admin/packages')->with([
+                "success" => "Package Added Succesfully"
+            ]);
+        }
+
         // $input = $request->except(['image']);
 
+        //     $package->name = $request->get('name');
+        //     $package->roi = $request->get('roi');
+        //     $package->start_date = $request->get('start_date');
+        //     $package->slots = $request->get('slots');
+        //     $package->min_amount = $request->get('min_amount');
+        //     $package->max_amount = $request->get('max_amount');
+        //     $package->duration = $request->get('duration');
+        //     $package->duration_mode = $request->get('duration_mode');
+        //     $package->milestones = $request->get('milestones');
+        //     $package->payout_mode = $request->get('payout_mode');
+        //     $package->description = $request->get('description');
+
+        //     $package->type = $request->get('type');
+        //     $package->rollover = $request->get('rollover');
+        //     $package->status = $request->get('status');
+
+        // $input = $request->except(['image']);
+
+<<<<<<< HEAD
         $package->name = $request->get('name');
         $package->roi = $request->get('roi');
         $package->start_date = $request->get('start_date');
@@ -221,31 +222,44 @@ class PackageController extends Controller
         $package->type = $request->get('type');
         $package->rollover = $request->get('rollover');
         $package->status = $request->get('status');
+=======
+        //     $package->name = $request->get('name');
+        //     $package->roi = $request->get('roi');
+        //     $package->start_date = $request->get('start_date');
+        //     $package->slots = $request->get('slots');
+        //     $package->min_amount = $request->get('min_amount');
+        //     $package->max_amount = $request->get('max_amount');
+        //     $package->duration = $request->get('duration');
+        //     $package->duration_mode = $request->get('duration_mode');
+        //     $package->milestones = $request->get('milestones');
+        //     $package->payout_mode = $request->get('payout_mode');
+        //     $package->description = $request->get('description');
+
+        //     $package->type = $request->get('type');
+        //     $package->rollover = $request->get('rollover');
+        //     $package->status = $request->get('status');
+>>>>>>> 5a288440605c740201e4ee3229508e90be3d8a65
+
+
+        //     if ($file = request()->file('image')) {
+        //         \File::delete(public_path(). '/assets/packages/' .$package->image);
+
+        //         $this->addImage(request()->file('image'));
+
+        //         $extension =request()->file('image')->getClientOriginalExtension();
+        //         $name = time();
+
+
+        //         $input['image'] = $name.".".$extension;
+        //     }
+
+
+        // $package->update($input);
 
 
 
 
-        if ($request->file('image')) {
-            File::delete(public_path() . '/assets/packages/' . $package->image);
-
-            $this->addImage(request()->file('image'));
-
-            $extension = request()->file('image')->getClientOriginalExtension();
-            $name = time();
-
-
-            $input['image'] = $name . "." . $extension;
-        }
-
-
-        $package->update($input);
-
-
-
-
-
-
-        return redirect('/admin/packages');
+        // return redirect('/admin/packages');
     }
 
     public function destroy(Package $package)
@@ -259,6 +273,6 @@ class PackageController extends Controller
             return redirect()->route('admin.packages')->with('success', 'Package deleted successfully');
         }
 
-        return back()->with('error', 'Error deleting package');
+        // return redirect('/admin/packages');
     }
 }
