@@ -67,19 +67,26 @@
                                 <div class="card space-y-5 p-4 sm:p-5">
                                     <label class="block">
                                         <span class="font-medium text-slate-600 dark:text-navy-100"
-                                        >Select Package</span
+                                        >Package</span
                                         >
-                                        <select name="package_id" id="package_id"
-                                        class="mt-1.5 w-full"
-                                        x-tom-select="{create: false,sortField: {field: 'text',direction: 'asc'}}"
-                                        placeholder="Select Package..."
+                                       
+                                        <input value="{{ $package->name }}"
+                                            class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                            placeholder="Enter Investment amount of your choice"
+                                            type="text"
+                                        />
+                                    </label>
+
+                                    <label for="number" class="block">
+                                        <span
+                                            class="font-medium text-slate-600 dark:text-navy-100"
+                                            >ROI</span
                                         >
-                                        @foreach ($packages as $package)
-                                            <option value="{{ $package->id }}">
-                                                {{ $package->name }}
-                                            </option>
-                                        @endforeach
-                                        </select>
+                                        <input value = "{{ $package->roi }}" id="firstNumber"
+                                            class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                            placeholder="Return on Investment"
+                                            type="number"
+                                        />
                                     </label>
                                 
                                     <label for="number" class="block">
@@ -87,7 +94,7 @@
                                             class="font-medium text-slate-600 dark:text-navy-100"
                                             >Amount</span
                                         >
-                                        <input name="amount"
+                                        <input name="amount" id="secondNumber"
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                             placeholder="Enter Investment amount of your choice"
                                             type="number"
@@ -99,7 +106,7 @@
                                             class="font-medium text-slate-600 dark:text-navy-100"
                                             >Slots</span
                                         >
-                                        <input name="slots"
+                                        <input name="slots" id="thirdNumber" onchange="multiply()"
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                             placeholder="Enter number of slots"
                                             type="number"
@@ -107,24 +114,14 @@
                                     </label>
 
 
-                                    <label for="number" class="block">
-                                        <span
-                                            class="font-medium text-slate-600 dark:text-navy-100"
-                                            >ROI</span
-                                        >
-                                        <input value = package->name
-                                            class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                            placeholder="Return on Investment"
-                                            type="number"
-                                        />
-                                    </label>
+                                
                             
                                     <label for="number" class="block">
                                         <span
                                             class="font-medium text-slate-600 dark:text-navy-100"
-                                            >Slots</span
+                                            >Total Returns</span
                                         >
-                                        <input  name="total_return"
+                                        <input  name="total_return" id="result"
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                             placeholder="Total Returns"
                                             type="number"
@@ -212,4 +209,19 @@
           
         </form>
     </main>
+    <script>
+
+        function multiply()
+        {
+            let num1 = document.getElementById(
+                "firstNumber").value;
+            let num2 = document.getElementById(
+                "secondNumber").value
+            let num3 = document.getElementById(
+                "thirdNumber").value
+
+             let result = document.getElementById('result').value= num1 * num2 * num3 / 100 ;
+             console.log(result);
+        }
+   </script>
 @endsection

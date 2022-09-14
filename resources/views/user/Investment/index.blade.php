@@ -148,7 +148,7 @@
                                                 class="btn min-w-[7rem] border border-white/10 bg-white/20 text-white backdrop-blur hover:bg-white/30 focus:bg-white/30" 
                                                 >
                                                 <a
-                                                href="/investment/add"> Invest</a>
+                                                href="{{ url('/investment/add', $package->id) }}"> Invest</a>
                                                 </button>
                                             </div>
                                         </div>

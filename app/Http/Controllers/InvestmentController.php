@@ -22,11 +22,11 @@ class InvestmentController extends Controller
         ]);
     }
 
-    public function create()
+    public function create($id)
     {
         return view('user.Investment.add')->with([
 
-            "packages" => Package::all()
+            "package" => Package::findOrFail($id)
         ]);
     }
 
