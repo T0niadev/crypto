@@ -7,14 +7,23 @@ use Illuminate\Database\Eloquent\Model;
 
 class Investment extends Model
 {
-    use HasFactory;
+   
+    protected $fillable = ['amount', 'total_return', 'start_date', 'withdrawal_date',  'inv_user','slots', 'user_id', 'package_id', 'status'];
 
-            protected $fillable = ['amount', 'total_return', 'start_date', 'withdrawal_date',  'inv_user','slots', 'package_id', 'status'];
-    // Investments relationships with package.
+
+
+    protected static function boot()
+    {
+
+     parent::boot(); 
     
-  
+    
+     self::creating(function($model) {
+           $model->user_id = auth()->id();
+        });
 
 
+    }
     
     public function package()
     {
