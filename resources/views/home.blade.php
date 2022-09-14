@@ -242,7 +242,7 @@
               <div class="mt-8 flex items-center justify-between space-x-2">
                 <div class="flex -space-x-3">
                   <div class="avatar h-8 w-8 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-16.jpg"
+                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-16.jpg') }}"
                       alt="avatar" />
                   </div>
                   <div class="avatar h-8 w-8 hover:z-10">
@@ -252,7 +252,7 @@
                     </div>
                   </div>
                   <div class="avatar h-8 w-8 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-20.jpg"
+                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-20.jpg') }}"
                       alt="avatar" />
                   </div>
                 </div>
@@ -292,7 +292,7 @@
               <div class="mt-8 flex items-center justify-between space-x-2">
                 <div class="flex -space-x-3">
                   <div class="avatar h-8 w-8 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-16.jpg"
+                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-16.jpg') }}"
                       alt="avatar" />
                   </div>
                   <div class="avatar h-8 w-8 hover:z-10">
@@ -302,7 +302,7 @@
                     </div>
                   </div>
                   <div class="avatar h-8 w-8 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-14.jpg"
+                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-14.jpg') }}"
                       alt="avatar" />
                   </div>
                 </div>
@@ -346,7 +346,7 @@
               <div class="mt-8 flex items-center justify-between space-x-2">
                 <div class="flex -space-x-3">
                   <div class="avatar h-8 w-8 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-11.jpg"
+                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-11.jpg') }}"
                       alt="avatar" />
                   </div>
                   <div class="avatar h-8 w-8 hover:z-10">
@@ -356,7 +356,7 @@
                     </div>
                   </div>
                   <div class="avatar h-8 w-8 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-10.jpg"
+                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-10.jpg') }}"
                       alt="avatar" />
                   </div>
                 </div>
@@ -559,7 +559,7 @@
           <div class="flex items-center justify-between space-x-2">
             <div class="flex items-center space-x-3">
               <div class="avatar">
-                <img class="mask is-squircle" src="images/avatar/avatar-5.jpg" alt="image" />
+                <img class="mask is-squircle" src="{{ asset('assets/images/avatar/avatar-5.jpg') }}" alt="image" />
               </div>
               <div>
                 <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100">
@@ -653,11 +653,11 @@
           </div>
           <div class="flex justify-between">
             <div class="flex space-x-2">
-              <img x-tooltip="'Award Level 1'" class="h-6 w-6" src="images/awards/award-19.svg"
+              <img x-tooltip="'Award Level 1'" class="h-6 w-6" src="{{ asset('assets/images/awards/award-19.svg') }}"
                 alt="avatar" />
-              <img x-tooltip="'Award Level 2'" class="h-6 w-6" src="images/awards/award-2.svg"
+              <img x-tooltip="'Award Level 2'" class="h-6 w-6" src="{{ asset('assets/images/awards/award-2.svg') }}"
                 alt="avatar" />
-              <img x-tooltip="'Award Level 3'" class="h-6 w-6" src="images/awards/award-5.svg"
+              <img x-tooltip="'Award Level 3'" class="h-6 w-6" src="{{ asset('assets/images/awards/award-5.svg') }}"
                 alt="avatar" />
             </div>
             <button
@@ -675,7 +675,7 @@
           <div class="flex items-center justify-between space-x-2">
             <div class="flex items-center space-x-3">
               <div class="avatar">
-                <img class="mask is-squircle" src="images/avatar/avatar-18.jpg" alt="image" />
+                <img class="mask is-squircle" src="{{ asset('assets/images/avatar/avatar-18.jpg') }}" alt="image" />
               </div>
               <div>
                 <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100">
@@ -765,11 +765,11 @@
           </div>
           <div class="flex justify-between">
             <div class="flex space-x-2">
-              <img x-tooltip="'Award Level 1'" class="h-6 w-6" src="images/awards/award-1.svg"
+              <img x-tooltip="'Award Level 1'" class="h-6 w-6" src="{{ asset('assets/images/awards/award-1.svg') }}"
                 alt="avatar" />
-              <img x-tooltip="'Award Level 2'" class="h-6 w-6" src="images/awards/award-6.svg"
+              <img x-tooltip="'Award Level 2'" class="h-6 w-6" src="{{ asset('assets/images/awards/award-6.svg') }}"
                 alt="avatar" />
-              <img x-tooltip="'Award Level 3'" class="h-6 w-6" src="images/awards/award-9.svg"
+              <img x-tooltip="'Award Level 3'" class="h-6 w-6" src="{{ asset('assets/images/awards/award-9.svg') }}"
                 alt="avatar" />
             </div>
             <button
@@ -787,7 +787,7 @@
           <div class="flex items-center justify-between space-x-2">
             <div class="flex items-center space-x-3">
               <div class="avatar">
-                <img class="mask is-squircle" src="images/avatar/avatar-6.jpg" alt="image" />
+                <img class="mask is-squircle" src="{{ asset('assets/images/avatar/avatar-6.jpg') }}" alt="image" />
               </div>
               <div>
                 <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100">
@@ -877,9 +877,9 @@
           </div>
           <div class="flex justify-between">
             <div class="flex space-x-2">
-              <img x-tooltip="'Award Level 2'" class="h-6 w-6" src="images/awards/award-14.svg"
+              <img x-tooltip="'Award Level 2'" class="h-6 w-6" src="{{ asset('assets/images/awards/award-14.svg') }}"
                 alt="avatar" />
-              <img x-tooltip="'Award Level 3'" class="h-6 w-6" src="images/awards/award-13.svg"
+              <img x-tooltip="'Award Level 3'" class="h-6 w-6" src="{{ asset('assets/images/awards/award-13.svg') }}"
                 alt="avatar" />
             </div>
             <button
@@ -897,7 +897,7 @@
           <div class="flex items-center justify-between space-x-2">
             <div class="flex items-center space-x-3">
               <div class="avatar">
-                <img class="mask is-squircle" src="images/avatar/avatar-11.jpg" alt="image" />
+                <img class="mask is-squircle" src="{{ asset('assets/images/avatar/avatar-11.jpg') }}" alt="image" />
               </div>
               <div>
                 <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100">
@@ -987,9 +987,9 @@
           </div>
           <div class="flex justify-between">
             <div class="flex space-x-2">
-              <img x-tooltip="'Award Level 2'" class="h-6 w-6" src="images/awards/award-15.svg"
+              <img x-tooltip="'Award Level 2'" class="h-6 w-6" src="{{ asset('assets/images/awards/award-15.svg') }}"
                 alt="avatar" />
-              <img x-tooltip="'Award Level 3'" class="h-6 w-6" src="images/awards/award-13.svg"
+              <img x-tooltip="'Award Level 3'" class="h-6 w-6" src="{{ asset('assets/images/awards/award-13.svg') }}"
                 alt="avatar" />
             </div>
             <button
@@ -1007,7 +1007,7 @@
           <div class="flex items-center justify-between space-x-2">
             <div class="flex items-center space-x-3">
               <div class="avatar">
-                <img class="mask is-squircle" src="images/avatar/avatar-19.jpg" alt="image" />
+                <img class="mask is-squircle" src="{{ asset('assets/images/avatar/avatar-19.jpg') }}" alt="image" />
               </div>
               <div>
                 <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100">
@@ -1093,11 +1093,11 @@
           </div>
           <div class="flex justify-between">
             <div class="flex space-x-2">
-              <img x-tooltip="'Award Level 2'" class="h-6 w-6" src="images/awards/award-15.svg"
+              <img x-tooltip="'Award Level 2'" class="h-6 w-6" src="{{ asset('assets/images/awards/award-15.svg') }}"
                 alt="avatar" />
-              <img x-tooltip="'Award Level 3'" class="h-6 w-6" src="images/awards/award-5.svg"
+              <img x-tooltip="'Award Level 3'" class="h-6 w-6" src="{{ asset('assets/images/awards/award-5.svg') }}"
                 alt="avatar" />
-              <img x-tooltip="'Award Level 3'" class="h-6 w-6" src="images/awards/award-25.svg"
+              <img x-tooltip="'Award Level 3'" class="h-6 w-6" src="{{ asset('assets/images/awards/award-25.svg') }}"
                 alt="avatar" />
             </div>
             <button
@@ -1115,7 +1115,7 @@
           <div class="flex items-center justify-between space-x-2">
             <div class="flex items-center space-x-3">
               <div class="avatar">
-                <img class="mask is-squircle" src="images/avatar/avatar-7.jpg" alt="image" />
+                <img class="mask is-squircle" src="{{ asset('assets/images/avatar/avatar-7.jpg') }}" alt="image" />
               </div>
               <div>
                 <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100">
@@ -1208,11 +1208,11 @@
 
           <div class="flex justify-between">
             <div class="flex space-x-2">
-              <img x-tooltip="'Award Level 2'" class="h-6 w-6" src="images/awards/award-1.svg"
+              <img x-tooltip="'Award Level 2'" class="h-6 w-6" src="{{ asset('assets/images/awards/award-1.svg') }}"
                 alt="avatar" />
-              <img x-tooltip="'Award Level 3'" class="h-6 w-6" src="images/awards/award-24.svg"
+              <img x-tooltip="'Award Level 3'" class="h-6 w-6" src="{{ asset('assets/images/awards/award-24.svg') }}"
                 alt="avatar" />
-              <img x-tooltip="'Award Level 3'" class="h-6 w-6" src="images/awards/award-30.svg"
+              <img x-tooltip="'Award Level 3'" class="h-6 w-6" src="{{ asset('assets/images/awards/award-30.svg') }}"
                 alt="avatar" />
             </div>
             <button
@@ -1434,7 +1434,7 @@
               </div>
               <p class="py-1">John Doe changed his avatar photo</p>
               <div class="avatar mt-2 h-16 w-16">
-                <img class="mask is-squircle" src="images/avatar/avatar-19.jpg" alt="avatar" />
+                <img class="mask is-squircle" src="{{ asset('assets/images/avatar/avatar-19.jpg') }}" alt="avatar" />
               </div>
             </div>
           </li>
@@ -1501,7 +1501,7 @@
                   <div class="flex flex-wrap -space-x-2">
                     <div class="avatar h-7 w-7 hover:z-10">
                       <img class="rounded-full ring ring-white dark:ring-navy-700"
-                        src="images/avatar/avatar-16.jpg" alt="avatar" />
+                        src="{{ asset('assets/images/avatar/avatar-16.jpg') }}" alt="avatar" />
                     </div>
 
                     <div class="avatar h-7 w-7 hover:z-10">
@@ -1513,17 +1513,17 @@
 
                     <div class="avatar h-7 w-7 hover:z-10">
                       <img class="rounded-full ring ring-white dark:ring-navy-700"
-                        src="images/avatar/avatar-20.jpg" alt="avatar" />
+                        src="{{ asset('assets/images/avatar/avatar-20.jpg') }}" alt="avatar" />
                     </div>
 
                     <div class="avatar h-7 w-7 hover:z-10">
                       <img class="rounded-full ring ring-white dark:ring-navy-700"
-                        src="images/avatar/avatar-8.jpg" alt="avatar" />
+                        src="{{ asset('assets/images/avatar/avatar-8.jpg') }}" alt="avatar" />
                     </div>
 
                     <div class="avatar h-7 w-7 hover:z-10">
                       <img class="rounded-full ring ring-white dark:ring-navy-700"
-                        src="images/avatar/avatar-5.jpg" alt="avatar" />
+                        src="{{ asset('assets/images/avatar/avatar-5.jpg') }}" alt="avatar" />
                     </div>
                   </div>
                   <button

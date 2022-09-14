@@ -69,7 +69,7 @@ class User extends Authenticatable
         return $this->hasMany(PaypalPayment::class);
     }
 
-    public function getFullNameAttribute()
+    public function getFulNameAttribute()
     {
         return $this->first_name . ' ' .$this->last_name;
     }

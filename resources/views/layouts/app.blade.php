@@ -47,7 +47,7 @@
           <div class="flex pt-4">
             <a href="index.html">
               <img class="h-11 w-11 transition-transform duration-500 ease-in-out hover:rotate-[360deg]"
-                src="images/app-logo.svg" alt="logo" />
+                src="{{ asset('assets/images/app-logo.svg') }}" alt="logo" />
             </a>
           </div>
 
@@ -69,6 +69,26 @@
                   class="fill-primary dark:fill-accent" />
                 <rect x="16" y="5" width="2" height="4" rx="0.5"
                   class="fill-primary dark:fill-accent" />
+              </svg>
+            </a>
+
+            <!-- Apps -->
+            <a href="{{ route('package') }}"
+              class="flex h-11 w-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
+              x-tooltip.placement.right="'Package'">
+              <svg class="h-7 w-7" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5 8H19V16C19 17.8856 19 18.8284 18.4142 19.4142C17.8284 20 16.8856 20 15 20H9C7.11438 20 6.17157 20 5.58579 19.4142C5 18.8284 5 17.8856 5 16V8Z"
+                  class="fill-slate-500 dark:fill-navy-200" fill-opacity="0.3" />
+                <path
+                  d="M12 8L11.7608 5.84709C11.6123 4.51089 10.4672 3.5 9.12282 3.5V3.5C7.68381 3.5 6.5 4.66655 6.5 6.10555V6.10555C6.5 6.97673 6.93539 7.79026 7.66025 8.2735L9.5 9.5"
+                  class="stroke-slate-500 dark:stroke-navy-200" stroke-linecap="round" />
+                <path
+                  d="M12 8L12.2392 5.84709C12.3877 4.51089 13.5328 3.5 14.8772 3.5V3.5C16.3162 3.5 17.5 4.66655 17.5 6.10555V6.10555C17.5 6.97673 17.0646 7.79026 16.3397 8.2735L14.5 9.5"
+                  class="stroke-slate-500 dark:stroke-navy-200" stroke-linecap="round" />
+                <rect x="4" y="8" width="16" height="3" rx="1"
+                  class="fill-slate-500 dark:fill-navy-200" />
+                <path d="M12 11V15" class="stroke-slate-500 dark:stroke-navy-200" stroke-linecap="round" />
               </svg>
             </a>
 
@@ -178,7 +198,7 @@
             <!-- Profile -->
             <div x-data="usePopper({ placement: 'right-end', offset: 12 })" @click.outside="if(isShowPopper) isShowPopper = false" class="flex">
               <button @click="isShowPopper = !isShowPopper" x-ref="popperRef" class="avatar h-12 w-12">
-                <img class="rounded-full" src="images/avatar/avatar-12.jpg" alt="avatar" />
+                <img class="rounded-full" src="{{ asset('assets/images/avatar/avatar-12.jpg') }}" alt="avatar" />
                 <span
                   class="absolute right-0 h-3.5 w-3.5 rounded-full border-2 border-white bg-success dark:border-navy-700"></span>
               </button>
@@ -188,7 +208,7 @@
                   class="popper-box w-64 rounded-lg border border-slate-150 bg-white shadow-soft dark:border-navy-600 dark:bg-navy-700">
                   <div class="flex items-center space-x-4 rounded-t-lg bg-slate-100 py-5 px-4 dark:bg-navy-800">
                     <div class="avatar h-14 w-14">
-                      <img class="rounded-full" src="images/avatar/avatar-12.jpg" alt="avatar" />
+                      <img class="rounded-full" src="{{ asset('assets/images/avatar/avatar-12.jpg') }}" alt="avatar" />
                     </div>
                     <div>
                       <a href="#"
@@ -1299,7 +1319,7 @@
                       x-transition:enter-end="opacity-100 [transform:translate3d(0,0,0)]"
                       class="is-scrollbar-hidden overflow-y-auto px-4">
                       <div class="mt-8 pb-8 text-center">
-                        <img class="mx-auto w-36" src="images/illustrations/empty-girl-box.svg" alt="image" />
+                        <img class="mx-auto w-36" src="{{ asset('assets/images/illustrations/empty-girl-box.svg') }}" alt="image" />
                         <div class="mt-5">
                           <p class="text-base font-semibold text-slate-700 dark:text-navy-100">
                             No any logs
@@ -1697,7 +1717,7 @@
                   <div
                     class="swiper-slide relative flex h-28 w-48 flex-col overflow-hidden rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 p-3">
                     <div class="grow">
-                      <img class="h-3" src="images/payments/cc-visa-white.svg" alt="image" />
+                      <img class="h-3" src="{{ asset('assets/images/payments/cc-visa-white.svg') }}" alt="image" />
                     </div>
                     <div class="text-white">
                       <p class="text-lg font-semibold tracking-wide">
@@ -1712,7 +1732,7 @@
                   <div
                     class="swiper-slide relative flex h-28 w-48 flex-col overflow-hidden rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 p-3">
                     <div class="grow">
-                      <img class="h-3" src="images/payments/cc-visa-white.svg" alt="image" />
+                      <img class="h-3" src="{{ asset('assets/images/payments/cc-visa-white.svg') }}" alt="image" />
                     </div>
                     <div class="text-white">
                       <p class="text-lg font-semibold tracking-wide">
@@ -1727,7 +1747,7 @@
                   <div
                     class="swiper-slide relative flex h-28 w-48 flex-col overflow-hidden rounded-xl bg-gradient-to-br from-info to-info-focus p-3">
                     <div class="grow">
-                      <img class="h-3" src="images/payments/cc-visa-white.svg" alt="image" />
+                      <img class="h-3" src="{{ asset('assets/images/payments/cc-visa-white.svg') }}" alt="image" />
                     </div>
                     <div class="text-white">
                       <p class="text-lg font-semibold tracking-wide">
@@ -1909,7 +1929,7 @@
               <div class="mt-3 grid grid-cols-2 gap-3 px-3">
                 <div class="rounded-lg bg-slate-100 p-2.5 dark:bg-navy-600">
                   <div class="flex items-center space-x-2">
-                    <img class="h-10 w-10" src="images/logos/bitcoin.svg" alt="image" />
+                    <img class="h-10 w-10" src="{{ asset('assets/images/logos/bitcoin.svg') }}" alt="image" />
                     <div>
                       <h2 class="font-medium tracking-wide text-slate-700 dark:text-navy-100">
                         BTC
@@ -1935,7 +1955,7 @@
 
                 <div class="rounded-lg bg-slate-100 p-2.5 dark:bg-navy-600">
                   <div class="flex items-center space-x-2">
-                    <img class="h-10 w-10" src="images/logos/solana.svg" alt="image" />
+                    <img class="h-10 w-10" src="{{ asset('assets/images/logos/solana.svg') }}" alt="image" />
                     <div>
                       <h2 class="font-medium tracking-wide text-slate-700 dark:text-navy-100">
                         SOL
@@ -1976,7 +1996,7 @@
                     <div class="flex items-center justify-between">
                       <div class="flex items-center space-x-2">
                         <div class="avatar h-7 w-7">
-                          <img class="rounded-full" src="images/avatar/avatar-20.jpg" alt="avatar" />
+                          <img class="rounded-full" src="{{ asset('assets/images/avatar/avatar-20.jpg') }}" alt="avatar" />
                         </div>
                         <div>
                           <p class="text-xs font-medium line-clamp-1">
@@ -2007,7 +2027,7 @@
                       </div>
                     </div>
                   </div>
-                  <img src="images/object/object-18.jpg" class="h-20 w-20 rounded-lg object-cover object-center"
+                  <img src="{{ asset('assets/images/object/object-18.jpg') }}" class="h-20 w-20 rounded-lg object-cover object-center"
                     alt="image" />
                 </div>
 
@@ -2021,7 +2041,7 @@
                     <div class="flex items-center justify-between">
                       <div class="flex items-center space-x-2">
                         <div class="avatar h-7 w-7">
-                          <img class="rounded-full" src="images/avatar/avatar-19.jpg" alt="avatar" />
+                          <img class="rounded-full" src="{{ asset('assets/images/avatar/avatar-19.jpg') }}" alt="avatar" />
                         </div>
                         <div>
                           <p class="text-xs font-medium line-clamp-1">
@@ -2052,7 +2072,7 @@
                       </div>
                     </div>
                   </div>
-                  <img src="images/object/object-2.jpg" class="h-20 w-20 rounded-lg object-cover object-center"
+                  <img src="{{ asset('assets/images/object/object-2.jpg') }}" class="h-20 w-20 rounded-lg object-cover object-center"
                     alt="image" />
                 </div>
 
@@ -2066,7 +2086,7 @@
                     <div class="flex items-center justify-between">
                       <div class="flex items-center space-x-2">
                         <div class="avatar h-7 w-7">
-                          <img class="rounded-full" src="images/avatar/avatar-18.jpg" alt="avatar" />
+                          <img class="rounded-full" src="{{ asset('assets/images/avatar/avatar-18.jpg') }}" alt="avatar" />
                         </div>
                         <div>
                           <p class="text-xs font-medium line-clamp-1">
@@ -2097,7 +2117,7 @@
                       </div>
                     </div>
                   </div>
-                  <img src="images/object/object-1.jpg" class="h-20 w-20 rounded-lg object-cover object-center"
+                  <img src="{{ asset('assets/images/object/object-1.jpg') }}" class="h-20 w-20 rounded-lg object-cover object-center"
                     alt="image" />
                 </div>
               </div>
@@ -2198,7 +2218,7 @@
 
             <div class="mt-4 rounded-lg border border-slate-150 p-3 dark:border-navy-600">
               <div class="flex items-center space-x-3">
-                <img class="h-10 w-10 rounded-lg object-cover object-center" src="images/illustrations/lms-ui.svg"
+                <img class="h-10 w-10 rounded-lg object-cover object-center" src="{{ asset('assets/images/illustrations/lms-ui.svg') }}"
                   alt="image" />
                 <div>
                   <p class="font-medium leading-snug text-slate-700 dark:text-navy-100">
@@ -2222,7 +2242,7 @@
               <div class="mt-3 flex items-center justify-between space-x-2">
                 <div class="flex -space-x-3">
                   <div class="avatar h-7 w-7 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-16.jpg"
+                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-16.jpg') }}"
                       alt="avatar" />
                   </div>
                   <div class="avatar h-7 w-7 hover:z-10">
@@ -2232,7 +2252,7 @@
                     </div>
                   </div>
                   <div class="avatar h-7 w-7 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-20.jpg"
+                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-20.jpg') }}"
                       alt="avatar" />
                   </div>
                 </div>
@@ -2249,7 +2269,7 @@
 
             <div class="mt-4 rounded-lg border border-slate-150 p-3 dark:border-navy-600">
               <div class="flex items-center space-x-3">
-                <img class="h-10 w-10 rounded-lg object-cover object-center" src="images/illustrations/store-ui.svg"
+                <img class="h-10 w-10 rounded-lg object-cover object-center" src="{{ asset('assets/images/illustrations/store-ui.svg') }}"
                   alt="image" />
                 <div>
                   <p class="font-medium leading-snug text-slate-700 dark:text-navy-100">
@@ -2273,7 +2293,7 @@
               <div class="mt-3 flex items-center justify-between space-x-2">
                 <div class="flex -space-x-3">
                   <div class="avatar h-7 w-7 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-17.jpg"
+                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-17.jpg') }}"
                       alt="avatar" />
                   </div>
                   <div class="avatar h-7 w-7 hover:z-10">
@@ -2283,7 +2303,7 @@
                     </div>
                   </div>
                   <div class="avatar h-7 w-7 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-19.jpg"
+                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-19.jpg') }}"
                       alt="avatar" />
                   </div>
                 </div>
@@ -2300,7 +2320,7 @@
 
             <div class="mt-4 rounded-lg border border-slate-150 p-3 dark:border-navy-600">
               <div class="flex items-center space-x-3">
-                <img class="h-10 w-10 rounded-lg object-cover object-center" src="images/illustrations/chat-ui.svg"
+                <img class="h-10 w-10 rounded-lg object-cover object-center" src="{{ asset('assets/images/illustrations/chat-ui.svg') }}"
                   alt="image" />
                 <div>
                   <p class="font-medium leading-snug text-slate-700 dark:text-navy-100">
@@ -2324,7 +2344,7 @@
               <div class="mt-3 flex items-center justify-between space-x-2">
                 <div class="flex -space-x-3">
                   <div class="avatar h-7 w-7 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-5.jpg"
+                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-5.jpg') }}"
                       alt="avatar" />
                   </div>
                   <div class="avatar h-7 w-7 hover:z-10">
@@ -2334,7 +2354,7 @@
                     </div>
                   </div>
                   <div class="avatar h-7 w-7 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-11.jpg"
+                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-11.jpg') }}"
                       alt="avatar" />
                   </div>
                 </div>
@@ -2351,7 +2371,7 @@
 
             <div class="mt-4 rounded-lg border border-slate-150 p-3 dark:border-navy-600">
               <div class="flex items-center space-x-3">
-                <img class="h-10 w-10 rounded-lg object-cover object-center" src="images/illustrations/nft.svg"
+                <img class="h-10 w-10 rounded-lg object-cover object-center" src="{{ asset('assets/images/illustrations/nft.svg') }}"
                   alt="image" />
                 <div>
                   <p class="font-medium leading-snug text-slate-700 dark:text-navy-100">
@@ -2375,7 +2395,7 @@
               <div class="mt-3 flex items-center justify-between space-x-2">
                 <div class="flex -space-x-3">
                   <div class="avatar h-7 w-7 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-8.jpg"
+                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-8.jpg') }}"
                       alt="avatar" />
                   </div>
                   <div class="avatar h-7 w-7 hover:z-10">
@@ -2385,7 +2405,7 @@
                     </div>
                   </div>
                   <div class="avatar h-7 w-7 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-12.jpg"
+                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-12.jpg') }}"
                       alt="avatar" />
                   </div>
                 </div>
@@ -2452,7 +2472,7 @@
                   </div>
                   <p class="py-1">John Doe changed his avatar photo</p>
                   <div class="avatar mt-2 h-20 w-20">
-                    <img class="mask is-squircle" src="images/avatar/avatar-19.jpg" alt="avatar" />
+                    <img class="mask is-squircle" src="{{ asset('assets/images/avatar/avatar-19.jpg') }}" alt="avatar" />
                   </div>
                 </div>
               </li>
@@ -2470,12 +2490,12 @@
                   </div>
                   <p class="py-1">Mores Clarke added new image gallery</p>
                   <div class="mt-4 grid grid-cols-3 gap-3">
-                    <img class="rounded-lg" src="images/object/object-1.jpg" alt="image" />
-                    <img class="rounded-lg" src="images/object/object-2.jpg" alt="image" />
-                    <img class="rounded-lg" src="images/object/object-3.jpg" alt="image" />
-                    <img class="rounded-lg" src="images/object/object-4.jpg" alt="image" />
-                    <img class="rounded-lg" src="images/object/object-5.jpg" alt="image" />
-                    <img class="rounded-lg" src="images/object/object-6.jpg" alt="image" />
+                    <img class="rounded-lg" src="{{ asset('assets/images/object/object-1.jpg') }}" alt="image" />
+                    <img class="rounded-lg" src="{{ asset('assets/images/object/object-2.jpg') }}" alt="image" />
+                    <img class="rounded-lg" src="{{ asset('assets/images/object/object-3.jpg') }}" alt="image" />
+                    <img class="rounded-lg" src="{{ asset('assets/images/object/object-4.jpg') }}" alt="image" />
+                    <img class="rounded-lg" src="{{ asset('assets/images/object/object-5.jpg') }}" alt="image" />
+                    <img class="rounded-lg" src="{{ asset('assets/images/object/object-6.jpg') }}" alt="image" />
                   </div>
                   <div class="mt-4">
                     <span class="font-medium text-slate-600 dark:text-navy-100">
@@ -2557,7 +2577,7 @@
                       <div class="flex flex-wrap -space-x-2">
                         <div class="avatar h-7 w-7 hover:z-10">
                           <img class="rounded-full ring ring-white dark:ring-navy-700"
-                            src="images/avatar/avatar-16.jpg" alt="avatar" />
+                            src="{{ asset('assets/images/avatar/avatar-16.jpg') }}" alt="avatar" />
                         </div>
 
                         <div class="avatar h-7 w-7 hover:z-10">
@@ -2569,17 +2589,17 @@
 
                         <div class="avatar h-7 w-7 hover:z-10">
                           <img class="rounded-full ring ring-white dark:ring-navy-700"
-                            src="images/avatar/avatar-20.jpg" alt="avatar" />
+                            src="{{ asset('assets/images/avatar/avatar-20.jpg') }}" alt="avatar" />
                         </div>
 
                         <div class="avatar h-7 w-7 hover:z-10">
                           <img class="rounded-full ring ring-white dark:ring-navy-700"
-                            src="images/avatar/avatar-8.jpg" alt="avatar" />
+                            src="{{ asset('assets/images/avatar/avatar-8.jpg') }}" alt="avatar" />
                         </div>
 
                         <div class="avatar h-7 w-7 hover:z-10">
                           <img class="rounded-full ring ring-white dark:ring-navy-700"
-                            src="images/avatar/avatar-5.jpg" alt="avatar" />
+                            src="{{ asset('assets/images/avatar/avatar-5.jpg') }}" alt="avatar" />
                         </div>
                       </div>
                       <button

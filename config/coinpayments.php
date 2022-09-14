@@ -1,6 +1,6 @@
 <?php
 
-use Kevupton\LaravelCoinpayments\Models\Log;
+// use Kevupton\LaravelCoinpayments\Models\Log;
 
 return array(
 
@@ -25,5 +25,5 @@ return array(
     'format' => env('COINPAYMENTS_API_FORMAT', 'json'),
 
     // ALL logs all requests, ERROR logs only errors, and NONE never
-    'log_level' => Log::LEVEL_ERROR,
+    // 'log_level' => Log::LEVEL_ERROR,
 );

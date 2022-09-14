@@ -57,7 +57,7 @@
                       First Name
                     </label>
                     <input type="text" name="first_name" placeholder="Enter your first name"
-                      class="a4F dark:a38 ab a1u a1C a27 a4z a22 aI a1F aS a4I a24 focus:a1H focus-visible:aM dark:a4G dark:a1w[#1F2656] @error('first_name') border-red-500 @enderror"
+                      class="a4F dark:a38 ab a1u a1C a27 a4z a22 aI a1F dark:aS a4I a24 focus:a1H focus-visible:aM dark:a4G dark:a1w[#1F2656] @error('first_name') border-red-500 @enderror"
                       id="first_name" name="first_name" value="{{ old('first_name') }}" required autocomplete="first_name"
                       autofocus />
                     @error('first_name')
@@ -71,7 +71,7 @@
                       Last Name
                     </label>
                     <input type="text" name="last_name" placeholder="Enter your last name"
-                      class="a4F dark:a38 ab a1u a1C a27 a4z a22 aI a1F aS a4I a24 focus:a1H focus-visible:aM dark:a4G dark:a1w[#1F2656] @error('last_name') border-red-500 @enderror"
+                      class="a4F dark:a38 ab a1u a1C a27 a4z a22 aI a1F dark:aS a4I a24 focus:a1H focus-visible:aM dark:a4G dark:a1w[#1F2656] @error('last_name') border-red-500 @enderror"
                       id="last_name" name="last_name" value="{{ old('last_name') }}" required autocomplete="last_name"
                       autofocus />
                     @error('last_name')
@@ -85,9 +85,22 @@
                       Email Address
                     </label>
                     <input type="email" name="email" placeholder="Enter your Email"
-                      class="a4F dark:a38 ab a1u a1C a27 a4z a22 aI a1F aS a4I a24 focus:a1H focus-visible:aM dark:a4G dark:a1w[#1F2656] @error('email') border-red-500 @enderror"
+                      class="a4F dark:a38 ab a1u a1C a27 a4z a22 aI a1F dark:aS a4I a24 focus:a1H focus-visible:aM dark:a4G dark:a1w[#1F2656] @error('email') border-red-500 @enderror"
                       id="email" name="email" value="{{ old('email') }}" required autocomplete="email" />
                     @error('email')
+                      <p class="text-red-500 text-xs italic mt-4">
+                        {{ $message }}
+                      </p>
+                    @enderror
+                  </div>
+                  <div class="a2n">
+                    <label for="username" class="a2d an a1j a1R a2u dark:aT">
+                      Username
+                    </label>
+                    <input type="text" name="username" placeholder="Enter your username"
+                      class="a4F dark:a38 ab a1u a1C a27 a4z a22 aI a1F dark:aS a4I a24 focus:a1H focus-visible:aM dark:a4G dark:a1w[#1F2656] @error('username') border-red-500 @enderror"
+                      id="username" name="username" value="{{ old('username') }}" required autocomplete="username" />
+                    @error('username')
                       <p class="text-red-500 text-xs italic mt-4">
                         {{ $message }}
                       </p>
@@ -98,7 +111,7 @@
                       Password
                     </label>
                     <input type="password" name="password" placeholder="Enter your Password"
-                      class="a4F dark:a38 ab a1u a1C a27 a4z a22 aI a1F aS a4I a24 focus:a1H focus-visible:aM dark:a4G dark:a1w[#1F2656] @error('password') border-red-500 @enderror"
+                      class="a4F dark:a38 ab a1u a1C a27 a4z a22 aI a1F dark:aS a4I a24 focus:a1H focus-visible:aM dark:a4G dark:a1w[#1F2656] @error('password') border-red-500 @enderror"
                       id="password" name="password" required autocomplete="new-password" />
                     @error('password')
                       <p class="text-red-500 text-xs italic mt-4">
@@ -111,7 +124,7 @@
                       Confirm Password
                     </label>
                     <input type="password" placeholder="Re-Enter your Password"
-                      class="a4F dark:a38 ab a1u a1C a27 a4z a22 aI a1F aS a4I a24 focus:a1H focus-visible:aM dark:a4G dark:a1w[#1F2656] @error('password_confirmation') border-red-500 @enderror"
+                      class="a4F dark:a38 ab a1u a1C a27 a4z a22 aI a1F dark:aS a4I a24 focus:a1H focus-visible:aM dark:a4G dark:a1w[#1F2656] @error('password_confirmation') border-red-500 @enderror"
                       required autocomplete="new-password" id="password_confirmation" type="password" class="form-input w-full"
                       name="password_confirmation" required autocomplete="new-password" />
                     @error('password_confirmation')
