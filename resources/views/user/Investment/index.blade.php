@@ -20,41 +20,7 @@
                             class="hidden w-full max-w-xs justify-between space-x-4 text-slate-700 dark:text-navy-100 sm:flex"
                             x-data="{activeTab:'tabAll'}"
                         >
-                            <button
-                            @click="activeTab = 'tabAll'"
-                            class="font-medium tracking-wide"
-                            :class="activeTab === 'tabAll' && 'text-primary dark:text-accent-light' "
-                            >
-                            All
-                            </button>
-                            <button
-                            @click="activeTab = 'tabArt'"
-                            class="font-medium tracking-wide"
-                            :class="activeTab === 'tabArt' && 'text-primary dark:text-accent-light' "
-                            >
-                            Art
-                            </button>
-                            <button
-                            @click="activeTab = 'tabSport'"
-                            class="font-medium tracking-wide"
-                            :class="activeTab === 'tabSport' && 'text-primary dark:text-accent-light' "
-                            >
-                            Sport
-                            </button>
-                            <button
-                            @click="activeTab = 'tabMusic'"
-                            class="font-medium tracking-wide"
-                            :class="activeTab === 'tabMusic' && 'text-primary dark:text-accent-light' "
-                            >
-                            Music
-                            </button>
-                            <button
-                            @click="activeTab = 'tabMore'"
-                            class="font-medium tracking-wide"
-                            :class="activeTab === 'tabMore' && 'text-primary dark:text-accent-light' "
-                            >
-                            More
-                            </button>
+                           
                         </div>
 
                         <div class="flex space-x-1 sm:hidden">
@@ -174,12 +140,12 @@
                                                 </div>
                                                 <div class="text-right">
                                                     <p class="text-xs text-slate-400 dark:text-navy-300">
-                                                        My Bid
+                                                        invest today
                                                     </p>
                                                     <p
                                                         class="text-base font-medium text-primary dark:text-accent-light"
                                                     >
-                                                        4.56 ETH
+                                                       
                                                     </p>
                                                 </div>
                                         </div>
@@ -202,34 +168,65 @@
                         >
                             My Investments
                         </h3>
-                        <a
-                            href="#"
-                            class="border-b border-dotted border-current pb-0.5 font-medium text-primary outline-none transition-colors duration-300 hover:text-primary/70 focus:text-primary/70 dark:text-accent-light dark:hover:text-accent-light/70 dark:focus:text-accent-light/70"
-                            >View All</a
-                        >
+                        
+                       
                     </div>
+                    <p class="text-xs text-primary dark:text-accent-light">
+                             Your approved investment will appear here      
+                        </p>
                     <div class="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-5">
                         @foreach($investments as $investment)
                             <div class="card items-center pb-5 text-center">
+                               @foreach($package->investments()->where("package_id",$package->id)->get() as $investment)
                                 <img
                                 class="h-24 w-full rounded-t-lg object-cover object-center"
                                 src="{{ asset('assets/images/payments/invest3.png' ) }}"
                                 alt="image"
                                 />
-                                 {{ $investment['amount'] }}
+                                 {{ $package['name'] }}
+                                @endforeach
                                 <div class="mt-1.5 px-2">
                                 <a
                                     href="#"
                                     class="text-base font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light"
                                 >
                                 </a>
-                                <p class="text-xs text-slate-400 dark:text-navy-300">
-                                    {{ $investment['slots'] }}
+                                <p class="font-medium text-slate-600 line-clamp-1 dark:text-navy-100">
+                                  {{ $investment['slots'] }} Slots
                                 </p>
+
+                                <p class="font-medium text-slate-600 line-clamp-1 dark:text-navy-100">
+                                
+                                </p>
+
+                                <p class="font-medium text-slate-600 line-clamp-1 dark:text-navy-100">
+                                Amount Invested:  ${{ $investment['amount'] }} 
+                                </p>
+
+                                <p class="font-medium text-slate-600 line-clamp-1 dark:text-navy-100">
+                                
+                                </p>
+                                
+                                <p class="font-medium text-slate-600 line-clamp-1 dark:text-navy-100">
+                                   Total Returns:  ${{ $investment['total_return'] }}
+                                </p>
+
+                                <p class="font-medium text-slate-600 line-clamp-1 dark:text-navy-100">
+                                
+                                </p>
+
+                                <p class="font-medium text-slate-600 line-clamp-1 dark:text-navy-100">
+                                   Withdrawal Date:  {{ $investment['withdrawal_date'] }}
+                                </p>
+
+                                <p class="font-medium text-slate-600 line-clamp-1 dark:text-navy-100">
+                                
+                                </p>
+
                                 <button
                                     class="btn mt-4 h-8 min-w-[7rem] rounded-full bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90"
                                 >
-                                    Check status
+                                    Check Withdrawal status
                                 </button>
                                 </div>
                             </div>
@@ -261,6 +258,7 @@
                     </div>
                 </div>
 
+                
                 <div class="card p-3">
                     <img
                     class="h-56 w-full rounded-lg object-cover object-center"
@@ -274,7 +272,7 @@
                         href="#"
                         class="text-base font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light"
                         >
-                        Other Investment Packages
+                        Latest Investment Packages
                         </a>
                         <button
                         x-data="{isLiked:true}"
@@ -289,8 +287,9 @@
                         </button>
                     </div>
                     <p class="mt-2 text-xs+">
-                        Check out the other investment packages available.
+                        Check out the latest investment package available.
                     </p>
+                   
                     <div class="mt-5 flex items-center justify-between space-x-2">
                         <div class="flex items-center space-x-2">
                             <div class="avatar h-10 w-10">
@@ -304,17 +303,17 @@
                                 <a
                                 href="#"
                                 class="font-medium text-slate-600 line-clamp-1 dark:text-navy-100"
-                                >DEC-01</a
+                                >{{ $pack['name'] }}</a
                                 >
                                 <p class="text-xs text-slate-400 dark:text-navy-300">
-                                40% after 48 hours
+                                {{ $pack['roi'] }}% after {{ $package['duration'] }} {{ $pack['duration_mode'] }}
                                 </p>
                             </div>
                         </div>
                             <button
                             class="btn h-7 rounded-full bg-primary/10 px-2.5 text-xs font-medium text-primary hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:bg-accent-light/10 dark:text-accent-light dark:hover:bg-accent-light/20 dark:focus:bg-accent-light/20 dark:active:bg-accent-light/25"
                             >
-                            View other packages
+                            
                             </button>
                     </div>
                     <p class="mt-6 font-medium">Package expires in</p>
@@ -366,12 +365,13 @@
                             <p
                             class="text-lg font-medium text-slate-700 dark:text-navy-100"
                             >
-                            Minimum Deposit: $1500
+                            Mininimum of ${{ $package['min_amount'] }}
                             </p>
                             <button
                             class="btn h-9 min-w-[7rem] rounded-full bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90"
-                            >
-                            Place a Bid
+                            > <a
+                            href="{{ url('/investment/add', $package->id) }}"> Place a bid</a>
+                           
                             </button>
                         </div>
                     </div>

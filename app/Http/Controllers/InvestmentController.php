@@ -18,6 +18,7 @@ class InvestmentController extends Controller
 
         return view('user.Investment.index')->with([
             "packages" => Package::all(),
+            "pack" => Package::latest()->first(),
             "investments" => Investment::all(),
         ]);
     }

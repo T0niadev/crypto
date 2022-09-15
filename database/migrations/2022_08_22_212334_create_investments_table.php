@@ -20,7 +20,7 @@ class CreateInvestmentsTable extends Migration
             $table->integer('slots');
             $table->decimal('amount', 15, 2);
             $table->decimal('total_return', 15, 2);
-            // $table->text('package_data');
+            $table->text('package_data');
             $table->dateTime('investment_date');
             $table->dateTime('start_date');
             $table->dateTime('withdrawal_date');
