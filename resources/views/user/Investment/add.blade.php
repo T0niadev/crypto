@@ -3,12 +3,12 @@
 @section('content')
 
 
-   
+
 
     <main class="main-content w-full px-[var(--margin-x)] pb-8">
 
 
-       
+
         <div
           class="flex flex-col items-center justify-between space-y-4 py-5 sm:flex-row sm:space-y-0 lg:py-6"
         >
@@ -43,7 +43,7 @@
                     </ul>
                 </div>
         @endif
-       
+
         <form method="POST" action="{{ url('/investments/store') }}" enctype="multipart/form-data">
           @csrf
             <div class="grid grid-cols-12 gap-4 sm:gap-5 lg:gap-6">
@@ -59,7 +59,7 @@
                                     <i class="fa-solid fa-layer-group text-base"></i>
                                     <span>Take advantage of the specially curated investment packages</span>
                                 </button>
-                            
+
                                 </div>
                             </div>
                             </div>
@@ -69,7 +69,7 @@
                                         <span class="font-medium text-slate-600 dark:text-navy-100"
                                         >Package</span
                                         >
-                                       
+
                                         <input value="{{ $package->name }}"
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                             placeholder=""
@@ -77,16 +77,16 @@
                                         />
                                     </label>
 
-                                
+
 
                                         <input value="{{ $package->id }}" name="package_id"
                                             class=" bg-transparent px-3 py-2 text:text-transparent "
                                             placeholder=""
-                                            type="text"
+                                            type="hidden"
                                         />
-                                    
 
-                                    
+
+
 
                                     <label for="number" class="block">
                                         <span
@@ -99,7 +99,7 @@
                                             type="number"
                                         />
                                     </label>
-                                
+
                                     <label for="number" class="block">
                                         <span
                                             class="font-medium text-slate-600 dark:text-navy-100"
@@ -117,7 +117,7 @@
                                             class="font-medium text-slate-600 dark:text-navy-100"
                                             >Slots</span
                                         >
-                                        <input name="slots" id="thirdNumber" onchange="multiply()" 
+                                        <input name="slots" id="thirdNumber" onchange="multiply()"
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                             placeholder="Enter number of slots"
                                             type="number"
@@ -125,14 +125,14 @@
                                     </label>
 
 
-                                
-                            
+
+
                                     <label for="number" class="block">
                                         <span
                                             class="font-medium text-slate-600 dark:text-navy-100"
                                             >Total Interest</span
                                         >
-                                        <input  id="result" 
+                                        <input  id="result"
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                             placeholder="Total Interest"
                                             type="number"
@@ -150,8 +150,8 @@
                                             type="number"
                                         />
                                     </label>
-                                   
-                                   
+
+
 
                                     <label>
                                         <span class="font-medium text-slate-600 dark:text-navy-100"
@@ -230,7 +230,7 @@
                     </div>
                 </div>
             </div>
-          
+
         </form>
     </main>
     <script>

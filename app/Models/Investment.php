@@ -7,26 +7,25 @@ use Illuminate\Database\Eloquent\Model;
 
 class Investment extends Model
 {
-   
-    protected $fillable = ['amount', 'total_return', 'start_date', 'withdrawal_date',  'inv_user','slots', 'user_id', 'package_id', 'status'];
+
+    // protected $fillable = ['amount', 'total_return', 'start_date', 'withdrawal_date',  'inv_user', 'slots', 'user_id', 'package_id', 'status'];
+    protected $guarded = [];
 
 
 
     protected static function boot()
     {
 
-     parent::boot(); 
-    
-    
-     self::creating(function($model) {
-           $model->user_id = auth()->id();
+        parent::boot();
+
+
+        self::creating(function ($model) {
+            $model->user_id = auth()->id();
         });
-
-
     }
 
- 
-    
+
+
     public function package()
     {
         return $this->belongsTo(Package::class);

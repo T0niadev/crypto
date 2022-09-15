@@ -15,7 +15,7 @@ class InvestmentController extends Controller
 
     public function index()
     {
-      
+
         return view('user.Investment.index')->with([
             "packages" => Package::all(),
             "investments" => Investment::all(),
@@ -38,29 +38,35 @@ class InvestmentController extends Controller
             "slots" => 'required',
             "amount" => 'required',
             "total_return" => 'required',
-            // "investment_date" => 'required',
             "start_date" => 'required',
             "withdrawal_date" => 'required',
             "package_id" => 'required',
 
         ]);
 
-      //   $inv = investment::find($id);
-       //  $inv_user = User::find($inv->user_id); 
-        
+        //   $inv = investment::find($id);
+        //  $inv_user = User::find($inv->user_id);
 
 
-       $user_id = Auth::id(); 
+
+        $user_id = Auth::id();
+
+        // Find package and check if investment is enabled
+        $package = Package::all()->where('id', $request['package_id'])->first();
+        if (!($package && $package->canRunInvestment())){
+            return back()->with('error', 'Can\'t process investment, package not found, disabled or closed');
+        }
 
         Investment::create([
 
             "slots" => $request->slots,
             "amount" => $request->amount,
             "total_return" => $request->total_return,
-            // "investment_date" => $request->investment_date,
+            "investment_date" => now()->format('Y-m-d H:i:s'),
             "start_date" => $request->start_date,
             "withdrawal_date" => $request->withdrawal_date,
             "package_id" => $request->package_id,
+            'package_data' => json_encode($package)
 
 
         ]);
@@ -68,7 +74,7 @@ class InvestmentController extends Controller
 
 
         return redirect('/investment')->with([
-            "success" => "Package Added Succesfully"
+            "success" => "Package Added Successfully"
         ]);
     }
 
@@ -91,8 +97,8 @@ class InvestmentController extends Controller
             "total_return" => 'required',
             "investment_date" => 'required',
             "start_date" => 'required',
-        "withdrawal_date" => 'required',
-        "status" => 'required',
+            "withdrawal_date" => 'required',
+            "status" => 'required',
         ]);
 
         // $input = $request->except(['image']);
@@ -129,4 +135,3 @@ class InvestmentController extends Controller
         return redirect('/admin/investments');
     }
 }
-
