@@ -28,6 +28,7 @@ Route::get('/investment/add/{package_id}', [\App\Http\Controllers\InvestmentCont
 Route::post('/investments/store', [\App\Http\Controllers\InvestmentController::class, 'store'])->name('storeinvestment');
 Route::get('/dashboard', [\App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
 Route::get('/profile', [\App\Http\Controllers\UserController::class, 'index'])->name('profile');
+Route::post('/edit/profile', [\App\Http\Controllers\UserController::class, 'infoChange'])->name('editprofile');
 Route::get('/transaction', [\App\Http\Controllers\TransactionController::class, 'index'])->name('transaction');
 Route::get('/document', [\App\Http\Controllers\DocumentController::class, 'index'])->name('document');
 
