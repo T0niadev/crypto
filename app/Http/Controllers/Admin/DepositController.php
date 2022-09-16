@@ -54,7 +54,7 @@ class DepositController extends Controller
 
 
 				// $this->addImage(request()->file('image'));
-				// $deposit->save();
+			    $deposit->save();
 
 
 				return redirect('/deposits');
