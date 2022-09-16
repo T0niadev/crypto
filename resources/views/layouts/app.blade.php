@@ -18,8 +18,11 @@
   <!-- CSS Assets -->
   <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}" />
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
   <!-- Javascript Assets -->
   <script src="{{ asset('assets/user-js/app.js') }}" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com/" />
@@ -54,7 +57,7 @@
           <!-- Main Sections Links -->
           <div class="is-scrollbar-hidden flex grow flex-col space-y-4 overflow-y-auto pt-6">
             <!-- Dashobards -->
-            <a href="{{route('dashboard')}}"
+            <a href="{{ route('dashboard') }}"
               class="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:bg-navy-600 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90"
               x-tooltip.placement.right="'Dashboards'">
               <svg class="h-7 w-7" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,7 +116,7 @@
             </a>
 
             <!-- Investments -->
-            <a href={{route('investment') }}
+            <a href={{ route('investment') }}
               class="flex h-11 w-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
               x-tooltip.placement.right="'Investments'">
               <svg class="h-7 w-7" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -133,7 +136,7 @@
             </a>
 
             <!-- Transactions -->
-            <a href="{{route('transaction')}}"
+            <a href="{{ route('transaction') }}"
               class="flex h-11 w-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
               x-tooltip.placement.right="'Transactions'">
               <svg class="h-7 w-7" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -150,7 +153,7 @@
             </a>
 
             <!-- Components -->
-            <a href="{{route('document')}}"
+            <a href="{{ route('document') }}"
               class="flex h-11 w-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
               x-tooltip.placement.right="'ID Verification'">
               <svg class="h-7 w-7" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -184,7 +187,7 @@
           <!-- Bottom Links -->
           <div class="flex flex-col items-center space-y-3 py-3">
             <!-- Settings -->
-            <a href="{{route('profile')}}"
+            <a href="{{ route('profile') }}"
               class="flex h-11 w-11 items-center justify-center rounded-lg text-slate-500 outline-none transition-colors duration-200 hover:bg-primary/20 hover:text-primary focus:bg-primary/25 focus:text-primary dark:text-navy-200 dark:hover:bg-accent dark:hover:text-white dark:focus:bg-accent dark:focus:text-white">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24"
                 stroke="currentColor">
@@ -208,7 +211,8 @@
                   class="popper-box w-64 rounded-lg border border-slate-150 bg-white shadow-soft dark:border-navy-600 dark:bg-navy-700">
                   <div class="flex items-center space-x-4 rounded-t-lg bg-slate-100 py-5 px-4 dark:bg-navy-800">
                     <div class="avatar h-14 w-14">
-                      <img class="rounded-full" src="{{ asset('assets/images/avatar/avatar-12.jpg') }}" alt="avatar" />
+                      <img class="rounded-full" src="{{ asset('assets/images/avatar/avatar-12.jpg') }}"
+                        alt="avatar" />
                     </div>
                     <div>
                       <a href="#"
@@ -324,15 +328,18 @@
                       </div>
                     </a>
                     <div class="mt-3 px-4">
-                      <button
-                        class="btn h-9 w-full space-x-2 bg-primary text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewbox="0 0 24 24"
-                          stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-                        </svg>
-                        <span>Logout</span>
-                      </button>
+                      <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit"
+                          class="btn h-9 w-full space-x-2 bg-primary text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewbox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                          </svg>
+                          <span>Logout</span>
+                        </button>
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -1319,7 +1326,8 @@
                       x-transition:enter-end="opacity-100 [transform:translate3d(0,0,0)]"
                       class="is-scrollbar-hidden overflow-y-auto px-4">
                       <div class="mt-8 pb-8 text-center">
-                        <img class="mx-auto w-36" src="{{ asset('assets/images/illustrations/empty-girl-box.svg') }}" alt="image" />
+                        <img class="mx-auto w-36" src="{{ asset('assets/images/illustrations/empty-girl-box.svg') }}"
+                          alt="image" />
                         <div class="mt-5">
                           <p class="text-base font-semibold text-slate-700 dark:text-navy-100">
                             No any logs
@@ -1717,7 +1725,8 @@
                   <div
                     class="swiper-slide relative flex h-28 w-48 flex-col overflow-hidden rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 p-3">
                     <div class="grow">
-                      <img class="h-3" src="{{ asset('assets/images/payments/cc-visa-white.svg') }}" alt="image" />
+                      <img class="h-3" src="{{ asset('assets/images/payments/cc-visa-white.svg') }}"
+                        alt="image" />
                     </div>
                     <div class="text-white">
                       <p class="text-lg font-semibold tracking-wide">
@@ -1732,7 +1741,8 @@
                   <div
                     class="swiper-slide relative flex h-28 w-48 flex-col overflow-hidden rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 p-3">
                     <div class="grow">
-                      <img class="h-3" src="{{ asset('assets/images/payments/cc-visa-white.svg') }}" alt="image" />
+                      <img class="h-3" src="{{ asset('assets/images/payments/cc-visa-white.svg') }}"
+                        alt="image" />
                     </div>
                     <div class="text-white">
                       <p class="text-lg font-semibold tracking-wide">
@@ -1747,7 +1757,8 @@
                   <div
                     class="swiper-slide relative flex h-28 w-48 flex-col overflow-hidden rounded-xl bg-gradient-to-br from-info to-info-focus p-3">
                     <div class="grow">
-                      <img class="h-3" src="{{ asset('assets/images/payments/cc-visa-white.svg') }}" alt="image" />
+                      <img class="h-3" src="{{ asset('assets/images/payments/cc-visa-white.svg') }}"
+                        alt="image" />
                     </div>
                     <div class="text-white">
                       <p class="text-lg font-semibold tracking-wide">
@@ -1939,8 +1950,10 @@
                   </div>
 
                   <div class="ax-transparent-gridline">
-                    <div x-init="$nextTick(() => { $el._x_chart = new ApexCharts($el, pages.charts.stockMarket1);
-                        $el._x_chart.render() });"></div>
+                    <div x-init="$nextTick(() => {
+                        $el._x_chart = new ApexCharts($el, pages.charts.stockMarket1);
+                        $el._x_chart.render()
+                    });"></div>
                   </div>
 
                   <div class="mt-2 flex items-center justify-between">
@@ -1965,8 +1978,10 @@
                   </div>
 
                   <div class="ax-transparent-gridline">
-                    <div x-init="$nextTick(() => { $el._x_chart = new ApexCharts($el, pages.charts.stockMarket2);
-                        $el._x_chart.render() });"></div>
+                    <div x-init="$nextTick(() => {
+                        $el._x_chart = new ApexCharts($el, pages.charts.stockMarket2);
+                        $el._x_chart.render()
+                    });"></div>
                   </div>
 
                   <div class="mt-2 flex items-center justify-between">
@@ -1996,7 +2011,8 @@
                     <div class="flex items-center justify-between">
                       <div class="flex items-center space-x-2">
                         <div class="avatar h-7 w-7">
-                          <img class="rounded-full" src="{{ asset('assets/images/avatar/avatar-20.jpg') }}" alt="avatar" />
+                          <img class="rounded-full" src="{{ asset('assets/images/avatar/avatar-20.jpg') }}"
+                            alt="avatar" />
                         </div>
                         <div>
                           <p class="text-xs font-medium line-clamp-1">
@@ -2027,8 +2043,8 @@
                       </div>
                     </div>
                   </div>
-                  <img src="{{ asset('assets/images/object/object-18.jpg') }}" class="h-20 w-20 rounded-lg object-cover object-center"
-                    alt="image" />
+                  <img src="{{ asset('assets/images/object/object-18.jpg') }}"
+                    class="h-20 w-20 rounded-lg object-cover object-center" alt="image" />
                 </div>
 
                 <div class="flex justify-between space-x-2 rounded-lg bg-slate-100 p-2.5 dark:bg-navy-700">
@@ -2041,7 +2057,8 @@
                     <div class="flex items-center justify-between">
                       <div class="flex items-center space-x-2">
                         <div class="avatar h-7 w-7">
-                          <img class="rounded-full" src="{{ asset('assets/images/avatar/avatar-19.jpg') }}" alt="avatar" />
+                          <img class="rounded-full" src="{{ asset('assets/images/avatar/avatar-19.jpg') }}"
+                            alt="avatar" />
                         </div>
                         <div>
                           <p class="text-xs font-medium line-clamp-1">
@@ -2072,8 +2089,8 @@
                       </div>
                     </div>
                   </div>
-                  <img src="{{ asset('assets/images/object/object-2.jpg') }}" class="h-20 w-20 rounded-lg object-cover object-center"
-                    alt="image" />
+                  <img src="{{ asset('assets/images/object/object-2.jpg') }}"
+                    class="h-20 w-20 rounded-lg object-cover object-center" alt="image" />
                 </div>
 
                 <div class="flex justify-between space-x-2 rounded-lg bg-slate-100 p-2.5 dark:bg-navy-700">
@@ -2086,7 +2103,8 @@
                     <div class="flex items-center justify-between">
                       <div class="flex items-center space-x-2">
                         <div class="avatar h-7 w-7">
-                          <img class="rounded-full" src="{{ asset('assets/images/avatar/avatar-18.jpg') }}" alt="avatar" />
+                          <img class="rounded-full" src="{{ asset('assets/images/avatar/avatar-18.jpg') }}"
+                            alt="avatar" />
                         </div>
                         <div>
                           <p class="text-xs font-medium line-clamp-1">
@@ -2117,8 +2135,8 @@
                       </div>
                     </div>
                   </div>
-                  <img src="{{ asset('assets/images/object/object-1.jpg') }}" class="h-20 w-20 rounded-lg object-cover object-center"
-                    alt="image" />
+                  <img src="{{ asset('assets/images/object/object-1.jpg') }}"
+                    class="h-20 w-20 rounded-lg object-cover object-center" alt="image" />
                 </div>
               </div>
             </div>
@@ -2218,8 +2236,8 @@
 
             <div class="mt-4 rounded-lg border border-slate-150 p-3 dark:border-navy-600">
               <div class="flex items-center space-x-3">
-                <img class="h-10 w-10 rounded-lg object-cover object-center" src="{{ asset('assets/images/illustrations/lms-ui.svg') }}"
-                  alt="image" />
+                <img class="h-10 w-10 rounded-lg object-cover object-center"
+                  src="{{ asset('assets/images/illustrations/lms-ui.svg') }}" alt="image" />
                 <div>
                   <p class="font-medium leading-snug text-slate-700 dark:text-navy-100">
                     LMS App Design
@@ -2242,8 +2260,8 @@
               <div class="mt-3 flex items-center justify-between space-x-2">
                 <div class="flex -space-x-3">
                   <div class="avatar h-7 w-7 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-16.jpg') }}"
-                      alt="avatar" />
+                    <img class="rounded-full ring ring-white dark:ring-navy-700"
+                      src="{{ asset('assets/images/avatar/avatar-16.jpg') }}" alt="avatar" />
                   </div>
                   <div class="avatar h-7 w-7 hover:z-10">
                     <div
@@ -2252,8 +2270,8 @@
                     </div>
                   </div>
                   <div class="avatar h-7 w-7 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-20.jpg') }}"
-                      alt="avatar" />
+                    <img class="rounded-full ring ring-white dark:ring-navy-700"
+                      src="{{ asset('assets/images/avatar/avatar-20.jpg') }}" alt="avatar" />
                   </div>
                 </div>
                 <button
@@ -2269,8 +2287,8 @@
 
             <div class="mt-4 rounded-lg border border-slate-150 p-3 dark:border-navy-600">
               <div class="flex items-center space-x-3">
-                <img class="h-10 w-10 rounded-lg object-cover object-center" src="{{ asset('assets/images/illustrations/store-ui.svg') }}"
-                  alt="image" />
+                <img class="h-10 w-10 rounded-lg object-cover object-center"
+                  src="{{ asset('assets/images/illustrations/store-ui.svg') }}" alt="image" />
                 <div>
                   <p class="font-medium leading-snug text-slate-700 dark:text-navy-100">
                     Store Dashboard
@@ -2293,8 +2311,8 @@
               <div class="mt-3 flex items-center justify-between space-x-2">
                 <div class="flex -space-x-3">
                   <div class="avatar h-7 w-7 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-17.jpg') }}"
-                      alt="avatar" />
+                    <img class="rounded-full ring ring-white dark:ring-navy-700"
+                      src="{{ asset('assets/images/avatar/avatar-17.jpg') }}" alt="avatar" />
                   </div>
                   <div class="avatar h-7 w-7 hover:z-10">
                     <div
@@ -2303,8 +2321,8 @@
                     </div>
                   </div>
                   <div class="avatar h-7 w-7 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-19.jpg') }}"
-                      alt="avatar" />
+                    <img class="rounded-full ring ring-white dark:ring-navy-700"
+                      src="{{ asset('assets/images/avatar/avatar-19.jpg') }}" alt="avatar" />
                   </div>
                 </div>
                 <button
@@ -2320,8 +2338,8 @@
 
             <div class="mt-4 rounded-lg border border-slate-150 p-3 dark:border-navy-600">
               <div class="flex items-center space-x-3">
-                <img class="h-10 w-10 rounded-lg object-cover object-center" src="{{ asset('assets/images/illustrations/chat-ui.svg') }}"
-                  alt="image" />
+                <img class="h-10 w-10 rounded-lg object-cover object-center"
+                  src="{{ asset('assets/images/illustrations/chat-ui.svg') }}" alt="image" />
                 <div>
                   <p class="font-medium leading-snug text-slate-700 dark:text-navy-100">
                     Chat Mobile App
@@ -2344,8 +2362,8 @@
               <div class="mt-3 flex items-center justify-between space-x-2">
                 <div class="flex -space-x-3">
                   <div class="avatar h-7 w-7 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-5.jpg') }}"
-                      alt="avatar" />
+                    <img class="rounded-full ring ring-white dark:ring-navy-700"
+                      src="{{ asset('assets/images/avatar/avatar-5.jpg') }}" alt="avatar" />
                   </div>
                   <div class="avatar h-7 w-7 hover:z-10">
                     <div
@@ -2354,8 +2372,8 @@
                     </div>
                   </div>
                   <div class="avatar h-7 w-7 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-11.jpg') }}"
-                      alt="avatar" />
+                    <img class="rounded-full ring ring-white dark:ring-navy-700"
+                      src="{{ asset('assets/images/avatar/avatar-11.jpg') }}" alt="avatar" />
                   </div>
                 </div>
                 <button
@@ -2371,8 +2389,8 @@
 
             <div class="mt-4 rounded-lg border border-slate-150 p-3 dark:border-navy-600">
               <div class="flex items-center space-x-3">
-                <img class="h-10 w-10 rounded-lg object-cover object-center" src="{{ asset('assets/images/illustrations/nft.svg') }}"
-                  alt="image" />
+                <img class="h-10 w-10 rounded-lg object-cover object-center"
+                  src="{{ asset('assets/images/illustrations/nft.svg') }}" alt="image" />
                 <div>
                   <p class="font-medium leading-snug text-slate-700 dark:text-navy-100">
                     NFT Marketplace App
@@ -2395,8 +2413,8 @@
               <div class="mt-3 flex items-center justify-between space-x-2">
                 <div class="flex -space-x-3">
                   <div class="avatar h-7 w-7 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-8.jpg') }}"
-                      alt="avatar" />
+                    <img class="rounded-full ring ring-white dark:ring-navy-700"
+                      src="{{ asset('assets/images/avatar/avatar-8.jpg') }}" alt="avatar" />
                   </div>
                   <div class="avatar h-7 w-7 hover:z-10">
                     <div
@@ -2405,8 +2423,8 @@
                     </div>
                   </div>
                   <div class="avatar h-7 w-7 hover:z-10">
-                    <img class="rounded-full ring ring-white dark:ring-navy-700" src="{{ asset('assets/images/avatar/avatar-12.jpg') }}"
-                      alt="avatar" />
+                    <img class="rounded-full ring ring-white dark:ring-navy-700"
+                      src="{{ asset('assets/images/avatar/avatar-12.jpg') }}" alt="avatar" />
                   </div>
                 </div>
                 <button
@@ -2472,7 +2490,8 @@
                   </div>
                   <p class="py-1">John Doe changed his avatar photo</p>
                   <div class="avatar mt-2 h-20 w-20">
-                    <img class="mask is-squircle" src="{{ asset('assets/images/avatar/avatar-19.jpg') }}" alt="avatar" />
+                    <img class="mask is-squircle" src="{{ asset('assets/images/avatar/avatar-19.jpg') }}"
+                      alt="avatar" />
                   </div>
                 </div>
               </li>
@@ -2490,12 +2509,18 @@
                   </div>
                   <p class="py-1">Mores Clarke added new image gallery</p>
                   <div class="mt-4 grid grid-cols-3 gap-3">
-                    <img class="rounded-lg" src="{{ asset('assets/images/object/object-1.jpg') }}" alt="image" />
-                    <img class="rounded-lg" src="{{ asset('assets/images/object/object-2.jpg') }}" alt="image" />
-                    <img class="rounded-lg" src="{{ asset('assets/images/object/object-3.jpg') }}" alt="image" />
-                    <img class="rounded-lg" src="{{ asset('assets/images/object/object-4.jpg') }}" alt="image" />
-                    <img class="rounded-lg" src="{{ asset('assets/images/object/object-5.jpg') }}" alt="image" />
-                    <img class="rounded-lg" src="{{ asset('assets/images/object/object-6.jpg') }}" alt="image" />
+                    <img class="rounded-lg" src="{{ asset('assets/images/object/object-1.jpg') }}"
+                      alt="image" />
+                    <img class="rounded-lg" src="{{ asset('assets/images/object/object-2.jpg') }}"
+                      alt="image" />
+                    <img class="rounded-lg" src="{{ asset('assets/images/object/object-3.jpg') }}"
+                      alt="image" />
+                    <img class="rounded-lg" src="{{ asset('assets/images/object/object-4.jpg') }}"
+                      alt="image" />
+                    <img class="rounded-lg" src="{{ asset('assets/images/object/object-5.jpg') }}"
+                      alt="image" />
+                    <img class="rounded-lg" src="{{ asset('assets/images/object/object-6.jpg') }}"
+                      alt="image" />
                   </div>
                   <div class="mt-4">
                     <span class="font-medium text-slate-600 dark:text-navy-100">

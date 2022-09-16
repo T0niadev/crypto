@@ -15,7 +15,7 @@ class UserController extends Controller
 
     protected function infoChange(Request $request){
         $request->validate([
-            'fisrt_name' => ['nullable','string', 'max:255'],
+            'first_name' => ['nullable','string', 'max:255'],
             'last_name' => ['nullable','string', 'max:255'],
             'phone' => ['nullable','string', 'max:255'],
             'email' => ['nullable','string', 'email', 'max:255', 'unique:users'],

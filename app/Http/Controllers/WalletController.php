@@ -15,7 +15,8 @@ class WalletController extends Controller
      */
     public function index()
     {
-        return view('user.Wallet.index');
+        $walletBalance = auth()->user()->wallet->balance;
+        return view('user.Wallet.index', compact('walletBalance'));
     }
 
     /**
@@ -25,7 +26,7 @@ class WalletController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.Wallet.depositform');
     }
 
     /**

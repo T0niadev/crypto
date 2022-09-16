@@ -10,7 +10,7 @@ class CreatePackagesTable extends Migration
      * Run the migrations.
      *
      * @return void
-     */ 
+     */
     public function up()
     {
         Schema::create('packages', function (Blueprint $table) {
@@ -18,7 +18,6 @@ class CreatePackagesTable extends Migration
             $table->string('name');
             $table->string('roi');
             $table->date('start_date');
-
             $table->string('slots');
             $table->string('min_amount');
             $table->enum('type', ['farm', 'plant']);

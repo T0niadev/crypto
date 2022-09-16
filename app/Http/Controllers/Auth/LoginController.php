@@ -63,7 +63,7 @@ class LoginController extends Controller
     }
 
     /**
- 
+
     * Get username property.
      *
      * @return string
@@ -72,4 +72,6 @@ class LoginController extends Controller
     {
         return $this->username;
     }
+
+    
 }
