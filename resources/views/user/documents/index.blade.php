@@ -3,79 +3,115 @@
 @section('content')
 
     <main class="main-content w-full px-[var(--margin-x)] pb-8">
-        <h2
-            class="text-xl font-medium text-slate-800 dark:text-navy-50 lg:text-2xl"
-        >
-            My Files
-        </h2>
-        <div>
-
-            <div  class="pt-5 text-base font-medium tracking-wide text-primary dark:text-accent-light">
-                Collection
-            </div>
-            <div class="mt-1.5 flex items-center justify-between">
-                <p class="text-salte-400 text-xs+ dark:text-navy-300">
-                22 files
-                </p>
-                <p class="font-medium text-slate-600 dark:text-navy-100">
-                455 MB
-                </p>
-            </div>
-        </div>
-        <div class="card swiper-slide w-56 shrink-0 p-3 pt-4">
-            <div class="flex items-center justify-between">
-                <img
-                class="w-14"
-                src="{{ asset('assets/images/folders/folder-warning.svg') }}"
-
-                alt="folder"
-                />
-                <button
-                class="btn -mr-2 h-8 w-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
-                >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    fill="none"
-                    viewbox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                >
-                    <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                    />
-                </svg>
-                </button>
-            </div>
-            <div
-              class="pt-5 text-base font-medium tracking-wide text-warning"
-            >
-              View Previously Uploaded Documents
-            </div>
-            <div class="mt-1.5 flex items-center justify-between">
-              <p class="text-salte-400 text-xs+ dark:text-navy-300">
-                2 files
-              </p>
-              <p class="font-medium text-slate-600 dark:text-navy-100">
-
-              </p>
-            </div>
-        </div>
-
+      
+        
 
         <div  class="pt-5 text-base font-medium tracking-wide text-primary dark:text-accent-light">
             Kindly upload both the front and back page of your identification document e.g Valid Passport, National Identification Card
         </div>
 
 
-        <form action="/action_page.php">
-          <label for="myfile">Select a file:</label>
-          <input type="file" id="myfile" name="myfile"><br><br>
-          <button
-                class="btn -mr-1 h-20 w-20 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-light-300/20 dark:focus:bg-warning-300/20 dark:active:bg-navy-300/25"
-                >Submit</button>
+        @if ($errors->any())
+                      <div class="alert alert-danger">
+                        <ul>
+                          @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                          @endforeach
+                        </ul>
+                      </div><br />
+                    @endif
+        <form action="{{url('/submit/document')}}" method="post">
+            @csrf
+            <div class="grid grid-cols-12 gap-4 sm:gap-5 lg:gap-6">
+        
+            <div class="col-span-12 lg:col-span-8">
+                <div class="card">
+                
+                <div
+                    class="flex flex-col items-center space-y-4 border-b border-slate-200 p-4 dark:border-navy-500 sm:flex-row sm:justify-between sm:space-y-0 sm:px-5"
+                >
+
+                    
+                    <h2
+                    class="text-lg font-medium tracking-wide text-slate-700 dark:text-navy-100"
+                    >
+                    Document Upload
+                    </h2>
+                    <div class="flex justify-center space-x-2">
+                    <button
+                        class="btn min-w-[7rem] rounded-full border border-slate-300 font-medium text-slate-700 hover:bg-slate-150 focus:bg-slate-150 active:bg-slate-150/80 dark:border-navy-450 dark:text-navy-100 dark:hover:bg-navy-500 dark:focus:bg-navy-500 dark:active:bg-navy-500/90"
+                    >
+                        Cancel
+                    </button>
+                    <button
+                        type="submit" class="btn min-w-[7rem] rounded-full bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90"
+                    >
+                        Save
+                    </button>
+                    </div>
+                </div>
+                
+                                
+                                                
+                                            
+                                                
+                                                
+                                                    
+                                                
+                            
+                                    
+                                
+                <div class="flex flex-col items-center space-y-4 border-b border-slate-200 p-4 dark:border-navy-500 sm:flex-row sm:justify-between sm:space-y-0 sm:px-5">
+                    <img
+                    class="w-14"
+                    src="{{ asset('assets/images/folders/folder-warning.svg') }}"
+
+                    alt="folder"
+                    />
+                   
+                 
+                </div>
+                                
+                            
+        
+                <div class="tab-content p-4 sm:p-5">
+                    <div class="card space-y-5 p-4 sm:p-5">
+                      
+
+
+
+                        <label for="number" class="block">
+                                        <span
+                                            class="font-medium text-slate-600 dark:text-navy-100"
+                                            >Document Type</span
+                                        >
+                                        <input  
+                                            class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                            placeholder="Enter Document Type"
+                                            type="text"
+                                            name="document_type"
+                                        />
+                        </label>
+
+
+                        <label for="image" class="block">
+                                        <span
+                                            class="font-medium text-slate-600 dark:text-navy-100"
+                                            >Attachment</span
+                                        >
+                                        <input  
+                                            class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                            placeholder="Attach Document Here"
+                                            type="file"
+                                            name="image"
+                                        />
+                        </label>
+                    
+                    </div>
+                </div>
+                
+            </div>
+            </div>
         </form>
     </main>
 @endsection

@@ -31,6 +31,9 @@ Route::get('/profile', [\App\Http\Controllers\UserController::class, 'index'])->
 Route::post('/edit/profile', [\App\Http\Controllers\UserController::class, 'infoChange'])->name('editprofile');
 Route::get('/transaction', [\App\Http\Controllers\TransactionController::class, 'index'])->name('transaction');
 Route::get('/document', [\App\Http\Controllers\DocumentController::class, 'index'])->name('document');
+Route::post('/submit/document', [\App\Http\Controllers\DocumentController::class, 'store'])->name('submitdocument');
+
+
 
 
 Route::prefix('google')->name('google.')->group(function () {

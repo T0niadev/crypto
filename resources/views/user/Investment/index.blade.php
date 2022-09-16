@@ -306,7 +306,7 @@
                                 >{{ $pack['name'] }}</a
                                 >
                                 <p class="text-xs text-slate-400 dark:text-navy-300">
-                                {{ $pack['roi'] }}% after {{ $package['duration'] }} {{ $pack['duration_mode'] }}
+                                {{ $pack['roi'] }}% after {{ $pack['duration'] }} {{ $pack['duration_mode'] }}
                                 </p>
                             </div>
                         </div>
@@ -365,7 +365,7 @@
                             <p
                             class="text-lg font-medium text-slate-700 dark:text-navy-100"
                             >
-                            Mininimum of ${{ $package['min_amount'] }}
+                            Mininimum of ${{ $pack['min_amount'] }}
                             </p>
                             <button
                             class="btn h-9 min-w-[7rem] rounded-full bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90"
