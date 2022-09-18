@@ -218,7 +218,7 @@
                                         </span>
                                     </label>
                                     <div class="flex justify-center space-x-2">
-                                        <button type="submit" href="/admin/packages/store"
+                                        <button type="submit" 
                                         class="btn min-w-[7rem] bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90"
                                         >
                                         Save

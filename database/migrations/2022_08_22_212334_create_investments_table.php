@@ -17,7 +17,6 @@ class CreateInvestmentsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('package_id')->constrained();
-            $table->integer('slots');
             $table->decimal('amount', 15, 2);
             $table->decimal('total_return', 15, 2);
             $table->text('package_data');

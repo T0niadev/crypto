@@ -47,7 +47,6 @@ class PackageController extends Controller
             "name" => 'required',
             "roi" => 'required',
             "start_date" => 'required',
-            "slots" => 'required',
             "min_amount" => 'required',
             "max_amount" => 'required',
             "duration" => 'required',
@@ -56,8 +55,6 @@ class PackageController extends Controller
             // "payout_mode" => 'required',
             "description" => 'required',
             "image" => 'mimes:jpeg,png|max:5000',
-            "type" => 'required',
-            "rollover" => 'required',
             "status" => 'required',
         ]);
 
@@ -102,7 +99,6 @@ class PackageController extends Controller
                 "name"  => $request->name,
                 "roi"  => $request->roi,
                 "start_date"  => $request->start_date,
-                "slots"  => $request->slots,
                 "min_amount"  => $request->min_amount,
                 "max_amount"  => $request->max_amount,
                 "duration"  => $request->duration,
@@ -111,7 +107,6 @@ class PackageController extends Controller
                 "payout_mode"  => $request->payout_mode,
                 "description"  => $request->description,
                 "type"  => $request->type,
-                "rollover"  => $request->rollover,
                 "status"  => $request->status,
             ]);
 

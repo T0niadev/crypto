@@ -33,6 +33,9 @@ Route::get('/transaction', [\App\Http\Controllers\TransactionController::class, 
 Route::get('/document', [\App\Http\Controllers\DocumentController::class, 'index'])->name('document');
 Route::post('/submit/document', [\App\Http\Controllers\DocumentController::class, 'store'])->name('submitdocument');
 
+Route::get('/withdrawal', [\App\Http\Controllers\WithdrawalController::class, 'index'])->name('withdrawal');
+Route::post('/withdrawal/store', [\App\Http\Controllers\WithdrawalController::class, 'store'])->name('withdrawaladd');
+
 
 
 

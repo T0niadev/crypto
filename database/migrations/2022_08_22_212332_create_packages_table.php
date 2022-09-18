@@ -18,13 +18,10 @@ class CreatePackagesTable extends Migration
             $table->string('name');
             $table->string('roi');
             $table->date('start_date');
-
-            $table->string('slots');
             $table->string('min_amount');
-            $table->enum('type', ['farm', 'plant']);
             $table->string('max_amount');
             $table->integer('duration')->nullable();
-            $table->enum('duration_mode', ['day', 'month', 'year'])->default('day');
+            $table->enum('duration_mode', ['days', 'months', 'year'])->default('days');
             $table->text('description');
             $table->text('image')->nullable();
             $table->enum('status', ['open', 'closed'])->default('open');

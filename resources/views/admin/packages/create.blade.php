@@ -41,14 +41,6 @@
                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light">
             </div>
 
-          
-
-            <div class="mb-6">
-                <label for="number"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Slots</label>
-                <input type="number" name="slots"
-                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light">
-            </div>
 
             <div class="mb-6">
                 <label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Mnimum
@@ -86,26 +78,6 @@
                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light">
             </div>
 
-            <div class="mb-6">
-                <label for="image"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Image</label>
-                <input type="file" name="image"
-                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light">
-            </div>
-
-            <div class="mb-6">
-                <label for="rollover"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Rollover</label>
-                <input type="" name="rollover"
-                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light">
-            </div>
-
-            <div class="mb-6">
-                <label for="rollover"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Type</label>
-                <input type="" name="type"
-                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light">
-            </div>
 
 
             <div class="mb-6">
