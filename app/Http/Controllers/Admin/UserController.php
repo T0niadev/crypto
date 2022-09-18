@@ -103,10 +103,10 @@ class UserController extends Controller
         $request->validate([
             'wallet' => 'required',
         ]);
-        
+
         $user->fill($request->post())->save();
 
-        return redirect()->route('admin.users.index')->with('success','wallet Has Been updated successfully');
+        return redirect()->route('admin.user')->with('success','wallet Has Been updated successfully');
     }
 
 }

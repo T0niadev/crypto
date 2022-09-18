@@ -19,12 +19,8 @@ class PackageFactory extends Factory
             'min_amount' => $this->faker->numberBetween(10, 1000),
             'max_amount' => $this->faker->numberBetween(10000, 1000000),
             'start_date' => $this->faker->date(),
-            'description' => $this->faker->realText()                                                                                       ,
-            'slots' => $this->faker->numberBetween(10, 1000),
-            'end_date' => $this->faker->date(),
+            'description' => $this->faker->realText(),
             'duration' => $this->faker->randomDigitNotZero(),
-            'duration_mode' => $this->faker->randomElement(['year', 'month', 'year']),
-            'rollover' => $this->faker->randomElement([true,  false]),
             'status' => $this->faker->randomElement(['open', 'closed']),
         ];
     }

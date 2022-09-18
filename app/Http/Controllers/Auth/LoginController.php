@@ -63,7 +63,7 @@ class LoginController extends Controller
     }
 
     /**
- 
+
     * Get username property.
      *
      * @return string

@@ -92,8 +92,7 @@
                 </div>
 
                 <div class="mt-3">
-                    <p class="text-2xl font-semibold">$6,556.55</p>
-                    <p class="text-xs">+ 3.5%</p>
+                    <p class="text-2xl font-semibold">${{ number_format(auth()->user()->wallet) }}</p>
                 </div>
 
                 <div class="mt-4 flex space-x-7">
@@ -109,7 +108,7 @@
                             fill="none"
                             viewbox="0 0 24 24"
                             stroke="currentColor"
-                            
+
                         >
                             <path
                             stroke-linecap="round"
@@ -672,7 +671,7 @@
                         Take advantage of the specially curated investment packages we have for you
                     </i>
                     <p>
-                        click here
+                       <a href="{{ route('investment') }}">click here</a>
                     </p>
                 </div>
 
