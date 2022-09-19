@@ -17,7 +17,7 @@ class PackageController extends Controller
      */
     public function index()
     {
-        
+
 
         $packages = Package::all();
         return view('admin.packages.index', compact('packages'));
@@ -26,7 +26,6 @@ class PackageController extends Controller
 
     public function create()
     {
-        
         return view('admin.packages.create');
     }
 
@@ -53,7 +52,7 @@ class PackageController extends Controller
         ]);
 
 
-       
+
 
             Package::create([
                 "name"  => $request->name,
@@ -137,7 +136,7 @@ class PackageController extends Controller
             ]);
         }
 
-      
+
     }
 
     public function destroy(Package $package)

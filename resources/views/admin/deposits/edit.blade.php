@@ -21,7 +21,7 @@
                 @csrf
                 @method('PUT')
                 <div class="card-body">
-              
+
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label> {{ __('Deposit Amount') }} </label>
@@ -32,7 +32,11 @@
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label> {{ __('Status') }} </label>
-                        <input type="text" value="{{ $deposit->status }}" class="form-control" name="status">
+                        <select name="status" id="status">
+                            <option value="confirmed">Confirmed</option>
+                            <option value="pending">Pending</option>
+                            <option value="unconfirmed">Unconfirmed</option>
+                        </select>
                       </div>
                     </div>
 

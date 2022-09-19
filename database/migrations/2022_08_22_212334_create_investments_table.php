@@ -24,7 +24,7 @@ class CreateInvestmentsTable extends Migration
             $table->dateTime('start_date');
             $table->dateTime('withdrawal_date');
             $table->enum('payment', ['approved', 'declined', 'pending']);
-            $table->enum('status', ['active', 'pending', 'cancelled', 'settled'])->default('pending');
+            $table->enum('status', ['approved', 'pending', 'declined'])->default('pending');
             $table->boolean('rollover')->default(false);
             $table->timestamps();
         });

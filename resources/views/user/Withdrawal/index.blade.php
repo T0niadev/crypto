@@ -66,7 +66,7 @@
                             </div>
                             </div>
                             <div class="tab-content p-4 sm:p-5">
-                               
+
 
 
                                     <label for="amount" class="block">
@@ -78,7 +78,7 @@
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                             placeholder="Enter here"
                                             type="number"
-                                            
+
                                         />
                                     </label>
 
@@ -92,7 +92,7 @@
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                             placeholder="Enter here"
                                             type="text"
-                                            
+
                                         />
                                     </label>
 
@@ -102,8 +102,8 @@
                                             >Account Name or Wallet ID</span
                                         >
                                         <input name="accountname_ID"
-                                            class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                            placeholder="Enter here"
+                                            class="form-input mt-1.5 w-full rounded-lg border bo
+
                                             type="text"
                                         />
                                     </label>
@@ -115,7 +115,7 @@
                                             class="font-medium text-slate-600 dark:text-navy-100"
                                             >Account Number or Wallet</span
                                         >
-                                        <input name="bank_wallet" 
+                                        <input name="bank_wallet"
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                             placeholder="Enter here"
                                             type="text"
@@ -124,8 +124,8 @@
 
 
 
-                                  
-                                    <div class="flex justify-center space-x-2">
+
+                                    <div class="flex justify-center mt-3 space-x-2">
                                         <button type="submit"
                                         class="btn min-w-[7rem] bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90"
                                         >
