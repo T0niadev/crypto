@@ -10,7 +10,7 @@ class Withdrawal extends Model
     use HasFactory;
 
 
-    protected $fillable = ['bankname_currency', 'accountname_ID', 'bank_wallet'];
+    protected $fillable = ['bankname_currency', 'accountname_ID', 'bank_wallet', 'status', 'amount'];
 
     protected static function boot()
     {

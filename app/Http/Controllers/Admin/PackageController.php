@@ -103,10 +103,7 @@ class PackageController extends Controller
                 "max_amount"  => $request->max_amount,
                 "duration"  => $request->duration,
                 "duration_mode"  => $request->duration_mode,
-                "milestones"  => $request->milestones,
-                "payout_mode"  => $request->payout_mode,
                 "description"  => $request->description,
-                "type"  => $request->type,
                 "status"  => $request->status,
             ]);
 

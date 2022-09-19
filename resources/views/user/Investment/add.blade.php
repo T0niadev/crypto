@@ -105,24 +105,13 @@
                                             class="font-medium text-slate-600 dark:text-navy-100"
                                             > Investment Amount</span
                                         >
-                                        <input name="amount" id="secondNumber"
+                                        <input name="amount" id="secondNumber" onchange="multiply()"
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                             placeholder="Enter Investment amount of your choice"
                                             type="number"
                                         />
                                     </label>
 
-                                    <label for="number" class="block">
-                                        <span
-                                            class="font-medium text-slate-600 dark:text-navy-100"
-                                            >Slots</span
-                                        >
-                                        <input name="slots" id="thirdNumber" onchange="multiply()"
-                                            class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                            placeholder="Enter number of slots"
-                                            type="number"
-                                        />
-                                    </label>
 
 
 
@@ -241,10 +230,9 @@
                 "firstNumber").value;
             let num2 = document.getElementById(
                 "secondNumber").value
-            let num3 = document.getElementById(
-                "thirdNumber").value
+          
 
-             let result = document.getElementById('result').value= ((num1 * num2 * num3)  / 100);
+             let result = document.getElementById('result').value= ((num1 * num2 )  / 100);
              console.log(result);
         }
    </script>

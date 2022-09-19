@@ -10,24 +10,28 @@ class Deposit extends Model
     // protected $table = "deposits";
     use HasFactory;
 
+    use HasFactory;
 
 
-        // Deposit relationship with Online payments.
-        public function onlinePayment()
-        {
-            return $this->hasOne(OnlinePayment::class);
-        }
-        // Deposit relationship with Investments.
-        public function investment()
-        {
-            return $this->belongsTo(Investment::class);
-        }
+    protected $fillable = ['bankname_currency', 'accountname_ID', 'bank_wallet', 'status', 'amount'];
 
-        // Deposit relationship with user.
-        public function user()
-        {
-            return $this->belongsTo(User::class);
-        }
+    protected static function boot()
+    {
 
+        parent::boot();
+
+
+        self::creating(function ($model) {
+            $model->user_id = auth()->id();
+        });
+    }
+
+    // Withdrawal relationship with user.
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+ 
 
 }

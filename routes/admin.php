@@ -39,6 +39,10 @@ Route::get('/wallet/edit/{user}', [\App\Http\Controllers\Admin\UserController::c
 Route::put('/wallet/update/{user}', [\App\Http\Controllers\Admin\UserController::class, 'updatewallet'] )->name('wallet.update');
 
 
+
+Route::get('/investment/edit/{investment}', [\App\Http\Controllers\Admin\InvestmentController::class, 'editinvestment'])->name('investment.edit');
+Route::put('/investment/update/{investment}', [\App\Http\Controllers\Admin\InvestmentController::class, 'updateinvestment'] )->name('investment.update');
+
 Route::get('/investments', [\App\Http\Controllers\Admin\InvestmentController::class, 'index'])->name('invest');
 Route::get('/investments/create', [\App\Http\Controllers\Admin\InvestmentController::class, 'create'] )->name('investcreate');
 Route::post('/investments/store', [\App\Http\Controllers\Admin\InvestmentController::class, 'store'] )->name('investstore');

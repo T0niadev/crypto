@@ -117,4 +117,24 @@ class InvestmentController extends Controller
 
         return redirect('/admin/investments');
     }
+
+
+    public function editinvestment(Investment $investment)
+    {
+        return view('admin.investments.edit',compact('investment'));
+    }
+
+
+
+	public function updateinvestment(Request $request, Investment $investment)
+    {
+        $request->validate([
+            'status' => 'required',
+        ]);
+
+        $investment->fill($request->post())->save();
+
+        return redirect()->route('admin.investments')->with('success','Status updated succesfully');
+    }
+
 }

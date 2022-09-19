@@ -1,24 +1,23 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
-use App\Models\Withdrawal;
+use App\Models\Deposit;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
-
-class WithdrawalController extends Controller
+class DepositController extends Controller
 {
     public function index()
     {
 
-        return view('user.Withdrawal.index')->with([
-           // "packages" => Package::all(),
+        return view('user.Deposit.index')->with([
+       
         ]);
     }
 
     public function create()
     {
+
     }
 
 
@@ -38,7 +37,7 @@ class WithdrawalController extends Controller
         ]);
 
 
-        Withdrawal::create([
+        Deposit::create([
             "amount" => $request->amount,
             "bankname_currency" => $request->bankname_currency,
             "accountname_ID" => $request->accountname_ID,
@@ -50,16 +49,8 @@ class WithdrawalController extends Controller
 
 
 
-        return redirect('/w')->with([
-            "success" => "Withdrawal process in progress"
+        return redirect('/wallet')->with([
+            "success" => "Deposit awaiting confirmation"
         ]);
     }
-
-
-
-
-
-
-
-
 }

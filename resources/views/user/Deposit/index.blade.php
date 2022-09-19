@@ -32,7 +32,7 @@
             <h2
               class="text-xl font-medium text-slate-700 line-clamp-1 dark:text-navy-50"
             >
-              Withdrawal
+              Deposit Form
             </h2>
           </div>
         </div>
@@ -46,7 +46,7 @@
                 </div>
         @endif
 
-        <form method="POST" action="{{ url('/withdrawal/store') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ url('/depositform/store') }}" enctype="multipart/form-data">
           @csrf
             <div class="grid grid-cols-12 gap-4 sm:gap-5 lg:gap-6">
                 <div class="col-span-12 lg:col-span-8">
@@ -59,7 +59,7 @@
                                     class="btn h-14 shrink-0 space-x-2 rounded-none border-b-2 border-primary px-4 font-medium text-primary dark:border-accent dark:text-accent-light sm:px-5"
                                 >
                                     <i class="fa-solid fa-layer-group text-base"></i>
-                                    <span>Enter your withdrawal details here</span>
+                                    <span>Make a Deposit</span>
                                 </button>
 
                                 </div>
@@ -72,7 +72,7 @@
                                     <label for="amount" class="block">
                                         <span
                                             class="font-medium text-slate-600 dark:text-navy-100"
-                                            > Amount</span
+                                            > Deposit Amount</span
                                         >
                                         <input name="amount"
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"

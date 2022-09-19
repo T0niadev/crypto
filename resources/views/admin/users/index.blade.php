@@ -45,13 +45,13 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
-                            <table class="">
+                            <table class="display table table-stripped table-hover">
                                 <thead>
                                     <tr>
                                         <th>First Name</th>
                                         <th>Last Name</th>
                                         <th>Email</th>
-                                        <th>Country</th>
+                                       
                                         <th>Registration Date</th>
                                         <th>Wallet Balance</th>
                                         <th>Action</th>
@@ -67,9 +67,7 @@
                                         <td>
                                             {{ $user['email'] }}
                                         </td>
-                                        <td>
-                                            {{ $user['country'] }}
-                                        </td>
+                                      
                                         <td>
                                             {{ $user['created_at'] }}
                                         </td>
@@ -83,9 +81,9 @@
                                                     <i data-feather="more-vertical"></i>
                                                 </button>
                                                 <div class="dropdown-menu dropdown-menu-end">
-                                                    <a class="dropdown-item" href="{{ url('/admin/wallet/edit/', $user->id) }}">
+                                                    <a class="dropdown-item" href="{{ url('/admin/wallet/edit', $user->id) }}">
                                                         <i data-feather="trash" class="me-50"></i>
-                                                        <span>Edit User Wallet Balancer</span>
+                                                        <span>Edit User Wallet Balance</span>
                                                     </a>
                                                 </div>
                                             </div>

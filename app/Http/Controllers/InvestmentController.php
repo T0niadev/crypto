@@ -36,7 +36,7 @@ class InvestmentController extends Controller
     {
 
         $request->validate([
-            "slots" => 'required',
+          
             "amount" => 'required',
             "total_return" => 'required',
             "start_date" => 'required',
@@ -60,7 +60,7 @@ class InvestmentController extends Controller
 
         Investment::create([
 
-            "slots" => $request->slots,
+            
             "amount" => $request->amount,
             "total_return" => $request->total_return,
             "investment_date" => now()->format('Y-m-d H:i:s'),

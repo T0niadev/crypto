@@ -17,12 +17,11 @@ class CreateWithdrawalTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
           //  $table->string('username');
-        //    $table->string('amount');
+            $table->string('amount');
             $table->string('bankname_currency');
             $table->string('accountname_ID');
             $table->string('bank_wallet');
-          //  $table->string('date');
-          //  $table->string('status');
+            $table->enum('status', ['pending', 'cancelled', 'settled'])->default('pending');
             $table->timestamps();
 
         });
