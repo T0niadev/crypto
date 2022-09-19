@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Transaction;
-use App\Http\Requests\StoreTransactionRequest;
-use App\Http\Requests\UpdateTransactionRequest;
+use Illuminate\Http\Request;
+use App\Models\Withdrawal;
+use App\Models\Deposit;
+use Illuminate\Support\Facades\Auth;
 
 class TransactionController extends Controller
 {
@@ -15,7 +16,10 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        return view('user.Transaction.index');
+        return view('user.Transaction.index')->with([
+            "deposits" => Deposit::all(),
+            "withdrawals" => Withdrawal::all(),
+        ]);
     }
 
     /**

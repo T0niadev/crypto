@@ -50,7 +50,7 @@ class WithdrawalController extends Controller
 
 
 
-        return redirect('/w')->with([
+        return redirect('/wallet')->with([
             "success" => "Withdrawal process in progress"
         ]);
     }

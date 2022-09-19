@@ -1,5 +1,7 @@
 @extends('admin.layouts.app')
+
 @section('content')
+
 <!-- BEGIN: Content-->
 <div class="app-content content ">
     <div class="content-overlay"></div>
@@ -21,6 +23,24 @@
                     </div>
                 </div>
             </div>
+            <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
+                <div class="mb-1 breadcrumb-right">
+                    <div class="dropdown">
+                        <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                data-feather="grid"></i></button>
+                        <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="app-todo.html"><i
+                                    class="me-1" data-feather="check-square"></i><span
+                                    class="align-middle">Todo</span></a><a class="dropdown-item" href="app-chat.html"><i
+                                    class="me-1" data-feather="message-square"></i><span
+                                    class="align-middle">Chat</span></a><a class="dropdown-item"
+                                href="app-email.html"><i class="me-1" data-feather="mail"></i><span
+                                    class="align-middle">Email</span></a><a class="dropdown-item"
+                                href="app-calendar.html"><i class="me-1" data-feather="calendar"></i><span
+                                    class="align-middle">Calendar</span></a></div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="content-body">
             <!-- Basic table -->
@@ -28,20 +48,70 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
-                            <table class="datatables-basic table">
+                            <table class="display table table-stripped table-hover">
                                 <thead>
                                     <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <th>id</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Date</th>
-                                        <th>Salary</th>
+                                        <th>User Name</th>
+                                        <th>Wallet Balance</th>
+                                        <th>Amount</th>
+                                        <th>Bank Name/ Currency Type</th>
+                                        <th>Account Name/ Wallet ID</th>
+                                        <th>Account Number/ Wallet</th>
+                                        <th>Request Date</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
+                                @foreach($withdrawals as $withdrawal)
+                                <tbody>
+                                    <tr>
+                                        <td>{{ $withdrawal->user->first_name}} {{ $withdrawal->user->last_name}}</td>
+                                        <td>{{ $withdrawal->user->wallet}}</td>
+                                        
+                                        <td>
+                                            {{ $withdrawal['amount'] }}
+                                        </td>
+                    
+                                        <td>
+                                            {{ $withdrawal['bankname_currency'] }}
+                                        </td>
+                                        <td>
+                                            {{ $withdrawal['accountname_ID'] }}
+                                        </td>
+                                        <td>
+                                            {{ $withdrawal['bank_wallet'] }}
+                                        </td>
+                                        <td>
+                                            {{ $withdrawal['created_at'] }}
+                                        </td>
+                                        <td>
+                                            @if($withdrawal['status'] == 'pending')
+                                            <span class="badge rounded-pill badge-light-success me-1">pending</span>
+                                            @elseif($withdrawal['status'] == 'settled')
+                                            <span class="badge rounded-pill badge-light-success me-1">settled</span>
+                                            @else
+                                            <span class="badge rounded-pill badge-light-danger me-1">canceled</span>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow py-0"
+                                                    data-bs-toggle="dropdown">
+                                                    <i data-feather="more-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a  class="dropdown-item"  href="{{ url('/admin/withdrawals/edit', $withdrawal->id) }}">
+                                                        <i data-feather="edit-2" class="me-50"></i>
+                                                        <span>Approve</span>
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                   
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                @endforeach
                             </table>
                         </div>
                     </div>

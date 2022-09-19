@@ -505,7 +505,7 @@
                   <th
                     class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
                   >
-                    Transaction ID
+                    Transaction Amount
                   </th>
                   <th
                     class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
@@ -513,11 +513,6 @@
                    Transaction Type
                   </th>
 
-                  <th
-                    class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
-                  >
-                    Progress
-                  </th>
                   <th
                     class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
                   >
@@ -530,168 +525,62 @@
                   </th>
                 </tr>
               </thead>
+              @foreach($deposits as $deposit)
               <tbody>
-                <tr
-                  class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
-                >
+                <tr class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500">
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">1</td>
                   <td
                     class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
                   >
-                  WIT24-08-22-02
+                   ${{ $deposit['amount'] }}
                   </td>
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    Withdrawal
+                    Deposit
                   </td>
 
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    <div
-                      x-tooltip.primary="'42% Completed'"
-                      class="progress h-2 bg-slate-150 dark:bg-navy-500"
-                    >
-                      <div
-                        class="w-5/12 rounded-full bg-primary dark:bg-accent"
-                      ></div>
-                    </div>
-                  </td>
+               
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                     <div
                       class="badge space-x-2.5 px-0 text-primary dark:text-accent-light"
                     >
                       <div class="h-2 w-2 rounded-full bg-current"></div>
-                      <span>In Progress</span>
+                      <span>{{ $deposit['status'] }}</span>
                     </div>
                   </td>
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    03 Sep
+                    {{ $deposit['created_at'] }}
                   </td>
                 </tr>
-                <tr
-                  class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
-                >
+                @endforeach
+               
+                @foreach($withdrawals as $withdrawal)
+                <tr  class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500">
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">2</td>
                   <td
                     class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
                   >
-                   DEP24-08-22-01
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    Deposit
-                  </td>
-
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    <div
-                      x-tooltip.primary="'77% Completed'"
-                      class="progress h-2 bg-slate-150 dark:bg-navy-500"
-                    >
-                      <div
-                        class="w-9/12 rounded-full bg-primary dark:bg-accent"
-                      ></div>
-                    </div>
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    <div
-                      class="badge space-x-2.5 px-0 text-primary dark:text-accent-light"
-                    >
-                      <div class="h-2 w-2 rounded-full bg-current"></div>
-                      <span>In Progress</span>
-                    </div>
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    16 Sep
-                  </td>
-                </tr>
-                <tr
-                  class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
-                >
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">3</td>
-                  <td
-                    class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
-                  >
-                   DEP24-08-22-02
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    Deposit
-                  </td>
-
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    <div
-                      x-tooltip.error="'Cancelled'"
-                      class="progress h-2 bg-slate-150 dark:bg-navy-500"
-                    >
-                      <div class="w-full rounded-full bg-error"></div>
-                    </div>
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    <div class="badge space-x-2.5 px-0 text-error">
-                      <div class="h-2 w-2 rounded-full bg-current"></div>
-                      <span>Cancelled</span>
-                    </div>
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">N/A</td>
-                </tr>
-                <tr
-                  class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
-                >
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">4</td>
-                  <td
-                    class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
-                  >
-                    WIT24-08-22-01
+                   ${{ $withdrawal['amount'] }}
                   </td>
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                     Withdrawal
                   </td>
 
+              
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                     <div
-                      x-tooltip.success="'Completed'"
-                      class="progress h-2 bg-slate-150 dark:bg-navy-500"
-                    >
-                      <div class="w-full rounded-full bg-success"></div>
-                    </div>
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    <div class="badge space-x-2.5 px-0 text-success">
-                      <div class="h-2 w-2 rounded-full bg-current"></div>
-                      <span>Completed</span>
-                    </div>
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    25 Aug
-                  </td>
-                </tr>
-                <tr
-                  class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
-                >
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">5</td>
-                  <td
-                    class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
-                  >
-                  DEP24-08-22-03
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    Deposit
-                  </td>
-
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    <div
-                      x-tooltip.secondary="'Pending'"
-                      class="progress h-2 bg-slate-150 dark:bg-navy-500"
-                    >
-                      <div class="w-1/12 rounded-full bg-secondary"></div>
-                    </div>
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    <div
-                      class="badge space-x-2.5 px-0 text-secondary dark:text-secondary-light"
+                      class="badge space-x-2.5 px-0 text-primary dark:text-accent-light"
                     >
                       <div class="h-2 w-2 rounded-full bg-current"></div>
-                      <span>Pending</span>
+                      <span>{{ $withdrawal['status'] }}</span>
                     </div>
                   </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">3 Oct</td>
+                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                   {{ $withdrawal['created_at'] }}
+                  </td>
                 </tr>
+                @endforeach
+                
+                
               </tbody>
             </table>
           </div>
