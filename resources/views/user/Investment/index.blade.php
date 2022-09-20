@@ -171,29 +171,25 @@
                         
                        
                     </div>
-                    <p class="text-xs text-primary dark:text-accent-light">
-                             Your approved investment will appear here      
+                    <p class="text-xs text-primary dark:text-accent-light mt-2">
+                             Your investments will appear here. Ensure that you have enough in your wallet before placing a bid for desired investment package.     
                         </p>
-                    <div class="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-5">
+                    <!-- <div class="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-5">
                         @foreach($investments as $investment)
                             <div class="card items-center pb-5 text-center">
-                               @foreach($package->investments()->where("package_id",$package->id)->get() as $investment)
                                 <img
-                                class="h-24 w-full rounded-t-lg object-cover object-center"
-                                src="{{ asset('assets/images/payments/invest3.png' ) }}"
-                                alt="image"
+                                    class="h-24 w-full rounded-t-lg object-cover object-center"
+                                    src="{{ asset('assets/images/payments/invest3.png' ) }}"
+                                    alt="image"
                                 />
-                                 {{ $package['name'] }}
-                                @endforeach
+                                 {{ $investment->package->name }}
                                 <div class="mt-1.5 px-2">
                                 <a
                                     href="#"
                                     class="text-base font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light"
                                 >
                                 </a>
-                                <p class="font-medium text-slate-600 line-clamp-1 dark:text-navy-100">
-                                  {{ $investment['slots'] }} Slots
-                                </p>
+                               
 
                                 <p class="font-medium text-slate-600 line-clamp-1 dark:text-navy-100">
                                 
@@ -233,7 +229,87 @@
                         @endforeach
 
 
+                    </div> -->
+                    <table class="is-hoverable w-full text-left mt-4">
+              <thead>
+                <tr>
+                <th
+                    class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
+                  >
+                   Package Name
+                  </th>
+                <th
+                    class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
+                  >
+                   ROI
+                  </th>
+                  <th
+                    class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
+                  >
+                    Investment Amount
+                  </th>
+                
+                  <th
+                    class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
+                  >
+                   Expected Total Returns
+                  </th>
+               
+
+                  <th
+                    class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
+                  >
+                    Status
+                  </th>
+                  <th
+                    class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
+                  >
+                    Transaction Date
+                  </th>
+                  <th
+                    class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
+                  >
+                    Expected Withdrawal Date
+                  </th>
+                </tr>
+              </thead>
+              @foreach($investments as $investment)
+              <tbody>
+                <tr class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500">
+                <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                  {{ $investment->package->name }}
+                  </td>
+                <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                   {{ $investment->package->roi }} %
+                  </td>
+                  <td
+                    class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
+                  >
+                   ${{ $investment['amount'] }}
+                  </td>
+                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                   ${{ $investment['total_return'] }}
+                  </td>
+                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                    <div
+                      class="badge space-x-2.5 px-0 text-primary dark:text-accent-light"
+                    >
+                      <div class="h-2 w-2 rounded-full bg-current"></div>
+                      <span>{{ $investment['status'] }}</span>
                     </div>
+                  </td>
+                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                    {{ $investment['created_at'] }}
+                  </td>
+                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                    {{ $investment['withdrawal_date'] }}
+                  </td>
+                </tr>
+                @endforeach
+                
+                
+              </tbody>
+            </table>
                 </div>
 
 
@@ -370,7 +446,7 @@
                             <button
                             class="btn h-9 min-w-[7rem] rounded-full bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90"
                             > <a
-                            href="{{ url('/investment/add', $package->id) }}"> Place a bid</a>
+                            href="{{ url('/investment/add', $pack->id) }}"> Place a bid</a>
                            
                             </button>
                         </div>

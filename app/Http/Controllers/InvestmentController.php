@@ -10,16 +10,20 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreInvestmentRequest;
 use App\Http\Requests\UpdateInvestmentRequest;
 
+use \Carbon\Carbon;
+
 class InvestmentController extends Controller
 {
 
     public function index()
     {
-
+        
         return view('user.Investment.index')->with([
-            "packages" => Package::all(),
-            "pack" => Package::latest()->first(),
-            "investments" => Investment::all(),
+      
+            "packages" => Package::where('status', 'open')->get(),
+            "pack" => Package::where('status', 'open')->latest()->first(),
+            "investments" => Investment::where('user_id',auth()->user()->id)->get(),
+          
         ]);
     }
 
@@ -49,6 +53,8 @@ class InvestmentController extends Controller
         //  $inv_user = User::find($inv->user_id);
 
 
+        // Convert withdrawal day 
+        // $request->withdrawal_date = Carbon::parse($request['withdrawal_date'])->format('d-m-y H:i:s');
 
         $user_id = Auth::id();
 

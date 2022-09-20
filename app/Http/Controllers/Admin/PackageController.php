@@ -77,67 +77,7 @@ class PackageController extends Controller
     }
 
 
-    public function edit(Package $package)
-    {
-
-        $package = Package::findorfail($id);
-
-        return view('admin.packages.edit', compact('package'));
-    }
-
-
-    public function update(Request $request, Package $package)
-    {
-
-        $request->validate([
-            "name" => 'required',
-            "roi" => 'required',
-            "start_date" => 'required',
-            "slots" => 'required',
-            "min_amount" => 'required',
-            "max_amount" => 'required',
-            "duration" => 'required',
-            "duration_mode" => 'required',
-            "milestones" => 'required',
-            "payout_mode" => 'required',
-            "description" => 'required',
-            "image" => 'mimes:jpeg,png|max:5000',
-            "type" => 'required',
-            "rollover" => 'required',
-            "status" => 'required',
-        ]);
-
-        if ($request->hasFile("image")) {
-            $file = $request->image;
-            $imageName = time() . "_" . $file->getClientOriginalName();
-            $file->move(public_path('images/packages'), $imageName);
-
-            Package::create([
-                "name"  => $request->name,
-                "roi"  => $request->roi,
-                "start_date"  => $request->start_date,
-                "slots"  => $request->slots,
-                "min_amount"  => $request->min_amount,
-                "max_amount"  => $request->max_amount,
-                "duration"  => $request->duration,
-                "duration_mode"  => $request->duration_mode,
-                "milestones"  => $request->milestones,
-                "payout_mode"  => $request->payout_mode,
-                "description"  => $request->description,
-                "type"  => $request->type,
-                "rollover"  => $request->rollover,
-                "status"  => $request->status,
-            ]);
-
-
-
-            return redirect('admin/packages')->with([
-                "success" => "Package Added Succesfully"
-            ]);
-        }
-
-
-    }
+   
 
     public function destroy(Package $package)
     {
@@ -151,5 +91,32 @@ class PackageController extends Controller
         }
 
         // return redirect('/admin/packages');
+    }
+
+    public function editpackage(Package $package)
+    {
+        return view('admin.packages.edit',compact('package'));
+    }
+
+
+
+	public function updatepackage(Request $request, Package $package)
+    {
+        $request->validate([
+            "name" => 'required',
+            "roi" => 'required',
+            "start_date" => 'required',
+            "min_amount" => 'required',
+            "max_amount" => 'required',
+            "duration" => 'required',
+            "duration_mode" => 'required',
+            "description" => 'required',
+            "image" => 'mimes:jpeg,png|max:5000',
+            "status" => 'required',
+        ]);
+
+        $package->fill($request->post())->save();
+
+        return redirect('/admin/packages')->with('success','Status updated succesfully');
     }
 }

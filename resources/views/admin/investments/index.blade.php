@@ -84,10 +84,12 @@
                                             {{ $investment['withdrawal_date'] }}
                                         </td>
                                         <td>
-                                            @if($investment['status'] == 'open')
+                                            @if($investment['status'] == 'approved')
                                             <span class="badge rounded-pill badge-light-success me-1">Approved</span>
-                                            @else
+                                            @elseif($investment['status'] == 'pending')
                                             <span class="badge rounded-pill badge-light-danger me-1">Pending</span>
+                                            @else
+                                            <span class="badge rounded-pill badge-light-danger me-1">Declined</span>
                                             @endif
                                         </td>
                                         <td>

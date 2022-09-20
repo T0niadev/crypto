@@ -41,8 +41,9 @@
       <div class="af ag aa ac ah">
         <div class="ai aj ak">
           <a href="{{ route('welcome') }}" :class="scrolledFromTop && '!al lg:!am'" class="an ab a2h lg:aW">
-            <img src="{{ asset('assets/images/logo/logo.svg') }}" alt="logo" class="ab dark:ao" />
-            <img src="{{ asset('assets/images/logo/logo-white.svg') }}" alt="logo" class="ao ab dark:an" />
+            <img src="{{ asset('assets/images/logo/cryptfx.png') }}" alt="cryptfx" class="ab dark:ao" />
+            <img src="{{ asset('assets/images/logo/cryptfx.png') }}" alt="cryptfx" class="ao ab dark:an" />
+      
           </a>
         </div>
           <div class="aa ap lg:a1m xl:a1n 2xl:a1o">
@@ -87,9 +88,8 @@
       <div class="ag aa a1L">
         <div class="ab ak md:a1M/2 lg:a1U/12 xl:a1U/12">
           <div class="wow fadeInUp a2_ aH[330px] xl:a30" data-wow-delay="0s">
-            <a href="index.html" class="a2a a2i">
-              <img src="{{ asset('assets/images/logo/logo-white.svg') }}" alt="logo" class="ao dark:an" />
-              <img src="{{ asset('assets/images/logo/logo.svg') }}" alt="logo" class="dark:ao" />
+            <a href="" class="a1W a1F a1R aQ dark:aS">
+             <h2 class="a2K a2B a1P a1k dark:aT">CryptFx</h2>
             </a>
             <p class="a1W a1F a1R aQ dark:aS">
                 Converts well, receive more
@@ -138,7 +138,7 @@
             </div>
           </div>
         </div>
-        <div class="ab ak sm:a1M/2 md:a1M/2 lg:a1U/12 xl:a12/12">
+        <div class="ab ak md:a1M/2 lg:a1U/12 xl:a1U/12">
           <div class="wow fadeInUp a2_ xl:a30" data-wow-delay="0s">
             <h2 class="a2K a2B a1P a1k dark:aT">Quick Links</h2>
             <div class="a34">
@@ -157,7 +157,7 @@
             </div>
           </div>
         </div>
-        <div class="ab ak sm:a1M/2 md:a1M/2 lg:a1U/12 xl:a12/12">
+        <div class="ab ak md:a1M/2 lg:a1U/12 xl:a1U/12">
           <div class="wow fadeInUp a2_ xl:a30" data-wow-delay="0s">
             <h2 class="a2K a2B a1P a1k dark:aT">Supports</h2>
             <div class="a34">

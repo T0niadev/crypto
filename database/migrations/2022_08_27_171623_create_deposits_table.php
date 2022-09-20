@@ -20,7 +20,7 @@ class CreateDepositsTable extends Migration
             $table->string('bankname_currency');
             $table->string('accountname_ID');
             $table->string('bank_wallet');
-            $table->enum('status', ['pending', 'unconfirmed', 'confirmed'])->default('pending');
+            $table->enum('status', ['pending', 'declined', 'confirmed'])->default('pending');
             $table->timestamps();
 
 

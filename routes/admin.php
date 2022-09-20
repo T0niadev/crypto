@@ -38,7 +38,8 @@ Route::post('/users/update', [\App\Http\Controllers\Admin\UserController::class,
 Route::get('/wallet/edit/{user}', [\App\Http\Controllers\Admin\UserController::class, 'editwallet'])->name('wallet.edit');
 Route::put('/wallet/update/{user}', [\App\Http\Controllers\Admin\UserController::class, 'updatewallet'] )->name('wallet.update');
 
-
+Route::get('/packages/edit/{package}', [\App\Http\Controllers\Admin\PackageController::class, 'editpackage'])->name('package.edit');
+Route::put('/packages/update/{package}', [\App\Http\Controllers\Admin\PackageController::class, 'updatepackage'] )->name('package.update');
 
 Route::get('/investment/edit/{investment}', [\App\Http\Controllers\Admin\InvestmentController::class, 'editinvestment'])->name('investment.edit');
 Route::put('/investment/update/{investment}', [\App\Http\Controllers\Admin\InvestmentController::class, 'updateinvestment'] )->name('investment.update');
@@ -72,7 +73,6 @@ Route::get('/packages', [\App\Http\Controllers\Admin\PackageController::class, '
 Route::get('/packages/fetchPackages', [\App\Http\Controllers\Admin\PackageController::class, 'fetchPackages'])->name('fetchPackages');
 Route::get('/packages/create', [\App\Http\Controllers\Admin\PackageController::class, 'create'] )->name('package.create');
 Route::post('/packages/store', [\App\Http\Controllers\Admin\PackageController::class, 'store'] )->name('package.store');
-Route::get('/packages/{package}/edit', [\App\Http\Controllers\Admin\PackageController::class, 'edit'])->name('packages.edit');
-Route::post('/packages/{package}/update', [\App\Http\Controllers\Admin\PackageController::class, 'update'] )->name('package.update');
+
 
 Route::delete('/packages/{package}/destroy', [App\Http\Controllers\Admin\PackageController::class, 'destroy'])->name('package.destroy');

@@ -15,7 +15,7 @@
     </div>
 
     <div x-data="{isFilterExpanded:false}">
-        <div class="flex items-center justify-between">
+        <!-- <div class="flex items-center justify-between">
           <h2
             class="text-base font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100"
           >
@@ -249,8 +249,12 @@
               </button>
             </div>
           </div>
-        </div>
+        </div> -->
+        <p class="text-xs text-primary dark:text-accent-light mt-2">
+                             Your transaction histrory will appear here.     
+                        </p>
         <div class="card mt-3">
+          
           <div class="is-scrollbar-hidden min-w-full overflow-x-auto">
             <table class="is-hoverable w-full text-left">
               <thead>
