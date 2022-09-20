@@ -87,10 +87,10 @@
                                         <td>
                                             @if($deposit['status'] == 'pending')
                                             <span class="badge rounded-pill badge-light-success me-1">pending</span>
-                                            @elseif($deposit['status'] == 'settled')
-                                            <span class="badge rounded-pill badge-light-success me-1">settled</span>
+                                            @elseif($deposit['status'] == 'confirmed')
+                                            <span class="badge rounded-pill badge-light-success me-1">confirmed</span>
                                             @else
-                                            <span class="badge rounded-pill badge-light-danger me-1">canceled</span>
+                                            <span class="badge rounded-pill badge-light-danger me-1">unconfirmed</span>
                                             @endif
                                         </td>
                                         <td>

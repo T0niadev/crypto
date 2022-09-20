@@ -32,7 +32,7 @@ Route::post('password/confirm', 'Auth\ConfirmPasswordController@confirm');
 Route::get('/users', [\App\Http\Controllers\Admin\UserController::class, 'index'])->name('user');
 Route::get('/users/create', [\App\Http\Controllers\Admin\UserController::class, 'create'] )->name('usercreate');
 Route::post('/users/store', [\App\Http\Controllers\Admin\UserController::class, 'store'] )->name('userstore');
-Route::get('/users/edit/{user_id}', [\App\Http\Controllers\Admin\UserController::class, 'edit'])->name('useredit');
+
 Route::post('/users/update', [\App\Http\Controllers\Admin\UserController::class, 'update'] )->name('userupdate');
 
 Route::get('/wallet/edit/{user}', [\App\Http\Controllers\Admin\UserController::class, 'editwallet'])->name('wallet.edit');
