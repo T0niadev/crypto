@@ -71,7 +71,7 @@
                                             {{ $investment->package->name }}
                                         </td>
                                         <td>
-                                            {{ $investment['amount'] }}
+                                            ${{ $investment['amount'] }}
                                         </td>
                     
                                         <td>

@@ -167,7 +167,7 @@
                   </div>
                 </form>
                 <p class="a2G a1F a1R aQ dark:aS">
-                  Already using CRYPTO-LUONO?
+                  Already using CryptFX?
                   @if (Route::has('login'))
                   <a href="{{ route('login') }}" class="aR hover:a2z">
                     Sign in

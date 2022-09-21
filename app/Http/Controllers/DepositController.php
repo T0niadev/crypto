@@ -49,7 +49,7 @@ class DepositController extends Controller
 
 
 
-        return redirect('/wallet')->with([
+        return redirect('/pay')->with([
             "success" => "Deposit awaiting confirmation"
         ]);
     }

@@ -25,7 +25,7 @@
             We offer a comprehensive, user-friendly, risk-free investing platform that boosts your income potential.
             We also have a range investment packages specially curated for you by our highly competent analysts and
             predictive tools.
-            With CrptoFX, you'll have greater opportunity, and choice.
+            With CryptFX, you'll have greater opportunity, and choice.
             We are here to support you as you go.
             </p>
 
