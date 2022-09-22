@@ -53,21 +53,21 @@
 
 
                 <label for="amount" class="block">
-                  <span class="font-medium text-slate-600 dark:text-navy-100"> Deposit Amount</span>
+                  <span class="font-medium text-slate-600 dark:text-navy-100"> Deposit Amount ($)</span>
                   <input name="amount"
                     class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                     placeholder="Enter here" type="number" />
                 </label>
 
 
-                <label for="number" class="block">
+                <label for="number" class="block mt-3">
                   <span class="font-medium text-slate-600 dark:text-navy-100"> Bank Name or Currency Type</span>
                   <input name="bankname_currency"
                     class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                     placeholder="Enter here" type="text" />
                 </label>
 
-                <label for="number" class="block">
+                <label for="number" class="block mt-3">
                   <span class="font-medium text-slate-600 dark:text-navy-100">Account Name or Wallet ID</span>
                   <input name="accountname_ID"
                     class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
@@ -76,7 +76,7 @@
 
 
 
-                <label for="number" class="block">
+                <label for="number" class="block mt-3">
                   <span class="font-medium text-slate-600 dark:text-navy-100">Account Number or Wallet</span>
                   <input name="bank_wallet"
                     class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"

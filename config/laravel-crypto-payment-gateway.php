@@ -49,7 +49,7 @@ return [
      */
     'paymentbox' => [
         'bitcoin' => [
-            'public_key' => env('GOURL_PAYMENTBOX_BITCOIN_PUBLIC_KEY', null),
+            'public_key' => env('65784AAMWaFBBitcoin77BTCPUBQQVgi5SPo5tqmexPtUGxnen', null),
             'private_key' => env('GOURL_PAYMENTBOX_BITCOIN_PRIVATE_KEY', null),
             'enabled' => true,
         ],

@@ -24,9 +24,9 @@ class WalletController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function pay()
     {
-        return view('user.Wallet.depositform');
+        return view('user.Wallet.payment');
     }
 
     /**

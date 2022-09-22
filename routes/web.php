@@ -22,7 +22,7 @@ Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/wallet', [\App\Http\Controllers\WalletController::class, 'index'])->name('wallet');
-Route::get('/create/deposit', [\App\Http\Controllers\WalletController::class, 'create'])->name('deposit.create');
+Route::get('/pay', [\App\Http\Controllers\WalletController::class, 'pay'])->name('payform');
 Route::get('/investment', [\App\Http\Controllers\InvestmentController::class, 'index'])->name('investment');
 Route::get('/package', [\App\Http\Controllers\PackageController::class, 'index'])->name('package');
 Route::get('/investment/add/{package_id}', [\App\Http\Controllers\InvestmentController::class, 'create'])->name('addinvestment');
@@ -46,3 +46,14 @@ Route::prefix('google')->name('google.')->group(function () {
     Route::get('login', [GoogleController::class, 'loginWithGoogle'])->name('login');
     Route::any('callback', [GoogleController::class, 'callbackFromGoogle'])->name('callback');
 });
+
+
+
+Route::match(['get', 'post'], '/payments/crypto/pay', Victorybiz\LaravelCryptoPaymentGateway\Http\Controllers\CryptoPaymentController::class)
+                ->name('payments.crypto.pay');
+
+// You you need to create your own callback controller and define the route below
+// The callback route should be a publicly accessible route with no auth
+// However, you may also exclude the route from CSRF Protection by adding their URIs to the $except property of the VerifyCsrfToken middleware.
+Route::post('/payments/crypto/callback', [App\Http\Controllers\Payment\PaymentController::class, 'callback'])
+                ->withoutMiddleware(['web', 'auth']);

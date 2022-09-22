@@ -15,6 +15,8 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+  <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
 
 
   <!-- CSS Assets -->
@@ -187,9 +189,9 @@
                   <div class="flex flex-col pt-2 pb-5">
 
                     <div class="mt-3 px-4">
-                      <form method="POST" action="{{ route('logout') }}">
+                      <form action="{{ route('logout') }}" method="post">
                         @csrf
-                        <button type="submit"
+                        <button
                           class="btn h-9 w-full space-x-2 bg-primary text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
                           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewbox="0 0 24 24"
                             stroke="currentColor">

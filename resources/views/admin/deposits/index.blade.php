@@ -69,7 +69,7 @@
                                         <td>{{ $deposit->user->wallet}}</td>
                                         
                                         <td>
-                                            {{ $deposit['amount'] }}
+                                            ${{ $deposit['amount'] }}
                                         </td>
                     
                                         <td>
