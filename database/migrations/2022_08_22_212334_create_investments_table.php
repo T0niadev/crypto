@@ -17,15 +17,14 @@ class CreateInvestmentsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('package_id')->constrained();
-            $table->integer('slots');
             $table->decimal('amount', 15, 2);
             $table->decimal('total_return', 15, 2);
             $table->text('package_data');
             $table->dateTime('investment_date');
             $table->dateTime('start_date');
-            $table->dateTime('withdrawal_date');
+            $table->string('withdrawal_date');
             $table->enum('payment', ['approved', 'declined', 'pending']);
-            $table->enum('status', ['active', 'pending', 'cancelled', 'settled'])->default('pending');
+            $table->enum('status', ['approved', 'pending', 'declined'])->default('pending');
             $table->boolean('rollover')->default(false);
             $table->timestamps();
         });

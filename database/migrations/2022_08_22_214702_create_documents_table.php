@@ -15,6 +15,10 @@ class CreateDocumentsTable extends Migration
     {
         Schema::create('documents', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->string('image');
+            $table->string('document_type');
+            $table->enum('status', ['approved', 'declined', 'pending'])->default('pending');
             $table->timestamps();
         });
     }

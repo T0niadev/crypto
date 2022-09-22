@@ -15,13 +15,12 @@ class CreateDepositsTable extends Migration
     {
         Schema::create('deposits', function (Blueprint $table) {
             $table->id();
-            $table->string('username');
+            $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->string('amount');
+            $table->string('bankname_currency');
             $table->string('accountname_ID');
-            $table->string('accountno_wallet');
-            $table->string('method');
-            $table->string('trans_date');
-            $table->string('status');
+            $table->string('bank_wallet');
+            $table->enum('status', ['pending', 'declined', 'confirmed'])->default('pending');
             $table->timestamps();
 
 

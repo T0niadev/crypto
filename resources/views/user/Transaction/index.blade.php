@@ -4,249 +4,7 @@
 @section('content')
   <!-- Main Content Wrapper -->
   <main class="main-content w-full px-[var(--margin-x)] pb-8">
-    <div class="mt-5 flex items-center justify-between">
-      <h3
-        class="text-lg font-medium text-slate-700 line-clamp-1 dark:text-navy-50"
-      >
-        Transactions Overview
-      </h3>
-      <div class="flex">
-        <button
-          class="btn h-8 w-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            fill="none"
-            viewbox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="1.5"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-            />
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-            />
-          </svg>
-        </button>
-        <button
-          class="btn h-8 w-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            fill="none"
-            viewbox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="1.5"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <div class="mt-4 grid grid-cols-12 gap-4 sm:gap-5 lg:gap-6">
-      <div class="card group col-span-12 lg:col-span-7">
-        <div class="mt-3 flex items-center justify-between px-4 sm:px-5">
-          <div
-            class="flex flex-1 items-center justify-between space-x-2 sm:flex-initial"
-          >
-            <h2
-              class="text-sm+ font-medium tracking-wide text-slate-700 dark:text-navy-100"
-            >
-              Transaction History
-            </h2>
-            <div
-              x-data="usePopper({placement:'bottom-start',offset:4})"
-              @click.outside="if(isShowPopper) isShowPopper = false"
-              :class="!isShowPopper && 'sm:opacity-0'"
-              class="inline-flex focus-within:opacity-100 group-hover:opacity-100"
-            >
-              <button
-                x-ref="popperRef"
-                @click="isShowPopper = !isShowPopper"
-                class="btn h-8 w-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewbox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
-                  />
-                </svg>
-              </button>
-
-              <div
-                x-ref="popperRoot"
-                class="popper-root"
-                :class="isShowPopper && 'show'"
-              >
-                <div
-                  class="popper-box rounded-md border border-slate-150 bg-white py-1.5 font-inter dark:border-navy-500 dark:bg-navy-700"
-                >
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100"
-                        >Action</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100"
-                        >Another Action</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100"
-                        >Something else</a
-                      >
-                    </li>
-                  </ul>
-                  <div
-                    class="my-1 h-px bg-slate-150 dark:bg-navy-500"
-                  ></div>
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100"
-                        >Separated Link</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="hidden justify-between space-x-4 text-xs+ sm:flex"
-            x-data="{activeTab:'tabAll'}"
-          >
-            <button
-              @click="activeTab = 'tabRecent'"
-              class="font-medium tracking-wide"
-              :class="activeTab === 'tabRecent' && 'text-primary dark:text-accent-light' "
-            >
-              Last 7 days
-            </button>
-            <button
-              @click="activeTab = 'tabAll'"
-              class="font-medium tracking-wide"
-              :class="activeTab === 'tabAll' && 'text-primary dark:text-accent-light' "
-            >
-              All time
-            </button>
-          </div>
-        </div>
-        <div class="ax-transparent-gridline pr-2">
-          <div
-            x-init="$nextTick(() => { $el._x_chart = new ApexCharts($el,pages.charts.serverTraffic); $el._x_chart.render() });"
-          ></div>
-        </div>
-      </div>
-      <div
-        class="order-first col-span-12 grid grid-cols-2 gap-4 sm:order-none sm:gap-5 lg:col-span-5 lg:gap-6"
-      >
-        {{-- <div class="card row-span-2 justify-between py-5 px-2 text-center">
-          <p
-            class="font-medium tracking-wide text-slate-700 dark:text-navy-100"
-          >
-            CPU Usage
-          </p>
-
-          <div class="ax-transparent-gridline pr-1">
-            <div
-              x-init="$nextTick(() => { $el._x_chart = new ApexCharts($el,pages.charts.cpuUsage); $el._x_chart.render() });"
-            ></div>
-          </div>
-
-          <p class="mt-4 text-xs+">
-            Daily usage is
-            <span class="font-medium text-slate-700 dark:text-navy-100"
-              >Good</span
-            >
-          </p>
-        </div> --}}
-        {{-- <div class="card justify-center p-4">
-          <div class="flex items-center space-x-3">
-            <div>
-              <div
-                x-init="$nextTick(() => { $el._x_chart = new ApexCharts($el,pages.charts.storageUsage); $el._x_chart.render() });"
-              ></div>
-            </div>
-            <div
-              class="text-xs+ font-medium text-slate-700 dark:text-navy-100"
-            >
-              Storage Usage
-            </div>
-          </div>
-        </div> --}}
-        {{-- <div class="card justify-center p-4">
-          <div class="flex items-center space-x-3">
-            <div>
-              <div
-                x-init="$nextTick(() => { $el._x_chart = new ApexCharts($el,pages.charts.memoryUsage); $el._x_chart.render() });"
-              ></div>
-            </div>
-            <div
-              class="text-xs+ font-medium text-slate-700 dark:text-navy-100"
-            >
-              Memory Usage
-            </div>
-          </div>
-        </div> --}}
-        {{-- <div class="card flex-row overflow-hidden">
-          <div class="h-full w-1 shrink-0 bg-primary dark:bg-accent"></div>
-          <div class="p-4 font-inter">
-            <div class="flex items-baseline space-x-2">
-              <p
-                class="text-2xl font-semibold text-slate-700 dark:text-navy-100"
-              >
-                4.54
-              </p>
-              <p class="text-xs">/12 GB</p>
-            </div>
-            <p class="text-xs">Daily traffic</p>
-          </div>
-        </div> --}}
-        {{-- <div class="card flex-row overflow-hidden">
-          <div class="h-full w-1 shrink-0 bg-info"></div>
-          <div class="p-4 font-inter">
-            <div class="flex items-baseline space-x-2">
-              <p
-                class="text-2xl font-semibold text-slate-700 dark:text-navy-100"
-              >
-                14.54
-              </p>
-              <p class="text-xs">/12 GB</p>
-            </div>
-            <p class="text-xs">Hourly traffic</p>
-          </div>
-        </div> --}}
-      </div>
-    </div>
+  
 
     <div class="mt-4 sm:mt-5 lg:mt-6">
       <div class="flex items-center justify-between">
@@ -257,7 +15,7 @@
     </div>
 
     <div x-data="{isFilterExpanded:false}">
-        <div class="flex items-center justify-between">
+        <!-- <div class="flex items-center justify-between">
           <h2
             class="text-base font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100"
           >
@@ -491,8 +249,12 @@
               </button>
             </div>
           </div>
-        </div>
+        </div> -->
+        <p class="text-xs text-primary dark:text-accent-light mt-2">
+                             Your transaction histrory will appear here.     
+                        </p>
         <div class="card mt-3">
+          
           <div class="is-scrollbar-hidden min-w-full overflow-x-auto">
             <table class="is-hoverable w-full text-left">
               <thead>
@@ -505,7 +267,7 @@
                   <th
                     class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
                   >
-                    Transaction ID
+                    Transaction Amount
                   </th>
                   <th
                     class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
@@ -513,11 +275,6 @@
                    Transaction Type
                   </th>
 
-                  <th
-                    class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
-                  >
-                    Progress
-                  </th>
                   <th
                     class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
                   >
@@ -530,168 +287,62 @@
                   </th>
                 </tr>
               </thead>
+              @foreach($deposits as $deposit)
               <tbody>
-                <tr
-                  class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
-                >
+                <tr class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500">
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">1</td>
                   <td
                     class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
                   >
-                  WIT24-08-22-02
+                   ${{ $deposit['amount'] }}
                   </td>
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    Withdrawal
+                    Deposit
                   </td>
 
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    <div
-                      x-tooltip.primary="'42% Completed'"
-                      class="progress h-2 bg-slate-150 dark:bg-navy-500"
-                    >
-                      <div
-                        class="w-5/12 rounded-full bg-primary dark:bg-accent"
-                      ></div>
-                    </div>
-                  </td>
+               
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                     <div
                       class="badge space-x-2.5 px-0 text-primary dark:text-accent-light"
                     >
                       <div class="h-2 w-2 rounded-full bg-current"></div>
-                      <span>In Progress</span>
+                      <span>{{ $deposit['status'] }}</span>
                     </div>
                   </td>
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    03 Sep
+                    {{ $deposit['created_at'] }}
                   </td>
                 </tr>
-                <tr
-                  class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
-                >
+                @endforeach
+               
+                @foreach($withdrawals as $withdrawal)
+                <tr  class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500">
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">2</td>
                   <td
                     class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
                   >
-                   DEP24-08-22-01
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    Deposit
-                  </td>
-
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    <div
-                      x-tooltip.primary="'77% Completed'"
-                      class="progress h-2 bg-slate-150 dark:bg-navy-500"
-                    >
-                      <div
-                        class="w-9/12 rounded-full bg-primary dark:bg-accent"
-                      ></div>
-                    </div>
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    <div
-                      class="badge space-x-2.5 px-0 text-primary dark:text-accent-light"
-                    >
-                      <div class="h-2 w-2 rounded-full bg-current"></div>
-                      <span>In Progress</span>
-                    </div>
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    16 Sep
-                  </td>
-                </tr>
-                <tr
-                  class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
-                >
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">3</td>
-                  <td
-                    class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
-                  >
-                   DEP24-08-22-02
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    Deposit
-                  </td>
-
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    <div
-                      x-tooltip.error="'Cancelled'"
-                      class="progress h-2 bg-slate-150 dark:bg-navy-500"
-                    >
-                      <div class="w-full rounded-full bg-error"></div>
-                    </div>
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    <div class="badge space-x-2.5 px-0 text-error">
-                      <div class="h-2 w-2 rounded-full bg-current"></div>
-                      <span>Cancelled</span>
-                    </div>
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">N/A</td>
-                </tr>
-                <tr
-                  class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
-                >
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">4</td>
-                  <td
-                    class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
-                  >
-                    WIT24-08-22-01
+                   ${{ $withdrawal['amount'] }}
                   </td>
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                     Withdrawal
                   </td>
 
+              
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                     <div
-                      x-tooltip.success="'Completed'"
-                      class="progress h-2 bg-slate-150 dark:bg-navy-500"
-                    >
-                      <div class="w-full rounded-full bg-success"></div>
-                    </div>
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    <div class="badge space-x-2.5 px-0 text-success">
-                      <div class="h-2 w-2 rounded-full bg-current"></div>
-                      <span>Completed</span>
-                    </div>
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    25 Aug
-                  </td>
-                </tr>
-                <tr
-                  class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
-                >
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">5</td>
-                  <td
-                    class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
-                  >
-                  DEP24-08-22-03
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    Deposit
-                  </td>
-
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    <div
-                      x-tooltip.secondary="'Pending'"
-                      class="progress h-2 bg-slate-150 dark:bg-navy-500"
-                    >
-                      <div class="w-1/12 rounded-full bg-secondary"></div>
-                    </div>
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    <div
-                      class="badge space-x-2.5 px-0 text-secondary dark:text-secondary-light"
+                      class="badge space-x-2.5 px-0 text-primary dark:text-accent-light"
                     >
                       <div class="h-2 w-2 rounded-full bg-current"></div>
-                      <span>Pending</span>
+                      <span>{{ $withdrawal['status'] }}</span>
                     </div>
                   </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">3 Oct</td>
+                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                   {{ $withdrawal['created_at'] }}
+                  </td>
                 </tr>
+                @endforeach
+                
+                
               </tbody>
             </table>
           </div>

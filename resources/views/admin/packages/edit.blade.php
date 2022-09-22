@@ -1,68 +1,123 @@
-<div id="packEdit" class="container edit_pack_cont" >
-    <div class="row wd_row_pad">
-      <div class="col-md-4">&emps;</div>
-      <div class="col-md-4" align="Center">
-        <div class="card mt50">
-          <div class="card-header card_header_bg_blue">
-            <h2 class="text-white">Update Package</h2>
-          </div>
-          <div id="" class="edit_pack_pad_n30_5 card-body">
-            <form action="/admin/edit/packages" method="post">
-                <input id="token" type="hidden" class="form-control" name="_token" value="">
-                <div class="form-group">
-                    <input id="p_id" type="hidden" class="form-control" name="p_id" value="">
+@extends('admin.layouts.app')
+
+
+@section('content')
+  <div class="app-content content ">
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+    <div class="content-wrapper container-xxl p-0">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card_header_bg_blue">
+              <div class="container">
+                <h4 class="card-title text-dark"> {{ __('Edit Package') }} </h4>
+
+              </div>
+            </div>
+            <div class="card-body">
+
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                    </ul>
                 </div>
-                <div class="input-group">
-                  <div class="input-group-prepend " >
-                    <span class="input-group-text " ><i class=""></i>Min</span>
-                  </div>
-                  <input id="min" type="text" class="form-control" name="min" placeholder="Enter Min amount to invest" required>
-                  <div class="input-group-append " >
-                    <span class="input-group-text pack_edit_cur" ><i class=""></i></span>
+                @endif
+
+            
+                <form action="{{ url('/admin/packages/update', $package->id) }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                @method('PUT')
+                <div class="card-body">
+
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label> {{ __('Package Name') }} </label>
+                        <input type="" name="name" value="{{ $package->name }}"  class="form-control" >
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-2">
+                      <div class="form-group">
+                        <label> {{ __('ROI (%)') }} </label>
+                        <input type="percentage" name="roi" value="{{ $package->roi }}"  class="form-control" >
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-2">
+                      <div class="form-group">
+                        <label> {{ __('Start Date') }} </label>
+                        <input type="date" name="start_date" value="{{ $package->start_date }}" class="form-control" >
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-2">
+                      <div class="form-group">
+                        <label> {{ __('Minimum Amount') }} </label>
+                        <input type="number" name="min_amount" value="{{ $package->min_amount }}" class="form-control" >
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-2">
+                      <div class="form-group">
+                        <label> {{ __('Maximum Amount') }} </label>
+                        <input type="number" name="max_amount"  value="{{ $package->max_amount }}" class="form-control" >
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-2">
+                      <div class="form-group">
+                        <label> {{ __('Duration') }} </label>
+                        <input type="number" name="duration" value="{{ $package->duration }}" class="form-control" >
+                      </div>
+                    </div>
+
+
+                    <div class="col-lg-6 mt-2">
+                      <div class="form-group">
+                        <label> {{ __('Duration Mode') }} </label>
+                        <select name="duration_mode" id="duration_mode">
+                            <option value="days">days</option>
+                            <option value="months">months</option>
+                            <option value="year">year</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-2">
+                      <div class="form-group">
+                        <label> {{ __('Description') }} </label>
+                        <input type="" name="description" value="{{ $package->description}}" class="form-control" >
+                      </div>
+                    </div>
+
+
+                    <div class="col-lg-6 mt-2">
+                      <div class="form-group">
+                        <label> {{ __('Status') }} </label>
+                        <select name="status" id="status">
+                         <option value="open">Open</option>
+                         <option value="closed">Closed</option>
+                        
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-span-12">
+                            <button type="submit" class="btn w-100 btn-primary">Submit</button>
+                        </div>
+                    </div>
                   </div>
                 </div>
-                <br>
-                <div class="input-group">
-                  <div class="input-group-prepend " >
-                    <span class="input-group-text "><i class=""></i>Max</span>
-                  </div>
-                  <input id="max" type="text" class="form-control" name="max" placeholder="Enter Max amount to invest" required>
-                  <div class="input-group-append " >
-                    <span class="input-group-text pack_edit_cur" ><i class=""></i></span>
-                  </div>
-                </div>
-                <br>
-                <div class="input-group">
-                  <div class="input-group-prepend " >
-                    <span class="input-group-text "><i class=""></i>Interest</span>
-                  </div>
-                    <input id="interest" type="text" class="form-control" name="interest" placeholder="Interest for the period of investment" required>
-                  <div class="input-group-append " >
-                    <span class="input-group-text " ><i class="fa fa-percent"></i></span>
-                  </div>
-                </div>
-                <br>
-                <div class="form-group">
-                  <br>
-                    <button class="collb btn btn-info">Update</button>
-                    <span style="">
-                      <a id="pack_edit_close" href="javascript:void(0)" class="btn btn-danger">Cancel</a>
-                    </span>
-                    <br>
-                </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
-        <!-- close btn -->
-        <script type="text/javascript">
-          $('#pack_edit_close').click( function(){
-            $('#packEdit').hide();
-          });
-        </script>
-        <!-- end close btn -->
-
       </div>
-
     </div>
-
-  </div>
+</div 
+@endsection

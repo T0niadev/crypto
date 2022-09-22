@@ -32,6 +32,14 @@ Route::get('/profile', [\App\Http\Controllers\UserController::class, 'index'])->
 Route::post('/edit/profile', [\App\Http\Controllers\UserController::class, 'infoChange'])->name('editprofile');
 Route::get('/transaction', [\App\Http\Controllers\TransactionController::class, 'index'])->name('transaction');
 Route::get('/document', [\App\Http\Controllers\DocumentController::class, 'index'])->name('document');
+Route::post('/submit/document', [\App\Http\Controllers\DocumentController::class, 'store'])->name('submitdocument');
+
+Route::get('/withdrawal', [\App\Http\Controllers\WithdrawalController::class, 'index'])->name('withdrawal');
+Route::post('/withdrawal/store', [\App\Http\Controllers\WithdrawalController::class, 'store'])->name('withdrawaladd');
+
+Route::get('/depositform', [\App\Http\Controllers\DepositController::class, 'index'])->name('depositform');
+Route::post('/depositform/store', [\App\Http\Controllers\DepositController::class, 'store'])->name('depositformstore');
+
 
 
 Route::prefix('google')->name('google.')->group(function () {

@@ -90,4 +90,23 @@ class UserController extends Controller
 
 	}
 
+
+    public function editwallet(User $user)
+    {
+        return view('admin.users.edit',compact('user'));
+    }
+
+
+
+	public function updatewallet(Request $request, User $user)
+    {
+        $request->validate([
+            'wallet' => 'required',
+        ]);
+
+        $user->fill($request->post())->save();
+
+        return redirect()->route('admin.user')->with('success','wallet Has Been updated successfully');
+    }
+
 }

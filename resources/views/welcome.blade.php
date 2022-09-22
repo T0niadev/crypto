@@ -5,24 +5,37 @@
     <div class="ae">
       <div class="ag aa a1L">
         <div class="ab ak">
-          <div class="a3r aH[720px] a2G">
+          <div class="a3r aH[820px] a2G">
             <h1 class="a1N a2o a1P a2p a1k dark:aT md:a2Q[45px]">
               CryptFX
             </h1>
 
             <p class="a3r a1N aH[820px] aO a1R aQ dark:aT">
-              We offer a comprehensive, user-friendly, risk-free investing platform that boosts your income potential.
-              We also have a range investment packages specially curated for you by our highly competent analysts and
-              predictive tools.
+              
+            Founded on honesty and integrity, we have assurance in our capacity to execute our pledges.
+            We maintain a secure, safe, and reliable trading environment that is designed to minimize losses and give our
+           customers a relaxed atmosphere.
+          
+            </p>
+            
+
+            <p class="a3r a1N aH[820px] aO a1R aQ dark:aT" style="padding: 20px;">
+              
+          
+            We offer a comprehensive, user-friendly, risk-free investing platform that boosts your income potential.
+            We also have a range investment packages specially curated for you by our highly competent analysts and
+            predictive tools.
+            With CrptoFX, you'll have greater opportunity, and choice.
+            We are here to support you as you go.
             </p>
 
 
-
-            <p class="a3r a1N aH[820px] aO a1R aQ dark:aT">
-
+            <p class="a3r a1N aH[820px] aO a1R aQ dark:aT pt-2">
+             
+              We make use of safe trading strategies while trading on the cryptocurrency and forex markets.
               More financial opportunities than you can think are available to you through cryptocurrency and helium
               mining, and we've built a platform to help you put those prospects into action.
-              Join the platform to learn how to profit from the expanding helium and cryptocurrency ecosystems.
+             
 
             </p>
             <div class="a3s a1W aa a1L ac a1t sm:a3t">
@@ -176,72 +189,12 @@
 
 
 
+
   <section>
     <div class="ae">
-      <div class="wow fadeInUp a3E a2l[#F3F4F4] a3F dark:a2l[#2D2C4A]" data-wow-delay="0s">
-
-        <h2 class="a1W a2G aO a1P a1k dark:aT sm:a2B">
-          Join the 1,000+ users using the our platform
-        </h2>
-        <p class="a1W aO a1R aQ dark:aS">
-          Founded on honesty and integrity.
-          We have assurance in our capacity to execute our pledges.
-          We maintain a secure, safe, and reliable trading environment that is designed to minimize losses and give our
-          customers a relaxed atmosphere.
-        </p>
-
-
-
-        {{-- <div class="ag aa a1L ac a1t">
-            <a href="/register" class="a1u a1A a22 a1E a1F aP aT hover:a2X dark:hover:bg-opacity-90 md-4">
-                Register Now
-            </a> --}}
-        {{-- <div class="ak">
-            <a href="https://uideck.com/" target="_blank" rel="nofollow noopenner"
-              class="a1W aa aH[170px] a1t a3G a3H hover:a1d hover:a3I dark:hover:a1d">
-              <img src="{{ asset('assets/images/brands/uideck-white.svg') }}" alt="uideck"
-                class="a3r ao a32 a2G dark:an" />
-              <img src="{{ asset('assets/images/brands/uideck.svg') }}" alt="uideck" class="a3r a32 a2G dark:ao" />
-            </a>
-          </div>
-          <div class="ak">
-            <a href="https://tailgrids.com/" target="_blank" rel="nofollow noopenner"
-              class="a1W aa aH[170px] a1t a3G a3H hover:a1d hover:a3I dark:hover:a1d">
-              <img src="{{ asset('assets/images/brands/TailGrids-white.svg') }}" alt="tailgrids"
-                class="a3r ao a32 a2G dark:an" />
-              <img src="{{ asset('assets/images/brands/tailgrids.svg') }}" alt="tailgrids"
-                class="a3r a32 a2G dark:ao" />
-            </a>
-          </div> --}}
-        {{-- <div class="ak">
-            <a href="https://lineicons.com/" target="_blank" rel="nofollow noopenner"
-              class="a1W aa aH[170px] a1t a3G a3H hover:a1d hover:a3I dark:hover:a1d">
-              <img src="{{ asset('assets/images/brands/LineIcons-white.svg') }}" alt="lineicons"
-                class="a3r ao a32 a2G dark:an" />
-              <img src="{{ asset('assets/images/brands/lineicons.svg') }}" alt="lineicons"
-                class="a3r a32 a2G dark:ao" />
-            </a>
-          </div> --}}
-        {{-- <div class="ak">
-            <a href="https://ayroui.com/" target="_blank" rel="nofollow noopenner"
-              class="a1W aa aH[170px] a1t a3G a3H hover:a1d hover:a3I dark:hover:a1d">
-              <img src="{{ asset('assets/images/brands/AyroUI-white.svg') }}" alt="ayroui"
-                class="a3r ao a32 a2G dark:an" />
-              <img src="images/brands/ayroui.svg" alt="ayroui" class="a3r a32 a2G dark:ao" />
-            </a>
-          </div> --}}
-        {{-- <div class="ak">
-            <a href="https://plainadmin.com/" target="_blank" rel="nofollow noopenner"
-              class="a1W aa aH[170px] a1t a3G a3H hover:a1d hover:a3I dark:hover:a1d">
-              <img src="{{ asset('assets/images/brands/PlainAdmin-white.svg') }}" alt="plainadmin"
-                class="a3r ao a32 a2G dark:an" />
-              <img src="{{ asset('assets/images/brands/plainadmin.svg') }}" alt="plainadmin"
-                class="a3r a32 a2G dark:ao" />
-            </a>
-          </div> --}}
-        {{-- </div>
-      </div> --}}
-      </div>
+      
+      <hr style="color: white;">
+    </div>
   </section>
 
   <section id="features" class="a1J[120px] a3J">
@@ -368,6 +321,13 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="ae">
+      
+      <hr style="color: white;">
     </div>
   </section>
 
@@ -863,6 +823,50 @@
                 <img src="{{ asset('assets/images/avatar/avatar.png') }}" alt="author" />
               </div>
               <div class="ab">
+                <h3 class="a4g aO aP a2u dark:aT">Alex Golia</h3>
+                <p class="a1j a1R aQ dark:aT">Customer</p>
+              </div>
+            </div>
+            <div>
+              <p class="a1F a1R a2f aQ dark:aS">
+                "Very very nice. Answered all of my questions. First time Investor here. They are very nice with extremely friendly rates. I will definitely be buying again"
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="ab ak md:a1M/2">
+          <div class="wow fadeInUp af a2E a1W a2c a4d[10px] a1 aI a3_ dark:a1w[#131B4D] sm:a4f md:a29 xl:a4f"
+            data-wow-delay="0s">
+            <div class="aq a19 a8 a2I[-1]">
+              <img src="{{ asset('assets/images/shapes/testimonial-shape.svg') }}" alt="shape" />
+            </div>
+            <div class="a2n aa ac">
+              <div class="a20 a3N ab aH[80px] a2c a1i">
+                <img src="{{ asset('assets/images/avatar/avatar.png') }}" alt="author" />
+              </div>
+              <div class="ab">
+                <h3 class="a4g aO aP a2u dark:aT">Flair Mikels</h3>
+                <p class="a1j a1R aQ dark:aT">Customer</p>
+              </div>
+            </div>
+            <div>
+              <p class="a1F a1R a2f aQ dark:aS">
+                "Great transaction. Very prompt seller who takes good reasonable methods to protect al parties. I would recommend to all other investors."
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="ab ak md:a1M/2">
+          <div class="wow fadeInUp af a2E a1W a2c a4d[10px] a1 aI a3_ dark:a1w[#131B4D] sm:a4f md:a29 xl:a4f"
+            data-wow-delay="0s">
+            <div class="aq a19 a8 a2I[-1]">
+              <img src="{{ asset('assets/images/shapes/testimonial-shape.svg') }}" alt="shape" />
+            </div>
+            <div class="a2n aa ac">
+              <div class="a20 a3N ab aH[80px] a2c a1i">
+                <img src="{{ asset('assets/images/avatar/avatar.png') }}" alt="author" />
+              </div>
+              <div class="ab">
                 <h3 class="a4g aO aP a2u dark:aT">Peterson Jones</h3>
                 <p class="a1j a1R aQ dark:aT">Customer</p>
               </div>
@@ -1267,12 +1271,12 @@
             </div>
             <div class="ab ak sm:a1M/2">
               <div class="wow fadeInUp a4w aH[250px]" data-wow-delay="0s">
-                <h3 class="a1N aO aP a2u dark:aT">Phone Number</h3>
-                <p class="a1F a1R a4u aQ dark:aS">+990 846 73644</p>
-                <p class="a1F a1R a4u aQ dark:aS">+550 9475 4543</p>
+                <h3 class="a1N aO aP a2u dark:aT">Email Address</h3>
+                <p class="a1F a1R a4u aQ dark:aS">support@cryptfx.com</p>
+             
               </div>
             </div>
-            <div class="ab ak sm:a1M/2">
+            <!-- <div class="ab ak sm:a1M/2">
               <div class="wow fadeInUp a4w aH[250px]" data-wow-delay="0s">
                 <h3 class="a1N aO aP a2u dark:aT">Email Address</h3>
                 <p class="a1F a1R a4u aQ dark:aS">
@@ -1282,7 +1286,7 @@
                     <a href="mailto:"></a>
                 </p>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="ab ak lg:a4x/12">

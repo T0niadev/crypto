@@ -105,24 +105,13 @@
                                             class="font-medium text-slate-600 dark:text-navy-100"
                                             > Investment Amount</span
                                         >
-                                        <input name="amount" id="secondNumber"
+                                        <input name="amount" id="secondNumber" onchange="multiply()"
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                             placeholder="Enter Investment amount of your choice"
                                             type="number"
                                         />
                                     </label>
 
-                                    <label for="number" class="block">
-                                        <span
-                                            class="font-medium text-slate-600 dark:text-navy-100"
-                                            >Slots</span
-                                        >
-                                        <input name="slots" id="thirdNumber" onchange="multiply()"
-                                            class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                            placeholder="Enter number of slots"
-                                            type="number"
-                                        />
-                                    </label>
 
 
 
@@ -136,7 +125,7 @@
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                             placeholder="Total Interest"
                                             type="number"
-                                        />
+                                            readonly/>
                                     </label>
 
                                     <label for="number" class="block">
@@ -148,7 +137,7 @@
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                             placeholder="Total Returns"
                                             type="number"
-                                        />
+                                            readonly/>
                                     </label>
 
 
@@ -163,6 +152,7 @@
                                             class="form-input peer w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 pl-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                             placeholder="Choose date..."
                                             type="text"
+                                            id="start_date"
                                             name="start_date"
                                         />
                                         <span
@@ -191,12 +181,14 @@
                                         >
                                         <span class="relative mt-1.5 flex">
                                         <input
-                                            x-flatpickr
+                                            
                                             class="form-input peer w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 pl-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                             placeholder="Choose date..."
                                             type="text"
                                             name="withdrawal_date"
+                                            id='withdrawal_date'
                                         />
+                                        <input type="hidden" id="durationValue" value="{{ $package->duration }}"/>
                                         <span
                                             class="pointer-events-none absolute flex h-full w-10 items-center justify-center text-slate-400 peer-focus:text-primary dark:text-navy-300 dark:peer-focus:text-accent"
                                         >
@@ -206,7 +198,7 @@
                                             fill="none"
                                             viewbox="0 0 24 24"
                                             stroke="currentColor"
-                                            stroke-width="1.5"
+                                            stroke-width="1.5"400
                                             >
                                             <path
                                                 stroke-linecap="round"
@@ -218,7 +210,7 @@
                                         </span>
                                     </label>
                                     <div class="flex justify-center space-x-2">
-                                        <button type="submit" href="/admin/packages/store"
+                                        <button type="submit" 
                                         class="btn min-w-[7rem] bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90"
                                         >
                                         Save
@@ -241,25 +233,40 @@
                 "firstNumber").value;
             let num2 = document.getElementById(
                 "secondNumber").value
-            let num3 = document.getElementById(
-                "thirdNumber").value
+          
 
-             let result = document.getElementById('result').value= ((num1 * num2 * num3)  / 100);
+             let result = document.getElementById('result').value= ((num1 * num2 )  / 100);
              console.log(result);
         }
    </script>
    <script>
 
+
+
+    function addDate()
+    {
+        let durationValue = document.getElementById("durationValue").value;
+
+        let presentDay = document.getElementById("start_date").value;
+        let date = new Date(presentDay);
+        addedDate = new Date(date.setDate(date.getDate() + parseInt(durationValue)));
+
+        document.getElementById("withdrawal_date").value = addedDate.toLocaleDateString();
+        
+    }
+
     function add()
     {
+        addDate();
 
         let num4 = document.getElementById(
             "secondNumber").value
         let num5 = document.getElementById(
             "result").value
 
-        let result = document.getElementById('returns').value= num4 + num5;
+        let result = document.getElementById('returns').value= parseInt(num4) + parseInt(num5);
         console.log(result);
+
     }
     </script>
 @endsection

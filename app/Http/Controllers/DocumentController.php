@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Document;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 use App\Http\Requests\StoreDocumentRequest;
 use App\Http\Requests\UpdateDocumentRequest;
 
@@ -34,11 +37,36 @@ class DocumentController extends Controller
      * @param  \App\Http\Requests\StoreDocumentRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreDocumentRequest $request)
-    {
-        //
-    }
+    
 
+
+     
+    public function store(Request $request)
+    {
+        //validation
+        $this->validate($request, [
+            "document_type" => 'required|max:255',
+            "image" => "required|image|mimes:png,jpg,jpeg|max:2048",
+        ]);
+        //store data
+        if ($request->hasFile("image")) {
+            $file = $request->image;
+            $imageName = time() . "_" . $file->getClientOriginalName();
+            $file->move(public_path('files/documents'), $imageName);
+            
+            Document::create([
+                "document_type" =>  $request->document_type,
+                "image" =>  $imageName,
+            ]);
+            //redirect user
+
+
+            return redirect('/documents')->with([
+                "success" => "Document Added Succesfully and now awaiting approval"
+            ]);
+
+        }
+    }
     /**
      * Display the specified resource.
      *

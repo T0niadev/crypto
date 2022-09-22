@@ -48,13 +48,13 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
-                            <table class="">
+                            <table class="display table table-stripped table-hover">
                                 <thead>
                                     <tr>
                                         <th>User Name</th>
+                                        <th>Wallet Balance</th>
                                         <th>Package Name</th>
                                         <th>Amount</th>
-                                        <th>Slots</th>
                                         <th>Total Returns</th>
                                         <th>Start Date</th>
                                         <th>Withdrawal Date</th>
@@ -66,15 +66,14 @@
                                 <tbody>
                                     <tr>
                                         <td>{{ $investment->user->first_name}} {{ $investment->user->last_name}}</td>
+                                        <td>{{ $investment->user->wallet}}</td>
                                         <td>
                                             {{ $investment->package->name }}
                                         </td>
                                         <td>
                                             {{ $investment['amount'] }}
                                         </td>
-                                        <td>
-                                            {{ $investment['slots'] }}
-                                        </td>
+                    
                                         <td>
                                             {{ $investment['total_returns'] }}
                                         </td>
@@ -85,10 +84,12 @@
                                             {{ $investment['withdrawal_date'] }}
                                         </td>
                                         <td>
-                                            @if($investment['status'] == 'open')
+                                            @if($investment['status'] == 'approved')
                                             <span class="badge rounded-pill badge-light-success me-1">Approved</span>
-                                            @else
+                                            @elseif($investment['status'] == 'pending')
                                             <span class="badge rounded-pill badge-light-danger me-1">Pending</span>
+                                            @else
+                                            <span class="badge rounded-pill badge-light-danger me-1">Declined</span>
                                             @endif
                                         </td>
                                         <td>
@@ -98,15 +99,12 @@
                                                     <i data-feather="more-vertical"></i>
                                                 </button>
                                                 <div class="dropdown-menu dropdown-menu-end">
-                                                    <a  class="dropdown-item"  href="">
+                                                    <a  class="dropdown-item"  href="{{ url('/admin/investment/edit', $investment->id) }}">
                                                         <i data-feather="edit-2" class="me-50"></i>
                                                         <span>Approve</span>
                                                     </a>
                                                     <a class="dropdown-item" href="#">
-                                                    <a class="dropdown-item" href="#">
-                                                        <i data-feather="trash" class="me-50"></i>
-                                                        <span>Delete</span>
-                                                    </a>
+                                                   
                                                 </div>
                                             </div>
                                         </td>
