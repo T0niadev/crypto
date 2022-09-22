@@ -46,6 +46,77 @@
       
           </a>
         </div>
+        <div class="aa ab ac ap ak">
+            <div>
+              <button
+                @click="navbarOpen = !navbarOpen"
+                :class="navbarOpen && 'navbarTogglerActive' "
+                id="navbarToggler"
+                class="aq ar as/2 an at/2 au av aw[6px] ax focus:ay lg:ao"
+              >
+                <span
+                  :class="navbarOpen && 'az aA[7px]' "
+                  class="af aB[6px] an aC[2px] aD[30px] a2 dark:a1"
+                ></span>
+                <span
+                  :class="navbarOpen && 'aE' "
+                  class="af aB[6px] an aC[2px] aD[30px] a2 dark:a1"
+                ></span>
+                <span
+                  :class="navbarOpen && 'aA[-8px] aF[135deg]' "
+                  class="af aB[6px] an aC[2px] aD[30px] a2 dark:a1"
+                ></span>
+              </button>
+              <nav
+                :class="!navbarOpen && 'ao' "
+                id="navbarCollapse"
+                class="aq ar aG ab aH[250px] au a1 al aI aJ dark:a2 lg:aK lg:an lg:ab lg:aj lg:a7 lg:aL lg:aM dark:lg:a7"
+              >
+                <ul class="aN lg:aa">
+                  <li class="aQ dark:aS">
+                    <a
+                      href="#home"
+                      class="scroll-menu aa am aO aP aR hover:aR dark:aT dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#features"
+                      class="scroll-menu aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY"
+                    >
+                      Features
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#testimonial"
+                      class="scroll-menu aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY"
+                    >
+                     Testimonials
+                    </a>
+                  </li>
+                  <li class="aZ submenu-item af">
+                    <a
+                      href="#faq"
+                      class="af aa am aO aP aQ after:aq after:a_ after:as/2 after:a10[-2px] after:a11 after:a12 after:a13[-50%] after:az after:a14 after:a15 after:a16 group-hover:aR dark:aS dark:group-hover:aT lg:aU lg:aV lg:aW lg:a17 lg:a18 lg:after:a19 xl:aX 2xl:aY"
+                    >
+                     FAQ
+                    </a>
+                    
+                  </li>
+                  <li>
+                    <a
+                      href="#contact"
+                      class="scroll-menu aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY"
+                    >
+                      Support
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           <div class="aa ap lg:a1m xl:a1n 2xl:a1o">
             <div class="a1p">
               <label for="darkToggler" class="aa a1q a1r a1s ac a1t a1u a1v dark:a1w[#1E2763]">
@@ -65,6 +136,7 @@
                 </span>
               </label>
             </div>
+            
             <div class="ao sm:aa">
               @if (Route::has('login'))
                 <a href="{{ route('login') }}"
