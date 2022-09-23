@@ -76,13 +76,13 @@
                                         >
                                         <input
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                           type="text" name="amountUSD" placeholder="Amount">
+                                           type="text" name="amountUSD" placeholder="Ensure you enter the same amount in the deposit form">
 
                                       
                                     </label>
 
 
-                                    <input type="hidden" name="userID" value="{{ Auth::user()->id }}">
+                                    <input type="hidden" name="userID" value="{{auth()->user()->id}}">
                                     <input type="hidden" name="orderID" value="1">
                                     <input type="hidden" name="redirect" value="{{ url()->full() }}">
 
