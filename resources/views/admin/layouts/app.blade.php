@@ -21,7 +21,7 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+  <script src="https://kit.fontawesome.com/b7bbe1d43a.js" crossorigin="anonymous"></script>
 
 
   <!-- Datatable CSS -->
@@ -116,10 +116,11 @@
           </a>
           Settings
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user">
-              <form action="{{ route('admin.logout') }}" method="post">
-                @csrf()
-                <button class="dropdown-item" type="submit"><i class="me-50" data-feather="power"></i>Logout</button>
-              </form>
+            <form action="{{ route('admin.logout') }}" method="post">
+              @csrf()
+              <button class="dropdown-item" type="submit"><i class="me-50"
+                  data-feather="power"></i>Logout</button>
+            </form>
           </div>
         </li>
       </ul>

@@ -66,14 +66,14 @@
                         </td>
                         <td>
                           <div class="dropdown">
-                            <button type="button" class="btn btn-sm dropdown-toggle hide-arrow py-0"
+                            <button type="button" class="btn btn-success dropdown-toggle hide-arrow"
                               data-bs-toggle="dropdown">
-                              <i data-feather="more-vertical"></i>
+                              Actions
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
                               <a class="dropdown-item" href="{{ url('/admin/wallet/edit', $user->id) }}">
-                                <i data-feather="trash" class="me-50"></i>
-                                <span>Edit User Wallet Balance</span>
+                                <i class="fa-solid fa-pen-to-square" class=""></i>
+                                <span class="ps-1">Edit user wallet balance</span>
                               </a>
                             </div>
                           </div>

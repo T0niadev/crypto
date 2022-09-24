@@ -73,7 +73,7 @@
                                         <td>
                                             ${{ $investment['amount'] }}
                                         </td>
-                    
+
                                         <td>
                                             {{ $investment['total_return'] }}
                                         </td>
@@ -94,19 +94,17 @@
                                         </td>
                                         <td>
                                             <div class="dropdown">
-                                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow py-0"
-                                                    data-bs-toggle="dropdown">
-                                                    <i data-feather="more-vertical"></i>
+                                                <button type="button" class="btn btn-success dropdown-toggle hide-arrow"
+                                                  data-bs-toggle="dropdown">
+                                                  Actions
                                                 </button>
                                                 <div class="dropdown-menu dropdown-menu-end">
-                                                    <a  class="dropdown-item"  href="{{ url('/admin/investment/edit', $investment->id) }}">
-                                                        <i data-feather="edit-2" class="me-50"></i>
-                                                        <span>Approve</span>
-                                                    </a>
-                                                    <a class="dropdown-item" href="#">
-                                                   
+                                                  <a class="dropdown-item" href="{{ url('/admin/investment/edit', $investment->id) }}">
+                                                    <i class="fa-regular fa-circle-check"></i>
+                                                    <span class="ps-1">Approve</span>
+                                                  </a>
                                                 </div>
-                                            </div>
+                                              </div>
                                         </td>
                                     </tr>
                                 </tbody>

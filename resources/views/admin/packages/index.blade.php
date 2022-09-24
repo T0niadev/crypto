@@ -76,22 +76,22 @@
                                         </td>
                                         <td>
                                             <div class="dropdown">
-                                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow py-0"
+                                                <button type="button" class="btn btn-success dropdown-toggle hide-arrow"
                                                     data-bs-toggle="dropdown">
-                                                    <i data-feather="more-vertical"></i>
+                                                    Actions
                                                 </button>
                                                 <div class="dropdown-menu dropdown-menu-end">
                                                     <a  class="dropdown-item"  href="{{ url('admin/packages/edit', $package->id) }}">
-                                                        <i data-feather="edit-2" class="me-50"></i>
-                                                        <span>Edit</span>
+                                                        <i class="fa-solid fa-pen-to-square" class=""></i>
+                                                        <span class="ps-1">Edit</span>
                                                     </a>
                                                     <a class="dropdown-item" href="#">
-                                                        <i data-feather="edit-2" class="me-50"></i>
-                                                        <span>Show</span>
+                                                        <i class="fa-solid fa-eye"></i>
+                                                        <span class="ps-1">Show</span>
                                                     </a>
                                                     <a class="dropdown-item" href="#">
-                                                        <i data-feather="trash" class="me-50"></i>
-                                                        <span>Delete</span>
+                                                        <i class="fa-solid fa-trash"></i>
+                                                        <span class="ps-1">Delete</span>
                                                     </a>
                                                 </div>
                                             </div>
