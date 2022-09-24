@@ -51,10 +51,13 @@ Route::prefix('google')->name('google.')->group(function () {
 
 
 Route::match(['get', 'post'], '/payments/crypto/pay', Victorybiz\LaravelCryptoPaymentGateway\Http\Controllers\CryptoPaymentController::class)
-                ->name('payments.crypto.pay');
+    ->name('payments.crypto.pay');
+
+Route::get('/coinbase/webhook', [App\Http\Controllers\CoinbaseController::class, 'initiatePayment'])->name('coinbase.payment');
+
 
 // You you need to create your own callback controller and define the route below
 // The callback route should be a publicly accessible route with no auth
 // However, you may also exclude the route from CSRF Protection by adding their URIs to the $except property of the VerifyCsrfToken middleware.
 Route::post('/payments/crypto/callback', [App\Http\Controllers\Payment\PaymentController::class, 'callback'])
-                ->withoutMiddleware(['web', 'auth']);
+    ->withoutMiddleware(['web', 'auth']);

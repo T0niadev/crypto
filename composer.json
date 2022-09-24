@@ -14,6 +14,7 @@
         "laravel/sanctum": "^2.11",
         "laravel/socialite": "^5.5",
         "laravel/tinker": "^2.5",
+        "shakurov/coinbase": "^0.7.7",
         "victorybiz/laravel-crypto-payment-gateway": "^1.2",
         "yajra/laravel-datatables-oracle": "^9.21.2"
     },
