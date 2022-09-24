@@ -259,20 +259,16 @@
             <table class="is-hoverable w-full text-left">
               <thead>
                 <tr>
+               
                   <th
-                    class="whitespace-nowrap rounded-tl-lg bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
+                    class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
                   >
-                    #
+                    Transaction Type
                   </th>
                   <th
                     class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
                   >
-                    Transaction Amount
-                  </th>
-                  <th
-                    class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5"
-                  >
-                   Transaction Type
+                   Transaction Amount
                   </th>
 
                   <th
@@ -290,16 +286,17 @@
               @foreach($deposits as $deposit)
               <tbody>
                 <tr class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500">
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">1</td>
+
+                 
+                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                    Deposit
+                  </td>
+
                   <td
                     class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
                   >
                    ${{ $deposit['amount'] }}
                   </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    Deposit
-                  </td>
-
                
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                     <div
@@ -317,16 +314,17 @@
                
                 @foreach($withdrawals as $withdrawal)
                 <tr  class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500">
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">2</td>
+                 
+              
+                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                    Withdrawal
+                  </td>
+
                   <td
                     class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
                   >
                    ${{ $withdrawal['amount'] }}
                   </td>
-                  <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                    Withdrawal
-                  </td>
-
               
                   <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                     <div

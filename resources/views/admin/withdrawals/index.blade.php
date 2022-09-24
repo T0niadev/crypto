@@ -55,8 +55,7 @@
                                         <th>Wallet Balance</th>
                                         <th>Amount</th>
                                         <th>Bank Name/ Currency Type</th>
-                                        <th>Account Name/ Wallet ID</th>
-                                        <th>Account Number/ Wallet</th>
+                                        <th>Account Number/ Wallet Address</th>
                                         <th>Request Date</th>
                                         <th>Status</th>
                                         <th>Action</th>
@@ -74,9 +73,6 @@
                     
                                         <td>
                                             {{ $withdrawal['bankname_currency'] }}
-                                        </td>
-                                        <td>
-                                            {{ $withdrawal['accountname_ID'] }}
                                         </td>
                                         <td>
                                             {{ $withdrawal['bank_wallet'] }}

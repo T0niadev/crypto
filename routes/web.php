@@ -35,6 +35,7 @@ Route::get('/document', [\App\Http\Controllers\DocumentController::class, 'index
 Route::post('/submit/document', [\App\Http\Controllers\DocumentController::class, 'store'])->name('submitdocument');
 
 Route::get('/withdrawal', [\App\Http\Controllers\WithdrawalController::class, 'index'])->name('withdrawal');
+
 Route::post('/withdrawal/store', [\App\Http\Controllers\WithdrawalController::class, 'store'])->name('withdrawaladd');
 
 Route::get('/depositform', [\App\Http\Controllers\DepositController::class, 'index'])->name('depositform');

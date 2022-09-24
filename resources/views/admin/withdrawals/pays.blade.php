@@ -11,12 +11,12 @@
             <div class="content-header-left col-md-9 col-12 mb-2">
                 <div class="row breadcrumbs-top">
                     <div class="col-12">
-                        <h2 class="content-header-title float-start mb-0">Investments</h2>
+                        <h2 class="content-header-title float-start mb-0">payments</h2>
                         <div class="breadcrumb-wrapper">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a>
                                 </li>
-                                <li class="breadcrumb-item"><a href="#">All Investments</a>
+                                <li class="breadcrumb-item"><a href="#">All payments</a>
                                 </li>
                             </ol>
                         </div>
@@ -51,63 +51,37 @@
                             <table class="display table table-stripped table-hover">
                                 <thead>
                                     <tr>
-                                        <th>User Name</th>
-                                        <th>Wallet Balance</th>
-                                        <th>Package Name</th>
+                                       
+                              
                                         <th>Amount</th>
-                                        <th>Total Returns</th>
-                                        <th>Start Date</th>
-                                        <th>Withdrawal Date</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
+                                        <th>Amount in USD</th>
+                                        <th>Coin Label</th>
+                                        <th>Address</th>
+                                        <th>Date</th>
                                     </tr>
                                 </thead>
-                                @foreach($investments as $investment)
+                                @foreach($payments as $payment)
                                 <tbody>
                                     <tr>
-                                        <td>{{ $investment->user->first_name}} {{ $investment->user->last_name}}</td>
-                                        <td>{{ $investment->user->wallet}}</td>
+                           
+                                        
                                         <td>
-                                            {{ $investment->package->name }}
-                                        </td>
-                                        <td>
-                                            ${{ $investment['amount'] }}
+                                            {{ $payment['amount'] }}
                                         </td>
                     
                                         <td>
-                                            {{ $investment['total_return'] }}
+                                            {{ $payment['amountUSD'] }}
                                         </td>
                                         <td>
-                                            {{ $investment['start_date'] }}
+                                            {{ $payment['coinLabel'] }}
                                         </td>
                                         <td>
-                                            {{ $investment['withdrawal_date'] }}
+                                            {{ $payment['addr'] }}
                                         </td>
                                         <td>
-                                            @if($investment['status'] == 'approved')
-                                            <span class="badge rounded-pill badge-light-success me-1">Approved</span>
-                                            @elseif($investment['status'] == 'pending')
-                                            <span class="badge rounded-pill badge-light-danger me-1">Pending</span>
-                                            @else
-                                            <span class="badge rounded-pill badge-light-danger me-1">Declined</span>
-                                            @endif
+                                            {{ $payment['recordCreated'] }}
                                         </td>
-                                        <td>
-                                            <div class="dropdown">
-                                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow py-0"
-                                                    data-bs-toggle="dropdown">
-                                                    <i data-feather="more-vertical"></i>
-                                                </button>
-                                                <div class="dropdown-menu dropdown-menu-end">
-                                                    <a  class="dropdown-item"  href="{{ url('/admin/investment/edit', $investment->id) }}">
-                                                        <i data-feather="edit-2" class="me-50"></i>
-                                                        <span>Approve</span>
-                                                    </a>
-                                                    <a class="dropdown-item" href="#">
-                                                   
-                                                </div>
-                                            </div>
-                                        </td>
+                                       
                                     </tr>
                                 </tbody>
                                 @endforeach

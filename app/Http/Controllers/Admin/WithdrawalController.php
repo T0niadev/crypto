@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Withdrawal;
+use Victorybiz\LaravelCryptoPaymentGateway\Models\CryptoPaymentModel;
 
 class WithdrawalController extends Controller
 {
@@ -14,6 +15,15 @@ class WithdrawalController extends Controller
 
 
 		return view('admin.withdrawals.index', compact('withdrawals'));
+	}
+
+
+    public function crypto() {
+
+		$payments = CryptoPaymentModel::all();
+
+
+		return view('admin.withdrawals.pays', compact('payments'));
 	}
 
 	public function editwithdrawal(Withdrawal $withdrawal)

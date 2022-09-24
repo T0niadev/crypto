@@ -64,6 +64,7 @@ Route::get('/deposits/edit/{deposit_id}', [\App\Http\Controllers\Admin\DepositCo
 Route::post('/deposits/update', [\App\Http\Controllers\Admin\DepositController::class, 'update'] )->name('depositupdate');
 
 Route::get('/withdrawals', [\App\Http\Controllers\Admin\WithdrawalController::class, 'index'])->name('withdrawal');
+Route::get('/confirmpayment', [\App\Http\Controllers\Admin\WithdrawalController::class, 'crypto'])->name('payss');
 Route::get('/withdrawals/create', [\App\Http\Controllers\Admin\WithdrawalController::class, 'create'] )->name('withdrawalcreate');
 Route::post('/withdrawals/store', [\App\Http\Controllers\Admin\WithdrawalController::class, 'store'] )->name('withdrawalstore');
 Route::get('/withdrawals/edit/{withdrawal_id}', [\App\Http\Controllers\Admin\WithdrawalController::class, 'edit'])->name('withdrawaledit');

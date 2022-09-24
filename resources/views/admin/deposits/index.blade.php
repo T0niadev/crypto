@@ -55,8 +55,7 @@
                                         <th>Wallet Balance</th>
                                         <th>Amount</th>
                                         <th>Bank Name/ Currency Type</th>
-                                        <th>Account Name/ Wallet ID</th>
-                                        <th>Account Number/ Wallet</th>
+                                        <th>Wallet Address</th>
                                         <th>Request Date</th>
                                         <th>Status</th>
                                         <th>Action</th>
@@ -74,9 +73,6 @@
                     
                                         <td>
                                             {{ $deposit['bankname_currency'] }}
-                                        </td>
-                                        <td>
-                                            {{ $deposit['accountname_ID'] }}
                                         </td>
                                         <td>
                                             {{ $deposit['bank_wallet'] }}

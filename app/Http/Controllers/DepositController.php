@@ -30,7 +30,6 @@ class DepositController extends Controller
         $request->validate([
             "amount" => 'required',
             "bankname_currency" => 'required',
-            "accountname_ID" => 'required',
             "bank_wallet" => 'required',
             
 
@@ -40,7 +39,6 @@ class DepositController extends Controller
         Deposit::create([
             "amount" => $request->amount,
             "bankname_currency" => $request->bankname_currency,
-            "accountname_ID" => $request->accountname_ID,
             "bank_wallet" => $request->bank_wallet,
             
 

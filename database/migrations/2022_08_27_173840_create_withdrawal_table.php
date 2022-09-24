@@ -19,7 +19,7 @@ class CreateWithdrawalTable extends Migration
           //  $table->string('username');
             $table->string('amount');
             $table->string('bankname_currency');
-            $table->string('accountname_ID');
+            $table->string('accountname_ID')->nullable();
             $table->string('bank_wallet');
             $table->enum('status', ['pending', 'cancelled', 'settled'])->default('pending');
             $table->timestamps();
