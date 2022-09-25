@@ -13,7 +13,7 @@
     content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
   <meta name="author" content="devProMaleek et Tonia">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>{{ config('app.name', 'Laravel') }} :: Admin</title>
+  <title>CryptFX</title>
   <link rel="apple-touch-icon" href="{{ asset('assets/admin/images/ico/apple-icon-120.html') }}">
   <link rel="shortcut icon" type="image/x-icon"
     href="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/app-assets/images/ico/favicon.ico">

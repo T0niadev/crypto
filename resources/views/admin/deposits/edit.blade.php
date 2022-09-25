@@ -35,7 +35,7 @@
                         <select name="status" id="status">
                             <option value="confirmed">Confirmed</option>
                             <option value="pending">Pending</option>
-                            <option value="unconfirmed">Unconfirmed</option>
+                            <option value="declined">Declined</option>
                         </select>
                       </div>
                     </div>

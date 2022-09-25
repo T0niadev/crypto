@@ -61,7 +61,7 @@
                     <tbody>
                       <tr>
                         <td>{{ $deposit->user->first_name }} {{ $deposit->user->last_name }}</td>
-                        <td>{{ $deposit->user->wallet }}</td>
+                        <td> ${{ $deposit->user->wallet }}</td>
 
                         <td>
                           ${{ $deposit['amount'] }}
@@ -82,7 +82,7 @@
                           @elseif($deposit['status'] == 'confirmed')
                             <span class="badge rounded-pill badge-light-success me-1">confirmed</span>
                           @else
-                            <span class="badge rounded-pill badge-light-danger me-1">unconfirmed</span>
+                            <span class="badge rounded-pill badge-light-danger me-1">Declined</span>
                           @endif
                         </td>
                         <td>

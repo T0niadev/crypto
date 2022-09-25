@@ -9,7 +9,7 @@
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
 
-  <title>{{ config('app.name', 'Laravel') }}</title>
+  <title>CryptFX</title>
   <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png') }}" />
 
   <!-- CSRF Token -->

@@ -143,7 +143,7 @@ return [
     /**
      * Show logo on payment page
      */
-    'show_logo' => true,
+    'show_logo' => false,
 
     /**
      * Show language box on payment page
