@@ -13,8 +13,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>CryptFX</title>
   <link rel="apple-touch-icon" href="{{ asset('assets/admin/images/ico/apple-icon-120.html') }}">
-  <link rel="shortcut icon" type="image/x-icon"
-    href="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/app-assets/images/ico/favicon.ico">
+  <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logo/cryptfx.png') }}" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
     rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -69,7 +68,7 @@
 
 <!-- BEGIN: Body-->
 
-<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click"
+<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click" 
   data-menu="vertical-menu-modern" data-col="">
 
   <!-- BEGIN: Header-->
@@ -235,7 +234,7 @@
   <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
     <div class="navbar-header">
       <ul class="nav navbar-nav flex-row">
-        <li class="nav-item me-auto"><a class="navbar-brand" href="index.html"><img
+        <li class="nav-item me-auto"><a class="navbar-brand" href=""><img
               src="{{ asset('assets/images/logo/cryptfx.png') }}" alt="png" height="40"><span
               class="brand-logo">
 
@@ -339,7 +338,7 @@
 
 
   <!-- BEGIN: Customizer-->
-  <div class="customizer d-none d-md-block"><a
+  <!-- <div class="customizer d-none d-md-block"><a
       class="customizer-toggle d-flex align-items-center justify-content-center" href="#"><i class="spinner"
         data-feather="settings"></i></a>
     <div class="customizer-content">
@@ -468,7 +467,7 @@
       </div>
     </div>
 
-  </div>
+  </div> -->
   <!-- End: Customizer-->
 
   <!-- Buynow Button-->

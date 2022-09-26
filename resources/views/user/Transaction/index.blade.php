@@ -251,7 +251,7 @@
           </div>
         </div> -->
         <p class="text-xs text-primary dark:text-accent-light mt-2">
-                             Your transaction histrory will appear here.     
+                             Your transaction history will appear here.     
                         </p>
         <div class="card mt-3">
           

@@ -10,7 +10,7 @@
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
 
   <title>CryptFX</title>
-  <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png') }}" />
+  <link rel="icon" type="image/png" href="{{ asset('assets/images/logo/cryptfx.png') }}" />
 
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">

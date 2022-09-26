@@ -17,7 +17,7 @@
             </div>
             <div class="card-body">
               <form action="{{ url('/admin/wallet/update', $user->id) }}" method="POST" enctype="multipart/form-data">
-                @csrf "
+                @csrf
                 @method('PUT')
                 <div class="card-body">
                   <div class="row">

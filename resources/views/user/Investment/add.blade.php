@@ -91,7 +91,7 @@
                                     <label for="number" class="block">
                                         <span
                                             class="font-medium text-slate-600 dark:text-navy-100"
-                                            >ROI</span
+                                            >ROI (%)</span
                                         >
                                         <input value = "{{ $package->roi }}" id="firstNumber"
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
@@ -103,7 +103,7 @@
                                     <label for="number" class="block">
                                         <span
                                             class="font-medium text-slate-600 dark:text-navy-100"
-                                            > Investment Amount</span
+                                            > Investment Amount ($)</span
                                         >
                                         <input name="amount" id="secondNumber" onchange="multiply()"
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
@@ -119,7 +119,7 @@
                                     <label for="number" class="block">
                                         <span
                                             class="font-medium text-slate-600 dark:text-navy-100"
-                                            >Total Interest</span
+                                            >Total Interest ($)</span
                                         >
                                         <input  id="result"
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
@@ -131,7 +131,7 @@
                                     <label for="number" class="block">
                                         <span
                                             class="font-medium text-slate-600 dark:text-navy-100"
-                                            >Total Returns</span
+                                            >Total Returns ($)</span
                                         >
                                         <input  name="total_return" id="returns"
                                             class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"

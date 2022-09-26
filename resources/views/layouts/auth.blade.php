@@ -13,7 +13,7 @@
 
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-  <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{{ asset('assets/images/logo/cryptfx.png') }}" type="image/x-icon" />
   <link rel="stylesheet" href="{{ asset('assets/css/glightbox.min.css') }}" />
   <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}" />
   <link rel="stylesheet" href="{{ asset('assets/css/apexcharts.css') }}" />

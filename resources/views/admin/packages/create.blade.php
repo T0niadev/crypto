@@ -54,14 +54,14 @@
 
                     <div class="col-lg-6 mt-2">
                       <div class="form-group">
-                        <label> {{ __('Minimum Amount') }} </label>
+                        <label> {{ __('Minimum Amount  ($)') }} </label>
                         <input type="number" name="min_amount" class="form-control" >
                       </div>
                     </div>
 
                     <div class="col-lg-6 mt-2">
                       <div class="form-group">
-                        <label> {{ __('Maximum Amount') }} </label>
+                        <label> {{ __('Maximum Amount  ($)') }} </label>
                         <input type="number" name="max_amount" class="form-control" >
                       </div>
                     </div>
@@ -76,11 +76,11 @@
 
                     <div class="col-lg-6 mt-2">
                       <div class="form-group">
-                        <label> {{ __('Duration Mode') }} </label>
+                        <label> {{ __('Duration Mode:') }} </label>
                         <select name="duration_mode" id="duration_mode">
                             <option value="days">days</option>
-                            <option value="months">months</option>
-                            <option value="year">year</option>
+                            <!-- <option value="months">months</option>
+                            <option value="year">year</option> -->
                         </select>
                       </div>
                     </div>
@@ -95,7 +95,7 @@
 
                     <div class="col-lg-6 mt-2">
                       <div class="form-group">
-                        <label> {{ __('Status') }} </label>
+                        <label> {{ __('Status:') }} </label>
                         <select name="status" id="status">
                          <option value="open">Open</option>
                          <option value="closed">Closed</option>

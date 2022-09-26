@@ -37,12 +37,12 @@
                             <table class="datatables-basic table">
                             <thead>
                                     <tr>
-                                        <th>Image</th>
+                                        <!-- <th>Image</th> -->
                                         <th>Package Name</th>
                                         <th>Min Amount</th>
                                         <th>Max Amount</th>
                                         <th>Start Date</th>
-                                        <th>End Date</th>
+                                        <th>Duration</th>
                                         <th>Status</th>
                                         <th>Actions</th>
                                     </tr>
@@ -50,10 +50,10 @@
                                 @foreach($packages as $package)
                                 <tbody>
                                     <tr>
-                                        <td>
+                                        <!-- <td>
                                             <img src="{{ asset('assets/images/packages/'.$package['image']) }}"
                                                 class="avatar" alt="Avatar" height="40" width="40" />
-                                        </td>
+                                        </td> -->
                                         <td>{{ $package['name'] }}</td>
                                         <td>
                                             {{ $package['min_amount'] }}
@@ -65,7 +65,7 @@
                                             {{ $package['start_date'] }}
                                         </td>
                                         <td>
-                                            {{ $package['start_date'] }}
+                                            {{ $package['duration'] }}  {{ $package['duration_mode'] }}
                                         </td>
                                         <td>
                                             @if($package['status'] == 'open')
@@ -85,14 +85,14 @@
                                                         <i class="fa-solid fa-pen-to-square" class=""></i>
                                                         <span class="ps-1">Edit</span>
                                                     </a>
-                                                    <a class="dropdown-item" href="#">
+                                                    <!-- <a class="dropdown-item" href="#">
                                                         <i class="fa-solid fa-eye"></i>
                                                         <span class="ps-1">Show</span>
                                                     </a>
                                                     <a class="dropdown-item" href="#">
                                                         <i class="fa-solid fa-trash"></i>
                                                         <span class="ps-1">Delete</span>
-                                                    </a>
+                                                    </a> -->
                                                 </div>
                                             </div>
                                         </td>

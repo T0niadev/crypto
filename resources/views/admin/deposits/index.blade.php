@@ -22,7 +22,7 @@
             </div>
           </div>
         </div>
-        <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
+        <!-- <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
           <div class="mb-1 breadcrumb-right">
             <div class="dropdown">
               <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button"
@@ -36,7 +36,7 @@
                     class="align-middle">Calendar</span></a></div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="content-body">
         <!-- Basic table -->
@@ -50,7 +50,7 @@
                       <th>User Name</th>
                       <th>Wallet Balance</th>
                       <th>Amount</th>
-                      <th>Bank Name/ Currency Type</th>
+                      <th>Currency Type</th>
                       <th>Wallet Address</th>
                       <th>Request Date</th>
                       <th>Status</th>
