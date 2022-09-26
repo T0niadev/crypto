@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Shakurov\Coinbase\Facades\Coinbase;
+use CoinbaseCommerce\ApiClient;
+use CoinbaseCommerce\Resources\Checkout;
 
 class CoinbaseController extends Controller
 {
@@ -85,16 +86,25 @@ class CoinbaseController extends Controller
 
     public function initiatePayment()
     {
-        $charge = Coinbase::createCharge([
-            'name' => 'Test Charges',
-            'description' => 'this is a just a test charges',
-            'local_price' => [
-                'amount' => 500,
-                'currency' => 'USD',
-            ],
-            'pricing_type' => 'fixed_price',
-        ]);
 
-        return $charge;
+        $apiClientObj = ApiClient::init(env('COINBASE_API_KEY'));
+        $apiClientObj->setTimeout(3);
+        // $apiClientObj->verifySsl(false);
+
+        $checkoutData = [
+            'name' => 'The Sovereign Individual',
+            'description' => 'Mastering the Transition to the Information Age',
+            'pricing_type' => 'fixed_price',
+            'local_price' => [
+                'amount' => '100.00',
+                'currency' => 'USD'
+            ],
+            'requested_info' => ['name', 'email']
+        ];
+        $newCheckoutObj = Checkout::create($checkoutData);
+
+
+        dd($newCheckoutObj);
+
     }
 }
