@@ -18,10 +18,9 @@ class CreateWithdrawalTable extends Migration
             $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
           //  $table->string('username');
             $table->string('amount');
-            $table->string('bankname_currency');
-            $table->string('accountname_ID')->nullable();
-            $table->string('bank_wallet');
-            $table->enum('status', ['pending', 'cancelled', 'settled'])->default('pending');
+            $table->string('bank_name_or_currency');
+            $table->string('account_number_or_wallet_address');
+            $table->enum('status', ['processing', 'annulled', 'settled'])->default('processing');
             $table->timestamps();
 
         });

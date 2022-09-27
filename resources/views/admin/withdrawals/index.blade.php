@@ -53,7 +53,7 @@
                                     <tr>
                                         <th>User Name</th>
                                         <th>Wallet Balance</th>
-                                        <th>Amount</th>
+                                        <th>Requested Amount</th>
                                         <th>Bank Name/ Currency Type</th>
                                         <th>Account Number/ Wallet Address</th>
                                         <th>Request Date</th>
@@ -65,46 +65,45 @@
                                 <tbody>
                                     <tr>
                                         <td>{{ $withdrawal->user->first_name}} {{ $withdrawal->user->last_name}}</td>
-                                        <td>{{ $withdrawal->user->wallet}}</td>
+                                        <td>${{ $withdrawal->user->wallet}}</td>
                                         
                                         <td>
-                                            {{ $withdrawal['amount'] }}
+                                            ${{ $withdrawal['amount'] }}
                                         </td>
                     
                                         <td>
-                                            {{ $withdrawal['bankname_currency'] }}
+                                            {{ $withdrawal['bank_name_or_currency'] }}
                                         </td>
                                         <td>
-                                            {{ $withdrawal['bank_wallet'] }}
+                                            {{ $withdrawal['account_number_or_wallet_address'] }}
                                         </td>
                                         <td>
                                             {{ $withdrawal['created_at'] }}
                                         </td>
                                         <td>
-                                            @if($withdrawal['status'] == 'pending')
-                                            <span class="badge rounded-pill badge-light-success me-1">pending</span>
+                                            @if($withdrawal['status'] == 'processing')
+                                            <span class="badge rounded-pill badge-light-success me-1">processing</span>
                                             @elseif($withdrawal['status'] == 'settled')
                                             <span class="badge rounded-pill badge-light-success me-1">settled</span>
                                             @else
-                                            <span class="badge rounded-pill badge-light-danger me-1">canceled</span>
+                                            <span class="badge rounded-pill badge-light-danger me-1">annulled</span>
                                             @endif
                                         </td>
                                         <td>
                                             <div class="dropdown">
-                                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow py-0"
-                                                    data-bs-toggle="dropdown">
-                                                    <i data-feather="more-vertical"></i>
+                                                <button type="button" class="btn btn-success dropdown-toggle hide-arrow"
+                                                data-bs-toggle="dropdown">
+                                                Actions
                                                 </button>
                                                 <div class="dropdown-menu dropdown-menu-end">
-                                                    <a  class="dropdown-item"  href="{{ url('/admin/withdrawals/edit', $withdrawal->id) }}">
-                                                        <i data-feather="edit-2" class="me-50"></i>
-                                                        <span>Approve</span>
-                                                    </a>
-                                                    <a class="dropdown-item" href="#">
-                                                   
+                                                <a class="dropdown-item" href="{{ url('/admin/withdrawals/edit', $withdrawal->id) }}">
+                                                    <i class="fa-regular fa-circle-check"></i>
+                                                    <span class="ps-1">Settle</span>
+                                                </a>
                                                 </div>
                                             </div>
                                         </td>
+                                
                                     </tr>
                                 </tbody>
                                 @endforeach

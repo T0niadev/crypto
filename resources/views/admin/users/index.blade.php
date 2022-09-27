@@ -62,7 +62,7 @@
                           {{ $user['created_at'] }}
                         </td>
                         <td>
-                          {{ $user['wallet'] }}
+                          ${{ $user['wallet'] }}
                         </td>
                         <td>
                           <div class="dropdown">

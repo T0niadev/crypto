@@ -13,7 +13,7 @@ class InvestmentController extends Controller
     public function index()
     {
 
-        $investments = Investment::latest()->get();
+        $investments = Investment::orderBy('created_at', 'desc')->get();
 
 
         return view('admin.investments.index', compact('investments'));

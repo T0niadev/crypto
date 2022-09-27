@@ -24,7 +24,7 @@
 
                     <div class="col-lg-6">
                       <div class="form-group">
-                        <label> {{ __('Deposit Amount') }} </label>
+                        <label> {{ __('Deposit Amount ($)') }} </label>
                         <input type="text" value="{{ $deposit->amount }}" class="form-control" q asAREW  readonly>
                       </div>
                     </div>
@@ -33,9 +33,10 @@
                       <div class="form-group">
                         <label> {{ __('Status') }} </label>
                         <select name="status" id="status">
-                            <option value="confirmed">Confirmed</option>
+                            <option value="processing">Processing</option>
+                            <option value="verified">Verified</option>
                             <option value="pending">Pending</option>
-                            <option value="declined">Declined</option>
+                            <option value="annulled">Annulled</option>
                         </select>
                       </div>
                     </div>

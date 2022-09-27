@@ -24,7 +24,7 @@
 
                     <div class="col-lg-6">
                       <div class="form-group">
-                        <label> {{ __('Investment Amount') }} </label>
+                        <label> {{ __('Investment Amount ($)') }} </label>
                         <input type="text" value="{{ $investment->amount }}" class="form-control" q asAREW  readonly>
                       </div>
                     </div>
@@ -33,8 +33,8 @@
                       <div class="form-group">
                         <label> {{ __('Status') }} </label>
                         <select name="status" id="status">
-                            <option value="approved">Approved</option>
                             <option value="pending">Pending</option>
+                            <option value="approved">Approved</option>
                             <option value="declined">Declined</option>
                         </select>
                       </div>

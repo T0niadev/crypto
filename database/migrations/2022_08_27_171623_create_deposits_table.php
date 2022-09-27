@@ -17,10 +17,9 @@ class CreateDepositsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->string('amount');
-            $table->string('bankname_currency');
-            $table->string('accountname_ID')->nullable();
-            $table->string('bank_wallet');
-            $table->enum('status', ['pending', 'declined', 'confirmed'])->default('pending');
+            $table->string('bitcoin_amount');
+            $table->string('wallet');
+            $table->enum('status', ['pending', 'processing', 'annulled', 'verified'])->default('pending');
             $table->timestamps();
 
 

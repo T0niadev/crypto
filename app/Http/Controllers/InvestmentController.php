@@ -20,9 +20,9 @@ class InvestmentController extends Controller
         
         return view('user.Investment.index')->with([
       
-            "packages" => Package::where('status', 'open')->get(),
-            "pack" => Package::where('status', 'open')->latest()->first(),
-            "investments" => Investment::where('user_id',auth()->user()->id)->get(),
+            "packages" => Package::where('status', 'open')->orderBy('created_at', 'desc')->get(),
+            "pack" => Package::where('status', 'open')->latest('created_at')->first(),
+            "investments" => Investment::where('user_id',auth()->user()->id)->orderBy('created_at', 'desc')->get(),
           
         ]);
     }

@@ -33,9 +33,10 @@
                       <div class="form-group">
                         <label> {{ __('Status') }} </label>
                         <select name="status" id="status">
+                            <option value="processing">Processing</option>
                             <option value="settled">Settled</option>
-                            <option value="pending">Pending</option>
-                            <option value="cancelled">Cancelled</option>
+                        
+                            <option value="annulled">Annulled</option>
                         </select>
                       </div>
                     </div>

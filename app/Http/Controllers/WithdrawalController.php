@@ -30,8 +30,8 @@ class WithdrawalController extends Controller
 
         $request->validate([
             "amount" => 'required',
-            "bankname_currency" => 'required',
-            "bank_wallet" => 'required',
+            "bank_name_or_currency" => 'required',
+            "account_number_or_wallet_address" => 'required',
             
 
         ]);
@@ -39,8 +39,8 @@ class WithdrawalController extends Controller
 
         Withdrawal::create([
             "amount" => $request->amount,
-            "bankname_currency" => $request->bankname_currency,
-            "bank_wallet" => $request->bank_wallet,
+            "bank_name_or_currency" => $request->bank_name_or_currency,
+            "account_number_or_wallet_address" => $request->account_number_or_wallet_address,
             
 
 

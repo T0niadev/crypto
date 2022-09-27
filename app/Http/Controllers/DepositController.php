@@ -15,6 +15,16 @@ class DepositController extends Controller
         ]);
     }
 
+    public function show()
+    {
+        return view('user.Deposit.show')->with([
+       
+            "deposit" => Deposit::where('user_id',auth()->user()->id)->latest('created_at')->first(),
+            
+        ]);
+    }
+
+
     public function create()
     {
 
@@ -29,8 +39,8 @@ class DepositController extends Controller
 
         $request->validate([
             "amount" => 'required',
-            "bankname_currency" => 'required',
-            "bank_wallet" => 'required',
+            "bitcoin_amount" => 'required',
+            "wallet" => 'required',
             
 
         ]);
@@ -38,17 +48,56 @@ class DepositController extends Controller
 
         Deposit::create([
             "amount" => $request->amount,
-            "bankname_currency" => $request->bankname_currency,
-            "bank_wallet" => $request->bank_wallet,
+            "bitcoin_amount" => $request->bitcoin_amount,
+            "wallet" => $request->wallet,
             
 
 
         ]);
 
-
-
-        return redirect('/pay')->with([
+        return redirect('/showdeposit')->with([
             "success" => "Deposit awaiting confirmation"
         ]);
     }
+
+
+        public function usereditdeposit(Deposit $deposit)
+        {
+            
+            return view('user.Deposit.edit')->with([
+       
+                "deposit" => Deposit::where('user_id',auth()->user()->id)->latest('created_at')->first(),
+                
+            ]);
+        }
+    
+    
+    
+        public function userupdatedeposit(Request $request, Deposit $deposit)
+        {
+            $request->validate([
+                "amount" => 'required',
+                "bitcoin_amount" => 'required',
+                "wallet" => 'required',
+            ]);
+    
+            $deposit->fill($request->post())->save();
+    
+            return redirect('/showdeposit')->with([
+                "success" => "Deposit awaiting confirmation"  ]);
+        }
+    
+        public function userupdatestatus(Request $request, Deposit $deposit)
+        {
+            
+            $deposit->fill($request->post())->save();
+
+          
+    
+            return redirect('/wallet')->with([
+                "success" => "Deposit awaiting confirmation"  ]);
+        }
+
+
+      
 }

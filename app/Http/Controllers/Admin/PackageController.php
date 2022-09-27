@@ -19,7 +19,7 @@ class PackageController extends Controller
     {
 
 
-        $packages = Package::all();
+        $packages = Package::orderBy('created_at', 'desc')->get();
         return view('admin.packages.index', compact('packages'));
     }
 

@@ -30,8 +30,11 @@
       </div>
     @endif
 
-    <form method="POST" action="{{ url('/depositform/store') }}" enctype="multipart/form-data">
-      @csrf
+
+
+    <form action="{{ url('/deposit/update', $deposit->id) }}" method="POST" enctype="multipart/form-data">
+        @csrf
+       @method('PUT')
       <div class="grid grid-cols-12 gap-4 sm:gap-5 lg:gap-6">
         <div class="col-span-12 lg:col-span-8">
           <div class="card">
@@ -42,7 +45,7 @@
                     <button
                       class="btn h-14 shrink-0 space-x-2 rounded-none border-b-2 border-primary px-4 font-medium text-primary dark:border-accent dark:text-accent-light sm:px-5">
                       <i class="fa-solid fa-layer-group text-base"></i>
-                      <span>Make a Deposit</span>
+                      <span>Edit Deposit Details</span>
                     </button>
 
                   </div>
@@ -62,7 +65,7 @@
 
                   <input name="amount"
                     class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                    placeholder="Enter here" id="USDAmount" onchange="divide()" type="number" />
+                    placeholder="Enter here" id="USDAmount" onchange="divide()" type="number" value="{{ $deposit['amount'] }}" />
                 </label>
 
             
@@ -71,7 +74,7 @@
                   <span class="font-medium text-slate-600 dark:text-navy-100">Currency Type</span>
                   <input name="bitcoin_amount"
                     class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                    id="result"  placeholder="The equivalent deposit amount in bitcoin will appear here"  type="text" readonly/>
+                    id="result"  placeholder="The equivalent deposit amount in bitcoin will appear here" value="{{ $deposit['bitcoin_amount'] }}" type="text" readonly/>
                 </label>
 
 
@@ -81,7 +84,7 @@
                   <span class="font-medium text-slate-600 dark:text-navy-100">Wallet Address</span>
                   <input name="wallet"
                     class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                    placeholder="Enter here" type="text" />
+                    placeholder="Enter here" type="text" value="{{ $deposit['wallet'] }}" />
                 </label>
 
 

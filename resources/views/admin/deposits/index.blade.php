@@ -50,7 +50,7 @@
                       <th>User Name</th>
                       <th>Wallet Balance</th>
                       <th>Amount</th>
-                      <th>Currency Type</th>
+                      <th>Bitcoin Equivalent</th>
                       <th>Wallet Address</th>
                       <th>Request Date</th>
                       <th>Status</th>
@@ -68,21 +68,23 @@
                         </td>
 
                         <td>
-                          {{ $deposit['bankname_currency'] }}
+                          {{ $deposit['bitcoin_amount'] }} BTC
                         </td>
                         <td>
-                          {{ $deposit['bank_wallet'] }}
+                          {{ $deposit['wallet'] }}
                         </td>
                         <td>
-                          {{ $deposit['created_at'] }}
+                          {{ $deposit['updated_at'] }}
                         </td>
                         <td>
                           @if ($deposit['status'] == 'pending')
                             <span class="badge rounded-pill badge-light-warning me-1">pending</span>
-                          @elseif($deposit['status'] == 'confirmed')
-                            <span class="badge rounded-pill badge-light-success me-1">confirmed</span>
+                          @elseif($deposit['status'] == 'processing')
+                            <span class="badge rounded-pill badge-light-success me-1">processing</span>
+                          @elseif($deposit['status'] == 'annulled')
+                            <span class="badge rounded-pill badge-light-success me-1">annulled</span>
                           @else
-                            <span class="badge rounded-pill badge-light-danger me-1">Declined</span>
+                            <span class="badge rounded-pill badge-light-danger me-1">Verified</span>
                           @endif
                         </td>
                         <td>
@@ -94,7 +96,7 @@
                             <div class="dropdown-menu dropdown-menu-end">
                               <a class="dropdown-item" href="{{ url('/admin/deposits/edit', $deposit->id) }}">
                                 <i class="fa-regular fa-circle-check"></i>
-                                <span class="ps-1">Approve</span>
+                                <span class="ps-1">Verify</span>
                               </a>
                             </div>
                           </div>

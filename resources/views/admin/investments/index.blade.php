@@ -66,7 +66,7 @@
                                 <tbody>
                                     <tr>
                                         <td>{{ $investment->user->first_name}} {{ $investment->user->last_name}}</td>
-                                        <td>{{ $investment->user->wallet}}</td>
+                                        <td>${{ $investment->user->wallet}}</td>
                                         <td>
                                             {{ $investment->package->name }}
                                         </td>
@@ -75,7 +75,7 @@
                                         </td>
 
                                         <td>
-                                            {{ $investment['total_return'] }}
+                                            ${{ $investment['total_return'] }}
                                         </td>
                                         <td>
                                             {{ $investment['start_date'] }}
@@ -83,7 +83,7 @@
                                         <td>
                                             {{ $investment['withdrawal_date'] }}
                                         </td>
-                                        <td>
+                                       <td>
                                             @if($investment['status'] == 'approved')
                                             <span class="badge rounded-pill badge-light-success me-1">Approved</span>
                                             @elseif($investment['status'] == 'pending')

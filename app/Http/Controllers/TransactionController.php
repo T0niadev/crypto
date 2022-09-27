@@ -17,8 +17,8 @@ class TransactionController extends Controller
     public function index()
     {
         return view('user.Transaction.index')->with([
-            "deposits" => Deposit::where('user_id',auth()->user()->id)->get(),
-            "withdrawals" => Withdrawal::where('user_id',auth()->user()->id)->get(),
+            "deposits" => Deposit::where('user_id',auth()->user()->id)->orderBy('created_at', 'desc')->get(),
+            "withdrawals" => Withdrawal::where('user_id',auth()->user()->id)->orderBy('created_at', 'desc')->get(),
         ]);
     }
 

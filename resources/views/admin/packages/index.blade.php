@@ -56,10 +56,10 @@
                                         </td> -->
                                         <td>{{ $package['name'] }}</td>
                                         <td>
-                                            {{ $package['min_amount'] }}
+                                            ${{ $package['min_amount'] }}
                                         </td>
                                         <td>
-                                            {{ $package['max_amount'] }}
+                                            ${{ $package['max_amount'] }}
                                         </td>
                                         <td>
                                             {{ $package['start_date'] }}

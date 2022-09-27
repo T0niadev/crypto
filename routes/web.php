@@ -34,11 +34,21 @@ Route::get('/transaction', [\App\Http\Controllers\TransactionController::class, 
 Route::get('/document', [\App\Http\Controllers\DocumentController::class, 'index'])->name('document');
 Route::post('/submit/document', [\App\Http\Controllers\DocumentController::class, 'store'])->name('submitdocument');
 
+
+
+Route::get('/deposit/edit/{deposit}', [\App\Http\Controllers\DepositController::class, 'usereditdeposit'])->name('userdepositedit');
+Route::put('/deposit/update/{deposit}', [\App\Http\Controllers\DepositController::class, 'userupdatedeposit'] )->name('userdepositupdate');
+
+Route::post('/update/status/{deposit}', [\App\Http\Controllers\DepositController::class, 'userupdatestatus'] )->name('userstatusupdate');
+
 Route::get('/withdrawal', [\App\Http\Controllers\WithdrawalController::class, 'index'])->name('withdrawal');
 
 Route::post('/withdrawal/store', [\App\Http\Controllers\WithdrawalController::class, 'store'])->name('withdrawaladd');
 
 Route::get('/depositform', [\App\Http\Controllers\DepositController::class, 'index'])->name('depositform');
+
+Route::get('/showdeposit', [\App\Http\Controllers\DepositController::class, 'show'])->name('showdeposit');
+
 Route::post('/depositform/store', [\App\Http\Controllers\DepositController::class, 'store'])->name('depositformstore');
 
 Route::get('/pay/bitcoin', [\App\Http\Controllers\PayController::class, 'paybitcoin'])->name('paybitcoin');

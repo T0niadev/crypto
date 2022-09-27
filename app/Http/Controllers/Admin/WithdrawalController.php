@@ -11,7 +11,7 @@ class WithdrawalController extends Controller
 {
     public function index() {
 
-		$withdrawals = Withdrawal::latest()->get();
+		$withdrawals = Withdrawal::orderBy('created_at', 'desc')->get();
 
 
 		return view('admin.withdrawals.index', compact('withdrawals'));

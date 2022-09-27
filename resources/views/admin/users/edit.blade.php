@@ -38,7 +38,7 @@
 
                     <div class="col-lg-6">
                       <div class="form-group">
-                        <label> {{ __('Wallet Balance') }} </label>
+                        <label> {{ __('Wallet Balance ($)') }} </label>
                         <input type="text" value="{{ $user->wallet }}" class="form-control" name="wallet">
                       </div>
                     </div>

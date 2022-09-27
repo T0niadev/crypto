@@ -10,7 +10,7 @@ class DepositController extends Controller
 {
     public function index() {
 
-		$deposits = Deposit::latest()->get();
+		$deposits = Deposit::latest()->orderBy('updated_at', 'desc')->get();
 
 
 		return view('admin.deposits.index', compact('deposits'));
