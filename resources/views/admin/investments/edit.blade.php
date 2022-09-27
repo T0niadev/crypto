@@ -29,7 +29,7 @@
                       </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 mt-2">
                       <div class="form-group">
                         <label> {{ __('Status') }} </label>
                         <select name="status" id="status">

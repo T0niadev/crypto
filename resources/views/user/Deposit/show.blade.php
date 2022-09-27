@@ -190,10 +190,10 @@
                     </div>
                     
 
-                    <a  class=""  href="{{ url('/deposit/edit', $deposit->id) }}">
+                    <!-- <a  class=""  href="{{ url('/deposit/edit', $deposit->id) }}">
                         <i class="fa-solid fa-pen-to-square" class=""></i>
                         <span class="ps-1">Edit</span>
-                    </a>
+                    </a> -->
 
                   </td>
                 </div>

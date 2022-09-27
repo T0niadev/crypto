@@ -60,7 +60,7 @@
 
                   <input
                   class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                  type="text" id="bitcoinAmount" value="{{ number_format(Cryptocap::getSingleAsset('bitcoin')->data->priceUsd, 2) }}"   placeholder="Ensure you enter the same amount in the deposit form">
+                  type="hidden" id="bitcoinAmount" value="{{ number_format(Cryptocap::getSingleAsset('bitcoin')->data->priceUsd, 2) }}"   placeholder="Ensure you enter the same amount in the deposit form">
               
 
                   <input name="amount"
@@ -71,7 +71,7 @@
             
 
                 <label for="number" class="block mt-3">
-                  <span class="font-medium text-slate-600 dark:text-navy-100">Currency Type</span>
+                  <span class="font-medium text-slate-600 dark:text-navy-100">Bitcin Equivalent</span>
                   <input name="bitcoin_amount"
                     class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                     id="result"  placeholder="The equivalent deposit amount in bitcoin will appear here" value="{{ $deposit['bitcoin_amount'] }}" type="text" readonly/>
