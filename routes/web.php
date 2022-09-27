@@ -41,6 +41,8 @@ Route::post('/withdrawal/store', [\App\Http\Controllers\WithdrawalController::cl
 Route::get('/depositform', [\App\Http\Controllers\DepositController::class, 'index'])->name('depositform');
 Route::post('/depositform/store', [\App\Http\Controllers\DepositController::class, 'store'])->name('depositformstore');
 
+Route::get('/pay/bitcoin', [\App\Http\Controllers\PayController::class, 'paybitcoin'])->name('paybitcoin');
+
 
 
 Route::prefix('google')->name('google.')->group(function () {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a998d9938800ba7fc23d2938aad3959",
+    "content-hash": "1ea53bb8e96b82b4159955508e0fb8b4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6118,6 +6118,51 @@
             "time": "2022-06-03T18:03:27+00:00"
         },
         {
+            "name": "wisdom-diala/cryptocap-pkg",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wisdom-diala/cryptocap-pkg.git",
+                "reference": "25dd1075f8b984cd48862ab9879d0be00f67df69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wisdom-diala/cryptocap-pkg/zipball/25dd1075f8b984cd48862ab9879d0be00f67df69",
+                "reference": "25dd1075f8b984cd48862ab9879d0be00f67df69",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "WisdomDiala\\Cryptocap\\Providers\\CryptocapServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "WisdomDiala\\Cryptocap\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Diala Wisdom",
+                    "email": "talk2whizzy@gmail.com"
+                }
+            ],
+            "description": "Package to fetch cryptocurrency price, market value, assets etc.",
+            "support": {
+                "issues": "https://github.com/wisdom-diala/cryptocap-pkg/issues",
+                "source": "https://github.com/wisdom-diala/cryptocap-pkg/tree/main"
+            },
+            "time": "2021-08-09T06:35:21+00:00"
+        },
+        {
             "name": "yajra/laravel-datatables-oracle",
             "version": "v9.21.2",
             "source": {
@@ -8593,7 +8638,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "wisdom-diala/cryptocap-pkg": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

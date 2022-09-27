@@ -1,0 +1,106 @@
+
+
+@extends('layouts.app')
+
+@section('content')
+
+<main class="main-content w-full px-[var(--margin-x)] pb-8">
+
+
+
+        <div
+          class="flex flex-col items-center justify-between space-y-4 py-5 sm:flex-row sm:space-y-0 lg:py-6"
+        >
+          <div class="flex items-center space-x-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewbox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              />
+            </svg>
+            <h2
+              class="text-xl font-medium text-slate-700 line-clamp-1 dark:text-navy-50"
+            >
+             
+            </h2>
+          </div>
+        </div>
+
+            <div class="grid grid-cols-12 gap-4 sm:gap-5 lg:gap-6">
+                <div class="col-span-12 lg:col-span-8">
+                    <div class="card">
+                        <div class="tabs flex flex-col">
+                            <div class="is-scrollbar-hidden overflow-x-auto">
+                            <div class="border-b-2 border-slate-150 dark:border-navy-500">
+                                <div class="tabs-list -mb-0.5 flex">
+                                <button
+                                    class="btn h-14 shrink-0 space-x-2 rounded-none border-b-2 border-primary px-4 font-medium text-primary dark:border-accent dark:text-accent-light sm:px-5"
+                                >
+                                    <i class="fa-solid fa-layer-group text-base"></i>
+                                    <span>Confirm Payment Amount</span>
+                                </button>
+
+                                </div>
+                            </div>
+                            </div>
+                            <div class="tab-content p-4 sm:p-5">
+
+
+
+                                    <label for="amount" class="block">
+                                        <span
+                                            class="font-medium text-slate-600 dark:text-navy-100"
+                                            > Amount ($)</span
+                                        >
+                                        <input
+                                            class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                           type="text"  placeholder="Ensure you enter the same amount in the deposit form">
+
+                                        <input
+                                            class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                           type="text"  placeholder="Ensure you enter the same amount in the deposit form">
+                                        
+                                       
+                                    </label>
+
+
+                                    <label for="bitcoinequivalent" class="block">
+                                        <span
+                                            class="font-medium text-slate-600 dark:text-navy-100"
+                                            > Bitcoin Equivalent</span
+                                        >
+                                        <p> {{ Cryptocap::getSingleAsset('bitcoin')->data->priceUsd }} </p>
+
+                                      
+                                       
+                                    </label>
+
+
+                                    <div class="flex justify-center mt-3 space-x-2">
+                                        <button type="submit"
+                                        class="btn min-w-[7rem] bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90"
+                                        >
+                                        Pay
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</main>
+@endsection
+
+
+
+

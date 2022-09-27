@@ -163,6 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
+        WisdomDiala\Cryptocap\Providers\CryptocapServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -233,6 +234,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Datatables' => Yajra\Datatables\Facades\Datatables::class,
+        'Cryptocap' => WisdomDiala\Cryptocap\Facades\Cryptocap::class,
 
     ],
 

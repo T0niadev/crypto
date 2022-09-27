@@ -16,6 +16,7 @@
         "laravel/socialite": "^5.5",
         "laravel/tinker": "^2.5",
         "victorybiz/laravel-crypto-payment-gateway": "^1.2",
+        "wisdom-diala/cryptocap-pkg": "dev-main",
         "yajra/laravel-datatables-oracle": "^9.21.2"
     },
     "require-dev": {
