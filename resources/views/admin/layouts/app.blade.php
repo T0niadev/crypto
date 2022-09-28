@@ -68,7 +68,7 @@
 
 <!-- BEGIN: Body-->
 
-<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click" 
+<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click"
   data-menu="vertical-menu-modern" data-col="">
 
   <!-- BEGIN: Header-->
@@ -343,7 +343,7 @@
         data-feather="settings"></i></a>
     <div class="customizer-content">
       <!-- Customizer header -->
-      <div class="customizer-header px-2 pt-1 pb-0 position-relative">
+      {{-- <div class="customizer-header px-2 pt-1 pb-0 position-relative">
         <h4 class="mb-0">Theme Customizer</h4>
         <p class="m-0">Customize & Preview in Real Time</p>
 
@@ -468,7 +468,7 @@
     </div>
 
   </div> -->
-  <!-- End: Customizer-->
+  <!-- End: Customizer--> --}}
 
   <!-- Buynow Button-->
   <div class="buy-now"><a target="_blank" class="btn btn-danger">CryptFX</a>

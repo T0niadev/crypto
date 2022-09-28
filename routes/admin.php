@@ -32,6 +32,7 @@ Route::post('password/confirm', 'Auth\ConfirmPasswordController@confirm');
 Route::get('/users', [\App\Http\Controllers\Admin\UserController::class, 'index'])->name('user');
 Route::get('/users/create', [\App\Http\Controllers\Admin\UserController::class, 'create'] )->name('usercreate');
 Route::post('/users/store', [\App\Http\Controllers\Admin\UserController::class, 'store'] )->name('userstore');
+Route::post('/users/search', [\App\Http\Controllers\Admin\UserController::class, 'search'])->name('searchusers');
 
 Route::post('/users/update', [\App\Http\Controllers\Admin\UserController::class, 'update'] )->name('userupdate');
 
@@ -55,6 +56,7 @@ Route::get('/investments/create', [\App\Http\Controllers\Admin\InvestmentControl
 Route::post('/investments/store', [\App\Http\Controllers\Admin\InvestmentController::class, 'store'] )->name('investstore');
 Route::get('/investments/edit/{investment_id}', [\App\Http\Controllers\Admin\InvestmentController::class, 'edit'])->name('investedit');
 Route::post('/investments/update', [\App\Http\Controllers\Admin\InvestmentController::class, 'update'] )->name('investupdate');
+Route::post('/investments/search', [\App\Http\Controllers\Admin\InvestmentController::class, 'search'])->name('searchinvestment');
 
 
 Route::get('/deposits', [\App\Http\Controllers\Admin\DepositController::class, 'index'])->name('deposit');
@@ -62,6 +64,7 @@ Route::get('/deposits/create', [\App\Http\Controllers\Admin\DepositController::c
 Route::post('/deposits/store', [\App\Http\Controllers\Admin\DepositController::class, 'store'] )->name('depositstore');
 Route::get('/deposits/edit/{deposit_id}', [\App\Http\Controllers\Admin\DepositController::class, 'edit'])->name('depositedit');
 Route::post('/deposits/update', [\App\Http\Controllers\Admin\DepositController::class, 'update'] )->name('depositupdate');
+Route::post('/deposits/search', [\App\Http\Controllers\Admin\DepositController::class, 'search'])->name('searchdeposit');
 
 Route::get('/withdrawals', [\App\Http\Controllers\Admin\WithdrawalController::class, 'index'])->name('withdrawal');
 Route::get('/confirmpayment', [\App\Http\Controllers\Admin\WithdrawalController::class, 'crypto'])->name('payss');
@@ -69,8 +72,10 @@ Route::get('/withdrawals/create', [\App\Http\Controllers\Admin\WithdrawalControl
 Route::post('/withdrawals/store', [\App\Http\Controllers\Admin\WithdrawalController::class, 'store'] )->name('withdrawalstore');
 Route::get('/withdrawals/edit/{withdrawal_id}', [\App\Http\Controllers\Admin\WithdrawalController::class, 'edit'])->name('withdrawaledit');
 Route::post('/withdrawals/update', [\App\Http\Controllers\Admin\WithdrawalController::class, 'update'] )->name('withdrawalupdate');
+Route::post('/withdrawal/search', [\App\Http\Controllers\Admin\WithdrawalController::class, 'search'])->name('searchwithdrawal');
 
 Route::get('/packages', [\App\Http\Controllers\Admin\PackageController::class, 'index'])->name('package');
+Route::post('/packages/search', [\App\Http\Controllers\Admin\PackageController::class, 'search'])->name('searchpackage');
 Route::get('/packages/fetchPackages', [\App\Http\Controllers\Admin\PackageController::class, 'fetchPackages'])->name('fetchPackages');
 Route::get('/packages/create', [\App\Http\Controllers\Admin\PackageController::class, 'create'] )->name('package.create');
 Route::post('/packages/store', [\App\Http\Controllers\Admin\PackageController::class, 'store'] )->name('package.store');

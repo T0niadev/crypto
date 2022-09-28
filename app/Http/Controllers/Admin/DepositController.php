@@ -16,6 +16,18 @@ class DepositController extends Controller
 		return view('admin.deposits.index', compact('deposits'));
 	}
 
+    public function search(Request $request)
+    {
+        $name = $request->name;
+
+        $deposits = Deposit::whereHas('user', function ($q) use ($name) {
+            $q->where('first_name', 'LIKE', "%{$name}%")->orWhere('last_name', 'LIKE', "%{$name}%");
+        })->get();
+
+        return view('admin.deposits.index', compact('deposits'));
+    }
+
+
 	public function editdeposit(Deposit $deposit)
     {
         return view('admin.deposits.edit',compact('deposit'));

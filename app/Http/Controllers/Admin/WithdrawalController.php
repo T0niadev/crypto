@@ -18,6 +18,19 @@ class WithdrawalController extends Controller
 	}
 
 
+
+    public function search(Request $request)
+    {
+        $name = $request->name;
+
+        $withdrawals = Withdrawal::whereHas('user', function ($q) use ($name) {
+            $q->where('first_name', 'LIKE', "%{$name}%")->orWhere('last_name', 'LIKE', "%{$name}%");
+        })->get();
+
+        return view('admin.withdrawals.index', compact('withdrawals'));
+	}
+
+
     public function crypto() {
 
 		$payments = CryptoPaymentModel::all();

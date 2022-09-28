@@ -17,13 +17,13 @@ class InvestmentController extends Controller
 
     public function index()
     {
-        
+
         return view('user.Investment.index')->with([
-      
+
             "packages" => Package::where('status', 'open')->orderBy('created_at', 'desc')->get(),
             "pack" => Package::where('status', 'open')->latest('created_at')->first(),
             "investments" => Investment::where('user_id',auth()->user()->id)->orderBy('created_at', 'desc')->get(),
-          
+
         ]);
     }
 
@@ -40,7 +40,7 @@ class InvestmentController extends Controller
     {
 
         $request->validate([
-          
+
             "amount" => 'required',
             "total_return" => 'required',
             "start_date" => 'required',
@@ -53,20 +53,31 @@ class InvestmentController extends Controller
         //  $inv_user = User::find($inv->user_id);
 
 
-        // Convert withdrawal day 
+        // Convert withdrawal day
         // $request->withdrawal_date = Carbon::parse($request['withdrawal_date'])->format('d-m-y H:i:s');
 
         $user_id = Auth::id();
 
         // Find package and check if investment is enabled
-        $package = Package::all()->where('id', $request['package_id'])->first();
+        $package = Package::where('id', $request['package_id'])->first();
         if (!($package && $package->canRunInvestment())){
             return back()->with('error', 'Can\'t process investment, package not found, disabled or closed');
         }
 
+        if (auth()->user()->wallet < $request['amount']) {
+            return back()->with('error', "You don't have sufficient amount in your wallet");
+        }
+
+        if ($package['min_amount'] > $request['amount']) {
+            return back()->with('error', "Invested amount is less than package minimum amount");
+        }
+        if ($package['max_amount'] < $request['amount']) {
+            return back()->with('error', "Invested amount is greater than package maximum amount");
+        }
+
         Investment::create([
 
-            
+
             "amount" => $request->amount,
             "total_return" => $request->total_return,
             "investment_date" => now()->format('Y-m-d H:i:s'),
@@ -81,7 +92,7 @@ class InvestmentController extends Controller
 
 
         return redirect('/investment')->with([
-            "success" => "Package Added Successfully"
+            "success" => "Investment Added Successfully"
         ]);
     }
 
@@ -141,4 +152,8 @@ class InvestmentController extends Controller
 
         return redirect('/admin/investments');
     }
+
+
+
+
 }

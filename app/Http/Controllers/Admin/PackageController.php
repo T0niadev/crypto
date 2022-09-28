@@ -54,30 +54,28 @@ class PackageController extends Controller
 
 
 
-            Package::create([
-                "name"  => $request->name,
-                "roi"  => $request->roi,
-                "start_date"  => $request->start_date,
-                "min_amount"  => $request->min_amount,
-                "max_amount"  => $request->max_amount,
-                "duration"  => $request->duration,
-                "duration_mode"  => $request->duration_mode,
-                "description"  => $request->description,
-                "status"  => $request->status,
-            ]);
+        Package::create([
+            "name"  => $request->name,
+            "roi"  => $request->roi,
+            "start_date"  => $request->start_date,
+            "min_amount"  => $request->min_amount,
+            "max_amount"  => $request->max_amount,
+            "duration"  => $request->duration,
+            "duration_mode"  => $request->duration_mode,
+            "description"  => $request->description,
+            "status"  => $request->status,
+        ]);
 
 
 
 
-            return redirect('admin/packages')->with([
-                "success" => "Package Added Succesfully"
-            ]);
-
-
+        return redirect('admin/packages')->with([
+            "success" => "Package Added Succesfully"
+        ]);
     }
 
 
-   
+
 
     public function destroy(Package $package)
     {
@@ -95,12 +93,12 @@ class PackageController extends Controller
 
     public function editpackage(Package $package)
     {
-        return view('admin.packages.edit',compact('package'));
+        return view('admin.packages.edit', compact('package'));
     }
 
 
 
-	public function updatepackage(Request $request, Package $package)
+    public function updatepackage(Request $request, Package $package)
     {
         $request->validate([
             "name" => 'required',
@@ -117,6 +115,17 @@ class PackageController extends Controller
 
         $package->fill($request->post())->save();
 
-        return redirect('/admin/packages')->with('success','Status updated succesfully');
+        return redirect('/admin/packages')->with('success', 'Status updated succesfully');
+    }
+
+    public function search(Request $request)
+    {
+        $name = $request->name;
+
+        $packages = Package::where('name', 'like', "%{$name}%")->get();
+
+       
+
+        return view('admin.packages.index', compact('packages'));
     }
 }

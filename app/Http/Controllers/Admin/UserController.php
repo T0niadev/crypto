@@ -14,6 +14,17 @@ class UserController extends Controller
 		return view('admin.users.index', compact('users'));
 	}
 
+    public function search(Request $request)
+    {
+        $name = $request->name;
+
+        $users = User::where('first_name', 'like', "%{$name}%")->orWhere('last_name', 'like', "%{$name}%")->get();
+
+
+
+        return view('admin.users.index', compact('users'));
+    }
+
 	public function create() {
 		return view('admin.users.create');
 	}

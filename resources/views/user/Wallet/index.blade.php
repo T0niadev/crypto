@@ -19,7 +19,7 @@
                     <svg aria-hidden="true" class="mx-auto mb-4 w-14 h-14 text-gray-400 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     <h3 class="text-lg font-normal text-gray-500 dark:text-gray-400">Sorry, this payment method in currently unavailable in your country.</h3>
                     <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Contact us via email: support@cryptfxtrading.com for support and enquiries.</h3>
-            
+
                     <button data-modal-toggle="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Back</button>
                 </div>
             </div>
@@ -110,13 +110,13 @@
         </div>
 
         <div class="col-span-12 mt-5 sm:col-span-6 sm:mt-0 lg:col-span-8">
-          <div class="swiper px-5 sm:pl-0" x-init="$nextTick(() => new Swiper($el, { slidesPerView: 'auto', spaceBetween: 16 }))">
+          <div class="swiper px-5 sm:pl-0" x-init="$nextTick(() => new Swiper($el, { slidesPerView: 'auto', spaceBetween: 20 }))">
             <div class="swiper-wrapper">
               <div
-                class="swiper-slide relative h-40 w-64 shrink-0 rounded-lg bg-gradient-to-br from-[#ffffff55] to-[#ffffff20]">
+                class="swiper-slide relative h-40 w-72 shrink-0 rounded-lg bg-gradient-to-br from-[#ffffff55] to-[#ffffff20]">
                 <div class="absolute inset-0 flex flex-col justify-between rounded-lg border border-white/10 p-5">
                   <div class="flex items-center justify-between">
-                    <img class="h-30" src="{{ asset('assets/images/payments/coins.png') }}" alt="image" />
+                    <img class="h-30" src="{{ asset('assets/images/payments/Bitcoin.png') }}" alt="image" />
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-100" fill="none"
                       stroke="currentColor" viewbox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -127,8 +127,8 @@
                     <p class="mt-1 text-xs font-medium">
                       Make Deposit With
                     </p>
-                    <a href="" class="text-lg font-semibold tracking-wide">
-                      CoinRemmiter
+                    <a href="{{ route('depositform') }}" class="text-lg font-semibold tracking-wide">
+                      Bitcoin
                     </a>
                     <p class="mt-1 text-xs font-medium">
 
@@ -165,13 +165,13 @@
                                 <p class="mt-1 text-xs font-medium">
                                 Make Deposit With
                                 </p>
-                               
+
 
                             </div>
                         </div>
                     </div> --}}
               <div
-                class="swiper-slide relative h-40 w-64 shrink-0 rounded-lg bg-gradient-to-br from-[#ffffff55] to-[#ffffff20]">
+                class="swiper-slide relative h-40 w-72 shrink-0 rounded-lg bg-gradient-to-br from-[#ffffff55] to-[#ffffff20]">
                 <div class="absolute inset-0 flex flex-col justify-between rounded-lg border border-white/10 p-5">
                   <div class="flex items-center justify-between">
                     <img class="h-30" src="{{ asset('assets/images/payments/paypal.png') }}" alt="image" />
@@ -207,7 +207,7 @@
                         d="M5.343 7.257a.5.5 0 01.354.147 6.5 6.5 0 010 9.192.64.64 0 00-.073.087 4.718 4.718 0 01-.56-.094 1.301 1.301 0 01-.109-.03.5.5 0 01.035-.67 5.5 5.5 0 000-7.778.5.5 0 01.353-.854zm-.422 9.288a.06.06 0 010 0zM15 1.6a.5.5 0 01.354.147 14.5 14.5 0 010 20.506.5.5 0 11-.708-.707 13.5 13.5 0 000-19.092A.5.5 0 0115 1.6zM10.172 4.43a.5.5 0 01.353.146 10.5 10.5 0 010 14.85.5.5 0 11-.707-.707 9.5 9.5 0 000-13.436.5.5 0 01.354-.853z" />
                     </svg>
                   </div>
-                 
+
                     <p class="mt-1 text-white font-medium">
                       Make Deposit With
                     </p>
@@ -229,7 +229,7 @@
         <script src="https://widgets.coingecko.com/coingecko-coin-compare-chart-widget.js"></script>
         <coingecko-coin-compare-chart-widget class="w-full" coin-ids="bitcoin,ethereum,eos,ripple,litecoin"
           currency="usd" locale="en">
-        </coingecko-coin-compare-chart-widget>   
+        </coingecko-coin-compare-chart-widget>
 
         <!-- <div class="my-3 flex flex-col justify-between px-4 sm:flex-row sm:items-center sm:px-5">
           <div class="flex flex-1 items-center justify-between space-x-2 sm:flex-initial">
@@ -251,7 +251,7 @@
               <div x-ref="popperRoot" class="popper-root" :class="isShowPopper && 'show'">
                 <div
                   class="popper-box rounded-md border border-slate-150 bg-white py-1.5 font-inter dark:border-navy-500 dark:bg-navy-700">
-                 
+
                 </div>
               </div>
             </div>
@@ -383,76 +383,30 @@
                 <p class="font-medium text-success">$558.88</p>
               </div>
             </div> --}}
-         
+
           </div>
         </div> -->
       </div>
 
       <div class="card col-span-12 px-4 pb-5 sm:px-5 lg:col-span-4">
         <div class="flex items-center justify-between py-3">
-          <h2 class="font-medium tracking-wide text-slate-700 dark:text-navy-100">
+          <h2 class="font-medium text-xl tracking-wide text-slate-700 dark:text-navy-100">
             Investment Packages
           </h2>
-          <div x-data="usePopper({ placement: 'bottom-end', offset: 4 })" @click.outside="if(isShowPopper) isShowPopper = false" class="inline-flex">
-            <button x-ref="popperRef" @click="isShowPopper = !isShowPopper"
-              class="btn -mr-1 h-8 w-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewbox="0 0 24 24"
-                stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
-              </svg>
-            </button>
-
-            <div x-ref="popperRoot" class="popper-root" :class="isShowPopper && 'show'">
-              <div
-                class="popper-box rounded-md border border-slate-150 bg-white py-1.5 font-inter dark:border-navy-500 dark:bg-navy-700">
-                <ul>
-                  <li>
-                    <a href="#"
-                      class="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100">Coin
-                      Remmitter</a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100">Paypal</a>
-
-                  </li>
-                  {{-- <li>
-                        <a
-                            href="#"
-                            class="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100"
-                            >Something else</a
-                        >
-                        </li> --}}
-                </ul>
-
-                <div class="my-1 h-px bg-slate-150 dark:bg-navy-500"></div>
-                {{-- <ul>
-                        <li>
-                        <a
-                            href="#"
-                            class="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100"
-                            >Separated Link</a
-                        >
-                        </li>
-                    </ul> --}}
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="flex space-x-2">
+        <div class="mx-auto">
           {{-- <div class="avatar h-8 w-8 hover:z-10"> --}}
           <img class="rounded-full ring ring-white dark:ring-navy-700"
-            src="{{ asset('assets/images/blogs/image-01.jpg') }}" alt="avatar" />
+            src="{{ asset('assets/images/blogs/image-01.jpg') }}"  />
 
         </div>
 
-        <div class="mt-2 space-y-4">
+        <div class="mt-2 text-md space-y-4">
           <i>
             Take advantage of the specially curated investment packages we have for you
           </i>
           <p>
-            <a href="{{ route('investment') }}">click here</a>
+            <a class="text-lg text-medium" href="{{ route('investment') }}">Click Here</a>
           </p>
         </div>
 

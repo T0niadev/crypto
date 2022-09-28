@@ -26,22 +26,26 @@ class WithdrawalController extends Controller
     {
 
 
-        
+
 
         $request->validate([
             "amount" => 'required',
             "bank_name_or_currency" => 'required',
             "account_number_or_wallet_address" => 'required',
-            
+
 
         ]);
+
+        if (auth()->user()->wallet < $request['amount']) {
+            return back()->with('error', "You don't have sufficient amount in your wallet");
+        }
 
 
         Withdrawal::create([
             "amount" => $request->amount,
             "bank_name_or_currency" => $request->bank_name_or_currency,
             "account_number_or_wallet_address" => $request->account_number_or_wallet_address,
-            
+
 
 
         ]);

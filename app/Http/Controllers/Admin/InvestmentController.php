@@ -19,16 +19,27 @@ class InvestmentController extends Controller
         return view('admin.investments.index', compact('investments'));
     }
 
-   
+    public function search(Request $request)
+    {
+        $name = $request->name;
+
+        $investments = Investment::whereHas('user', function ($q) use ($name) {
+            $q->where('first_name', 'LIKE', "%{$name}%")->orWhere('last_name', 'LIKE', "%{$name}%");
+        })->get();
+
+
+
+        return view('admin.investments.index', compact('investments'));
+    }
 
     public function editinvestment(Investment $investment)
     {
-        return view('admin.investments.edit',compact('investment'));
+        return view('admin.investments.edit', compact('investment'));
     }
 
 
 
-	public function updateinvestment(Request $request, Investment $investment)
+    public function updateinvestment(Request $request, Investment $investment)
     {
         $request->validate([
             'status' => 'required',
@@ -36,7 +47,6 @@ class InvestmentController extends Controller
 
         $investment->fill($request->post())->save();
 
-        return redirect('/admin/investments')->with('success','Status updated succesfully');
+        return redirect('/admin/investments')->with('success', 'Status updated succesfully');
     }
-
 }

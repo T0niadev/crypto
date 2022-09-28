@@ -8,7 +8,7 @@
     <div class="header-navbar-shadow"></div>
     <div class="content-wrapper container-xxl p-0">
       <div class="content-header row">
-        <div class="content-header-left col-md-9 col-12 mb-2">
+        <div class="content-header-left col-md-8 col-12 mb-2">
           <div class="row breadcrumbs-top">
             <div class="col-12">
               <h2 class="content-header-title float-start mb-0">Users</h2>
@@ -23,12 +23,20 @@
             </div>
           </div>
         </div>
-        <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
-          <div class="mb-1 breadcrumb-right">
-
-          </div>
+        <div class="content-header-right text-md-end col-md-4 col-12 d-md-block d-none">
+            <form action="{{ route('admin.searchusers') }}" method="POST" role="search">
+                @csrf
+                    <div class="input-group rounded">
+                    <input type="search" name="name" class="form-control rounded" placeholder="Search" aria-label="Search"
+                        aria-describedby="search-addon" />
+                    <span class="input-group-text border-0" id="search-addon">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </span>
+                    </div>
+               </form>
         </div>
       </div>
+
       <div class="content-body">
         <!-- Basic table -->
         <section id="">
@@ -47,6 +55,13 @@
                       <th>Action</th>
                     </tr>
                   </thead>
+                  @if (count($users)< 1)
+                  <tbody>
+                    <tr>
+                        <td colspan="8" class="text-center">No Records Found</td>
+                    </tr>
+                  </tbody>
+                  @endif
                   @foreach ($users as $user)
                     <tbody>
                       <tr>

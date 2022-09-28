@@ -1373,6 +1373,7 @@
       </div>
     </div>
 
+  
     <!-- Main Content Wrapper -->
     @yield('content')
   </div>
