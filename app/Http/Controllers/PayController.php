@@ -9,9 +9,9 @@ class PayController extends Controller
 {
     public function paybitcoin()
     {
-        // dd( Cryptocap::getAssets());
+        dd( Cryptocap::getAssets());
         return view('paybitcoin')->with([
-       
+
         ]);
     }
 }
