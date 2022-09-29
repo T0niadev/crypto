@@ -52,6 +52,7 @@
                     <tr>
                       <!-- <th>Image</th> -->
                       <th>Package Name</th>
+                      <th>ROI</th>
                       <th>Min Amount</th>
                       <th>Max Amount</th>
                       <th>Start Date</th>
@@ -75,6 +76,7 @@
                                                         class="avatar" alt="Avatar" height="40" width="40" />
                                                 </td> -->
                         <td>{{ $package['name'] }}</td>
+                        <td>{{ $package['roi'] }} %</td>
                         <td>
                           ${{ $package['min_amount'] }}
                         </td>

@@ -45,6 +45,10 @@ class DepositController extends Controller
 
         ]);
 
+        if ($request['zero'] > $request['amount']) {
+            return back()->with('error', "The minimum deposit amount is $3");
+        }
+
 
         Deposit::create([
             "amount" => $request->amount,

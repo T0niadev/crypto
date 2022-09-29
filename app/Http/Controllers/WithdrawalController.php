@@ -26,7 +26,7 @@ class WithdrawalController extends Controller
     {
 
 
-
+ 
 
         $request->validate([
             "amount" => 'required',
@@ -35,10 +35,17 @@ class WithdrawalController extends Controller
 
 
         ]);
+        
+       
 
         if (auth()->user()->wallet < $request['amount']) {
             return back()->with('error', "You don't have sufficient amount in your wallet");
         }
+
+        if ($request['zero'] > $request['amount']) {
+            return back()->with('error', "The minimum withdrawal amount is $3");
+        }
+
 
 
         Withdrawal::create([
@@ -53,7 +60,7 @@ class WithdrawalController extends Controller
 
 
         return redirect('/wallet')->with([
-            "success" => "Withdrawal process in progress"
+            "success" => "Withdrawal processing"
         ]);
     }
 

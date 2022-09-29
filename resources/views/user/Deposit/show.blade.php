@@ -2,12 +2,37 @@
 
 @section('content')
   <!-- Main Content Wrapper -->
+  <style>
+   .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+  </style>
   <main class="main-content w-full px-[var(--margin-x)] pb-8">
 
     <div id="popup-modal" bg-white tabindex="-1"
       class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full justify-center items-center"
       aria-hidden="true">
-      <div class="relative p-4 w-full max-w-md h-full md:h-auto ">
+      <div class="relative p-4 w-full max-w-lg h-full md:h-auto ">
         <div class="relative bg-white rounded-lg ">
 
           <button type="button"
@@ -23,7 +48,7 @@
 
           </button>
           <div class="p-6 pb-0 text-center">
-            <p class="text-xl font-medium text-gray-900 dark:text-white">You are about to pay {{ $deposit['amount'] }} USD
+            <p class="text-xl font-medium text-gray-900 dark:text-black">You are about to pay {{ $deposit['amount'] }} USD
             </p>
           </div>
           <div class="p-6 pt-0 text-center">
@@ -42,37 +67,46 @@
 
             <div class="text-2xl mt-2 mb-2 font-extrabold text-center">
               <span x-data="{ tooltip: 'Copy Amount' }" x-tooltip="tooltip" x-on:click="$clipboard(amount); tooltip = 'Copied!'"
-                class="cursor-pointer">
+                class="text-xl font-medium text-gray-900 dark:text-black cursor-pointer">
                 {{ $deposit['bitcoin_amount'] }}
               </span>
-              <span class="font-extralight">BTC</span>
+              <span class="text-xl font-medium text-gray-900 dark:text-black font-extralight">BTC</span>
             </div>
 
-            <div class="text-xs text-center mt-2">
+            <div class="text-xs text-gray-900 dark:text-black text-center mt-2">
               Send {{ $deposit['bitcoin_amount'] }} BTC (don't include transaction fee in this amount!)
             </div>
 
             <div class="p-1 text-sm font-extrabold text-center border border-gray-400 rounded mt-2">
-              <a href="12GFtXz6uL26wtd8wtRmhNJDjpy14H44kf" x-data="{ tooltip: 'Open Wallet' }" x-tooltip="tooltip"
-                class="text-blue-700 hover:text-blue-500" id="walletAddress">
+              <!-- <a href="12GFtXz6uL26wtd8wtRmhNJDjpy14H44kf" x-data="{ tooltip: 'Open Wallet' }" x-tooltip="tooltip"
+                class="text-blue-700 hover:text-blue-500 ">
                 3Mr2DCsEXQK3X1Nz9xMdAcq1Ak7Tgq48M8
-              </a>
+              </a> -->
 
-              <i class="ml-3 cursor-pointer far fa-copy"
-                @click="$clipboard({
-                content:document.querySelector('#clipboardContent1').innerText,
-                success:()=>$notification({text:'Text Copied',variant:'success'}),
-                error:()=>$notification({text:'Error',variant:'error'})
-              })"></i>
+             
+                <input class="text-blue-700 hover:text-blue-500 " style="border: none; border-color: transparent; outline: none;" type="text" value="3Mr2DCsEXQK3X1Nz9xMdAcq1Ak7Tgq48M8" id="copyMe" readonly>
+                <button ><i class="ml-3 cursor-pointer far fa-copy" onclick="copyMeOnClipboard()" x-data="{ tooltip: 'Copy Address' }" x-tooltip="tooltip" ></i></button>
 
-              {{-- <a href="12GFtXz6uL26wtd8wtRmhNJDjpy14H44kf">
-                        <i
-                            class="ml-3 cursor-pointer fas fa-external-link-alt"
-                            x-data="{ tooltip: 'It will open your Bitcoin wallet with address and sum which you need to send \\nand you will need to simply click Send button in wallet only. If your browser does not recognise the Bitcoin link, simply use \&quot;Copy Address\&quot; button below and manually copy address and the amount to pay in your Bitcoin wallet.' }"
-                            x-tooltip="tooltip"
-                        ></i>
-                        </a> --}}
-              <a href="bitcoin:12GFtXz6uL26wtd8wtRmhNJDjpy14H44kf?amount=0.02490858&amp;amp;label=Payment">
+
+
+
+
+
+
+
+
+
+
+          
+              <!-- <i
+                  class="ml-3 cursor-pointer far fa-copy"
+                  x-data="{ tooltip: 'Copy Address' }"
+                  x-tooltip="tooltip"
+                  x-on:click="$clipboard(walletAddress); tooltip = 'Copied!'"
+                ></i> -->
+
+         
+              <a href="bitcoin:3Mr2DCsEXQK3X1Nz9xMdAcq1Ak7Tgq48M8?amount={{ $deposit['bitcoin_amount'] }}&amp;amp;label=Payment">
                 <i class="ml-3 cursor-pointer fas fa-external-link-alt" x-data="{ tooltip: 'It will open your Bitcoin wallet with address and sum which you need to send \\nand you will need to simply click Send button in wallet only. If your browser does not recognise the Bitcoin link, simply use \&quot;Copy Address\&quot; button below and manually copy address and the amount to pay in your Bitcoin wallet.' }" x-tooltip="tooltip"></i>
               </a>
             </div>
@@ -85,7 +119,7 @@
                   Awaiting Payment From You
                 </button>
               </div>
-              <div class="text-sm text-center my-2">
+              <div class="text-sm text-gray-900 dark:text-black text-center my-2 mb-2">
                 If you send any other bitcoin amount, payment system will ignore it!
               </div>
             </div>
@@ -93,7 +127,8 @@
               {{ csrf_field() }}
               <div class="text-xs text-center mt-2">
 
-                <button name="status" value="processing" type="submit"
+                <button name="status" value="processing" type="submit" x-data="{ tooltip: 'Click here only if payment has been made' }"
+                  x-tooltip="tooltip"
                   class="justify-center w-45 px-4 py-2 text-sm font-medium text-blue-600 bg-white border border-blue-600 rounded-md shadow-sm hover:bg-blue-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Done
                 </button>
               </div>
@@ -184,6 +219,11 @@
                   </button>
                 </div>
 
+               
+               
+                </main>
+
+
 
 
               </td>
@@ -202,4 +242,32 @@
     </div>
     </div>
   </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-clipboard@2.x.x/dist/alpine-clipboard.js" defer></script>
+
+   <script>
+        const copyText = document.querySelector("#copyMe");
+   
+
+    const copyMeOnClipboard = () => {
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); //for mobile phone
+      document.execCommand("copy");
+      // copyText.style.border = 'none';
+     
+    }
+    </script>
+
+<script>
+  function CopyToClipboard(sample)
+  {
+  var r = document.createRange();
+  r.selectNode(document.getElementById(sample));
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(r);
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
+  }
+</script>
+
 @endsection

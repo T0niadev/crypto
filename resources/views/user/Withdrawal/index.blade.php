@@ -139,7 +139,7 @@
                     placeholder="Enter here" type="text" />
                 </label>
 
-
+                <input name="zero" value=3 type="hidden" readonly>
 
 
                 <label for="number" class="block mt-3">
