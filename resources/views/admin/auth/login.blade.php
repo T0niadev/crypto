@@ -5,7 +5,7 @@
   <div class="card mb-0">
     <div class="card-body">
       <a href="" class="brand-logo">
-        
+
         <h2 class="brand-text text-primary ms-1">CryptFX</h2>
       </a>
 
@@ -59,12 +59,12 @@
 
       <!-- <p class="text-center mt-2">
         <span>New on our platform?</span>
-        
+
           <span>Create an account</span>
         </a>
       </p> -->
 
-      <div class="divider my-2">
+      {{-- <div class="divider my-2">
         <div class="divider-text">or</div>
       </div>
 
@@ -81,7 +81,7 @@
         <a href="#" class="btn btn-github">
           <i data-feather="github"></i>
         </a>
-      </div>
+      </div> --}}
     </div>
   </div>
   <!-- /Login basic -->
