@@ -13,15 +13,6 @@ class PackageFactory extends Factory
      */
     public function definition()
     {
-        return [
-            'name' => $this->faker->name(),
-            'roi' => $this->faker->randomDigitNotZero(),
-            'min_amount' => $this->faker->numberBetween(10, 1000),
-            'max_amount' => $this->faker->numberBetween(10000, 1000000),
-            'start_date' => $this->faker->date(),
-            'description' => $this->faker->realText(),
-            'duration' => $this->faker->randomDigitNotZero(),
-            'status' => $this->faker->randomElement(['open', 'closed']),
-        ];
+        
     }
 }

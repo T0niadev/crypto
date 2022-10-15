@@ -194,7 +194,7 @@
                                         </span>
                                         </span>
                                     </label>
-
+<!-- 
                                     <div>
                                         <span>Change Password</span>
                                         <label class="block">
@@ -218,7 +218,7 @@
                                             />
                                         </label>
                                         <span class="text-tiny+ text-success"></span>
-                                    </div>
+                                    </div> -->
                                 <div>
                             
 
