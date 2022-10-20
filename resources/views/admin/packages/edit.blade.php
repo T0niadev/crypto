@@ -61,14 +61,14 @@
                       </div>
                     </div>
 
-                    <div class="col-lg-6 mt-2">
+                    <!-- <div class="col-lg-6 mt-2">
                       <div class="form-group">
                         <label> {{ __('Maximum Amount') }} </label>
                         <input type="number" name="max_amount"  value="{{ $package->max_amount }}" class="form-control" >
                       </div>
-                    </div>
+                    </div> -->
 
-                    <div class="col-lg-6 mt-2">
+                    <!-- <div class="col-lg-6 mt-2">
                       <div class="form-group">
                         <label> {{ __('Duration') }} </label>
                         <input type="number" name="duration" value="{{ $package->duration }}" class="form-control" >
@@ -85,15 +85,21 @@
                             <option value="year">year</option>
                         </select>
                       </div>
-                    </div>
+                    </div> -->
 
                     <div class="col-lg-6 mt-2">
                       <div class="form-group">
-                        <label> {{ __('Description') }} </label>
+                        <label> {{ __('Timeline') }} </label>
                         <input type="" name="description" value="{{ $package->description}}" class="form-control" >
                       </div>
                     </div>
 
+                    <div class="col-lg-6 mt-2">
+                      <div class="form-group">
+                        <label> {{ __('Timeline in days') }} </label>
+                        <input type="number" name="duration" value="{{ $package->duration }}" class="form-control" >
+                      </div>
+                    </div>
 
                     <div class="col-lg-6 mt-2">
                       <div class="form-group">

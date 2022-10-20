@@ -71,9 +71,9 @@ class InvestmentController extends Controller
         if ($package['min_amount'] > $request['amount']) {
             return back()->with('error', "Invested amount is less than package minimum amount");
         }
-        if ($package['max_amount'] < $request['amount']) {
-            return back()->with('error', "Invested amount is greater than package maximum amount");
-        }
+        // if ($package['max_amount'] < $request['amount']) {
+        //     return back()->with('error', "Invested amount is greater than package maximum amount");
+        // }
 
         Investment::create([
 

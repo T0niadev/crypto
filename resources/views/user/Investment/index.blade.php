@@ -122,8 +122,7 @@
                       <a href="#" class="font-medium text-slate-600 line-clamp-1 dark:text-navy-100">
                         {{ $package['name'] }}</a>
                       <p class="text-xs text-primary dark:text-accent-light">
-                        Get {{ $package['roi'] }}% of your investment after {{ $package['duration'] }}
-                        {{ $package['duration_mode'] }}
+                        Get {{ $package['roi'] }}% of your investment after {{ $package['description'] }}
                       </p>
                     </div>
                   </div>
@@ -151,17 +150,17 @@
                   <div class="mt-3 px-1">
                     <a href="#"
                       class="text-base font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light">
-                      {{ $package['roi'] }}% after {{ $package['duration'] }} {{ $package['duration_mode'] }}
+                      {{ $package['roi'] }}% after {{ $package['description'] }}
                     </a>
                     <div class="my-3 h-px bg-slate-200 dark:bg-navy-500"></div>
                     <div class="flex justify-between">
                       <div>
-                        <p class="text-xs text-slate-400 dark:text-navy-300">
+                        <!-- <p class="text-xs text-slate-400 dark:text-navy-300">
                           Minimum Deposit: ${{ $package['min_amount'] }}
 
-                        </p>
+                        </p> -->
                         <p class="text-base font-medium text-slate-700 dark:text-navy-100">
-                          Maximum Deposit: ${{ $package['max_amount'] }}
+                          Minimum Deposit: ${{ $package['min_amount'] }}
                         </p>
                       </div>
                       <div class="text-right">

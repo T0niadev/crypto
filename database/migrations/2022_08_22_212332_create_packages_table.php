@@ -19,8 +19,8 @@ class CreatePackagesTable extends Migration
             $table->string('roi');
             $table->date('start_date');
             $table->string('min_amount');
-            $table->string('max_amount');
-            $table->integer('duration')->nullable();
+            $table->string('max_amount')->nullable();
+            $table->integer('duration')->default('1');
             $table->enum('duration_mode', ['days', 'months', 'year'])->default('days');
             $table->text('description');
             $table->text('image')->nullable();
