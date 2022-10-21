@@ -54,9 +54,8 @@
                       <th>Package Name</th>
                       <th>ROI</th>
                       <th>Min Amount</th>
-                      <th>Max Amount</th>
                       <th>Start Date</th>
-                      <th>Duration</th>
+                      <th>Timeline</th>
                       <th>Status</th>
                       <th>Actions</th>
                     </tr>
@@ -80,14 +79,12 @@
                         <td>
                           ${{ $package['min_amount'] }}
                         </td>
-                        <td>
-                          ${{ $package['max_amount'] }}
-                        </td>
+                        
                         <td>
                           {{ $package['start_date'] }}
                         </td>
                         <td>
-                          {{ $package['duration'] }} {{ $package['duration_mode'] }}
+                          {{ $package['description'] }} 
                         </td>
                         <td>
                           @if ($package['status'] == 'open')

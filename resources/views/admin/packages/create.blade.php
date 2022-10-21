@@ -40,7 +40,7 @@
 
                     <div class="col-lg-6 mt-2">
                       <div class="form-group">
-                        <label> {{ __('ROI') }} </label>
+                        <label> {{ __('ROI (%)') }} </label>
                         <input type="percentage" name="roi" class="form-control" >
                       </div>
                     </div>
@@ -59,39 +59,40 @@
                       </div>
                     </div>
 
-                    <div class="col-lg-6 mt-2">
+                    <!-- <div class="col-lg-6 mt-2">
                       <div class="form-group">
                         <label> {{ __('Maximum Amount  ($)') }} </label>
                         <input type="number" name="max_amount" class="form-control" >
                       </div>
-                    </div>
+                    </div> -->
 
-                    <div class="col-lg-6 mt-2">
-                      <div class="form-group">
-                        <label> {{ __('Duration') }} </label>
-                        <input type="number" name="duration" class="form-control" >
-                      </div>
-                    </div>
+                    
 
 
-                    <div class="col-lg-6 mt-2">
+                    <!-- <div class="col-lg-6 mt-2">
                       <div class="form-group">
                         <label> {{ __('Duration Mode:') }} </label>
                         <select name="duration_mode" id="duration_mode">
                             <option value="days">days</option>
-                            <!-- <option value="months">months</option>
-                            <option value="year">year</option> -->
+                            <option value="months">months</option>
+                            <option value="year">year</option>
                         </select>
+                      </div>
+                    </div> -->
+
+                    <div class="col-lg-6 mt-2">
+                      <div class="form-group">
+                        <label> {{ __('Timeline e.g (12 -24 hours)') }} </label>
+                        <input type="" name="description" class="form-control" >
                       </div>
                     </div>
 
                     <div class="col-lg-6 mt-2">
                       <div class="form-group">
-                        <label> {{ __('Description') }} </label>
-                        <input type="" name="description" class="form-control" >
+                        <label> {{ __('Timeline in days') }} </label>
+                        <input type="number" name="duration" class="form-control" >
                       </div>
                     </div>
-
 
                     <div class="col-lg-6 mt-2">
                       <div class="form-group">
