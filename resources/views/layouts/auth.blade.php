@@ -43,7 +43,7 @@
           <a href="{{ route('welcome') }}" :class="scrolledFromTop && '!al lg:!am'" class="an ab a2h lg:aW">
             <img src="{{ asset('assets/images/logo/cryptfx.png') }}" alt="cryptfx" class="ab dark:ao" />
             <img src="{{ asset('assets/images/logo/cryptfx.png') }}" alt="cryptfx" class="ao ab dark:an" />
-      
+
           </a>
         </div>
         <div class="aa ab ac ap ak">
@@ -104,7 +104,7 @@
                     >
                      FAQ
                     </a>
-                    
+
                   </li>
                   <li>
                     <a
@@ -118,7 +118,7 @@
               </nav>
             </div>
           <div class="aa ap lg:a1m xl:a1n 2xl:a1o">
-            <div class="a1p">
+            <div style="margin-right: 3rem;">
               <label for="darkToggler" class="aa a1q a1r a1s ac a1t a1u a1v dark:a1w[#1E2763]">
                 <input type="checkbox" name="darkToggler" id="darkToggler" checked class="a1x"
                   aria-label="darkToggler" />
@@ -136,7 +136,7 @@
                 </span>
               </label>
             </div>
-            
+
             <div class="ao sm:aa">
               @if (Route::has('login'))
                 <a href="{{ route('login') }}"
